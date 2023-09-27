@@ -1,4 +1,4 @@
-10:51:40 **** Incremental Build of configuration Debug for project PROY_GITHUB ****
+11:03:40 **** Incremental Build of configuration Debug for project PROY_GITHUB ****
 make -j4 all 
 arm-none-eabi-size   PROY_GITHUB.elf 
    text	   data	    bss	    dec	    hex	filename
