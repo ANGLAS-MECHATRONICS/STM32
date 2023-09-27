@@ -1,7 +1,7 @@
-11:32:07 **** Incremental Build of configuration Debug for project PROY_GITHUB ****
+14:19:23 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.2 ****
 make -j4 all 
-arm-none-eabi-size   PROY_GITHUB.elf 
+arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.2.elf 
    text	   data	    bss	    dec	    hex	filename
-   5560	     20	   1652	   7232	   1c40	PROY_GITHUB.elf
+  48428	    508	   2984	  51920	   cad0	PORTABLE DIGITAL SOURCE V1.2.elf
 Finished building: default.size.stdout
  
