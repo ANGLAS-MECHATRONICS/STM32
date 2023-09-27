@@ -1,7 +1,7 @@
-11:15:24 **** Incremental Build of configuration Debug for project PROY_GITHUB ****
+11:32:07 **** Incremental Build of configuration Debug for project PROY_GITHUB ****
 make -j4 all 
 arm-none-eabi-size   PROY_GITHUB.elf 
    text	   data	    bss	    dec	    hex	filename
-   3876	     20	   1572	   5468	   155c	PROY_GITHUB.elf
+   5560	     20	   1652	   7232	   1c40	PROY_GITHUB.elf
 Finished building: default.size.stdout
  
