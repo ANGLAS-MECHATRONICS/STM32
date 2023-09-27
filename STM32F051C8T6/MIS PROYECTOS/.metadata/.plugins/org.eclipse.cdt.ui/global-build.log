@@ -1,4 +1,4 @@
-10:24:50 **** Incremental Build of configuration Debug for project OSC EXT VS INT ****
+10:35:23 **** Incremental Build of configuration Debug for project OSC EXT VS INT ****
 make -j4 all 
 arm-none-eabi-size   OSC\ EXT\ VS\ INT.elf 
    text	   data	    bss	    dec	    hex	filename
