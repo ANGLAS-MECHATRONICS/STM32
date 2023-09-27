@@ -1206,3 +1206,126 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-27 10:39:21.715
+!MESSAGE Indexed 'PROY_GITHUB' (19 sources, 81 headers) in 7.23 sec: 4,127 declarations; 22,553 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0075%)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-09-27 10:41:53.516
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: Nothing to push.
+!STACK 0
+org.eclipse.jgit.errors.TransportException: Nothing to push.
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1380)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-09-27 10:41:53.517
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (Nothing to push.)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-09-27 10:42:32.775
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:685)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1385)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-09-27 10:42:32.777
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-09-27 10:45:10.887
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: https://github.com/ANGLAS-MECHATRONICS/STM32.git: cannot open git-receive-pack
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: cannot open git-receive-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:749)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1385)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.net.UnknownHostException: github.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.eclipse.jgit.transport.http.apache.HttpClientConnection.execute(HttpClientConnection.java:274)
+	at org.eclipse.jgit.transport.http.apache.HttpClientConnection.getResponseCode(HttpClientConnection.java:251)
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:205)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:654)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-09-27 10:45:10.888
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: cannot open git-receive-pack)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-09-27 10:48:13.022
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:685)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1385)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-09-27 10:48:13.023
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-09-27 10:48:59.798
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:685)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1385)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-09-27 10:48:59.799
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-09-27 10:50:49.308
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:685)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:627)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1385)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-09-27 10:50:49.309
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized)
