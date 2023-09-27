@@ -1,0 +1,17 @@
+10:18:18 **** Incremental Build of configuration Debug for project GPIO_ENTRADA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "GPIO_ENTRADA.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\PRUEBAS DE INICIO\GPIO_ENTRADA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_ENTRADA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_ENTRADA.elf
+ 
+arm-none-eabi-size   GPIO_ENTRADA.elf 
+arm-none-eabi-objdump -h -S  GPIO_ENTRADA.elf  > "GPIO_ENTRADA.list"
+   text	   data	    bss	    dec	    hex	filename
+   4824	     20	   1572	   6416	   1910	GPIO_ENTRADA.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_ENTRADA.list
+ 
+
+10:18:20 Build Finished. 0 errors, 0 warnings. (took 1s.396ms)
+

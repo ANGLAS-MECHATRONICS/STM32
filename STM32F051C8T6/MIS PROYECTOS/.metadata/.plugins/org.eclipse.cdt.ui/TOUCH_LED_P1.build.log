@@ -1,0 +1,10 @@
+09:36:36 **** Incremental Build of configuration Debug for project TOUCH_LED_P1 ****
+make -j4 all 
+arm-none-eabi-size   TOUCH_LED_P1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13960	     52	   1772	  15784	   3da8	TOUCH_LED_P1.elf
+Finished building: default.size.stdout
+ 
+
+09:36:37 Build Finished. 0 errors, 0 warnings. (took 796ms)
+

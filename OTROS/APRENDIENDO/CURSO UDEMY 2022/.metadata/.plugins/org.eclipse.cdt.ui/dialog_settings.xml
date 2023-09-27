@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="${workspace_loc:/${ProjName}/Drivers/Src}"/>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="org.eclipse.cdt.internal.corext.codemanipulation">
+		<section name=".h">
+			<item key="id" value="org.eclipse.cdt.ui.text.codetemplates.cheaderfile"/>
+			<item key="name" value="Default C header template"/>
+			<item key="contextId" value="org.eclipse.cdt.core.cHeader.contenttype_context"/>
+		</section>
+		<section name=".c">
+			<item key="id" value="org.eclipse.cdt.ui.text.codetemplates.csourcefile"/>
+			<item key="name" value="Default C source template"/>
+			<item key="contextId" value="org.eclipse.cdt.core.cSource.contenttype_context"/>
+		</section>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="askReindex" value="true"/>
+		<item key="askReindex.detail" value="0"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="595"/>
+		<item key="size.height" value="180"/>
+	</section>
+</section>

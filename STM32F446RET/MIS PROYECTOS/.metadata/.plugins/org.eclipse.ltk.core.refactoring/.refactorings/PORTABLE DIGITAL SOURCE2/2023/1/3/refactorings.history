@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PORTABLE DIGITAL SOURCE2/PORTABLE DIGITAL SOURCE.ioc&apos; to &apos;PORTABLE DIGITAL SOURCE2.ioc&apos;" description="Rename resource &apos;PORTABLE DIGITAL SOURCE.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PORTABLE DIGITAL SOURCE.ioc" name="PORTABLE DIGITAL SOURCE2.ioc" stamp="1674171517830" updateReferences="true"/>
+</session>

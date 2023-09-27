@@ -1,0 +1,20 @@
+18:13:09 **** Incremental Build of configuration Debug for project BRAZO ROBOTICO PRUEBA 1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F103xB -DDEBUG -c -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BRAZO ROBOTICO PRUEBA 1.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY TODO\SKETCHS\STM32\PROYECTOS\BRAZO ROBOTICO\BRAZO ROBOTICO PRUEBA 1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BRAZO ROBOTICO PRUEBA 1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BRAZO ROBOTICO PRUEBA 1.elf
+ 
+arm-none-eabi-objdump -h -S  BRAZO\ ROBOTICO\ PRUEBA\ 1.elf  > "BRAZO ROBOTICO PRUEBA 1.list"
+arm-none-eabi-objcopy  -O binary  BRAZO\ ROBOTICO\ PRUEBA\ 1.elf  "BRAZO ROBOTICO PRUEBA 1.bin"
+arm-none-eabi-size   BRAZO\ ROBOTICO\ PRUEBA\ 1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18928	    120	   2080	  21128	   5288	BRAZO ROBOTICO PRUEBA 1.elf
+Finished building: default.size.stdout
+ 
+Finished building: BRAZO ROBOTICO PRUEBA 1.bin
+ 
+Finished building: BRAZO ROBOTICO PRUEBA 1.list
+ 
+
+18:13:12 Build Finished. 0 errors, 0 warnings. (took 2s.452ms)
+

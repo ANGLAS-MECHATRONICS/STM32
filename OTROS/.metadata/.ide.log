@@ -1,0 +1,1405 @@
+2022-10-19 11:33:30,707 [INFO] Activator:177 - 
+
+
+2022-10-19 11:33:30,708 [INFO] Activator:178 - !SESSION log4j initialized
+2022-10-19 11:33:39,746 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] oct. 19, 2022 11:33:39 A. M. org.glassfish.grizzly.http.server.NetworkListener start
+2022-10-19 11:33:39,754 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFORMACI?N: Started listener bound to [localhost:1596]
+2022-10-19 11:33:39,755 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-19 11:33:39,757 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] oct. 19, 2022 11:33:39 A. M. org.glassfish.grizzly.http.server.HttpServer start
+2022-10-19 11:33:39,765 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFORMACI?N: [HttpServer] Started.
+2022-10-19 11:33:39,766 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-19 11:33:43,130 [INFO] McuFinderGlobals:44 - Set McuFinder mode to 2 (CubeIDE integrated)
+2022-10-19 11:33:43,382 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-10-19 11:33:43,406 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-10-19 11:33:43,407 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-10-19 11:33:43,411 [WARN] ApiDb:254 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-10-19 11:33:43,444 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 11:33:43,449 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 11:33:43,454 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-10-19 11:33:43,616 [INFO] RulesReader:61 - Compatibility file has been processed (282 Rules)
+2022-10-19 11:33:43,742 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-10-19 11:33:43,743 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-10-19 11:33:43,743 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-10-19 11:33:43,744 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:43,744 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 11:33:43,744 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:43,744 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 11:33:43,746 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:43,746 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:43,747 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-10-19 11:33:43,876 [INFO] MainPanel:242 - HeapMemory: 268435456
+2022-10-19 11:33:44,029 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-10-19 11:33:44,030 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-10-19 11:33:44,031 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-10-19 11:33:44,031 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:44,032 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 11:33:44,032 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:44,032 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 11:33:44,033 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:44,033 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:33:44,033 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-10-19 11:33:44,065 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-10-19 11:33:44,068 [INFO] PluginManage:193 - Search for loadable plugins [exclusion list=, ]
+2022-10-19 11:33:44,070 [INFO] PluginManage:307 - Check plugin analytics
+2022-10-19 11:33:44,370 [INFO] AnalyticsPlugin:262 - Accepted Software Licenses: 
+2022-10-19 11:33:44,372 [INFO] AnalyticsPlugin:264 - Accepted CMSIS Pack Licenses: 
+2022-10-19 11:33:44,372 [INFO] AnalyticsPlugin:266 - Accepted Firmware Licenses: FW.F4.1.27.0
+2022-10-19 11:33:44,389 [INFO] PluginManage:356 - Loaded plugin analytics (category:tool,tabindex:-1)
+2022-10-19 11:33:44,390 [INFO] PluginManage:307 - Check plugin cadmodel
+2022-10-19 11:33:44,395 [INFO] CADModel:65 - Init CAD model plugin
+2022-10-19 11:33:44,395 [INFO] PluginManage:356 - Loaded plugin cadmodel (category:power,tabindex:5)
+2022-10-19 11:33:44,395 [INFO] PluginManage:307 - Check plugin clock
+2022-10-19 11:33:44,414 [INFO] PluginManage:356 - Loaded plugin clock (category:base,tabindex:2)
+2022-10-19 11:33:44,414 [INFO] PluginManage:307 - Check plugin ddr
+2022-10-19 11:33:44,418 [INFO] PluginManage:356 - Loaded plugin ddr (category:tool,tabindex:6)
+2022-10-19 11:33:44,418 [INFO] PluginManage:307 - Check plugin filemanager
+2022-10-19 11:33:44,689 [INFO] PluginManage:356 - Loaded plugin filemanager (category:base,tabindex:10)
+2022-10-19 11:33:44,690 [INFO] PluginManage:307 - Check plugin ipmanager
+2022-10-19 11:33:44,704 [INFO] PluginManage:356 - Loaded plugin ipmanager (category:base,tabindex:5)
+2022-10-19 11:33:44,704 [INFO] PluginManage:307 - Check plugin lpbam
+2022-10-19 11:33:44,726 [INFO] PluginManage:356 - Loaded plugin lpbam (category:base,tabindex:0)
+2022-10-19 11:33:44,727 [INFO] PluginManage:307 - Check plugin pinoutandconfiguration
+2022-10-19 11:33:44,741 [INFO] PluginManage:356 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2022-10-19 11:33:44,742 [INFO] PluginManage:307 - Check plugin pinoutconfig
+2022-10-19 11:33:44,794 [INFO] PluginManage:356 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2022-10-19 11:33:44,794 [INFO] PluginManage:307 - Check plugin power
+2022-10-19 11:33:44,809 [INFO] PluginManage:356 - Loaded plugin power (category:power,tabindex:4)
+2022-10-19 11:33:44,809 [INFO] PluginManage:307 - Check plugin projectmanager
+2022-10-19 11:33:44,843 [INFO] PluginManage:356 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2022-10-19 11:33:44,844 [INFO] PluginManage:307 - Check plugin thirdparty
+2022-10-19 11:33:45,053 [WARN] IntegrityCheckThread:82 - waiting for thirdparty lock release [integrity check]
+2022-10-19 11:33:45,054 [INFO] PluginManage:356 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2022-10-19 11:33:45,055 [INFO] IntegrityCheckThread:84 - entering critical section [integrity check]
+2022-10-19 11:33:45,055 [INFO] PluginManage:307 - Check plugin tools
+2022-10-19 11:33:45,058 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2022-10-19 11:33:45,064 [INFO] PluginManage:356 - Loaded plugin tools (category:base,tabindex:7)
+2022-10-19 11:33:45,064 [INFO] PluginManage:307 - Check plugin tutovideos
+2022-10-19 11:33:45,406 [INFO] PluginManage:356 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2022-10-19 11:33:45,406 [INFO] PluginManage:307 - Check plugin updater
+2022-10-19 11:33:45,427 [INFO] PluginManage:356 - Loaded plugin updater (category:base,tabindex:12)
+2022-10-19 11:33:45,428 [INFO] PluginManage:280 - PluginManage : Loaded plugins [15]
+2022-10-19 11:33:45,854 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-10-19 11:33:45,959 [INFO] CADModel:98 - CPN selected for project level
+2022-10-19 11:33:45,982 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:45,983 [INFO] PluginManager:217 - loadIPPluginJar : add adc
+2022-10-19 11:33:45,988 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:45,988 [INFO] PluginManager:217 - loadIPPluginJar : add aes
+2022-10-19 11:33:45,993 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:45,993 [INFO] PluginManager:217 - loadIPPluginJar : add can
+2022-10-19 11:33:45,996 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:45,997 [INFO] PluginManager:217 - loadIPPluginJar : add comp
+2022-10-19 11:33:46,001 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,002 [INFO] PluginManager:217 - loadIPPluginJar : add cryp
+2022-10-19 11:33:46,006 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,006 [INFO] PluginManager:217 - loadIPPluginJar : add dfsdm
+2022-10-19 11:33:46,015 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,016 [INFO] PluginManager:217 - loadIPPluginJar : add dma
+2022-10-19 11:33:46,021 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,022 [INFO] PluginManager:217 - loadIPPluginJar : add dma3
+2022-10-19 11:33:46,025 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,025 [INFO] PluginManager:217 - loadIPPluginJar : add fatfs
+2022-10-19 11:33:46,033 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,034 [INFO] PluginManager:217 - loadIPPluginJar : add fmc
+2022-10-19 11:33:46,042 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,042 [INFO] PluginManager:217 - loadIPPluginJar : add freertos
+2022-10-19 11:33:46,044 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,045 [INFO] PluginManager:217 - loadIPPluginJar : add genericplugin
+2022-10-19 11:33:46,048 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,048 [INFO] PluginManager:217 - loadIPPluginJar : add gfxmmu
+2022-10-19 11:33:46,056 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,056 [INFO] PluginManager:217 - loadIPPluginJar : add gic
+2022-10-19 11:33:46,062 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,063 [INFO] PluginManager:217 - loadIPPluginJar : add gpio
+2022-10-19 11:33:46,067 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,067 [INFO] PluginManager:217 - loadIPPluginJar : add gtzc
+2022-10-19 11:33:46,071 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,071 [INFO] PluginManager:217 - loadIPPluginJar : add hash
+2022-10-19 11:33:46,075 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,075 [INFO] PluginManager:217 - loadIPPluginJar : add i2c
+2022-10-19 11:33:46,079 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,079 [INFO] PluginManager:217 - loadIPPluginJar : add i2s
+2022-10-19 11:33:46,084 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,085 [INFO] PluginManager:217 - loadIPPluginJar : add ipddr
+2022-10-19 11:33:46,094 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,095 [INFO] PluginManager:217 - loadIPPluginJar : add linkedlist
+2022-10-19 11:33:46,099 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,100 [INFO] PluginManager:217 - loadIPPluginJar : add lorawan
+2022-10-19 11:33:46,102 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,103 [INFO] PluginManager:217 - loadIPPluginJar : add ltdc
+2022-10-19 11:33:46,112 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,113 [INFO] PluginManager:217 - loadIPPluginJar : add mdma
+2022-10-19 11:33:46,120 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,121 [INFO] PluginManager:217 - loadIPPluginJar : add nvic
+2022-10-19 11:33:46,125 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,126 [INFO] PluginManager:217 - loadIPPluginJar : add opamp
+2022-10-19 11:33:46,131 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,132 [INFO] PluginManager:217 - loadIPPluginJar : add openamp
+2022-10-19 11:33:46,137 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,137 [INFO] PluginManager:217 - loadIPPluginJar : add pdm2pcm
+2022-10-19 11:33:46,147 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,152 [INFO] PluginManager:217 - loadIPPluginJar : add plateformsettings
+2022-10-19 11:33:46,156 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,156 [INFO] PluginManager:217 - loadIPPluginJar : add quadspi
+2022-10-19 11:33:46,162 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,162 [INFO] PluginManager:217 - loadIPPluginJar : add resmgrutility
+2022-10-19 11:33:46,168 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,168 [INFO] PluginManager:217 - loadIPPluginJar : add sai
+2022-10-19 11:33:46,173 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,173 [INFO] PluginManager:217 - loadIPPluginJar : add spi
+2022-10-19 11:33:46,180 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,180 [INFO] PluginManager:217 - loadIPPluginJar : add stm32_wpan
+2022-10-19 11:33:46,183 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,184 [INFO] PluginManager:217 - loadIPPluginJar : add tim
+2022-10-19 11:33:46,189 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,189 [INFO] PluginManager:217 - loadIPPluginJar : add touchsensing
+2022-10-19 11:33:46,192 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,193 [INFO] PluginManager:217 - loadIPPluginJar : add tracer_emb
+2022-10-19 11:33:46,196 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,197 [INFO] PluginManager:217 - loadIPPluginJar : add ts
+2022-10-19 11:33:46,200 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,200 [INFO] PluginManager:217 - loadIPPluginJar : add tsc
+2022-10-19 11:33:46,203 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,204 [INFO] PluginManager:217 - loadIPPluginJar : add ucpd
+2022-10-19 11:33:46,208 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,208 [INFO] PluginManager:217 - loadIPPluginJar : add usart
+2022-10-19 11:33:46,213 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:33:46,213 [INFO] PluginManager:217 - loadIPPluginJar : add usbx
+2022-10-19 11:33:46,656 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:46,891 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:46,925 [INFO] DbMcusAds:52 - JSON generation date=Thu Sep 30 01:55:09 COT 2021 (1632984909377)
+2022-10-19 11:33:46,925 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:46,991 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-10-19 11:33:47,304 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:47,307 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:47,307 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:47,307 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-10-19 11:33:47,309 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 11:33:47,431 [ERROR] Updater:1105 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2022-10-19 11:33:47,435 [INFO] Updater:1041 - Updater Version found : 6.6.1
+2022-10-19 11:33:47,461 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-10-19 11:33:47,899 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 11:33:47,901 [INFO] MainUpdater:280 - Updater Check For Update Now.
+2022-10-19 11:33:47,901 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-10-19 11:33:48,059 [WARN] MainUpdater:1184 - Updater busy. Cannot search thirdparties
+2022-10-19 11:33:48,060 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [1/15]
+2022-10-19 11:33:48,127 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2022-10-19 11:33:48,324 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 11:33:48,344 [INFO] McuFinderGlobals:57 - Set McuFinderConnectedMode to true
+2022-10-19 11:33:48,514 [INFO] ServerAccessManage:474 - Download File mcusAds.json._tmp_
+2022-10-19 11:33:48,642 [INFO] LoadUrlFilesThread:150 - End of LoadUrlFiles Thread
+2022-10-19 11:33:50,555 [INFO] ServerAccessManage:474 - Download File cube-finder-db.zip
+2022-10-19 11:33:51,061 [WARN] MainUpdater:1184 - Updater busy. Cannot search thirdparties
+2022-10-19 11:33:51,061 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [2/15]
+2022-10-19 11:33:53,193 [INFO] FileExtend:239 - Unzip File : cube-finder-db.zip
+2022-10-19 11:33:53,195 [INFO] FileExtend:254 - Standard Zip Deflate
+2022-10-19 11:33:54,062 [WARN] MainUpdater:1184 - Updater busy. Cannot search thirdparties
+2022-10-19 11:33:54,062 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [3/15]
+2022-10-19 11:33:54,591 [INFO] LoadUrlFilesThread:150 - End of LoadUrlFiles Thread
+2022-10-19 11:33:55,976 [INFO] ServerAccessManage:474 - Download File crdb.zip
+2022-10-19 11:33:57,062 [WARN] MainUpdater:1184 - Updater busy. Cannot search thirdparties
+2022-10-19 11:33:57,062 [INFO] ThirdPartyUpdaterWithRetryManager:96 - Updater plugin is busy. [4/15]
+2022-10-19 11:33:57,355 [INFO] FileExtend:239 - Unzip File : crdb.zip
+2022-10-19 11:33:57,356 [INFO] FileExtend:254 - Standard Zip Deflate
+2022-10-19 11:33:57,516 [INFO] LoadUrlFilesThread:150 - End of LoadUrlFiles Thread
+2022-10-19 11:33:59,658 [INFO] ServerAccessManage:474 - Download File tutoVideoDB.zip
+2022-10-19 11:33:59,692 [INFO] FileExtend:239 - Unzip File : tutoVideoDB.zip
+2022-10-19 11:33:59,692 [INFO] FileExtend:254 - Standard Zip Deflate
+2022-10-19 11:33:59,802 [INFO] LoadUrlFilesThread:150 - End of LoadUrlFiles Thread
+2022-10-19 11:33:59,848 [INFO] JxBrowserEngine:106 - Initiate JxBrowser Engine with user profile folder
+2022-10-19 11:34:00,282 [ERROR] JxBrowserEngine:59 - Can't initiate JxBrowser engine com.teamdev.jxbrowser.engine.ChromiumBinariesExtractionException: Failed to extract Chromium binaries into C:\Users\PC\.stm32cubemx\.jxbrowser\Chromium
+2022-10-19 11:34:00,285 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 11:34:00,386 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2022-10-19 11:34:00,426 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.2.0
+2022-10-19 11:34:00,572 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.3.0
+2022-10-19 11:34:00,930 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.0.0
+2022-10-19 11:34:00,957 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.0.0
+2022-10-19 11:34:01,013 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.1
+2022-10-19 11:34:01,078 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2022-10-19 11:34:01,083 [INFO] ThirdParty:929 - Integrity check success = true
+2022-10-19 11:34:01,083 [INFO] IntegrityCheckThread:98 - exiting critical section [integrity check]
+2022-10-19 11:34:01,083 [INFO] IntegrityCheckThread:101 - End integrity checks thread
+2022-10-19 11:34:01,282 [INFO] ServerAccessManage:474 - Download File api_config.json
+2022-10-19 11:34:01,436 [INFO] LoadUrlFilesThread:150 - End of LoadUrlFiles Thread
+2022-10-19 11:34:01,439 [INFO] DbMcusAds:52 - JSON generation date=Thu Sep 30 01:56:37 COT 2021 (1632984997303)
+2022-10-19 11:34:01,467 [INFO] LoadUrlFilesThread:177 - End of LoadServerUrlFiles without Thread
+2022-10-19 11:34:01,468 [INFO] TargetSelectorAdapter:228 - Refresh data is successful
+2022-10-19 11:34:01,623 [INFO] ApiDb:576 - Connected to CubeFinder SQLite database (C:\Users\PC\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2022-10-19 11:34:01,673 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2022-10-19 11:34:01,674 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.32
+2022-10-19 11:34:01,674 [INFO] ApiDb:665 - CubeFinder database generation date=2022-08-05 (1659688109)
+2022-10-19 11:34:01,675 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[STM32Cube_FW_C0_V1.0.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.0, STM32Cube_FW_H7_V1.10.0, STM32Cube_FW_L5_V1.4.0, STM32Cube_FW_U5_V1.1.1, STM32Cube_FW_WB_V1.14.1, STM32Cube_FW_WL_V1.2.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V1.0.0, X-CUBE-AZRTOS-H7_V2.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L5_V1.0.0, X-CUBE-AZRTOS-WL_V1.0.0, X-CUBE-BLE1_V6.2.3, X-CUBE-BLE2_V3.3.0, X-CUBE-EEPRMA1_V3.1.1, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.3.0, X-CUBE-NFC4_V2.0.4, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0]
+2022-10-19 11:34:04,188 [INFO] ApiDb:239 - Found 138 in-development CPN: [B-WB1M-WPAN1, NUCLEO-C031C6, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6]
+2022-10-19 11:34:04,193 [INFO] DbMcus:215 - Found 3542 MCUs, 3542 are supported
+2022-10-19 11:34:04,206 [INFO] ApiDb:418 - Load user favorites file C:\Users\PC/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2022-10-19 11:34:04,208 [INFO] ApiDb:422 - User favorites MCUs=[STM32F446RET6]
+2022-10-19 11:34:04,209 [INFO] DbMcus:221 - Set 1 / 1 favorites MCUs
+2022-10-19 11:34:04,214 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2022-10-19 11:34:04,214 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.32
+2022-10-19 11:34:04,214 [INFO] ApiDb:665 - CubeFinder database generation date=2022-08-05 (1659688109)
+2022-10-19 11:34:04,214 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[STM32Cube_FW_C0_V1.0.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.0, STM32Cube_FW_H7_V1.10.0, STM32Cube_FW_L5_V1.4.0, STM32Cube_FW_U5_V1.1.1, STM32Cube_FW_WB_V1.14.1, STM32Cube_FW_WL_V1.2.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V1.0.0, X-CUBE-AZRTOS-H7_V2.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L5_V1.0.0, X-CUBE-AZRTOS-WL_V1.0.0, X-CUBE-BLE1_V6.2.3, X-CUBE-BLE2_V3.3.0, X-CUBE-EEPRMA1_V3.1.1, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.3.0, X-CUBE-NFC4_V2.0.4, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0]
+2022-10-19 11:34:04,304 [INFO] DbBoardsSqlite:227 - include board P-NUCLEO-WB55-NUCLEO as a kit item of type 'Nucleo-64'
+2022-10-19 11:34:04,304 [INFO] DbBoardsSqlite:227 - include board P-NUCLEO-WB55-USBDONGLE as a kit item of type 'Nucleo USB Dongle'
+2022-10-19 11:34:04,305 [INFO] DbBoardsSqlite:227 - include board STEVAL-IDP005V1 as a kit item of type 'Evaluation Board'
+2022-10-19 11:34:04,305 [INFO] DbBoardsSqlite:227 - include board STEVAL-IDP005V2 as a kit item of type 'Evaluation Board'
+2022-10-19 11:34:04,328 [INFO] ApiDb:239 - Found 138 in-development CPN: [B-WB1M-WPAN1, NUCLEO-C031C6, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6]
+2022-10-19 11:34:04,581 [INFO] BoardInfo:879 - No configuration file found for board P-NUCLEO-WB55
+2022-10-19 11:34:04,582 [INFO] DbBoards:156 - Kit is not supported: P-NUCLEO-WB55
+2022-10-19 11:34:04,590 [INFO] BoardInfo:879 - No configuration file found for board STEVAL-BFA001V1B
+2022-10-19 11:34:04,590 [INFO] DbBoards:156 - Kit is not supported: STEVAL-BFA001V1B
+2022-10-19 11:34:04,594 [INFO] BoardInfo:879 - No configuration file found for board STEVAL-BFA001V2B
+2022-10-19 11:34:04,595 [INFO] DbBoards:156 - Kit is not supported: STEVAL-BFA001V2B
+2022-10-19 11:34:04,825 [INFO] DbBoards:160 - Found 176 boards, 173 are supported
+2022-10-19 11:34:04,856 [INFO] ApiDb:418 - Load user favorites file C:\Users\PC/.stm32cubeide/favorites.boards.txt: 0 item(s)
+2022-10-19 11:34:04,856 [INFO] ApiDb:422 - User favorites Boards=[]
+2022-10-19 11:34:04,862 [INFO] DbBoards:189 - Set 0 / 0 favorites Boards
+2022-10-19 11:34:04,875 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2022-10-19 11:34:04,875 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.32
+2022-10-19 11:34:04,875 [INFO] ApiDb:665 - CubeFinder database generation date=2022-08-05 (1659688109)
+2022-10-19 11:34:04,875 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[STM32Cube_FW_C0_V1.0.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.0, STM32Cube_FW_H7_V1.10.0, STM32Cube_FW_L5_V1.4.0, STM32Cube_FW_U5_V1.1.1, STM32Cube_FW_WB_V1.14.1, STM32Cube_FW_WL_V1.2.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V1.0.0, X-CUBE-AZRTOS-H7_V2.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L5_V1.0.0, X-CUBE-AZRTOS-WL_V1.0.0, X-CUBE-BLE1_V6.2.3, X-CUBE-BLE2_V3.3.0, X-CUBE-EEPRMA1_V3.1.1, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.3.0, X-CUBE-NFC4_V2.0.4, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0]
+2022-10-19 11:34:06,228 [INFO] DbExamplesSqlite:374 - Ignored 31 examples not supported by CubeIDE
+2022-10-19 11:34:06,228 [INFO] DbExamplesSqlite:375 - Found 6197 examples active
+2022-10-19 11:34:06,229 [INFO] DbExamplesSqlite:376 - Found 89 examples obsolete
+2022-10-19 11:34:06,229 [INFO] DbExamplesSqlite:377 - Found 0 examples under development
+2022-10-19 11:34:06,229 [INFO] DbExamplesSqlite:378 - Found 76 examples not building
+2022-10-19 11:34:06,233 [INFO] DbExamples:124 - Found 6242 examples
+2022-10-19 11:34:06,306 [INFO] DbExamples:221 - Found 77 boards with related examples
+2022-10-19 11:34:06,308 [INFO] DbExamples:234 - Found 64 MCUs with related examples
+2022-10-19 11:34:06,341 [INFO] ApiDb:409 - User favorites file not found: C:\Users\PC/.stm32cubeide/favorites.examples.txt
+2022-10-19 11:34:06,342 [INFO] DbExamples:249 - Set 0 / 0 favorites Examples
+2022-10-19 11:34:06,608 [INFO] McuFinderGlobals:57 - Set McuFinderConnectedMode to true
+2022-10-19 11:34:06,621 [INFO] MultiScanPanel:195 - Auto-refresh data requested => check proxy status ongoing
+2022-10-19 11:34:06,626 [INFO] FinderPluginLoader:92 - Searching for filters in installed packs
+2022-10-19 11:34:10,653 [INFO] LoadUrlFilesThread:177 - End of LoadServerUrlFiles without Thread
+2022-10-19 11:34:11,057 [INFO] DetailPanel:339 - Set advertising image to C:/Users/PC/STM32Cube/Repository/\en.Prom_NBSTM32U50921.jpg
+2022-10-19 11:35:06,118 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 11:35:06,119 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 11:35:06,156 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-10-19 11:35:06,156 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-10-19 11:35:06,156 [WARN] ThirdParty:827 - waiting for thirdparty lock release [close project]
+2022-10-19 11:35:06,157 [INFO] ThirdParty:829 - entering critical section [close project]
+2022-10-19 11:35:06,159 [INFO] ThirdParty:839 - exiting critical section [close project]
+2022-10-19 11:35:06,171 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-10-19 11:35:06,201 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 419648864 Bytes (461373440)
+2022-10-19 11:35:06,210 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-10-19 11:35:06,211 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-10-19 11:35:06,211 [INFO] OpenFileManager:307 - Change cursor
+2022-10-19 11:35:06,688 [INFO] Mcu:1922 - Initializing MCU STM32F446RETx STM32F446RETx 
+2022-10-19 11:35:06,690 [INFO] Mcu:1935 - No CPN specified => set CPN to STM32F446RET6
+2022-10-19 11:35:12,129 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2022-10-19 11:35:13,286 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) Unable to find key (Mcu.ThirdPartyNb) in loaded IOC file
+2022-10-19 11:35:13,287 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) Unable to find key (Mcu.PinsNb) in loaded IOC file
+2022-10-19 11:35:13,287 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) Unable to find key (Mcu.IPNb) in loaded IOC file
+2022-10-19 11:35:13,470 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,470 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,471 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,471 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,471 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,472 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,472 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,472 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,472 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,472 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,472 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,473 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,474 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,475 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,475 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,475 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 11:35:13,816 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-10-19 11:35:13,816 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-10-19 11:35:13,816 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-10-19 11:35:13,847 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2022-10-19 11:35:13,848 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2022-10-19 11:35:13,848 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2022-10-19 11:35:13,848 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2022-10-19 11:35:13,849 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2022-10-19 11:35:13,864 [INFO] ThirdPartyModel:289 - Start build external matchings
+2022-10-19 11:35:14,191 [INFO] ThirdPartyModel:302 - End build external matchings
+2022-10-19 11:35:14,799 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 533173896 Bytes (663748608)
+2022-10-19 11:35:14,846 [WARN] ThirdParty:789 - waiting for thirdparty lock release [change project]
+2022-10-19 11:35:14,846 [INFO] ThirdParty:791 - entering critical section [change project]
+2022-10-19 11:35:14,846 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2022-10-19 11:35:14,846 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2022-10-19 11:35:14,847 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.0.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.2.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.3.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2022-10-19 11:35:14,850 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2022-10-19 11:35:14,851 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2022-10-19 11:35:14,859 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2022-10-19 11:35:14,859 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2022-10-19 11:35:14,859 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2022-10-19 11:35:14,859 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2022-10-19 11:35:14,859 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2022-10-19 11:35:14,859 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.0.0
+2022-10-19 11:35:14,859 [INFO] ThirdParty:797 - exiting critical section [change project]
+2022-10-19 11:35:15,929 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-10-19 11:35:15,931 [INFO] PinOutPanel:1468 - setPackage(STM32F446RETx,LQFP64)
+2022-10-19 11:35:17,409 [INFO] UtilMem:74 - Before build in PCC Used Memory: 501496520 Bytes (663748608)
+2022-10-19 11:35:18,753 [INFO] UtilMem:74 - After build in PCC Used Memory: 557415264 Bytes (663748608)
+2022-10-19 11:35:18,851 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,852 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,852 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,853 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,853 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,853 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,854 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,854 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,854 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,854 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,855 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,855 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,855 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,856 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,856 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,858 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,859 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,860 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,860 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,861 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,861 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,862 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,863 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,863 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,863 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,864 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,864 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,869 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,870 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,870 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,871 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,872 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,872 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,873 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,873 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,874 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,874 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,875 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,875 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,875 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,876 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,876 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,877 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,877 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,878 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,878 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,878 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,879 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,879 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,880 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,881 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,881 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,882 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,883 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,883 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,884 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,885 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,886 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,887 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,888 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 11:35:18,981 [INFO] ApiDbMcu:505 - Load IP Config File for PDM2PCM
+2022-10-19 11:35:19,391 [INFO] OpenFileManager:327 - Restore cursor
+2022-10-19 11:35:21,381 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 531847272 Bytes (663748608)
+2022-10-19 11:35:21,460 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 551770216 Bytes (663748608)
+2022-10-19 11:35:22,362 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:35:22,362 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:35:22,370 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:35:23,152 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:35:24,319 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:35:24,341 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:35:24,626 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:35:24,631 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:35:24,780 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:35:24,919 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:35:25,157 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:35:25,163 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:35:25,328 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:35:25,339 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:35:25,501 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:35:25,552 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:35:25,569 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:35:25,759 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:35:25,765 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:35:26,070 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:35:28,328 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 825mS.
+2022-10-19 11:35:28,359 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:35:29,027 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:35:29,046 [INFO] ApiDbMcu:505 - Load IP Config File for FATFS
+2022-10-19 11:35:29,058 [INFO] ApiDbMcu:505 - Load IP Config File for FREERTOS
+2022-10-19 11:35:29,062 [INFO] ApiDbMcu:505 - Load IP Config File for LIBJPEG
+2022-10-19 11:35:29,076 [INFO] ApiDbMcu:505 - Load IP Config File for MBEDTLS
+2022-10-19 11:35:29,106 [INFO] ApiDbMcu:505 - Load IP Config File for USB_DEVICE
+2022-10-19 11:35:29,120 [INFO] ApiDbMcu:505 - Load IP Config File for USB_HOST
+2022-10-19 11:35:37,398 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 9038mS.
+2022-10-19 11:35:37,401 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 2mS.
+2022-10-19 11:35:37,406 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:35:39,494 [INFO] McuFinderGlobals:57 - Set McuFinderConnectedMode to true
+2022-10-19 11:35:39,498 [INFO] ApiDb:443 - Save user favorites file C:\Users\PC/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2022-10-19 11:35:39,498 [INFO] ApiDb:447 - User favorites MCUs=[STM32F446RET6]
+2022-10-19 11:40:58,025 [INFO] Gpio:272 - dependency for GPIO [SYS]
+2022-10-19 11:41:10,802 [INFO] Gpio:272 - dependency for GPIO [SYS]
+2022-10-19 11:42:15,854 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 788970392 Bytes (1067450368)
+2022-10-19 11:42:25,214 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 920574856 Bytes (1067450368)
+2022-10-19 11:42:25,770 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:42:25,771 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:42:25,771 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:42:25,771 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:42:25,772 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:42:26,480 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:42:26,629 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:42:26,670 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:42:26,854 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:42:26,885 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:42:27,086 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:42:27,093 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:42:27,232 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:42:27,261 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:42:27,442 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:42:27,450 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:42:27,573 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:42:27,587 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:42:27,894 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:42:27,967 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:42:28,034 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:42:28,465 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:42:28,485 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:42:28,908 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:42:30,619 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 238mS.
+2022-10-19 11:42:30,637 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:42:31,219 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:42:36,556 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 5919mS.
+2022-10-19 11:42:36,571 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 14mS.
+2022-10-19 11:42:36,599 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:43:06,608 [INFO] Gpio:272 - dependency for GPIO [SYS]
+2022-10-19 11:43:11,109 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 295443000 Bytes (810549248)
+2022-10-19 11:43:12,043 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 383001144 Bytes (810549248)
+2022-10-19 11:43:12,928 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:43:12,928 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:43:12,928 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:43:12,928 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:43:12,931 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:43:13,682 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:43:13,873 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:43:13,895 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:43:14,160 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:43:14,187 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:43:14,350 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:43:14,357 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:43:14,496 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:43:14,508 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:43:14,656 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:43:14,690 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:43:14,806 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:43:14,821 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:43:14,994 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:43:15,019 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:43:15,049 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:43:15,212 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:43:15,221 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:43:15,416 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:43:17,271 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 258mS.
+2022-10-19 11:43:17,277 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:43:17,801 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:43:21,386 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 4109mS.
+2022-10-19 11:43:21,387 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:43:21,389 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:50:46,898 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 756216576 Bytes (1070596096)
+2022-10-19 11:50:48,176 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 814960704 Bytes (1070596096)
+2022-10-19 11:50:48,539 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:50:48,540 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:50:48,540 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:50:48,540 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:50:48,541 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:50:48,840 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:50:48,931 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:50:48,946 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:50:49,042 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:50:49,064 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:50:49,278 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:50:49,284 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:50:49,380 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:50:49,390 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:50:49,592 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:50:49,597 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:50:49,692 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:50:49,701 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:50:49,811 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:50:49,835 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:50:49,848 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:50:49,952 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:50:49,958 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:50:50,107 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:50:51,035 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 181mS.
+2022-10-19 11:50:51,038 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:50:51,618 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:50:54,037 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2999mS.
+2022-10-19 11:50:54,038 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:50:54,040 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:53:04,878 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 608793224 Bytes (1071644672)
+2022-10-19 11:53:05,662 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 726760072 Bytes (1071644672)
+2022-10-19 11:53:06,006 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:53:06,006 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:53:06,007 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:53:06,007 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:53:06,008 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:53:06,558 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:53:06,659 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:53:06,675 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:53:06,781 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:53:06,801 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:53:06,915 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:53:06,924 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:53:07,091 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:53:07,103 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:53:07,246 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:53:07,251 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:53:07,347 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:53:07,358 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:53:07,469 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:53:07,493 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:53:07,505 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:53:07,606 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:53:07,612 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:53:07,762 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:53:08,651 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 158mS.
+2022-10-19 11:53:08,656 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:53:09,354 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:53:11,629 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2973mS.
+2022-10-19 11:53:11,630 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:53:11,632 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:54:25,677 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 648336008 Bytes (1071644672)
+2022-10-19 11:54:26,131 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:54:26,131 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:54:26,131 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:54:26,131 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:54:26,132 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:54:26,441 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:54:26,588 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:54:26,603 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:54:26,703 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:54:26,724 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:54:26,832 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:54:26,837 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:54:26,932 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:54:26,944 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:54:27,073 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:54:27,078 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:54:27,175 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:54:27,185 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:54:27,310 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:54:27,334 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:54:27,347 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:54:27,517 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:54:27,523 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:54:27,668 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:54:28,805 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 166mS.
+2022-10-19 11:54:28,809 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:54:29,625 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:54:32,077 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 3268mS.
+2022-10-19 11:54:32,078 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:54:32,080 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:55:16,565 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 461152016 Bytes (1071644672)
+2022-10-19 11:55:16,889 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:55:16,889 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:55:16,889 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:55:16,890 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:55:16,891 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:55:17,370 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:55:17,464 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:55:17,480 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:55:17,586 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:55:17,610 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:55:17,720 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:55:17,727 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:55:17,892 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:55:17,912 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:55:18,064 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:55:18,069 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:55:18,181 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:55:18,192 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:55:18,317 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:55:18,342 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:55:18,358 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:55:18,463 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:55:18,469 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:55:18,612 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:55:19,719 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 171mS.
+2022-10-19 11:55:19,723 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:55:20,221 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:55:22,319 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2596mS.
+2022-10-19 11:55:22,320 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:55:22,322 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:56:13,386 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 464640912 Bytes (1071644672)
+2022-10-19 11:56:13,708 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:56:13,709 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:56:13,709 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:56:13,709 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:56:13,710 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:56:14,075 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:56:14,164 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:56:14,179 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:56:14,342 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:56:14,365 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:56:14,466 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:56:14,472 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:56:14,571 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:56:14,582 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:56:14,713 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:56:14,718 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:56:14,807 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:56:14,816 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:56:14,923 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:56:14,945 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:56:14,958 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:56:15,059 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:56:15,065 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:56:15,206 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:56:16,224 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 163mS.
+2022-10-19 11:56:16,228 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:56:16,644 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:56:19,000 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2772mS.
+2022-10-19 11:56:19,001 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:56:19,003 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:56:36,408 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 389642848 Bytes (1071644672)
+2022-10-19 11:56:36,755 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:56:36,756 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:56:36,756 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:56:36,756 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:56:36,757 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:56:37,039 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:56:37,132 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:56:37,146 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:56:37,240 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:56:37,260 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:56:37,376 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:56:37,381 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:56:37,476 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:56:37,487 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:56:37,612 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:56:37,616 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:56:37,706 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:56:37,715 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:56:37,823 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:56:37,848 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:56:37,862 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:56:37,964 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:56:37,969 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:56:38,114 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:56:39,317 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 157mS.
+2022-10-19 11:56:39,320 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:56:39,742 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:56:41,780 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2460mS.
+2022-10-19 11:56:41,783 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 11:56:41,784 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 11:58:40,109 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 518779664 Bytes (1071644672)
+2022-10-19 11:58:40,848 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 603515720 Bytes (1071644672)
+2022-10-19 11:58:41,322 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 11:58:41,322 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 11:58:41,322 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 11:58:41,323 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 11:58:41,323 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 11:58:41,693 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 11:58:41,783 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 11:58:41,799 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 11:58:41,893 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 11:58:41,912 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 11:58:42,012 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 11:58:42,018 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 11:58:42,111 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 11:58:42,121 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 11:58:42,249 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 11:58:42,253 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 11:58:42,346 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 11:58:42,356 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 11:58:42,481 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 11:58:42,502 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 11:58:42,515 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 11:58:42,614 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 11:58:42,620 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 11:58:42,759 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 11:58:43,904 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 161mS.
+2022-10-19 11:58:43,908 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 11:58:44,702 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 11:58:46,733 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2825mS.
+2022-10-19 11:58:46,743 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 10mS.
+2022-10-19 11:58:46,747 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:00:06,817 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-19 12:00:06,818 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-19 12:33:45,358 [INFO] Activator:177 - 
+
+
+2022-10-19 12:33:45,359 [INFO] Activator:178 - !SESSION log4j initialized
+2022-10-19 12:33:58,906 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] oct. 19, 2022 12:33:58 P. M. org.glassfish.grizzly.http.server.NetworkListener start
+2022-10-19 12:33:58,908 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFORMACI?N: Started listener bound to [localhost:1593]
+2022-10-19 12:33:58,909 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-19 12:33:58,913 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] oct. 19, 2022 12:33:58 P. M. org.glassfish.grizzly.http.server.HttpServer start
+2022-10-19 12:33:58,917 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFORMACI?N: [HttpServer] Started.
+2022-10-19 12:33:58,917 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-10-19 12:34:15,184 [INFO] McuFinderGlobals:44 - Set McuFinder mode to 2 (CubeIDE integrated)
+2022-10-19 12:34:15,357 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-10-19 12:34:15,379 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-10-19 12:34:15,380 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-10-19 12:34:15,383 [WARN] ApiDb:254 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-10-19 12:34:15,405 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 12:34:15,407 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 12:34:15,438 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-10-19 12:34:15,583 [INFO] RulesReader:61 - Compatibility file has been processed (282 Rules)
+2022-10-19 12:34:15,696 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-10-19 12:34:15,697 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-10-19 12:34:15,697 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-10-19 12:34:15,698 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,699 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 12:34:15,699 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,700 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 12:34:15,701 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,701 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,702 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-10-19 12:34:15,801 [INFO] MainPanel:242 - HeapMemory: 268435456
+2022-10-19 12:34:15,921 [INFO] DbMcusXml:77 - Set database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/mcu/
+2022-10-19 12:34:15,921 [INFO] ApiDb:269 - Set plugin database path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/boardmanager/
+2022-10-19 12:34:15,922 [INFO] ApiDb:256 - Set plugin images path to: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\/plugins/mcufinder/images/
+2022-10-19 12:34:15,923 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,923 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 12:34:15,959 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,973 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2022-10-19 12:34:15,973 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,974 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2022-10-19 12:34:15,974 [INFO] CrossReferenceDbSqlite:201 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2022-10-19 12:34:16,009 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-10-19 12:34:16,012 [INFO] PluginManage:193 - Search for loadable plugins [exclusion list=, ]
+2022-10-19 12:34:16,014 [INFO] PluginManage:307 - Check plugin analytics
+2022-10-19 12:34:16,328 [INFO] AnalyticsPlugin:262 - Accepted Software Licenses: 
+2022-10-19 12:34:16,330 [INFO] AnalyticsPlugin:264 - Accepted CMSIS Pack Licenses: 
+2022-10-19 12:34:16,331 [INFO] AnalyticsPlugin:266 - Accepted Firmware Licenses: FW.F4.1.27.0
+2022-10-19 12:34:16,348 [INFO] PluginManage:356 - Loaded plugin analytics (category:tool,tabindex:-1)
+2022-10-19 12:34:16,348 [INFO] PluginManage:307 - Check plugin cadmodel
+2022-10-19 12:34:16,353 [INFO] CADModel:65 - Init CAD model plugin
+2022-10-19 12:34:16,353 [INFO] PluginManage:356 - Loaded plugin cadmodel (category:power,tabindex:5)
+2022-10-19 12:34:16,354 [INFO] PluginManage:307 - Check plugin clock
+2022-10-19 12:34:16,371 [INFO] PluginManage:356 - Loaded plugin clock (category:base,tabindex:2)
+2022-10-19 12:34:16,371 [INFO] PluginManage:307 - Check plugin ddr
+2022-10-19 12:34:16,374 [INFO] PluginManage:356 - Loaded plugin ddr (category:tool,tabindex:6)
+2022-10-19 12:34:16,375 [INFO] PluginManage:307 - Check plugin filemanager
+2022-10-19 12:34:16,583 [INFO] PluginManage:356 - Loaded plugin filemanager (category:base,tabindex:10)
+2022-10-19 12:34:16,584 [INFO] PluginManage:307 - Check plugin ipmanager
+2022-10-19 12:34:16,598 [INFO] PluginManage:356 - Loaded plugin ipmanager (category:base,tabindex:5)
+2022-10-19 12:34:16,599 [INFO] PluginManage:307 - Check plugin lpbam
+2022-10-19 12:34:16,613 [INFO] PluginManage:356 - Loaded plugin lpbam (category:base,tabindex:0)
+2022-10-19 12:34:16,614 [INFO] PluginManage:307 - Check plugin pinoutandconfiguration
+2022-10-19 12:34:16,627 [INFO] PluginManage:356 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2022-10-19 12:34:16,628 [INFO] PluginManage:307 - Check plugin pinoutconfig
+2022-10-19 12:34:16,679 [INFO] PluginManage:356 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2022-10-19 12:34:16,680 [INFO] PluginManage:307 - Check plugin power
+2022-10-19 12:34:16,697 [INFO] PluginManage:356 - Loaded plugin power (category:power,tabindex:4)
+2022-10-19 12:34:16,698 [INFO] PluginManage:307 - Check plugin projectmanager
+2022-10-19 12:34:16,725 [INFO] PluginManage:356 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2022-10-19 12:34:16,726 [INFO] PluginManage:307 - Check plugin thirdparty
+2022-10-19 12:34:16,901 [WARN] IntegrityCheckThread:82 - waiting for thirdparty lock release [integrity check]
+2022-10-19 12:34:16,901 [INFO] PluginManage:356 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2022-10-19 12:34:16,902 [INFO] IntegrityCheckThread:84 - entering critical section [integrity check]
+2022-10-19 12:34:16,902 [INFO] PluginManage:307 - Check plugin tools
+2022-10-19 12:34:16,906 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2022-10-19 12:34:16,907 [INFO] PluginManage:356 - Loaded plugin tools (category:base,tabindex:7)
+2022-10-19 12:34:16,907 [INFO] PluginManage:307 - Check plugin tutovideos
+2022-10-19 12:34:17,191 [INFO] PluginManage:356 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2022-10-19 12:34:17,192 [INFO] PluginManage:307 - Check plugin updater
+2022-10-19 12:34:17,213 [INFO] PluginManage:356 - Loaded plugin updater (category:base,tabindex:12)
+2022-10-19 12:34:17,214 [INFO] PluginManage:280 - PluginManage : Loaded plugins [15]
+2022-10-19 12:34:17,583 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-10-19 12:34:17,680 [INFO] CADModel:98 - CPN selected for project level
+2022-10-19 12:34:17,703 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,704 [INFO] PluginManager:217 - loadIPPluginJar : add adc
+2022-10-19 12:34:17,708 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,709 [INFO] PluginManager:217 - loadIPPluginJar : add aes
+2022-10-19 12:34:17,712 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,713 [INFO] PluginManager:217 - loadIPPluginJar : add can
+2022-10-19 12:34:17,715 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,716 [INFO] PluginManager:217 - loadIPPluginJar : add comp
+2022-10-19 12:34:17,719 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,720 [INFO] PluginManager:217 - loadIPPluginJar : add cryp
+2022-10-19 12:34:17,723 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,724 [INFO] PluginManager:217 - loadIPPluginJar : add dfsdm
+2022-10-19 12:34:17,732 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,733 [INFO] PluginManager:217 - loadIPPluginJar : add dma
+2022-10-19 12:34:17,737 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,737 [INFO] PluginManager:217 - loadIPPluginJar : add dma3
+2022-10-19 12:34:17,739 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,739 [INFO] PluginManager:217 - loadIPPluginJar : add fatfs
+2022-10-19 12:34:17,746 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,746 [INFO] PluginManager:217 - loadIPPluginJar : add fmc
+2022-10-19 12:34:17,754 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,755 [INFO] PluginManager:217 - loadIPPluginJar : add freertos
+2022-10-19 12:34:17,757 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,758 [INFO] PluginManager:217 - loadIPPluginJar : add genericplugin
+2022-10-19 12:34:17,761 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,761 [INFO] PluginManager:217 - loadIPPluginJar : add gfxmmu
+2022-10-19 12:34:17,770 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,771 [INFO] PluginManager:217 - loadIPPluginJar : add gic
+2022-10-19 12:34:17,777 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,778 [INFO] PluginManager:217 - loadIPPluginJar : add gpio
+2022-10-19 12:34:17,782 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,783 [INFO] PluginManager:217 - loadIPPluginJar : add gtzc
+2022-10-19 12:34:17,787 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,787 [INFO] PluginManager:217 - loadIPPluginJar : add hash
+2022-10-19 12:34:17,792 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,792 [INFO] PluginManager:217 - loadIPPluginJar : add i2c
+2022-10-19 12:34:17,796 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,796 [INFO] PluginManager:217 - loadIPPluginJar : add i2s
+2022-10-19 12:34:17,801 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,801 [INFO] PluginManager:217 - loadIPPluginJar : add ipddr
+2022-10-19 12:34:17,811 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,812 [INFO] PluginManager:217 - loadIPPluginJar : add linkedlist
+2022-10-19 12:34:17,816 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,816 [INFO] PluginManager:217 - loadIPPluginJar : add lorawan
+2022-10-19 12:34:17,818 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,818 [INFO] PluginManager:217 - loadIPPluginJar : add ltdc
+2022-10-19 12:34:17,827 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,828 [INFO] PluginManager:217 - loadIPPluginJar : add mdma
+2022-10-19 12:34:17,833 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,834 [INFO] PluginManager:217 - loadIPPluginJar : add nvic
+2022-10-19 12:34:17,839 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,839 [INFO] PluginManager:217 - loadIPPluginJar : add opamp
+2022-10-19 12:34:17,844 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,845 [INFO] PluginManager:217 - loadIPPluginJar : add openamp
+2022-10-19 12:34:17,850 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,850 [INFO] PluginManager:217 - loadIPPluginJar : add pdm2pcm
+2022-10-19 12:34:17,860 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,865 [INFO] PluginManager:217 - loadIPPluginJar : add plateformsettings
+2022-10-19 12:34:17,867 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,868 [INFO] PluginManager:217 - loadIPPluginJar : add quadspi
+2022-10-19 12:34:17,872 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,872 [INFO] PluginManager:217 - loadIPPluginJar : add resmgrutility
+2022-10-19 12:34:17,876 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,877 [INFO] PluginManager:217 - loadIPPluginJar : add sai
+2022-10-19 12:34:17,880 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,880 [INFO] PluginManager:217 - loadIPPluginJar : add spi
+2022-10-19 12:34:17,887 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,888 [INFO] PluginManager:217 - loadIPPluginJar : add stm32_wpan
+2022-10-19 12:34:17,891 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,891 [INFO] PluginManager:217 - loadIPPluginJar : add tim
+2022-10-19 12:34:17,896 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,897 [INFO] PluginManager:217 - loadIPPluginJar : add touchsensing
+2022-10-19 12:34:17,900 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,900 [INFO] PluginManager:217 - loadIPPluginJar : add tracer_emb
+2022-10-19 12:34:17,903 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,903 [INFO] PluginManager:217 - loadIPPluginJar : add ts
+2022-10-19 12:34:17,906 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,906 [INFO] PluginManager:217 - loadIPPluginJar : add tsc
+2022-10-19 12:34:17,909 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,909 [INFO] PluginManager:217 - loadIPPluginJar : add ucpd
+2022-10-19 12:34:17,913 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,913 [INFO] PluginManager:217 - loadIPPluginJar : add usart
+2022-10-19 12:34:17,918 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:17,918 [INFO] PluginManager:217 - loadIPPluginJar : add usbx
+2022-10-19 12:34:18,325 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:18,739 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:18,753 [INFO] DbMcusAds:52 - JSON generation date=Thu Sep 30 01:56:37 COT 2021 (1632984997303)
+2022-10-19 12:34:18,753 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:18,840 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-10-19 12:34:19,075 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:19,078 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:19,078 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:19,079 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2022-10-19 12:34:19,081 [FATAL] Updater:301 - Updater called before beeing initialized
+2022-10-19 12:34:19,158 [ERROR] Updater:1105 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2022-10-19 12:34:19,161 [INFO] Updater:1041 - Updater Version found : 6.6.1
+2022-10-19 12:34:19,185 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420
+2022-10-19 12:34:19,327 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 12:34:19,328 [INFO] MainUpdater:280 - Updater Check For Update Now.
+2022-10-19 12:34:19,329 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-10-19 12:34:19,517 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2022-10-19 12:34:19,540 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 12:34:19,541 [INFO] MainUpdater:2768 - connection check result : 10
+2022-10-19 12:34:19,585 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-10-19 12:34:19,588 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-10-19 12:34:19,589 [WARN] ThirdParty:827 - waiting for thirdparty lock release [close project]
+2022-10-19 12:34:20,254 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2022-10-19 12:34:20,280 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.2.0
+2022-10-19 12:34:20,454 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.3.0
+2022-10-19 12:34:20,740 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.0.0
+2022-10-19 12:34:20,758 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.0.0
+2022-10-19 12:34:20,766 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.1
+2022-10-19 12:34:20,773 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2022-10-19 12:34:20,776 [INFO] ThirdParty:929 - Integrity check success = true
+2022-10-19 12:34:20,776 [INFO] IntegrityCheckThread:98 - exiting critical section [integrity check]
+2022-10-19 12:34:20,776 [INFO] ThirdParty:829 - entering critical section [close project]
+2022-10-19 12:34:20,777 [INFO] ThirdParty:839 - exiting critical section [close project]
+2022-10-19 12:34:20,780 [INFO] IntegrityCheckThread:101 - End integrity checks thread
+2022-10-19 12:34:20,784 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-10-19 12:34:20,799 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 196749424 Bytes (268435456)
+2022-10-19 12:34:20,802 [INFO] MicroXplorer:451 - Change Database Path : 
+2022-10-19 12:34:20,802 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.60
+2022-10-19 12:34:20,802 [INFO] OpenFileManager:307 - Change cursor
+2022-10-19 12:34:20,887 [INFO] Mcu:1922 - Initializing MCU STM32F446R(C-E)Tx STM32F446RETx STM32F446RET6
+2022-10-19 12:34:23,877 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2022-10-19 12:34:25,203 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,203 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,204 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,204 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,204 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,205 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,205 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,205 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,205 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,205 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,206 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,206 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,206 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,206 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,206 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,206 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,207 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,207 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,207 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,207 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,207 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,207 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,208 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,209 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,209 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,209 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,209 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2022-10-19 12:34:25,409 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-10-19 12:34:25,410 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-10-19 12:34:25,410 [WARN] ApiManager:308 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.9.3.0: no header file found
+2022-10-19 12:34:25,428 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2022-10-19 12:34:25,428 [INFO] RtosManager:488 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2022-10-19 12:34:25,429 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2022-10-19 12:34:25,429 [INFO] RtosManager:488 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2022-10-19 12:34:25,430 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2022-10-19 12:34:25,445 [INFO] ThirdPartyModel:289 - Start build external matchings
+2022-10-19 12:34:25,563 [INFO] ThirdPartyModel:302 - End build external matchings
+2022-10-19 12:34:26,191 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 195273904 Bytes (362807296)
+2022-10-19 12:34:26,361 [INFO] ApiDb:576 - Connected to CubeFinder SQLite database (C:\Users\PC\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2022-10-19 12:34:26,403 [INFO] ApiDb:663 - CubeFinder database Data Model version=2.1
+2022-10-19 12:34:26,403 [INFO] ApiDb:664 - CubeFinder database Configuration version=3.0.32
+2022-10-19 12:34:26,404 [INFO] ApiDb:665 - CubeFinder database generation date=2022-08-05 (1659688109)
+2022-10-19 12:34:26,404 [INFO] ApiDb:666 - CubeFinder database FW Pack versions=[STM32Cube_FW_C0_V1.0.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.0, STM32Cube_FW_H7_V1.10.0, STM32Cube_FW_L5_V1.4.0, STM32Cube_FW_U5_V1.1.1, STM32Cube_FW_WB_V1.14.1, STM32Cube_FW_WL_V1.2.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V1.0.0, X-CUBE-AZRTOS-H7_V2.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L5_V1.0.0, X-CUBE-AZRTOS-WL_V1.0.0, X-CUBE-BLE1_V6.2.3, X-CUBE-BLE2_V3.3.0, X-CUBE-EEPRMA1_V3.1.1, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.3.0, X-CUBE-NFC4_V2.0.4, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0]
+2022-10-19 12:34:28,445 [INFO] ApiDb:239 - Found 138 in-development CPN: [B-WB1M-WPAN1, NUCLEO-C031C6, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6]
+2022-10-19 12:34:28,451 [INFO] DbMcus:215 - Found 3542 MCUs, 3542 are supported
+2022-10-19 12:34:28,455 [INFO] ApiDb:418 - Load user favorites file C:\Users\PC/.stm32cubeide/favorites.mcus.txt: 1 item(s)
+2022-10-19 12:34:28,456 [INFO] ApiDb:422 - User favorites MCUs=[STM32F446RET6]
+2022-10-19 12:34:28,456 [INFO] DbMcus:221 - Set 1 / 1 favorites MCUs
+2022-10-19 12:34:28,467 [WARN] ThirdParty:789 - waiting for thirdparty lock release [change project]
+2022-10-19 12:34:28,467 [INFO] ThirdParty:791 - entering critical section [change project]
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.0.0
+2022-10-19 12:34:28,468 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.2.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.3.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2022-10-19 12:34:28,469 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2022-10-19 12:34:28,470 [INFO] ThirdParty:981 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.0.0
+2022-10-19 12:34:28,471 [INFO] ThirdParty:797 - exiting critical section [change project]
+2022-10-19 12:34:29,303 [INFO] PinOutPanel:1468 - setPackage(No Configuration,No Configuration)
+2022-10-19 12:34:29,305 [INFO] PinOutPanel:1468 - setPackage(STM32F446RETx,LQFP64)
+2022-10-19 12:34:30,716 [INFO] UtilMem:74 - Before build in PCC Used Memory: 210470408 Bytes (395313152)
+2022-10-19 12:34:32,477 [INFO] UtilMem:74 - After build in PCC Used Memory: 214375008 Bytes (395313152)
+2022-10-19 12:34:32,526 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,529 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,529 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,530 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,530 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,530 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,530 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,531 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,531 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,531 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,531 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,532 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,532 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,532 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,533 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,533 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,533 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,533 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,533 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,534 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,534 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,535 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,535 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,536 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,536 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,536 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,537 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,537 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,537 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,538 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,538 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,539 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,539 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,539 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,540 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,540 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,541 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,541 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,541 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,542 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,542 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,543 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,543 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,543 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,544 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,544 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,545 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,546 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,547 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,548 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,548 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,549 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,549 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,550 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,551 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,551 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,552 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,553 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,554 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,555 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2022-10-19 12:34:32,629 [INFO] ApiDbMcu:505 - Load IP Config File for PDM2PCM
+2022-10-19 12:34:33,013 [INFO] OpenFileManager:327 - Restore cursor
+2022-10-19 12:35:36,473 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 597496168 Bytes (982515712)
+2022-10-19 12:35:38,396 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 460044800 Bytes (982515712)
+2022-10-19 12:35:40,618 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 12:35:40,618 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 12:35:40,618 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 12:35:40,619 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 12:35:40,621 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 12:35:41,153 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 12:35:41,957 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 12:35:42,007 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 12:35:42,203 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 12:35:42,240 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 12:35:42,439 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 12:35:42,446 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 12:35:42,573 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 12:35:42,588 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 12:35:42,762 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 12:35:42,767 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 12:35:42,889 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 12:35:42,900 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 12:35:43,050 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 12:35:43,110 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 12:35:43,135 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 12:35:43,274 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 12:35:43,280 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 12:35:43,542 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 12:35:45,427 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 175mS.
+2022-10-19 12:35:45,452 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 12:35:46,365 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 12:35:46,379 [INFO] ApiDbMcu:505 - Load IP Config File for FATFS
+2022-10-19 12:35:46,389 [INFO] ApiDbMcu:505 - Load IP Config File for FREERTOS
+2022-10-19 12:35:46,393 [INFO] ApiDbMcu:505 - Load IP Config File for LIBJPEG
+2022-10-19 12:35:46,408 [INFO] ApiDbMcu:505 - Load IP Config File for MBEDTLS
+2022-10-19 12:35:46,421 [INFO] ApiDbMcu:505 - Load IP Config File for USB_DEVICE
+2022-10-19 12:35:46,427 [INFO] ApiDbMcu:505 - Load IP Config File for USB_HOST
+2022-10-19 12:35:50,488 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 5036mS.
+2022-10-19 12:35:50,490 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 12:35:50,492 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:41:28,631 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 842875240 Bytes (1073741824)
+2022-10-19 12:41:29,534 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 544943280 Bytes (1073741824)
+2022-10-19 12:41:30,013 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 12:41:30,013 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 12:41:30,013 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 12:41:30,014 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 12:41:30,015 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 12:41:30,399 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 12:41:30,549 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 12:41:30,583 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 12:41:30,762 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 12:41:30,791 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 12:41:30,996 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 12:41:31,004 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 12:41:31,176 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 12:41:31,189 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 12:41:31,330 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 12:41:31,335 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 12:41:31,475 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 12:41:31,484 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 12:41:31,610 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 12:41:31,647 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 12:41:31,665 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 12:41:31,786 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 12:41:31,792 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 12:41:32,066 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 12:41:33,110 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 168mS.
+2022-10-19 12:41:33,114 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 12:41:33,618 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 12:41:37,057 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 3943mS.
+2022-10-19 12:41:37,058 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:41:37,060 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:47:47,864 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 518897456 Bytes (1073741824)
+2022-10-19 12:47:48,629 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 608218680 Bytes (1073741824)
+2022-10-19 12:47:48,982 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 12:47:48,982 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 12:47:48,983 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 12:47:48,983 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 12:47:48,984 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 12:47:49,532 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 12:47:49,645 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 12:47:49,660 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 12:47:49,757 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 12:47:49,781 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 12:47:49,951 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 12:47:49,956 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 12:47:50,051 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 12:47:50,062 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 12:47:50,196 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 12:47:50,201 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 12:47:50,293 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 12:47:50,302 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 12:47:50,414 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 12:47:50,439 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 12:47:50,452 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 12:47:50,554 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 12:47:50,559 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 12:47:50,711 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 12:47:51,740 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 168mS.
+2022-10-19 12:47:51,744 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 12:47:52,153 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 12:47:54,531 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2787mS.
+2022-10-19 12:47:54,532 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 12:47:54,534 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:50:12,086 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 337546192 Bytes (1073741824)
+2022-10-19 12:50:12,847 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 427723728 Bytes (1073741824)
+2022-10-19 12:50:13,181 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 12:50:13,181 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 12:50:13,181 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 12:50:13,181 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 12:50:13,182 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 12:50:13,464 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 12:50:13,556 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 12:50:13,572 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 12:50:13,671 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 12:50:13,694 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 12:50:13,798 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 12:50:13,804 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 12:50:13,903 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 12:50:13,915 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 12:50:14,046 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 12:50:14,050 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 12:50:14,144 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 12:50:14,152 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 12:50:14,264 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 12:50:14,472 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 12:50:14,486 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 12:50:14,590 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 12:50:14,595 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 12:50:14,741 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 12:50:15,751 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 175mS.
+2022-10-19 12:50:15,755 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 12:50:16,172 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 12:50:18,736 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2981mS.
+2022-10-19 12:50:18,737 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:50:18,739 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:53:16,478 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 654332224 Bytes (1073741824)
+2022-10-19 12:53:17,232 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 742938944 Bytes (1073741824)
+2022-10-19 12:53:17,650 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 12:53:17,650 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 12:53:17,650 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 12:53:17,651 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 12:53:17,652 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 12:53:17,991 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 12:53:18,084 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 12:53:18,097 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 12:53:18,194 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 12:53:18,215 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 12:53:18,333 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 12:53:18,338 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 12:53:18,433 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 12:53:18,444 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 12:53:18,570 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 12:53:18,574 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 12:53:18,670 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 12:53:18,681 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 12:53:18,796 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 12:53:18,820 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 12:53:18,834 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 12:53:18,937 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 12:53:18,943 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 12:53:19,086 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 12:53:19,941 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 164mS.
+2022-10-19 12:53:19,945 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 12:53:20,356 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 12:53:22,624 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2679mS.
+2022-10-19 12:53:22,625 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:53:22,628 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 12:54:14,375 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 437759488 Bytes (1073741824)
+2022-10-19 12:54:15,091 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 510637568 Bytes (1073741824)
+2022-10-19 12:54:15,420 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 12:54:15,420 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 12:54:15,420 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 12:54:15,420 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 12:54:15,421 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 12:54:15,699 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 12:54:15,790 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 12:54:15,805 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 12:54:15,902 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 12:54:15,922 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 12:54:16,022 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 12:54:16,027 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 12:54:16,122 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 12:54:16,133 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 12:54:16,262 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 12:54:16,266 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 12:54:16,358 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 12:54:16,367 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 12:54:16,476 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 12:54:16,500 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 12:54:16,513 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 12:54:16,615 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 12:54:16,620 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 12:54:16,955 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 12:54:17,956 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 155mS.
+2022-10-19 12:54:17,960 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 12:54:18,370 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 12:54:20,417 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2457mS.
+2022-10-19 12:54:20,418 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 12:54:20,420 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 13:05:13,150 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 708900128 Bytes (1073741824)
+2022-10-19 13:05:13,857 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 794929544 Bytes (1073741824)
+2022-10-19 13:05:14,196 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 13:05:14,197 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 13:05:14,197 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 13:05:14,197 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 13:05:14,210 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 13:05:14,698 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 13:05:14,796 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 13:05:14,812 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 13:05:14,915 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 13:05:14,935 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 13:05:15,090 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 13:05:15,096 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 13:05:15,194 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 13:05:15,205 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 13:05:15,336 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 13:05:15,340 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 13:05:15,430 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 13:05:15,439 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 13:05:15,548 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 13:05:15,571 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 13:05:15,585 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 13:05:15,686 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 13:05:15,691 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 13:05:15,833 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 13:05:16,689 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 163mS.
+2022-10-19 13:05:16,692 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 13:05:17,104 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 13:05:19,459 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2767mS.
+2022-10-19 13:05:19,460 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 13:05:19,463 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 13:05:41,830 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 282556416 Bytes (1073741824)
+2022-10-19 13:05:42,553 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 372207616 Bytes (1073741824)
+2022-10-19 13:05:42,955 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 13:05:42,955 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 13:05:42,956 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 13:05:42,956 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 13:05:42,957 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 13:05:43,327 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 13:05:43,420 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 13:05:43,437 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 13:05:43,538 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 13:05:43,563 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 13:05:43,666 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 13:05:43,672 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 13:05:43,771 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 13:05:43,783 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 13:05:43,914 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 13:05:43,917 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 13:05:44,011 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 13:05:44,020 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 13:05:44,132 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 13:05:44,155 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 13:05:44,168 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 13:05:44,267 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 13:05:44,272 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 13:05:44,416 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 13:05:45,264 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 151mS.
+2022-10-19 13:05:45,268 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 13:05:46,092 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 13:05:47,992 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2724mS.
+2022-10-19 13:05:47,993 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 13:05:47,996 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2022-10-19 13:06:22,614 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 298508608 Bytes (1073741824)
+2022-10-19 13:06:23,327 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 387111232 Bytes (1073741824)
+2022-10-19 13:06:23,646 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: SYS
+2022-10-19 13:06:23,646 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: RCC
+2022-10-19 13:06:23,646 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: NVIC
+2022-10-19 13:06:23,647 [INFO] BlockDiagram:2753 - set Specific Code input for plugin: GPIO
+2022-10-19 13:06:23,648 [INFO] CodeGenerator:690 - code generatio: config db path: C:\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.6.1.202207061420\\db\
+2022-10-19 13:06:23,922 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp_save
+2022-10-19 13:06:24,013 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\license.tmp
+2022-10-19 13:06:24,026 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp_save
+2022-10-19 13:06:24,119 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\gpio.tmp
+2022-10-19 13:06:24,138 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c_save
+2022-10-19 13:06:24,239 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_it.c
+2022-10-19 13:06:24,244 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h_save
+2022-10-19 13:06:24,339 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_it.h
+2022-10-19 13:06:24,349 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c_save
+2022-10-19 13:06:24,474 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\stm32f4xx_hal_msp.c
+2022-10-19 13:06:24,478 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp_save
+2022-10-19 13:06:24,570 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\MXTmpFiles\system.tmp
+2022-10-19 13:06:24,579 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h_save
+2022-10-19 13:06:24,688 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\stm32f4xx_hal_conf.h
+2022-10-19 13:06:24,712 [WARN] IPConfigManager:2910 - Warning: the RefConfig PLL2P_FOR_MCO is not available in your config.xml file
+2022-10-19 13:06:24,725 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h_save
+2022-10-19 13:06:24,829 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Inc\main.h
+2022-10-19 13:06:24,834 [INFO] CodeEngine:245 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c_save
+2022-10-19 13:06:24,979 [INFO] CodeEngine:269 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\FUNCIONES COMPLEMENTARIAS\DELAY_MICROSECONDS\Core\Src\main.c
+2022-10-19 13:06:26,188 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 156mS.
+2022-10-19 13:06:26,192 [INFO] ProjectBuilder:4117 - Project Generator version: 3.17.1
+2022-10-19 13:06:26,675 [INFO] ConfigFileManager:1394 - The Die is : DIE421
+2022-10-19 13:06:28,929 [INFO] ProjectBuilder:4285 - Time for Generating toolchain IDE Files: 2737mS.
+2022-10-19 13:06:28,931 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 13:06:28,933 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2022-10-19 13:14:13,398 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 

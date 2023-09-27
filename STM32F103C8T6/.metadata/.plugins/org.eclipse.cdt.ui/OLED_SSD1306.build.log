@@ -1,0 +1,10 @@
+13:16:53 **** Incremental Build of configuration Debug for project OLED_SSD1306 ****
+make -j4 all 
+arm-none-eabi-size   OLED_SSD1306.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4672	     20	   1572	   6264	   1878	OLED_SSD1306.elf
+Finished building: default.size.stdout
+ 
+
+13:16:54 Build Finished. 0 errors, 0 warnings. (took 393ms)
+

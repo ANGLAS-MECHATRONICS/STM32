@@ -1,0 +1,10 @@
+09:35:07 **** Build of configuration Debug for project PRUEBA_ENTRENADOR_CASERO ****
+make -j4 all 
+arm-none-eabi-size   PRUEBA_ENTRENADOR_CASERO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4924	     20	   1572	   6516	   1974	PRUEBA_ENTRENADOR_CASERO.elf
+Finished building: default.size.stdout
+ 
+
+09:35:07 Build Finished. 0 errors, 0 warnings. (took 298ms)
+

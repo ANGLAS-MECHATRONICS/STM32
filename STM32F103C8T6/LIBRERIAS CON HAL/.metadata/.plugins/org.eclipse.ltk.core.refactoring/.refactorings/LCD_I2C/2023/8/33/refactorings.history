@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;LCD_I2C/Core/Inc/LCD_I2C.h&apos; to &apos;Anglas_LCD_I2C.h&apos;" description="Rename resource &apos;LCD_I2C.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/LCD_I2C.h" name="Anglas_LCD_I2C.h" stamp="1692202873449" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;LCD_I2C/Core/Src/LCD_I2C.c&apos; to &apos;Anglas_LCD_I2C.c&apos;" description="Rename resource &apos;LCD_I2C.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/LCD_I2C.c" name="Anglas_LCD_I2C.c" stamp="1692202951269" updateReferences="true"/>
+</session>

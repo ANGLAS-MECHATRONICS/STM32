@@ -1,0 +1,10 @@
+09:35:06 **** Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1 ****
+make -j4 all 
+arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.elf 
+   text	   data	    bss	    dec	    hex	filename
+  46916	    500	   2992	  50408	   c4e8	PORTABLE DIGITAL SOURCE V1.elf
+Finished building: default.size.stdout
+ 
+
+09:35:07 Build Finished. 0 errors, 0 warnings. (took 502ms)
+

@@ -1,0 +1,10 @@
+21:00:18 **** Incremental Build of configuration Debug for project ADS1115 ****
+make -j4 all 
+arm-none-eabi-size   ADS1115.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12424	     20	   1668	  14112	   3720	ADS1115.elf
+Finished building: default.size.stdout
+ 
+
+21:00:18 Build Finished. 0 errors, 0 warnings. (took 328ms)
+

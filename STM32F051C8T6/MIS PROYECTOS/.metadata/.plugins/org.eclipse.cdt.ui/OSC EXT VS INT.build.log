@@ -1,0 +1,10 @@
+09:35:06 **** Incremental Build of configuration Debug for project OSC EXT VS INT ****
+make -j4 all 
+arm-none-eabi-size   OSC\ EXT\ VS\ INT.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6620	     20	   1644	   8284	   205c	OSC EXT VS INT.elf
+Finished building: default.size.stdout
+ 
+
+09:35:06 Build Finished. 0 errors, 0 warnings. (took 332ms)
+

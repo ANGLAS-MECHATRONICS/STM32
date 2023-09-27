@@ -1,0 +1,62 @@
+#include <stm32f446xx.h>
+#include <stm32f446xx_gpio.h>
+
+GPIO_handle_t LED;
+GPIO_handle_t BUTTON;
+
+uint8_t boton;
+uint8_t mem=0;
+uint8_t suma=0;
+
+uint8_t flagInt = 0;
+
+void delay(uint32_t cnt){
+	while(cnt)
+		cnt--;
+}
+
+
+void EXTI15_10_IRQHandler(void){
+	GPIO_IRQHandler(GPIO_PIN_13);
+	flagInt = 1;
+}
+
+void GPIO_Setup(){
+	LED.pGPIOx = GPIOA;
+	LED.GPIO_config.GPIO_Mode = GPIO_MODE_OUT;
+	LED.GPIO_config.GPIO_OType = GPIO_OType_PP;
+ 	LED.GPIO_config.GPIO_Pin = GPIO_PIN_5;
+	LED.GPIO_config.GPIO_PuPd = GPIO_PuPd_NONE;
+	LED.GPIO_config.GPIO_Speed = GPIO_SPEED_LOW;
+	GPIO_Init(&LED);
+
+	BUTTON.pGPIOx = GPIOC;
+	BUTTON.GPIO_config.GPIO_Mode = GPIO_MODE_IT_FE;
+ 	BUTTON.GPIO_config.GPIO_Pin = GPIO_PIN_13;
+	BUTTON.GPIO_config.GPIO_PuPd = GPIO_PuPd_NONE;//ya tiene pull-up externo en la nucleo
+	BUTTON.GPIO_config.GPIO_Speed = GPIO_SPEED_LOW;
+	GPIO_Init(&BUTTON);
+}
+
+int main(void){
+
+	GPIO_Setup();
+	GPIO_NVIC_IRQ_Enable(IRQ_EXTI15_10);
+
+
+    while(1){
+
+    	if(flagInt){
+    		GPIO_TogglePin(LED.pGPIOx, GPIO_PIN_5);
+    		delay(70000);
+    		flagInt = 0;
+    	}else{
+    		GPIO_WritePin(LED.pGPIOx, GPIO_PIN_5, RESET);
+    	}
+
+    }
+}
+
+void SPI1_IRQHandler(void){
+
+}

@@ -1,0 +1,3 @@
+../Core/Src/MCP4725.c:19:6:MCP4725_Out_EEPROM	32	static
+../Core/Src/MCP4725.c:35:6:MCP4725_Out	32	static
+../Core/Src/MCP4725.c:51:10:MCP4725_Read	24	static

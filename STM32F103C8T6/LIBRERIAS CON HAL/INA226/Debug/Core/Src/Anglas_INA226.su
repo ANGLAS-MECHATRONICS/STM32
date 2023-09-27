@@ -1,0 +1,7 @@
+../Core/Src/Anglas_INA226.c:20:6:INA226_Init	104	static
+../Core/Src/Anglas_INA226.c:62:7:INA226_Shunt	32	static
+../Core/Src/Anglas_INA226.c:76:7:INA226_Vbus	32	static
+../Core/Src/Anglas_INA226.c:91:7:INA226_Current	32	static
+../Core/Src/Anglas_INA226.c:105:7:INA226_Power	32	static
+../Core/Src/Anglas_INA226.c:119:10:INA226_Mode_pinAlert	32	static
+../Core/Src/Anglas_INA226.c:157:10:INA226_Alert_Limit	48	static

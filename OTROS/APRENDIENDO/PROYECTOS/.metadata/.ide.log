@@ -1,0 +1,6 @@
+2020-03-30 20:05:27,928 [INFO] Activator:176 - 
+
+
+2020-03-30 20:05:27,932 [INFO] Activator:177 - !SESSION log4j initialized
+2020-03-30 20:05:48,948 [INFO] RetryExec:97 - I/O exception (java.net.SocketException) caught when processing request to {}->http://downloads.genuitec.com:80: Socket Closed
+2020-03-30 20:05:48,952 [INFO] RetryExec:113 - Retrying request to {}->http://downloads.genuitec.com:80

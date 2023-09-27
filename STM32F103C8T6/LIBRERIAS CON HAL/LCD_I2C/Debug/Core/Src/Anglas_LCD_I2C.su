@@ -1,0 +1,12 @@
+../Core/Src/Anglas_LCD_I2C.c:19:13:LCD_I2C_WriteCommand	32	static
+../Core/Src/Anglas_LCD_I2C.c:34:13:LCD_I2C_WriteData	32	static
+../Core/Src/Anglas_LCD_I2C.c:49:6:LCD_I2C_Init	16	static
+../Core/Src/Anglas_LCD_I2C.c:81:6:LCD_I2C_ClearText	8	static
+../Core/Src/Anglas_LCD_I2C.c:86:13:LCD_I2C_Blink	8	static
+../Core/Src/Anglas_LCD_I2C.c:89:13:LCD_I2C_NoBlink	8	static
+../Core/Src/Anglas_LCD_I2C.c:93:6:LCD_I2C_Set_Cursor_Blink	16	static
+../Core/Src/Anglas_LCD_I2C.c:113:6:LCD_I2C_WriteText	16	static
+../Core/Src/Anglas_LCD_I2C.c:133:6:LCD_I2C_Shift_Right	8	static
+../Core/Src/Anglas_LCD_I2C.c:134:6:LCD_I2C_Shift_Left	8	static
+../Core/Src/Anglas_LCD_I2C.c:138:6:LCD_I2C_CGRAM_CreateChar	24	static
+../Core/Src/Anglas_LCD_I2C.c:148:6:LCD_I2C_CGRAM_WriteChar	16	static

@@ -1,0 +1,10 @@
+19:47:23 **** Incremental Build of configuration Debug for project ELMINAR_YAAA ****
+make -j4 all 
+arm-none-eabi-size   ELMINAR_YAAA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5092	     20	   1572	   6684	   1a1c	ELMINAR_YAAA.elf
+Finished building: default.size.stdout
+ 
+
+19:47:24 Build Finished. 0 errors, 0 warnings. (took 317ms)
+

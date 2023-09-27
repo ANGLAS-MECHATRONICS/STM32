@@ -1,0 +1,10 @@
+12:47:13 **** Build of configuration Debug for project DHT11 ****
+make -j4 all 
+arm-none-eabi-size   DHT11.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9136	     20	   1652	  10808	   2a38	DHT11.elf
+Finished building: default.size.stdout
+ 
+
+12:47:13 Build Finished. 0 errors, 0 warnings. (took 325ms)
+

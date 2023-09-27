@@ -1,0 +1,100 @@
+/*
+ * INA226.c
+ *
+ *  Created on: May 20, 2023
+ *      Author: Giovanny Anglas
+ */
+
+/* Includes ------------------------------------------------------------------*/
+#include "main.h"
+#include "INA226.h"
+/* Exported types ------------------------------------------------------------*/
+/* Exported constant ---------------------------------------------------------*/
+/* Exported macros -----------------------------------------------------------*/
+/* Private macros ------------------------------------------------------------*/
+/* Variables -----------------------------------------------------------------*/
+inaDet ina;
+/* Private functions ---------------------------------------------------------*/
+/* Exported functions --------------------------------------------------------*/
+uint16_t  INA226_Shunt(void){
+	int16_t dato;
+	uint8_t datos[3];
+	uint8_t MSB,LSB;
+
+
+	/*
+	 * bit 15   : 0   (No reinicio)
+	 * bit 14-12: 100 (valor fijo del datasheet)
+	 * bit 11-9 : 000 (AVG=1 o promedios del numero de muestras)
+	 * bit  8-6 : 100 (T=1.1ms tiempo de conversion del voltaje bus)
+	 * bit  5-3 : 100 (T=1.1ms tiempo de conversion del voltaje shunt)
+	 * bit  2-0 : 111 (Shunt & Bus continuo, modo de operacion)
+	*/
+
+    // STEP1: Configuracion
+	MSB = 0b01000001;
+	LSB = 0b00100111;
+
+	datos[0] = INA_CONFIGURATION_REGISTER;
+	datos[1] = MSB;
+	datos[2] = LSB;
+	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 3, 100);
+
+	// STEP2: Shunt
+
+	datos[0] = INA_SHUNT_VOLTAGE_REGISTER;
+	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1, 100);
+
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
+	dato = ((datos[0]<<8)|datos[1]);
+
+	return dato;
+}
+
+uint16_t  INA226_Bus(void){
+	int16_t dato;
+	uint8_t datos[3];
+
+	datos[0] = INA_BUS_VOLTAGE_REGISTER;
+	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1, 100);
+
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
+	dato = ((datos[0]<<8)|datos[1]);
+
+	return dato;
+}
+
+void INA226_Init(const uint8_t maxBusAmps, const uint32_t microOhmR){
+	uint8_t datos[3];
+	uint8_t MSB,LSB;
+
+	ina.current_LSB = (uint64_t)maxBusAmps*1000000000/32767; // Get the best possible LSB in nA
+	ina.calibration = (uint64_t)51200000 / ((uint64_t)ina.current_LSB * (uint64_t)microOhmR / (uint64_t)100000);  // Compute calibration register
+	// 5120000/ina.current_LSB * microOhmR/1000000
+	ina.power_LSB   = (uint32_t)25*ina.current_LSB;   // Fixed multiplier for INA219
+
+
+    // STEP4: Calibracion
+	MSB = (uint8_t)(ina.calibration >> 8);
+	LSB = (uint8_t)(ina.calibration & 0xFF);
+
+	datos[0] = INA_CALIBRATION_REGISTER;
+	datos[1] = MSB;
+	datos[2] = LSB;
+	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 3, 100);
+
+}
+
+uint16_t  INA226_Current(void){
+	int16_t dato;
+	uint32_t current;
+	uint8_t datos[3];
+
+	datos[0] = INA_CURRENT_REGISTER;
+	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1, 100);
+
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
+	dato = ((datos[0]<<8)|datos[1]);
+	current = dato * ina.current_LSB/1000000;
+	return (uint16_t)current;
+}

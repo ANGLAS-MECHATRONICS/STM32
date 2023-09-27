@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.st.stm32cube.common.feature.mx.stinsider:6.7.0.202211181646"/>
+		<item value="com.st.stm32cube.common.feature.mx:6.7.0.202211181646"/>
+		<item value="org.eclipse.cdt.debug.gdbjtag:10.6.2.202205081303"/>
+		<item value="org.eclipse.cdt.gdb:10.6.2.202205081303"/>
+		<item value="org.eclipse.cdt.native:10.6.2.202205170638"/>
+		<item value="org.eclipse.cdt.platform:10.6.2.202205170638"/>
+		<item value="org.eclipse.cdt:10.6.2.202205170638"/>
+		<item value="org.eclipse.emf.common:2.25.0.v20220123-0838"/>
+		<item value="org.eclipse.emf.ecore:2.27.0.v20220123-0838"/>
+		<item value="org.eclipse.epp.mpc:1.9.3.v20220121-1317"/>
+		<item value="org.eclipse.help:2.3.900.v20220308-0310"/>
+		<item value="org.eclipse.platform:4.23.0.v20220308-0722"/>
+		<item value="org.eclipse.rcp:4.23.0.v20220308-0722"/>
+		<item value="org.eclipse.remote.console:10.6.0.202201121912"/>
+		<item value="org.eclipse.remote.serial:10.6.0.202201121912"/>
+		<item value="org.eclipse.remote:10.6.0.202201121912"/>
+		<item value="org.eclipse.tm.terminal.control.feature:10.6.0.202202251626"/>
+		<item value="org.eclipse.userstorage:1.2.0.v20210517-0327"/>
+	</list>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="true"/>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\OLED_SSD1306"/>
+		</list>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="619"/>
+		<item key="DIALOG_Y_ORIGIN" value="94"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="645"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

@@ -1,0 +1,10 @@
+21:57:00 **** Incremental Build of configuration Debug for project OSCILADOR INTERNO VS EXTERNO ****
+make -j4 all 
+arm-none-eabi-size   OSCILADOR\ INTERNO\ VS\ EXTERNO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5564	     20	   1644	   7228	   1c3c	OSCILADOR INTERNO VS EXTERNO.elf
+Finished building: default.size.stdout
+ 
+
+21:57:00 Build Finished. 0 errors, 0 warnings. (took 390ms)
+

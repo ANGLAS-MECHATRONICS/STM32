@@ -1,0 +1,10 @@
+10:21:36 **** Clean-only build of configuration Debug for project stm32f4xx_drivers ****
+make -j4 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/GPIO2_INT.d ./Src/GPIO2_INT.o ./Src/GPIO2_INT.su
+rm -rf ./Drivers/Src/stm32f446xx_gpio.d ./Drivers/Src/stm32f446xx_gpio.o ./Drivers/Src/stm32f446xx_gpio.su
+rm -rf default.size.stdout stm32f4xx_drivers.elf stm32f4xx_drivers.list stm32f4xx_drivers.map
+ 
+
+10:21:37 Build Finished. 0 errors, 0 warnings. (took 518ms)
+

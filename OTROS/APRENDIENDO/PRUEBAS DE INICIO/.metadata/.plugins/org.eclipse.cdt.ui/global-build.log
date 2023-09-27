@@ -1,0 +1,7 @@
+17:34:03 **** Build of configuration Debug for project GPIO_ENTRADA ****
+make -j4 all 
+arm-none-eabi-size   GPIO_ENTRADA.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4744	     20	   1572	   6336	   18c0	GPIO_ENTRADA.elf
+Finished building: default.size.stdout
+ 

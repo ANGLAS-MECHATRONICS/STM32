@@ -1,0 +1,10 @@
+11:31:21 **** Incremental Build of configuration Debug for project MCP4725 ****
+make -j4 all 
+arm-none-eabi-size   MCP4725.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10596	     20	   1652	  12268	   2fec	MCP4725.elf
+Finished building: default.size.stdout
+ 
+
+11:31:21 Build Finished. 0 errors, 0 warnings. (took 309ms)
+

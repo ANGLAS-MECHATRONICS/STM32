@@ -1,0 +1,2 @@
+../Middlewares/ST/STM32_TouchSensing_Library/src/tsl_filter.c:103:13:TSL_filt_MeasFilter	24	static
+../Middlewares/ST/STM32_TouchSensing_Library/src/tsl_filter.c:130:14:TSL_filt_DeltaFilter	16	static

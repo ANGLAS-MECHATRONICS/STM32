@@ -1,0 +1,10 @@
+18:11:23 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE2 ****
+make -j4 all 
+arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  42784	    492	   1884	  45160	   b068	PORTABLE DIGITAL SOURCE2.elf
+Finished building: default.size.stdout
+ 
+
+18:11:24 Build Finished. 0 errors, 0 warnings. (took 429ms)
+

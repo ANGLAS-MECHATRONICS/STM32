@@ -1,0 +1,6 @@
+../Core/Src/main.c:65:5:main	8	static
+../Core/Src/main.c:148:6:SystemClock_Config	88	static
+../Core/Src/main.c:192:13:MX_ADC1_Init	24	static
+../Core/Src/main.c:239:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:278:9:pressButtonEncoder	24	static
+../Core/Src/main.c:300:6:Error_Handler	4	static,ignoring_inline_asm
