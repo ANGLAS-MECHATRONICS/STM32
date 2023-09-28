@@ -93,7 +93,6 @@ int main(void)
 
   alert = INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//enable/disable alert pin
   alertLimit = INA226_Alert_Limit(401);//escribo el umbral para activar el pin alert
-
   /* USER CODE END 2 */
 
   /* Infinite loop */

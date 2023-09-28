@@ -2838,18 +2838,18 @@ LOAD f:/program files/stm32cubeide_1.11.0/stm32cubeide/plugins/com.st.stm32cube.
  .debug_macro   0x0000000000015d08      0x1dc ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
  .debug_macro   0x0000000000015ee4      0x1a0 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
 
-.debug_line     0x0000000000000000     0x8b2f
+.debug_line     0x0000000000000000     0x8b2e
  .debug_line    0x0000000000000000      0x8c0 ./Core/Src/Anglas_INA226.o
- .debug_line    0x00000000000008c0      0x774 ./Core/Src/main.o
- .debug_line    0x0000000000001034      0x6bf ./Core/Src/stm32f1xx_hal_msp.o
- .debug_line    0x00000000000016f3      0x736 ./Core/Src/stm32f1xx_it.o
- .debug_line    0x0000000000001e29      0x6f2 ./Core/Src/system_stm32f1xx.o
- .debug_line    0x000000000000251b       0x86 ./Core/Startup/startup_stm32f103c8tx.o
- .debug_line    0x00000000000025a1      0x91f ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
- .debug_line    0x0000000000002ec0      0xb07 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
- .debug_line    0x00000000000039c7      0x9b8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
- .debug_line    0x000000000000437f     0x3a85 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
- .debug_line    0x0000000000007e04      0xd2b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
+ .debug_line    0x00000000000008c0      0x773 ./Core/Src/main.o
+ .debug_line    0x0000000000001033      0x6bf ./Core/Src/stm32f1xx_hal_msp.o
+ .debug_line    0x00000000000016f2      0x736 ./Core/Src/stm32f1xx_it.o
+ .debug_line    0x0000000000001e28      0x6f2 ./Core/Src/system_stm32f1xx.o
+ .debug_line    0x000000000000251a       0x86 ./Core/Startup/startup_stm32f103c8tx.o
+ .debug_line    0x00000000000025a0      0x91f ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.o
+ .debug_line    0x0000000000002ebf      0xb07 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.o
+ .debug_line    0x00000000000039c6      0x9b8 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.o
+ .debug_line    0x000000000000437e     0x3a85 ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.o
+ .debug_line    0x0000000000007e03      0xd2b ./Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.o
 
 .debug_str      0x0000000000000000    0x7e933
  .debug_str     0x0000000000000000    0x7cb26 ./Core/Src/Anglas_INA226.o
