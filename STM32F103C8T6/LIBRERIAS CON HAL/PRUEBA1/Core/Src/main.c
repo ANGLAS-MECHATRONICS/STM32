@@ -92,7 +92,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   LCD_I2C_Init();
   LCD_I2C_WriteText(1,1," STM32F103C8T6  ");
-  LCD_I2C_WriteText(2,1,"  LCD 16x2 20x4 ");
+  LCD_I2C_WriteText(2,1,"GIOVANNY ANGLAS ");
 
   /* USER CODE END 2 */
 

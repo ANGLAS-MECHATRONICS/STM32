@@ -427,7 +427,7 @@ int main(void)
  8000366:	2101      	movs	r1, #1
  8000368:	2001      	movs	r0, #1
  800036a:	f7ff ffa9 	bl	80002c0 <LCD_I2C_WriteText>
-  LCD_I2C_WriteText(2,1,"  LCD 16x2 20x4 ");
+  LCD_I2C_WriteText(2,1,"GIOVANNY ANGLAS ");
  800036e:	4a04      	ldr	r2, [pc, #16]	; (8000380 <main+0x34>)
  8000370:	2101      	movs	r1, #1
  8000372:	2002      	movs	r0, #2
