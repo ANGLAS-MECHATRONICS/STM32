@@ -1,7 +1,14 @@
-10:55:50 **** Build of configuration Debug for project LCD_I2C ****
+11:06:30 **** Incremental Build of configuration Debug for project ENCODER_ROTATIVO_LCD_I2C ****
 make -j4 all 
-arm-none-eabi-size   LCD_I2C.elf 
+arm-none-eabi-gcc "../Core/Src/Anglas_ENCODER_ROT.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/Anglas_ENCODER_ROT.d" -MT"Core/Src/Anglas_ENCODER_ROT.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Anglas_ENCODER_ROT.o"
+arm-none-eabi-gcc -o "ENCODER_ROTATIVO_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\ENCODER_ROTATIVO_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ENCODER_ROTATIVO_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ENCODER_ROTATIVO_LCD_I2C.elf
+ 
+arm-none-eabi-size   ENCODER_ROTATIVO_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  ENCODER_ROTATIVO_LCD_I2C.elf  > "ENCODER_ROTATIVO_LCD_I2C.list"
    text	   data	    bss	    dec	    hex	filename
-  24440	    484	   1700	  26624	   6800	LCD_I2C.elf
+  13364	    128	   1776	  15268	   3ba4	ENCODER_ROTATIVO_LCD_I2C.elf
 Finished building: default.size.stdout
+ 
+Finished building: ENCODER_ROTATIVO_LCD_I2C.list
  

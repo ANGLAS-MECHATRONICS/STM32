@@ -16,9 +16,11 @@
 
 /* Variables -----------------------------------------------------------------*/
 uint8_t bit_anterior = 0, bit_actual = 0, bit_armado = 0;
+
 int16_t val_Min_Encoder = 0;
 int16_t val_Max_Encoder = 30;
 int16_t valor_Encoder   = 10;//valor inicial del encoder
+int16_t paso_Encoder    = 1;
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -30,12 +32,12 @@ uint16_t Encoder_Run(void){
     bit_anterior = bit_actual;
 
     //Lectura de encoder rotativo de 20 posiciones
-    if(bit_armado==14) valor_Encoder+=1;//horario
-    if(bit_armado==4)  valor_Encoder-=1;//antihorario
+    if(bit_armado==14) valor_Encoder+=paso_Encoder;//horario
+    if(bit_armado==4)  valor_Encoder-=paso_Encoder;//antihorario
 
     //Lectura de encoder rotativo de 30 posiciones
-    //if( (bit_armado==14)||(bit_armado==7) ) valor_Encoder+=10;//horario
-    //if( (bit_armado==4) ||(bit_armado==2) ) valor_Encoder-=10;//antihorario
+    //if( (bit_armado==14)||(bit_armado==7) ) valor_Encoder+=paso_Encoder;//horario
+    //if( (bit_armado==4) ||(bit_armado==2) ) valor_Encoder-=paso_Encoder;//antihorario
 
     if(valor_Encoder <= val_Min_Encoder) valor_Encoder = val_Min_Encoder;
     if(valor_Encoder >= val_Max_Encoder) valor_Encoder = val_Max_Encoder;
