@@ -21593,3 +21593,7 @@
 2023-09-28 16:00:36,177 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3506mS.
 2023-09-28 16:00:36,178 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
 2023-09-28 16:00:36,180 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-09-28 16:37:17,311 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-09-28 16:37:33,062 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-09-28 16:37:33,170 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-09-28 16:37:34,763 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
