@@ -22651,3 +22651,36 @@
 2023-10-04 11:24:38,813 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 6915mS.
 2023-10-04 11:24:38,814 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
 2023-10-04 11:24:38,816 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-04 11:31:11,584 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 744286216 Bytes (878706688)
+2023-10-04 11:31:12,121 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-04 11:31:12,121 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-04 11:31:12,122 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-04 11:31:12,122 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-04 11:31:12,122 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-04 11:31:12,123 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-04 11:31:12,124 [WARN] IP:2112 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
+2023-10-04 11:31:12,124 [WARN] IP:2112 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2023-10-04 11:31:12,399 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\MXTmpFiles\license.tmp_save
+2023-10-04 11:31:12,557 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\MXTmpFiles\license.tmp
+2023-10-04 11:31:12,689 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\MXTmpFiles\gpio.tmp_save
+2023-10-04 11:31:12,887 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\MXTmpFiles\gpio.tmp
+2023-10-04 11:31:12,939 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Src\stm32f1xx_it.c_save
+2023-10-04 11:31:13,099 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Src\stm32f1xx_it.c
+2023-10-04 11:31:13,106 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Inc\stm32f1xx_it.h_save
+2023-10-04 11:31:13,238 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Inc\stm32f1xx_it.h
+2023-10-04 11:31:13,249 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Src\stm32f1xx_hal_msp.c_save
+2023-10-04 11:31:13,583 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Src\stm32f1xx_hal_msp.c
+2023-10-04 11:31:13,589 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\MXTmpFiles\system.tmp_save
+2023-10-04 11:31:13,718 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\MXTmpFiles\system.tmp
+2023-10-04 11:31:13,733 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Inc\stm32f1xx_hal_conf.h_save
+2023-10-04 11:31:13,974 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Inc\stm32f1xx_hal_conf.h
+2023-10-04 11:31:14,018 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Inc\main.h_save
+2023-10-04 11:31:14,186 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Inc\main.h
+2023-10-04 11:31:14,192 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Src\main.c_save
+2023-10-04 11:31:14,435 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\Core\Src\main.c
+2023-10-04 11:31:15,637 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 167mS.
+2023-10-04 11:31:15,641 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-04 11:31:16,327 [INFO] ConfigFileManager:1396 - The Die is : DIE410
+2023-10-04 11:31:19,188 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3547mS.
+2023-10-04 11:31:19,189 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-04 11:31:19,191 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.

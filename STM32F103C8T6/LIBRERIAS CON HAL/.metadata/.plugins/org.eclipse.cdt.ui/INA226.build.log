@@ -1,4 +1,4 @@
-22:23:40 **** Incremental Build of configuration Debug for project INA226 ****
+11:37:13 **** Incremental Build of configuration Debug for project INA226 ****
 make -j4 all 
 arm-none-eabi-size   INA226.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   INA226.elf
 Finished building: default.size.stdout
  
 
-22:23:40 Build Finished. 0 errors, 0 warnings. (took 561ms)
+11:37:13 Build Finished. 0 errors, 0 warnings. (took 330ms)
 
