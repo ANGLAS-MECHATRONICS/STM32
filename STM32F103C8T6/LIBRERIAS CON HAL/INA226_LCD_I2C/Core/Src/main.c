@@ -21,8 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "Anglas_INA226.h"
 #include "stdio.h"
+#include "Anglas_INA226.h"
 #include "Anglas_LCD_I2C.h"
 /* USER CODE END Includes */
 
@@ -94,8 +94,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
   INA226_Init(3000,25,AVG_4,T_Vbus_1_1ms,T_Vshunt_1_1ms,MODE_SHUNT_BUS_CONTINUOUS);
 
-  alert = INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//enable/disable alert pin
-  alertLimit = INA226_Alert_Limit(401);//escribo el umbral para activar el pin alert
+  INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//enable/disable alert pin
+  INA226_Alert_Limit(70);//escribo el umbral para activar el pin alert
 
   LCD_I2C_Init();
   LCD_I2C_WriteText(1,1," STM32F103C8T6  ");
@@ -110,7 +110,7 @@ int main(void)
   while (1)
   {
 	  voltage = INA226_Vbus();
-	  sprintf(buff,"V:%2.1fV",voltage);
+	  sprintf(buff,"V:%2.1fV ",voltage);
 	  LCD_I2C_WriteText(1,1,buff);
 
 	  current = INA226_Current();
@@ -118,7 +118,7 @@ int main(void)
 	  LCD_I2C_WriteText(1,9,buff);
 
 	  power   = INA226_Power();
-	  sprintf(buff,"P: %2.1fW",power);
+	  sprintf(buff,"P: %2.1fW ",power);
 	  LCD_I2C_WriteText(2,1,buff);
     /* USER CODE END WHILE */
 

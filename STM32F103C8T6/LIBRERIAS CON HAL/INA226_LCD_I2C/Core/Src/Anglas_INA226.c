@@ -98,6 +98,27 @@ float INA226_Current(void){
 	uint32_t current;
 	uint8_t datos[3];
 
+	//todo esto es lo mismo que float INA226_Vshunt(void) ya que si ingreso esta funcion dentro de esta funcion, no me deja hacer debug
+	datos[0] = INA_SHUNT_VOLTAGE_REGISTER;
+	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1, 100);
+
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
+	dato = ((datos[0]<<8)|datos[1]);
+
+	if(dato >= 65534){//si no hay carga conectada, devuelve el dato 65535(puede oscilar entre 65534 y 65535)
+		return 0;
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////
+	}else{
+		datos[0] = INA_CURRENT_REGISTER;
+		HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1, 100);
+
+		HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
+		dato = ((datos[0]<<8)|datos[1]);
+		current = (uint32_t)dato * (ina.current_LSB-900);
+		return current/1000000.0;//mA;
+	}
+
+	/* Esto funciona pero no permite hacer debug, porque uso INA226_Vshunt(void) dentro de INA226_Current(void)
 	if(INA226_Vshunt() == 0){
 		return 0;
 	}else{
@@ -108,7 +129,7 @@ float INA226_Current(void){
 		dato = ((datos[0]<<8)|datos[1]);
 		current = (uint32_t)dato * (ina.current_LSB-900);
 		return current/1000000.0;//mA;
-	}
+	}*/
 }
 
 float INA226_Power(void){
