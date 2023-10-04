@@ -1,7 +1,112 @@
-11:49:49 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+13:24:29 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
 make -j4 all 
 arm-none-eabi-size   INA226_LCD_I2C.elf 
    text	   data	    bss	    dec	    hex	filename
-  29264	    484	   1724	  31472	   7af0	INA226_LCD_I2C.elf
+  28912	    484	   1724	  31120	   7990	INA226_LCD_I2C.elf
 Finished building: default.size.stdout
+ 
+13:24:39 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28912	    484	   1724	  31120	   7990	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+13:25:47 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
+ 
+13:26:20 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
+ 
+13:26:59 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
+ 
+13:27:30 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
+ 
+13:27:49 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
+ 
+13:28:13 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
+ 
+13:29:23 **** Incremental Build of configuration Debug for project INA226_LCD_I2C ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "INA226_LCD_I2C.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\INA226_LCD_I2C\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="INA226_LCD_I2C.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: INA226_LCD_I2C.elf
+ 
+arm-none-eabi-size   INA226_LCD_I2C.elf 
+arm-none-eabi-objdump -h -S  INA226_LCD_I2C.elf  > "INA226_LCD_I2C.list"
+   text	   data	    bss	    dec	    hex	filename
+  28896	    484	   1724	  31104	   7980	INA226_LCD_I2C.elf
+Finished building: default.size.stdout
+ 
+Finished building: INA226_LCD_I2C.list
  
