@@ -2844,7 +2844,7 @@ void SystemInit (void)
 Reset_Handler:
 
 /* Call the clock system initialization function.*/
-    bl  SystemInit
+  bl  SystemInit
  80019c4:	f7ff fff7 	bl	80019b6 <SystemInit>
 
 /* Copy the data segment initializers from flash to SRAM */
