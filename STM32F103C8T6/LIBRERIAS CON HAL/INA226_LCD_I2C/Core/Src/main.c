@@ -92,10 +92,10 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  INA226_Init(3000,25,AVG_4,T_Vbus_1_1ms,T_Vshunt_1_1ms,MODE_SHUNT_BUS_CONTINUOUS);
+  INA226_Init(3000,25,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);
 
   INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//enable/disable alert pin
-  INA226_Alert_Limit(70);//escribo el umbral para activar el pin alert
+  INA226_Alert_Limit(150);//escribo el umbral para activar el pin alert
 
   LCD_I2C_Init();
   LCD_I2C_WriteText(1,1," STM32F103C8T6  ");
@@ -120,6 +120,8 @@ int main(void)
 	  power   = INA226_Power();
 	  sprintf(buff,"P: %2.1fW ",power);
 	  LCD_I2C_WriteText(2,1,buff);
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
