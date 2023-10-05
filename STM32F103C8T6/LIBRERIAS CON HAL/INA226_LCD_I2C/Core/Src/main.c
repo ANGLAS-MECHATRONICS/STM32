@@ -45,7 +45,6 @@ I2C_HandleTypeDef hi2c1;
 
 /* USER CODE BEGIN PV */
 float power, current,shunt,voltage;
-uint16_t alert,alertLimit;
 char buff[16];
 /* USER CODE END PV */
 
@@ -94,7 +93,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   INA226_Init(3000,25,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);
 
-  INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//enable/disable alert pin
+  INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//superar la CORRIENTE de
   INA226_Alert_Limit(150);//escribo el umbral para activar el pin alert
 
   LCD_I2C_Init();
