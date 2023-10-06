@@ -97,7 +97,7 @@ typedef struct {                                                            // S
   uint16_t mask_Enable;
 } Anglas_IN226; // of structure
 /* Exported functions prototypes ---------------------------------------------*/
-void INA226_Init(const uint16_t maxBusMiliampers, const uint16_t resMiliohmios, uint16_t AVG, uint16_t Time_Vbus, uint16_t Time_Vshunt, uint16_t ModeOperation);
+void INA226_Init(const double Maximum_Expected_Current, const uint16_t resMiliohmios, uint16_t AVG, uint16_t Time_Vbus, uint16_t Time_Vshunt, uint16_t ModeOperation);
 
 float INA226_Vshunt(void);
 float INA226_Vbus(void);

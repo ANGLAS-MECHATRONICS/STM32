@@ -91,7 +91,7 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  INA226_Init(3000,25,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);
+  INA226_Init(3.2768,25,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);
 
   INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);//superar la CORRIENTE de
   INA226_Alert_Limit(150);//escribo el umbral para activar el pin alert
@@ -119,6 +119,13 @@ int main(void)
 	  power   = INA226_Power();
 	  sprintf(buff,"P: %2.1fW ",power);
 	  LCD_I2C_WriteText(2,1,buff);
+
+	  shunt = INA226_Vshunt();
+	  sprintf(buff,"P: %2.2fmV ",shunt);
+	  LCD_I2C_WriteText(2,10,buff);
+
+
+	  //HAL_Delay(500);
 
 
     /* USER CODE END WHILE */

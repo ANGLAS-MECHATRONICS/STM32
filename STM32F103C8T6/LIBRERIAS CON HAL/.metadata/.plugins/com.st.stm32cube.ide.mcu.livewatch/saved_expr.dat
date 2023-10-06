@@ -1,6 +1,8 @@
 voltage
 current
 power
-alert
-alertLimit
-INA226_Vshunt()
+ina.current_LSB
+ina.calibration
+ina.power_LSB
+shunt
+adc

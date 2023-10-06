@@ -17,7 +17,7 @@
 Anglas_IN226 ina;
 /* Private functions ---------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
-void INA226_Init(const uint16_t maxBusMiliampers, const uint16_t resMiliohmios, uint16_t AVG, uint16_t Time_Vbus, uint16_t Time_Vshunt, uint16_t ModeOperation){
+void INA226_Init(const double Maximum_Expected_Current, const uint16_t resMiliohmios, uint16_t AVG, uint16_t Time_Vbus, uint16_t Time_Vshunt, uint16_t ModeOperation){
 	uint8_t datos[3];
 	uint8_t MSB,LSB;
 	uint16_t REGISTER;
@@ -42,13 +42,13 @@ void INA226_Init(const uint16_t maxBusMiliampers, const uint16_t resMiliohmios, 
 	datos[2] = LSB;
 	HAL_I2C_Master_Transmit (&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 3, 100);
 
-	ina.current_LSB = (uint64_t)maxBusMiliampers*1000000/32767; // Conseguir el mejor LSB posible en nA
-	ina.calibration = (uint64_t)5120000 / ((uint64_t)ina.current_LSB * (uint64_t)resMiliohmios / (uint64_t)1000);  // Compute calibration register
+	ina.current_LSB = (Maximum_Expected_Current*1000000000/32768); // Conseguir el mejor LSB posible en nA
+	ina.calibration = (float)5120000 / ((float)ina.current_LSB * ina.Rshunt/1000);  // Compute calibration register(CAL)
 
 	//La formula para "power_LSB" es solo multiplicar "current_LSB" por 25 (pag.16 datasheet)
 	//Lo resto 900 para calibrar(probar desde 600 - 1500 )
 	//Lo divido entre 1000 porq el numero es muy grande y para la operacion de "INA226_Power()" el numero excede de uint32_t
-	ina.power_LSB   = (uint32_t)25*(ina.current_LSB-900)/1000;
+	ina.power_LSB   = (float)25 * ina.current_LSB/1000;
 
 	MSB = (uint8_t)(ina.calibration >> 8);
 	LSB = (uint8_t)(ina.calibration & 0xFF);
@@ -114,8 +114,8 @@ float INA226_Current(void){
 
 		HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 		dato = ((datos[0]<<8)|datos[1]);
-		current = (uint32_t)dato * (ina.current_LSB-900);
-		return current/1000000.0;//mA;
+		current = (uint32_t)dato * ina.current_LSB;
+		return current/1000000;//mA;
 	}
 
 	/* Esto funciona pero no permite hacer debug, porque uso INA226_Vshunt(void) dentro de INA226_Current(void)

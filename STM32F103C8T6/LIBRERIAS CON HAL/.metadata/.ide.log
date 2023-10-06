@@ -23925,3 +23925,26 @@
 2023-10-04 17:39:46,227 [WARN] IP:2112 - Analog_Filter not found: check if there is a RefParameter without a condition.
 2023-10-04 17:39:46,236 [WARN] IP:2112 - I2C_Coeff_DF not found: check if there is a RefParameter without a condition.
 2023-10-04 17:39:46,236 [WARN] IP:2112 - Analog_Filter not found: check if there is a RefParameter without a condition.
+2023-10-04 19:11:55,691 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-10-04 19:12:15,775 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-10-04 19:12:27,381 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-10-04 19:12:29,003 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-10-04 20:49:31,090 [INFO] Activator:179 - 
+
+
+2023-10-04 20:49:31,091 [INFO] Activator:180 - !SESSION log4j initialized
+2023-10-04 22:21:41,069 [INFO] Activator:179 - 
+
+
+2023-10-04 22:21:41,090 [INFO] Activator:180 - !SESSION log4j initialized
+2023-10-05 10:19:38,374 [INFO] Activator:179 - 
+
+
+2023-10-05 10:19:38,395 [INFO] Activator:180 - !SESSION log4j initialized
+2023-10-05 15:00:00,238 [ERROR] ConfigurationRetriever:140 - IOException on connection: sw-center.st.com
+2023-10-05 15:00:00,243 [ERROR] ConfigurationRetriever:140 - IOException on connection: sw-center.st.com
+2023-10-05 15:00:00,263 [ERROR] ConfigurationRetriever:140 - IOException on connection: sw-center.st.com
+2023-10-05 18:23:23,602 [INFO] Activator:179 - 
+
+
+2023-10-05 18:23:23,603 [INFO] Activator:180 - !SESSION log4j initialized
