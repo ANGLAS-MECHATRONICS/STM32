@@ -29,6 +29,7 @@
 #include "Anglas_IMAGENES.h"
 #include "Anglas_ENCODER_ROT.h"
 #include "Anglas_INA226.h"
+#include "Anglas_FUNCION_MAP.h"
 
 #include "eeprom.h"
 #include "eeprom_Config.h"
@@ -56,6 +57,7 @@ DAC_HandleTypeDef hdac1;
 I2C_HandleTypeDef hi2c1;
 
 TIM_HandleTypeDef htim6;
+TIM_HandleTypeDef htim15;
 
 /* USER CODE BEGIN PV */
 char buff[16];
@@ -73,6 +75,7 @@ uint16_t contButton=0;
 uint8_t memButton=0;
 uint8_t powerSupply=0;
 uint8_t mem=0,suma=0;//variables para el pulsador del encoder
+uint16_t FFF,AAA=5050;
 
 extern float valor_Encoder;
 extern float paso_Encoder;
@@ -86,11 +89,13 @@ static void MX_I2C1_Init(void);
 static void MX_TIM6_Init(void);
 static void MX_DAC1_Init(void);
 static void MX_ADC_Init(void);
+static void MX_TIM15_Init(void);
 /* USER CODE BEGIN PFP */
 void medirVoltage(void);
 void medirCorriente(void);
 void medirPotencia(void);
 void Control_Estabilizar(void);
+void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -130,6 +135,7 @@ int main(void)
   MX_TIM6_Init();
   MX_DAC1_Init();
   MX_ADC_Init();
+  MX_TIM15_Init();
   /* USER CODE BEGIN 2 */
 
 
@@ -141,13 +147,15 @@ int main(void)
 
   OLED_Init();
   //OLED_Imagen(AM_INTRO);
-  OLED_Imagen_Small(1,0, AM_INTRO, 128, 64);
+  OLED_Imagen_Small(2,0, AM_INTRO, 128, 64);
   OLED_Print_Text(1,0,1,"Designed by G. Anglas");
   while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
   HAL_TIM_Base_Start_IT(&htim6);
+
+
   OLED_Clear();
 
-  INA226_Init(3.2768,25,AVG_128,T_Vbus_588us,T_Vshunt_588us,MODE_SHUNT_BUS_CONTINUOUS);
+  INA226_Init(3.2768,25,AVG_64,T_Vbus_588us,T_Vshunt_588us,MODE_SHUNT_BUS_CONTINUOUS);
   OLED_Print_Text(3,104,2,"OFF");
   OLED_Print_Text(2,104,1,"0.1");
 
@@ -157,6 +165,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+//	  for(uint8_t i=1; i<=10; i++){
+//		  PWM_set_Freq_DutyCycle(1000*i,50,500);
+//		  HAL_Delay(500);
+//	  }
 
 	  ///////////////////////////// ICONO DE CARGA BATERIA////////////////////////////////////////////////////
 	  if(HAL_GPIO_ReadPin(stateCharger_GPIO_Port, stateCharger_Pin)==1){//Cuando se conecta el cargador
@@ -197,6 +209,7 @@ int main(void)
     	  OLED_Print_Text(3,104,2,"ON ");
     	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
     	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
+    	  PWM_set_Freq_DutyCycle(4000,50,100);
     	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
     	  ee_commit();
       }
@@ -206,6 +219,7 @@ int main(void)
     	  OLED_Print_Text(3,104,2,"OFF");
     	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
     	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
+    	  PWM_set_Freq_DutyCycle(1000,50,100);
     	  ENCO=0;//ver si eliminar esta linea
       }
       //SWITCH SW1
@@ -226,6 +240,7 @@ int main(void)
       ///////////////////////////// SETEAR VOLTAJE DE SALIDA (VOUTMATH) ///////////////////////////////////////////////////////////
       /* La formula es la siguiente:
        * VoutMath = Vref+(((Vref/R2)+((Vref-Vdac)/R3))*R1);
+       *
        * Para  R1=560k, R2=39k, R3=56k y Vref=1.25, se reduce a:
        * VoutMath = 31.7 - 10*Vdac
        * Vdac = 3.17 - VoutMath*0.1   // VoutMath = valor de encoder (0.0-30.0V);
@@ -233,18 +248,20 @@ int main(void)
        * Vdac = encoder*3.26/4096.0;
        * encoder = Vdac*4096.0/3.26
        *
-       * Formula para corregier la salida: (0.000008*encoder*encoder+0.0243*encoder-15.563)
+       * Formula para corregier la salida: (0.00001*encoder*encoder-0.0156*encoder+6.4948);
       */
 
       sprintf(buff,"SET:%2.1fV ",VoutMath);
       OLED_Print_Text(0,0,2,buff);
 
-      Vdac = 3.17 - VoutMath*0.1;
+      Vdac = 3.1677 - VoutMath*0.09825;//coloque R1=560k pero para mejorar los calculos utilizo el valor de 570k y obtuve esta formula
       encoder = Vdac * 4096.0/3.26;
-      sprintf(buff,"%4.0f",encoder);
-      OLED_Print_Text(7,96,1,buff);
+      //sprintf(buff,"%4.0f",encoder);
+      //OLED_Print_Text(7,96,1,buff);
 
-      encoder = encoder - (0.000006*encoder*encoder+0.0317*encoder-77.701);
+      encoder = encoder - (0.00001*encoder*encoder-0.0156*encoder+6.4948);
+
+
       Control_Estabilizar();
       //HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
       //HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, encoder);
@@ -260,7 +277,7 @@ int main(void)
       ///////////////////////////// MILLIS ///////////////////////////////////////////////////////////
       if(voltage <= 9.9) OLED_Print_Text(2,80,3," ");
 
-      if(contMillis>=100){//cada (Xms * 5) imprimo en el oled
+      if(contMillis>=120){//cada (Xms * 5) imprimo en el oled
     	  //sprintf(buff,"%2.2fV",Vbat); OLED_Print_Text(0,88,1,buff);
     	  if(Vbat>9 && Vbat<=9.9){
     		  OLED_Imagen_Small(0, 96, bateria0, 32, 16);
@@ -523,6 +540,81 @@ static void MX_TIM6_Init(void)
 }
 
 /**
+  * @brief TIM15 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM15_Init(void)
+{
+
+  /* USER CODE BEGIN TIM15_Init 0 */
+
+  /* USER CODE END TIM15_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+  TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
+
+  /* USER CODE BEGIN TIM15_Init 1 */
+
+  /* USER CODE END TIM15_Init 1 */
+  htim15.Instance = TIM15;
+  htim15.Init.Prescaler = 24-1;
+  htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim15.Init.Period = 20000-1;
+  htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim15.Init.RepetitionCounter = 0;
+  htim15.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim15) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim15, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_PWM_Init(&htim15) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim15, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
+  sConfigOC.Pulse = 0;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
+  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
+  if (HAL_TIM_PWM_ConfigChannel(&htim15, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
+  sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
+  sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
+  sBreakDeadTimeConfig.DeadTime = 0;
+  sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
+  sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
+  sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
+  if (HAL_TIMEx_ConfigBreakDeadTime(&htim15, &sBreakDeadTimeConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM15_Init 2 */
+
+  /* USER CODE END TIM15_Init 2 */
+  HAL_TIM_MspPostInit(&htim15);
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -585,7 +677,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM6) {//Leemos el encoder cada 5ms
-		//HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		//HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
 		VoutMath = Encoder_Run();
 		contMillis++;
 	}
@@ -671,6 +763,23 @@ void Control_Estabilizar(void){
     	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, PWM);
 
     }
+}
+
+void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo){
+	uint16_t valor_CCR;
+	uint32_t freqOsc = 48000000;//Hz
+	uint16_t prescaler = 24;//24-1     PSC-16bits
+
+	if(duty > 100) duty = 100;
+	freq = freqOsc/(freq*prescaler);
+
+
+    HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1);
+	__HAL_TIM_SET_AUTORELOAD(&htim15,freq);//Si quiero cambiar la frecuencia modifico: __HAL_TIM_SET_AUTORELOAD(&htim15, frecuencia que quiero)
+	valor_CCR = (__HAL_TIM_GET_AUTORELOAD(&htim15)+1)*duty/100;//__HAL_TIM_GET_AUTORELOAD(&htim15): esto es el valor de 10-1 osea 9, por eso le sumo 1 para volver a tener 10, y por 0.5 ya que quiero 50% del duty cycle
+    __HAL_TIM_SET_COMPARE(&htim15, TIM_CHANNEL_1, valor_CCR);
+    HAL_Delay(tiempo);
+    HAL_TIM_PWM_Stop(&htim15, TIM_CHANNEL_1);
 }
 /* USER CODE END 4 */
 

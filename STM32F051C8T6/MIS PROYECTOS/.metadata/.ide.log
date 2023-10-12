@@ -27979,3 +27979,1099 @@
 2023-10-11 17:43:21,948 [INFO] CADModel:164 - CPN selected for project levelSTM32F051C8T6
 2023-10-11 17:43:21,948 [INFO] CADModel:113 - Register for checkConnection events
 2023-10-11 17:43:22,008 [INFO] OpenFileManager:327 - Restore cursor
+2023-10-11 22:53:48,818 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-10-11 22:53:54,407 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-10-11 22:53:54,452 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-10-11 22:53:55,287 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-10-12 12:07:04,633 [INFO] Activator:179 - 
+
+
+2023-10-12 12:07:04,652 [INFO] Activator:180 - !SESSION log4j initialized
+2023-10-12 13:19:56,819 [INFO] McuFinderGlobals:52 - Set McuFinder mode to 2 (CubeIDE integrated)
+2023-10-12 13:19:57,205 [INFO] ApplicationProperties:181 - Using Application install path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646
+2023-10-12 13:19:57,261 [INFO] DbMcusXml:77 - Set database path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/mcu/
+2023-10-12 13:19:57,261 [INFO] ApiDb:273 - Set plugin database path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/plugins/boardmanager/
+2023-10-12 13:19:57,265 [WARN] ApiDb:258 - Overriding images path with different value:  => F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/plugins/mcufinder/images/
+2023-10-12 13:19:57,325 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2023-10-12 13:19:57,327 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2023-10-12 13:19:57,559 [INFO] CrossReferenceDbSqlite:202 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-10-12 13:19:57,810 [INFO] RulesReader:61 - Compatibility file has been processed (283 Rules)
+2023-10-12 13:19:58,033 [INFO] DbMcusXml:77 - Set database path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/mcu/
+2023-10-12 13:19:58,033 [INFO] ApiDb:273 - Set plugin database path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/plugins/boardmanager/
+2023-10-12 13:19:58,034 [INFO] ApiDb:260 - Set plugin images path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/plugins/mcufinder/images/
+2023-10-12 13:19:58,034 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,035 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2023-10-12 13:19:58,035 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,035 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2023-10-12 13:19:58,036 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,037 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,037 [INFO] CrossReferenceDbSqlite:202 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-10-12 13:19:58,247 [INFO] MainPanel:252 - HeapMemory: 527433728
+2023-10-12 13:19:58,519 [INFO] DbMcusXml:77 - Set database path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/mcu/
+2023-10-12 13:19:58,519 [INFO] ApiDb:273 - Set plugin database path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/plugins/boardmanager/
+2023-10-12 13:19:58,519 [INFO] ApiDb:260 - Set plugin images path to: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\/plugins/mcufinder/images/
+2023-10-12 13:19:58,520 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,520 [INFO] ApiDb:249 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2023-10-12 13:19:58,521 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,521 [INFO] DbMcusAds:124 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2023-10-12 13:19:58,521 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,521 [WARN] DbFile:40 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2023-10-12 13:19:58,522 [INFO] CrossReferenceDbSqlite:202 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2023-10-12 13:19:58,566 [INFO] ApplicationProperties:181 - Using Application install path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646
+2023-10-12 13:19:58,568 [INFO] PluginManage:193 - Search for loadable plugins [exclusion list=, ]
+2023-10-12 13:19:58,570 [INFO] PluginManage:307 - Check plugin analytics
+2023-10-12 13:19:58,907 [INFO] AnalyticsPlugin:262 - Accepted Software Licenses: 
+2023-10-12 13:19:58,908 [INFO] AnalyticsPlugin:264 - Accepted CMSIS Pack Licenses: 
+2023-10-12 13:19:58,909 [INFO] AnalyticsPlugin:266 - Accepted Firmware Licenses: FW.F4.1.27.0,FW.G0.1.6.0
+2023-10-12 13:19:58,918 [INFO] PluginManage:356 - Loaded plugin analytics (category:tool,tabindex:-1)
+2023-10-12 13:19:58,919 [INFO] PluginManage:307 - Check plugin cadmodel
+2023-10-12 13:19:59,006 [INFO] CADModel:104 - Init CAD model plugin
+2023-10-12 13:19:59,007 [INFO] PluginManage:356 - Loaded plugin cadmodel (category:power,tabindex:5)
+2023-10-12 13:19:59,007 [INFO] PluginManage:307 - Check plugin clock
+2023-10-12 13:19:59,049 [INFO] PluginManage:356 - Loaded plugin clock (category:base,tabindex:2)
+2023-10-12 13:19:59,050 [INFO] PluginManage:307 - Check plugin ddr
+2023-10-12 13:19:59,080 [INFO] PluginManage:356 - Loaded plugin ddr (category:tool,tabindex:6)
+2023-10-12 13:19:59,080 [INFO] PluginManage:307 - Check plugin filemanager
+2023-10-12 13:19:59,450 [INFO] PluginManage:356 - Loaded plugin filemanager (category:base,tabindex:10)
+2023-10-12 13:19:59,451 [INFO] PluginManage:307 - Check plugin ipmanager
+2023-10-12 13:19:59,696 [INFO] PluginManage:356 - Loaded plugin ipmanager (category:base,tabindex:5)
+2023-10-12 13:19:59,696 [INFO] PluginManage:307 - Check plugin lpbam
+2023-10-12 13:19:59,739 [INFO] PluginManage:356 - Loaded plugin lpbam (category:base,tabindex:0)
+2023-10-12 13:19:59,739 [INFO] PluginManage:307 - Check plugin pinoutandconfiguration
+2023-10-12 13:19:59,772 [INFO] PluginManage:356 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2023-10-12 13:19:59,772 [INFO] PluginManage:307 - Check plugin pinoutconfig
+2023-10-12 13:19:59,832 [INFO] PluginManage:356 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2023-10-12 13:19:59,832 [INFO] PluginManage:307 - Check plugin power
+2023-10-12 13:19:59,905 [INFO] PluginManage:356 - Loaded plugin power (category:power,tabindex:4)
+2023-10-12 13:19:59,906 [INFO] PluginManage:307 - Check plugin projectmanager
+2023-10-12 13:19:59,936 [INFO] PluginManage:356 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2023-10-12 13:19:59,937 [INFO] PluginManage:307 - Check plugin thirdparty
+2023-10-12 13:20:00,402 [WARN] IntegrityCheckThread:82 - waiting for thirdparty lock release [integrity check]
+2023-10-12 13:20:00,402 [INFO] PluginManage:356 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2023-10-12 13:20:00,403 [INFO] IntegrityCheckThread:84 - entering critical section [integrity check]
+2023-10-12 13:20:00,403 [INFO] PluginManage:307 - Check plugin tools
+2023-10-12 13:20:00,406 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2023-10-12 13:20:00,419 [INFO] PluginManage:356 - Loaded plugin tools (category:base,tabindex:7)
+2023-10-12 13:20:00,420 [INFO] PluginManage:307 - Check plugin tutovideos
+2023-10-12 13:20:00,799 [INFO] PluginManage:356 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2023-10-12 13:20:00,799 [INFO] PluginManage:307 - Check plugin updater
+2023-10-12 13:20:00,864 [INFO] PluginManage:356 - Loaded plugin updater (category:base,tabindex:12)
+2023-10-12 13:20:00,865 [INFO] PluginManage:280 - PluginManage : Loaded plugins [15]
+2023-10-12 13:20:01,483 [INFO] PinOutPanel:1477 - setPackage(No Configuration,No Configuration)
+2023-10-12 13:20:01,741 [INFO] CADModel:164 - CPN selected for project level
+2023-10-12 13:20:01,741 [INFO] CADModel:113 - Register for checkConnection events
+2023-10-12 13:20:01,808 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,808 [INFO] PluginManager:219 - loadIPPluginJar : add adc
+2023-10-12 13:20:01,823 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,823 [INFO] PluginManager:219 - loadIPPluginJar : add aes
+2023-10-12 13:20:01,838 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,839 [INFO] PluginManager:219 - loadIPPluginJar : add can
+2023-10-12 13:20:01,853 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,853 [INFO] PluginManager:219 - loadIPPluginJar : add comp
+2023-10-12 13:20:01,873 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,873 [INFO] PluginManager:219 - loadIPPluginJar : add cryp
+2023-10-12 13:20:01,889 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,889 [INFO] PluginManager:219 - loadIPPluginJar : add dfsdm
+2023-10-12 13:20:01,910 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,911 [INFO] PluginManager:219 - loadIPPluginJar : add dma
+2023-10-12 13:20:01,915 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,916 [INFO] PluginManager:219 - loadIPPluginJar : add dma3
+2023-10-12 13:20:01,988 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:01,989 [INFO] PluginManager:219 - loadIPPluginJar : add fatfs
+2023-10-12 13:20:02,009 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,009 [INFO] PluginManager:219 - loadIPPluginJar : add fmc
+2023-10-12 13:20:02,020 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,021 [INFO] PluginManager:219 - loadIPPluginJar : add freertos
+2023-10-12 13:20:02,024 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,024 [INFO] PluginManager:219 - loadIPPluginJar : add genericplugin
+2023-10-12 13:20:02,040 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,041 [INFO] PluginManager:219 - loadIPPluginJar : add gfxmmu
+2023-10-12 13:20:02,049 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,050 [INFO] PluginManager:219 - loadIPPluginJar : add gic
+2023-10-12 13:20:02,062 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,063 [INFO] PluginManager:219 - loadIPPluginJar : add gpio
+2023-10-12 13:20:02,080 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,081 [INFO] PluginManager:219 - loadIPPluginJar : add gtzc
+2023-10-12 13:20:02,094 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,094 [INFO] PluginManager:219 - loadIPPluginJar : add hash
+2023-10-12 13:20:02,115 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,115 [INFO] PluginManager:219 - loadIPPluginJar : add i2c
+2023-10-12 13:20:02,131 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,131 [INFO] PluginManager:219 - loadIPPluginJar : add i2s
+2023-10-12 13:20:02,147 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,147 [INFO] PluginManager:219 - loadIPPluginJar : add ipddr
+2023-10-12 13:20:02,172 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,173 [INFO] PluginManager:219 - loadIPPluginJar : add linkedlist
+2023-10-12 13:20:02,191 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,191 [INFO] PluginManager:219 - loadIPPluginJar : add lorawan
+2023-10-12 13:20:02,194 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,195 [INFO] PluginManager:219 - loadIPPluginJar : add ltdc
+2023-10-12 13:20:02,224 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,225 [INFO] PluginManager:219 - loadIPPluginJar : add mdma
+2023-10-12 13:20:02,231 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,231 [INFO] PluginManager:219 - loadIPPluginJar : add nvic
+2023-10-12 13:20:02,236 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,236 [INFO] PluginManager:219 - loadIPPluginJar : add opamp
+2023-10-12 13:20:02,247 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,248 [INFO] PluginManager:219 - loadIPPluginJar : add openamp
+2023-10-12 13:20:02,269 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,269 [INFO] PluginManager:219 - loadIPPluginJar : add pdm2pcm
+2023-10-12 13:20:02,280 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,308 [INFO] PluginManager:219 - loadIPPluginJar : add plateformsettings
+2023-10-12 13:20:02,323 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,323 [INFO] PluginManager:219 - loadIPPluginJar : add quadspi
+2023-10-12 13:20:02,350 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,350 [INFO] PluginManager:219 - loadIPPluginJar : add resmgrutility
+2023-10-12 13:20:02,363 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,363 [INFO] PluginManager:219 - loadIPPluginJar : add sai
+2023-10-12 13:20:02,367 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,368 [INFO] PluginManager:219 - loadIPPluginJar : add spi
+2023-10-12 13:20:02,384 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,384 [INFO] PluginManager:219 - loadIPPluginJar : add stm32_wpan
+2023-10-12 13:20:02,391 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,391 [INFO] PluginManager:219 - loadIPPluginJar : add tim
+2023-10-12 13:20:02,412 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,413 [INFO] PluginManager:219 - loadIPPluginJar : add touchsensing
+2023-10-12 13:20:02,432 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,433 [INFO] PluginManager:219 - loadIPPluginJar : add tracer_emb
+2023-10-12 13:20:02,443 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,443 [INFO] PluginManager:219 - loadIPPluginJar : add ts
+2023-10-12 13:20:02,451 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,451 [INFO] PluginManager:219 - loadIPPluginJar : add tsc
+2023-10-12 13:20:02,455 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,455 [INFO] PluginManager:219 - loadIPPluginJar : add ucpd
+2023-10-12 13:20:02,470 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,470 [INFO] PluginManager:219 - loadIPPluginJar : add usart
+2023-10-12 13:20:02,476 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:02,476 [INFO] PluginManager:219 - loadIPPluginJar : add usbx
+2023-10-12 13:20:02,680 [INFO] CADModel:164 - CPN selected for project level
+2023-10-12 13:20:02,680 [INFO] CADModel:113 - Register for checkConnection events
+2023-10-12 13:20:02,681 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:02,681 [ERROR] CADModel:124 - Updater not yet initialized, retry later 
+2023-10-12 13:20:03,127 [INFO] CADModel:164 - CPN selected for project level
+2023-10-12 13:20:03,127 [INFO] CADModel:113 - Register for checkConnection events
+2023-10-12 13:20:03,127 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,127 [ERROR] CADModel:124 - Updater not yet initialized, retry later 
+2023-10-12 13:20:03,132 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,451 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [2/15]
+2023-10-12 13:20:03,542 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,551 [INFO] DbMcusAds:52 - JSON generation date=Tue Mar 07 03:50:55 COT 2023 (1678179055114)
+2023-10-12 13:20:03,552 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,661 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2023-10-12 13:20:03,902 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,906 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,906 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:03,907 [WARN] DetailPanel:344 - Failed to get advertising image, set to default
+2023-10-12 13:20:03,908 [FATAL] Updater:308 - Updater called before beeing initialized
+2023-10-12 13:20:04,044 [ERROR] Updater:1120 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2023-10-12 13:20:04,056 [INFO] Updater:1056 - Updater Version found : 6.7.0
+2023-10-12 13:20:04,108 [INFO] ApplicationProperties:181 - Using Application install path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646
+2023-10-12 13:20:04,575 [INFO] MainUpdater:2800 - connection check result : 10
+2023-10-12 13:20:04,577 [INFO] MainUpdater:282 - Updater Check For Update Now.
+2023-10-12 13:20:04,577 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.70
+2023-10-12 13:20:04,830 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2023-10-12 13:20:04,847 [INFO] MainUpdater:2800 - connection check result : 10
+2023-10-12 13:20:04,867 [INFO] MainUpdater:2800 - connection check result : 10
+2023-10-12 13:20:05,086 [INFO] MicroXplorer:451 - Change Database Path : 
+2023-10-12 13:20:05,086 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.70
+2023-10-12 13:20:05,087 [WARN] ThirdParty:845 - waiting for thirdparty lock release [close project]
+2023-10-12 13:20:06,874 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SMBUS.2.1.0
+2023-10-12 13:20:06,955 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2023-10-12 13:20:06,975 [ERROR] RealEvaluatedCondition:430 - Found unsupported composite condition: CLASS='Data Exchange' GROUP='STM32_MetaDataManager'
+2023-10-12 13:20:06,975 [ERROR] RealEvaluatedCondition:430 - Found unsupported composite condition: CLASS='Data Exchange' GROUP='STM32_MetaDataManager'
+2023-10-12 13:20:06,977 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.4.3.0
+2023-10-12 13:20:06,991 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.4.3.2
+2023-10-12 13:20:07,010 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.0
+2023-10-12 13:20:07,022 [ERROR] RealEvaluatedCondition:430 - Found unsupported composite condition: CLASS='Data Exchange' GROUP='STM32_MetaDataManager'
+2023-10-12 13:20:07,022 [ERROR] RealEvaluatedCondition:430 - Found unsupported composite condition: CLASS='Data Exchange' GROUP='STM32_MetaDataManager'
+2023-10-12 13:20:07,024 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.4.3.1
+2023-10-12 13:20:07,041 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.1
+2023-10-12 13:20:07,108 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.4
+2023-10-12 13:20:07,126 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.0.2
+2023-10-12 13:20:07,146 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.3.0.0
+2023-10-12 13:20:07,167 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.7.0.0
+2023-10-12 13:20:07,181 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.22.0
+2023-10-12 13:20:07,192 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.22.1
+2023-10-12 13:20:07,212 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-SNS-SMARTAG2.1.2.0
+2023-10-12 13:20:07,261 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-10-12 13:20:07,262 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-10-12 13:20:07,264 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-10-12 13:20:07,265 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-10-12 13:20:07,267 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2023-10-12 13:20:07,274 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.2.0.0
+2023-10-12 13:20:07,300 [WARN] PackLoader:242 - Cannot read IP mode file for WES.I-CUBE-Cesium.1.3.0
+2023-10-12 13:20:07,357 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2023-10-12 13:20:07,373 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.2.2.0
+2023-10-12 13:20:07,426 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.2.0
+2023-10-12 13:20:07,486 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.1
+2023-10-12 13:20:07,497 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.0
+2023-10-12 13:20:07,511 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.3
+2023-10-12 13:20:07,526 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.21.4
+2023-10-12 13:20:07,662 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.4.0
+2023-10-12 13:20:08,055 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.7.3.0
+2023-10-12 13:20:08,072 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.3.0
+2023-10-12 13:20:08,132 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2023-10-12 13:20:08,145 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.3.0.0
+2023-10-12 13:20:08,172 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.1.3.0
+2023-10-12 13:20:08,189 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2023-10-12 13:20:08,299 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.5.0
+2023-10-12 13:20:08,786 [WARN] PackLoader:242 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.1
+2023-10-12 13:20:08,931 [WARN] PackLoader:242 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.0
+2023-10-12 13:20:09,038 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.6.0.0
+2023-10-12 13:20:09,083 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2023-10-12 13:20:09,152 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.2.0.0
+2023-10-12 13:20:09,240 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.9.6.0
+2023-10-12 13:20:09,561 [WARN] PackLoader:242 - Cannot read IP mode file for ITTIA_DB.I-CUBE-ITTIADB.8.8.0
+2023-10-12 13:20:09,582 [WARN] PackLoader:242 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.1.3
+2023-10-12 13:20:09,604 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.2.0.0
+2023-10-12 13:20:09,623 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.5
+2023-10-12 13:20:09,676 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,677 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,682 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.1.0
+2023-10-12 13:20:09,684 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,684 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,685 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,685 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,685 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:09,699 [WARN] PackLoader:242 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.5.3
+2023-10-12 13:20:09,716 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.1
+2023-10-12 13:20:09,735 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.1.0.0
+2023-10-12 13:20:09,750 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC6.3.0.0
+2023-10-12 13:20:09,766 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.4.1.0
+2023-10-12 13:20:09,784 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.1.0
+2023-10-12 13:20:09,816 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-10-12 13:20:09,817 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.2.0.0
+2023-10-12 13:20:09,819 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-10-12 13:20:09,819 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-10-12 13:20:09,820 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2023-10-12 13:20:09,842 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2023-10-12 13:20:09,947 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.0.0
+2023-10-12 13:20:09,967 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.1.1.0
+2023-10-12 13:20:09,984 [WARN] PackLoader:242 - Cannot read IP mode file for RoweBots.I-CUBE-UNISONRTOS.5.5.0-4
+2023-10-12 13:20:10,015 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.0.0
+2023-10-12 13:20:10,053 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,053 [WARN] ConditionMgr:437 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,060 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.2.0.0
+2023-10-12 13:20:10,061 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,061 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,064 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,064 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,064 [WARN] ConditionMgr:1038 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2023-10-12 13:20:10,082 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.0.0
+2023-10-12 13:20:10,100 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.0.1
+2023-10-12 13:20:10,151 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.1.1.0
+2023-10-12 13:20:10,164 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.8.0.1
+2023-10-12 13:20:10,185 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2023-10-12 13:20:10,210 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.3.1
+2023-10-12 13:20:10,274 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2023-10-12 13:20:10,339 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.3.0
+2023-10-12 13:20:10,406 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.1.1.1
+2023-10-12 13:20:10,498 [WARN] PackLoader:242 - Cannot read IP mode file for Infineon.AIROC-Wi-Fi-Bluetooth-STM32.1.5.1
+2023-10-12 13:20:10,543 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.1.0.0
+2023-10-12 13:20:10,580 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.1.0.0
+2023-10-12 13:20:10,603 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.1.0
+2023-10-12 13:20:10,640 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.1.0.0
+2023-10-12 13:20:10,671 [WARN] PackLoader:242 - Cannot read IP mode file for portGmbH.I-Cube-SoM-uGOAL.1.1.0
+2023-10-12 13:20:10,687 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.1
+2023-10-12 13:20:10,717 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.1.1.0
+2023-10-12 13:20:10,738 [WARN] PackLoader:242 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.0
+2023-10-12 13:20:10,739 [INFO] ThirdParty:947 - Integrity check success = true
+2023-10-12 13:20:10,739 [INFO] IntegrityCheckThread:98 - exiting critical section [integrity check]
+2023-10-12 13:20:10,739 [INFO] IntegrityCheckThread:101 - End integrity checks thread
+2023-10-12 13:20:10,740 [INFO] ThirdParty:847 - entering critical section [close project]
+2023-10-12 13:20:10,742 [INFO] ThirdParty:857 - exiting critical section [close project]
+2023-10-12 13:20:10,753 [INFO] PinOutPanel:1477 - setPackage(No Configuration,No Configuration)
+2023-10-12 13:20:10,764 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 535122856 Bytes (687865856)
+2023-10-12 13:20:10,765 [INFO] MicroXplorer:451 - Change Database Path : 
+2023-10-12 13:20:10,765 [INFO] MicroXplorer:481 - Change Database Version : DB.6.0.70
+2023-10-12 13:20:10,768 [INFO] OpenFileManager:307 - Change cursor
+2023-10-12 13:20:10,896 [INFO] Mcu:1925 - Initializing MCU STM32F051C8Tx STM32F051C8Tx STM32F051C8T6
+2023-10-12 13:20:13,366 [INFO] Context:654 - Trying to add GPIOservice into a context  which must be forbidden
+2023-10-12 13:20:14,561 [INFO] RtosManager:489 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS
+2023-10-12 13:20:14,561 [INFO] RtosManager:489 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS
+2023-10-12 13:20:14,561 [INFO] RtosManager:489 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS
+2023-10-12 13:20:14,562 [INFO] RtosManager:489 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS
+2023-10-12 13:20:14,562 [WARN] ModelIntegratedComponent:185 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2023-10-12 13:20:14,611 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,611 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,611 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,611 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,612 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,613 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,614 [WARN] ModelIntegratedComponent:64 - No mode defined for component null
+2023-10-12 13:20:14,845 [INFO] ThirdPartyModel:294 - Start build external matchings
+2023-10-12 13:20:17,902 [INFO] ThirdPartyModel:310 - End build external matchings
+2023-10-12 13:20:17,980 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2023-10-12 13:20:17,980 [INFO] ImportTextPane:193 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (HSICECFreq_Value)
+2023-10-12 13:20:18,380 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 545949920 Bytes (687865856)
+2023-10-12 13:20:18,672 [INFO] ApiDb:580 - Connected to CubeFinder SQLite database (C:\Users\PC\.stmcufinder\plugins\mcufinder\mcu\cube-finder-db.db)
+2023-10-12 13:20:18,834 [INFO] ApiDb:667 - CubeFinder database Data Model version=2.1
+2023-10-12 13:20:18,834 [INFO] ApiDb:668 - CubeFinder database Configuration version=3.0.37
+2023-10-12 13:20:18,835 [INFO] ApiDb:669 - CubeFinder database generation date=2023-08-09 (1691586011)
+2023-10-12 13:20:18,835 [INFO] ApiDb:670 - CubeFinder database FW Pack versions=[FP-ATR-ASTRA1_V2.0.0, FP-SNS-FLIGHT1_V5.0.1, FP-SNS-FLIGHT1_V5.0.2, FP-SNS-MOTENV1_V4.3.1, FP-SNS-MOTENV1_V4.3.2, STM32Cube_FW_C0_V1.1.0, STM32Cube_FW_F4_V1.27.1, STM32Cube_FW_F7_V1.17.0, STM32Cube_FW_G0_V1.6.1, STM32Cube_FW_G4_V1.5.1, STM32Cube_FW_H5_V0.5.1, STM32Cube_FW_H5_V1.1.0, STM32Cube_FW_H7_V1.11.0, STM32Cube_FW_L0_V1.12.2, STM32Cube_FW_L5_V1.5.0, STM32Cube_FW_U5_V1.3.0, STM32Cube_FW_U5_V1.3.0RC4, STM32Cube_FW_WBA_V1.0.0RC1, STM32Cube_FW_WBA_V1.1.0, STM32Cube_FW_WBA_V1.1.0RC1, STM32Cube_FW_WB_V1.15.0RC1, STM32Cube_FW_WB_V1.16.0, STM32Cube_FW_WB_V1.16.0RC2, STM32Cube_FW_WB_V1.17.0, STM32Cube_FW_WL_V1.3.0, X-CUBE-ALGOBUILD_V1.3.0, X-CUBE-ALS_V1.0.1, X-CUBE-AZRTOS-F4_V1.1.0, X-CUBE-AZRTOS-F7_V1.1.0, X-CUBE-AZRTOS-G0_V1.1.0, X-CUBE-AZRTOS-G4_V2.0.0, X-CUBE-AZRTOS-H7_V3.1.0, X-CUBE-AZRTOS-L4_V1.0.0, X-CUBE-AZRTOS-L4_V2.0.0, X-CUBE-AZRTOS-L5_V1.1.0, X-CUBE-AZRTOS-WB_V1.1.0, X-CUBE-AZRTOS-WL_V2.0.0, X-CUBE-BLE1_V7.0.0, X-CUBE-BLE2_V3.3.0, X-CUBE-BLEMGR_V2.0.0, X-CUBE-EEPRMA1_V4.1.0, X-CUBE-FREERTOS_V1.1.0, X-CUBE-GNSS1_V6.0.0, X-CUBE-MEMS1_V9.1.0, X-CUBE-MEMS1_V9.4.0, X-CUBE-MEMS1_V9.6.0, X-CUBE-NFC4_V3.0.0, X-CUBE-NFC7_V1.0.0, X-CUBE-SFXS2LP1_V4.0.0, X-CUBE-SUBG2_V5.0.0, X-CUBE-TOF1_V3.3.1]
+2023-10-12 13:20:22,288 [INFO] ApiDb:239 - Found 143 in-development CPN: [B-WB1M-WPAN1, B-WL5M-SUBG1, NUCLEO-C031C6, STEVAL-PROTEUS1, STEVAL-STWINBX1, STM320518-EVAL, STM32C0116-DK, STM32C011D6Y3TR, STM32C011D6Y6TR, STM32C011F4P3, STM32C011F4P6, STM32C011F4U3, STM32C011F4U6TR, STM32C011F6P3, STM32C011F6P6, STM32C011F6U3, STM32C011F6U6TR, STM32C011J4M3, STM32C011J4M6, STM32C011J6M3, STM32C011J6M6, STM32C0316-DK, STM32C031C4T3, STM32C031C4T6, STM32C031C4U3, STM32C031C4U6, STM32C031C6T3, STM32C031C6T6, STM32C031C6U3, STM32C031C6U6, STM32C031F4P3, STM32C031F4P6, STM32C031F6P3, STM32C031F6P6, STM32C031G4U3, STM32C031G4U6, STM32C031G6U3, STM32C031G6U6, STM32C031K4T3, STM32C031K4T6, STM32C031K4U3, STM32C031K4U6, STM32C031K6T3, STM32C031K6T6, STM32C031K6U3, STM32C031K6U6, STM32G071K8TXN, STM32G071K8UXN, STM32G081GBU6N, STM32G081KBT6N, STM32G081KBUXN, STM32G0B1CCT6N, STM32G0B1KCT6, STM32G0B1NEY6TR, STM32G0B1RCT6N, STM32G0C1CCT6, STM32G0C1CCT6N, STM32G0C1CCU6N, STM32G0C1CET6N, STM32G0C1CEU6N, STM32G0C1KCT6, STM32G0C1NEY6TR, STM32G0C1RCI6N, STM32G0C1RCT6N, STM32G0C1REI6N, STM32G0C1RET6N, STM32G0C1VCI6, STM32G0C1VEI6, STM32G471CCT6, STM32G471CCU6, STM32G471CET3, STM32G471CET6, STM32G471CEU3, STM32G471CEU6, STM32G471MCT6, STM32G471MET3, STM32G471MET6, STM32G471MEY6TR, STM32G471QCT6, STM32G471QET3, STM32G471RCT6, STM32G471RET3, STM32G471RET6, STM32G471VCH6, STM32G471VCI6, STM32G471VCT6, STM32G471VEH3, STM32G471VEH6, STM32G471VEI3, STM32G471VEI6, STM32G471VET3, STM32G471VET6, STM32G474CCT6, STM32L476VGY6PTR, STM32L4R5QGI6STR, STM32MP131AAE3, STM32MP131AAF3, STM32MP131AAG3, STM32MP131CAE3, STM32MP131CAF3, STM32MP131CAG3, STM32MP131DAE7, STM32MP131DAF7, STM32MP131DAG7, STM32MP131FAE7, STM32MP131FAF7, STM32MP131FAG7, STM32MP133AAE3, STM32MP133AAF3, STM32MP133AAG3, STM32MP133CAE3, STM32MP133CAF3, STM32MP133CAG3, STM32MP133DAE7, STM32MP133DAF7, STM32MP133DAG7, STM32MP133FAE7, STM32MP133FAF7, STM32MP133FAG7, STM32MP135AAE3, STM32MP135AAF3, STM32MP135AAG3, STM32MP135CAE3, STM32MP135CAF3, STM32MP135CAG3, STM32MP135DAE7, STM32MP135DAF7, STM32MP135DAG7, STM32MP135F-DK, STM32MP135FAE7, STM32MP135FAF7, STM32MP135FAF7T, STM32MP135FAF7U, STM32MP135FAG7, STM32U595ZJT6Q, STM32U599BJY6QTR, STM32U599NIH6Q, STM32U599NJH6Q, STM32U5A5ZJT6Q, STM32U5A9BJY6QTR, STM32U5A9NJH6Q, STM32WB1MMCH6, STM32WL5MOCH6TR]
+2023-10-12 13:20:22,292 [INFO] DbMcus:215 - Found 3806 MCUs, 3806 are supported
+2023-10-12 13:20:22,307 [INFO] ApiDb:422 - Load user favorites file C:\Users\PC/.stm32cubeide/favorites.mcus.txt: 4 item(s)
+2023-10-12 13:20:22,308 [INFO] ApiDb:426 - User favorites MCUs=[STM32F051C8T6, STM32F103C8T6, STM32F446RET6, STM32G030K6T6]
+2023-10-12 13:20:22,308 [INFO] DbMcus:221 - Set 4 / 4 favorites MCUs
+2023-10-12 13:20:23,218 [WARN] ThirdParty:807 - waiting for thirdparty lock release [change project]
+2023-10-12 13:20:23,218 [INFO] ThirdParty:809 - entering critical section [change project]
+2023-10-12 13:20:23,218 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 1.1.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.0.1
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.1
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.3
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2023-10-12 13:20:23,219 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.21.4
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.4.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 7.3.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.6.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.8.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.2
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 4.3.1
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.1
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.4
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 1.1.0
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2023-10-12 13:20:23,220 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.1.3
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 2.0.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.0.1
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.5
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.1
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.1.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.3.0
+2023-10-12 13:20:23,221 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 1.1.1
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.5.1
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 1.3.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.5.3
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 1.0.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 1.0.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.0
+2023-10-12 13:20:23,222 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.22.1
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 1.0.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.0.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 4.1.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 9.5.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 1.1.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2023-10-12 13:20:23,223 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 2.2.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.2.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:999 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.0.0
+2023-10-12 13:20:23,224 [INFO] ThirdParty:815 - exiting critical section [change project]
+2023-10-12 13:20:23,918 [INFO] PinOutPanel:1477 - setPackage(No Configuration,No Configuration)
+2023-10-12 13:20:23,920 [INFO] PinOutPanel:1477 - setPackage(STM32F051C8Tx,LQFP48)
+2023-10-12 13:20:26,421 [INFO] UtilMem:74 - Before build in PCC Used Memory: 531015016 Bytes (687865856)
+2023-10-12 13:20:29,253 [INFO] UtilMem:74 - After build in PCC Used Memory: 561183552 Bytes (687865856)
+2023-10-12 13:20:29,348 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,348 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,349 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,349 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,349 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,350 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,350 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,369 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,369 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,372 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,373 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,373 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,374 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,374 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,374 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,374 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,375 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,377 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,377 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,377 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,378 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,378 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,378 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,379 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,379 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,379 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,379 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,380 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,382 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,382 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,383 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,383 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,383 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,384 [INFO] IPUIPlugin:79 - create IPUIPlugin
+2023-10-12 13:20:29,939 [INFO] CADModel:164 - CPN selected for project levelSTM32F051C8T6
+2023-10-12 13:20:29,939 [INFO] CADModel:113 - Register for checkConnection events
+2023-10-12 13:20:30,017 [INFO] OpenFileManager:327 - Restore cursor
+2023-10-12 13:21:24,040 [INFO] Gpio:272 - dependency for GPIO [ADC, DAC1, I2C1, RCC, SYS]
+2023-10-12 13:22:32,679 [INFO] I2cTimingTraitement:329 - 0x20000209
+2023-10-12 13:23:00,263 [INFO] I2cTimingTraitement:329 - 0x20000209
+2023-10-12 13:23:13,209 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 548183616 Bytes (687865856)
+2023-10-12 13:23:15,669 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 552276984 Bytes (687865856)
+2023-10-12 13:23:16,936 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 13:23:16,937 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 13:23:16,937 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 13:23:16,937 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 13:23:16,937 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 13:23:16,937 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 13:23:16,937 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 13:23:16,938 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 13:23:16,939 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 13:23:18,159 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 13:23:19,235 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 13:23:19,599 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 13:23:19,871 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 13:23:20,837 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 13:23:21,118 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 13:23:21,153 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 13:23:21,315 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 13:23:21,379 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 13:23:21,779 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 13:23:21,785 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 13:23:21,919 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 13:23:21,955 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 13:23:22,154 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 13:23:22,217 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 13:23:22,219 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 13:23:22,226 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 13:23:22,446 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 13:23:22,471 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 13:23:22,816 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 13:23:25,136 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 1072mS.
+2023-10-12 13:23:25,157 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 13:23:25,935 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 13:23:25,982 [INFO] ApiDbMcu:505 - Load IP Config File for FATFS
+2023-10-12 13:23:26,011 [INFO] ApiDbMcu:505 - Load IP Config File for FREERTOS
+2023-10-12 13:23:26,047 [INFO] ApiDbMcu:505 - Load IP Config File for TOUCHSENSING
+2023-10-12 13:23:30,691 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 5534mS.
+2023-10-12 13:23:30,693 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 13:23:30,695 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 13:35:41,687 [INFO] I2cTimingTraitement:329 - 0x20000209
+2023-10-12 13:49:05,134 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 13:49:24,471 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 719718936 Bytes (943718400)
+2023-10-12 13:49:27,001 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 696882688 Bytes (943718400)
+2023-10-12 13:49:28,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 13:49:28,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 13:49:28,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 13:49:28,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 13:49:28,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 13:49:28,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 13:49:28,316 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 13:49:28,316 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 13:49:28,316 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 13:49:28,317 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 13:49:28,827 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 13:49:29,155 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 13:49:29,263 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 13:49:29,446 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 13:49:30,422 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 13:49:31,006 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 13:49:31,044 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 13:49:31,179 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 13:49:31,190 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 13:49:31,534 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 13:49:31,540 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 13:49:31,665 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 13:49:31,676 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 13:49:31,849 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 13:49:31,868 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 13:49:31,869 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 13:49:31,881 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 13:49:32,073 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 13:49:32,079 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 13:49:32,492 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 13:49:33,771 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 263mS.
+2023-10-12 13:49:33,775 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 13:49:34,989 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 13:49:38,874 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 5099mS.
+2023-10-12 13:49:38,874 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 13:49:38,877 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 13:50:05,530 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,508x210,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 13:50:07,203 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 13:50:12,027 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 627984984 Bytes (972029952)
+2023-10-12 13:50:24,034 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 731119632 Bytes (972029952)
+2023-10-12 13:50:24,788 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 13:50:24,789 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 13:50:24,789 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 13:50:24,789 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 13:50:24,789 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 13:50:24,789 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 13:50:24,790 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 13:50:24,790 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 13:50:24,790 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 13:50:24,791 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 13:50:25,567 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 13:50:26,024 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 13:50:26,145 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 13:50:26,456 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 13:50:28,076 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 13:50:28,250 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 13:50:28,258 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 13:50:28,431 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 13:50:28,441 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 13:50:28,683 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 13:50:28,687 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 13:50:28,800 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 13:50:28,809 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 13:50:28,990 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 13:50:29,010 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 13:50:29,011 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 13:50:29,019 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 13:50:29,145 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 13:50:29,150 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 13:50:29,590 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 13:50:31,220 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 253mS.
+2023-10-12 13:50:31,226 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 13:50:32,167 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 13:50:37,230 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 6004mS.
+2023-10-12 13:50:37,267 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 13:50:37,333 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:08:37,059 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 14:08:44,647 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 740521440 Bytes (983564288)
+2023-10-12 14:08:46,338 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 824487024 Bytes (983564288)
+2023-10-12 14:08:46,979 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 14:08:46,980 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 14:08:46,981 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 14:08:46,981 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 14:08:47,392 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 14:08:47,544 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 14:08:47,726 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 14:08:47,882 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 14:08:48,502 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 14:08:48,771 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 14:08:48,777 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 14:08:48,899 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 14:08:48,909 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 14:08:49,122 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 14:08:49,126 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 14:08:49,227 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 14:08:49,237 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 14:08:49,340 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 14:08:49,369 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 14:08:49,370 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 14:08:49,377 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 14:08:49,493 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 14:08:49,498 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 14:08:49,743 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 14:08:50,754 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 168mS.
+2023-10-12 14:08:50,758 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 14:08:51,499 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 14:08:53,765 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3006mS.
+2023-10-12 14:08:53,765 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:08:53,768 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:10:01,340 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 14:10:08,889 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 657538096 Bytes (1030750208)
+2023-10-12 14:10:48,362 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 618321152 Bytes (1030750208)
+2023-10-12 14:10:48,868 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 14:10:48,869 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 14:10:48,870 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 14:10:48,870 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 14:10:49,206 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 14:10:49,307 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 14:10:49,386 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 14:10:49,491 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 14:10:50,116 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 14:10:50,227 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 14:10:50,231 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 14:10:50,327 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 14:10:50,337 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 14:10:50,491 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 14:10:50,495 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 14:10:50,591 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 14:10:50,599 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 14:10:50,707 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 14:10:50,720 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 14:10:50,721 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 14:10:50,727 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 14:10:50,836 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 14:10:50,840 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 14:10:51,171 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 14:10:52,296 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 175mS.
+2023-10-12 14:10:52,301 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 14:10:52,861 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 14:10:55,264 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 2963mS.
+2023-10-12 14:10:55,265 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 14:10:55,268 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:11:19,305 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 14:11:29,807 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 620585504 Bytes (1040187392)
+2023-10-12 14:11:31,539 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 706061416 Bytes (1040187392)
+2023-10-12 14:11:32,050 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 14:11:32,051 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 14:11:32,052 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 14:11:32,572 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 14:11:32,703 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 14:11:32,794 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 14:11:32,910 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 14:11:33,414 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 14:11:33,532 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 14:11:33,537 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 14:11:33,646 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 14:11:33,656 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 14:11:33,847 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 14:11:33,851 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 14:11:34,007 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 14:11:34,015 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 14:11:34,119 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 14:11:34,131 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 14:11:34,132 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 14:11:34,139 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 14:11:34,243 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 14:11:34,248 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 14:11:34,449 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 14:11:35,373 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 158mS.
+2023-10-12 14:11:35,377 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 14:11:36,124 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 14:11:38,501 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3124mS.
+2023-10-12 14:11:38,502 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:11:38,505 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:12:04,508 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 14:12:54,887 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 693502576 Bytes (1049624576)
+2023-10-12 14:12:56,541 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 772145776 Bytes (1049624576)
+2023-10-12 14:12:57,087 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 14:12:57,087 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 14:12:57,088 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 14:12:57,089 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 14:12:57,507 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 14:12:57,622 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 14:12:57,698 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 14:12:57,812 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 14:12:58,323 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 14:12:58,436 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 14:12:58,442 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 14:12:58,543 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 14:12:58,552 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 14:12:58,713 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 14:12:58,770 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 14:12:58,870 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 14:12:58,879 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 14:12:58,983 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 14:12:58,996 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 14:12:58,997 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 14:12:59,005 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 14:12:59,111 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 14:12:59,115 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 14:12:59,316 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 14:13:00,300 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 177mS.
+2023-10-12 14:13:00,305 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 14:13:01,106 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 14:13:03,676 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3371mS.
+2023-10-12 14:13:03,677 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 14:13:03,679 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:14:22,088 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 14:14:32,231 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 661881232 Bytes (1054867456)
+2023-10-12 14:14:33,812 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 740002192 Bytes (1054867456)
+2023-10-12 14:14:34,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 14:14:34,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 14:14:34,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 14:14:34,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 14:14:34,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 14:14:34,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 14:14:34,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 14:14:34,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 14:14:34,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 14:14:34,428 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 14:14:34,853 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 14:14:34,988 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 14:14:35,072 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 14:14:35,202 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 14:14:35,704 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 14:14:35,818 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 14:14:35,824 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 14:14:35,927 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 14:14:35,936 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 14:14:36,141 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 14:14:36,145 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 14:14:36,251 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 14:14:36,260 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 14:14:36,366 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 14:14:36,382 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 14:14:36,383 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 14:14:36,390 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 14:14:36,494 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 14:14:36,500 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 14:14:36,790 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 14:14:37,672 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 160mS.
+2023-10-12 14:14:37,676 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 14:14:38,435 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 14:14:40,841 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3165mS.
+2023-10-12 14:14:40,842 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 14:14:40,845 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 14:37:40,660 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 14:38:01,355 [INFO] I2cTimingTraitement:329 - 0x20000209
+2023-10-12 14:41:38,177 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 680105056 Bytes (1059061760)
+2023-10-12 14:41:39,946 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 660807248 Bytes (1059061760)
+2023-10-12 14:41:40,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 14:41:40,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 14:41:40,426 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 14:41:40,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 14:41:40,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 14:41:40,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 14:41:40,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 14:41:40,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 14:41:40,427 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 14:41:40,428 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 14:41:40,706 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 14:41:40,918 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 14:41:41,051 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 14:41:41,159 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 14:41:41,616 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 14:41:41,849 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 14:41:41,853 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 14:41:41,960 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 14:41:41,969 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 14:41:42,132 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 14:41:42,136 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 14:41:42,231 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 14:41:42,238 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 14:41:42,344 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 14:41:42,358 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 14:41:42,359 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 14:41:42,366 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 14:41:42,513 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 14:41:42,518 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 14:41:42,741 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 14:41:43,807 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 163mS.
+2023-10-12 14:41:43,816 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 14:41:44,241 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 14:41:46,837 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 3021mS.
+2023-10-12 14:41:46,839 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 14:41:46,841 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:06:44,903 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 15:16:49,881 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 652193112 Bytes (1063256064)
+2023-10-12 15:16:51,682 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 714033224 Bytes (1063256064)
+2023-10-12 15:16:52,175 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 15:16:52,176 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 15:16:52,178 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 15:16:52,535 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 15:16:52,736 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 15:16:53,005 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 15:16:53,245 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 15:16:54,091 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 15:16:54,408 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 15:16:54,413 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 15:16:54,591 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 15:16:54,601 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 15:16:54,790 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 15:16:54,794 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 15:16:54,941 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 15:16:54,952 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 15:16:55,064 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 15:16:55,080 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 15:16:55,082 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 15:16:55,090 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 15:16:55,223 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 15:16:55,228 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 15:16:55,486 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 15:16:56,645 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 194mS.
+2023-10-12 15:16:56,652 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 15:16:57,534 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 15:17:00,837 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 4185mS.
+2023-10-12 15:17:00,837 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:17:00,915 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:19:25,411 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 15:19:45,064 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 693468568 Bytes (1067450368)
+2023-10-12 15:19:46,721 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 775257496 Bytes (1067450368)
+2023-10-12 15:19:47,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 15:19:47,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 15:19:47,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 15:19:47,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 15:19:47,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 15:19:47,315 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 15:19:47,316 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 15:19:47,316 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 15:19:47,316 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 15:19:47,317 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 15:19:47,685 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 15:19:47,813 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 15:19:47,905 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 15:19:48,013 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 15:19:48,561 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 15:19:48,674 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 15:19:48,679 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 15:19:48,778 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 15:19:48,788 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 15:19:48,939 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 15:19:48,943 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 15:19:49,038 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 15:19:49,045 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 15:19:49,227 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 15:19:49,241 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 15:19:49,242 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 15:19:49,250 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 15:19:49,352 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 15:19:49,357 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 15:19:49,611 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 15:19:50,884 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 166mS.
+2023-10-12 15:19:50,888 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 15:19:51,478 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 15:19:53,782 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 2894mS.
+2023-10-12 15:19:53,782 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:19:53,785 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:20:27,597 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 15:22:30,473 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 664499616 Bytes (1070596096)
+2023-10-12 15:22:31,858 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 743142816 Bytes (1070596096)
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 15:22:32,474 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 15:22:32,475 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 15:22:32,475 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 15:22:32,904 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 15:22:33,011 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 15:22:33,107 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 15:22:33,227 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 15:22:33,794 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 15:22:33,913 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 15:22:33,917 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 15:22:34,018 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 15:22:34,028 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 15:22:34,172 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 15:22:34,176 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 15:22:34,325 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 15:22:34,333 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 15:22:34,432 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 15:22:34,444 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 15:22:34,445 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 15:22:34,451 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 15:22:34,550 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 15:22:34,554 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 15:22:34,841 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 15:22:35,907 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 157mS.
+2023-10-12 15:22:35,912 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 15:22:36,377 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 15:22:38,584 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 2672mS.
+2023-10-12 15:22:38,584 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:22:38,587 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:24:04,663 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 15:24:37,113 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 714414184 Bytes (1071644672)
+2023-10-12 15:24:38,971 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 624858624 Bytes (1071644672)
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 15:24:39,552 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 15:24:39,553 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 15:24:39,553 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 15:24:39,553 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 15:24:39,891 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 15:24:40,087 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 15:24:40,160 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 15:24:40,292 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 15:24:40,911 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 15:24:41,011 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 15:24:41,016 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 15:24:41,110 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 15:24:41,119 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 15:24:41,255 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 15:24:41,259 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 15:24:41,349 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 15:24:41,356 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 15:24:41,524 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 15:24:41,536 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 15:24:41,537 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 15:24:41,543 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 15:24:41,641 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 15:24:41,646 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 15:24:41,834 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 15:24:42,891 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 159mS.
+2023-10-12 15:24:42,895 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 15:24:43,465 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 15:24:45,657 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 2762mS.
+2023-10-12 15:24:45,658 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 15:24:45,662 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 17:06:17,334 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 17:11:00,062 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 801076968 Bytes (1073741824)
+2023-10-12 17:11:26,947 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 667601480 Bytes (1073741824)
+2023-10-12 17:11:27,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 17:11:27,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 17:11:27,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 17:11:27,419 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 17:11:27,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 17:11:27,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 17:11:27,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 17:11:27,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 17:11:27,420 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 17:11:27,421 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 17:11:27,679 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 17:11:27,788 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 17:11:27,853 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 17:11:27,956 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 17:11:28,431 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 17:11:28,637 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 17:11:28,641 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 17:11:28,732 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 17:11:28,741 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 17:11:28,967 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 17:11:28,971 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 17:11:29,060 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 17:11:29,068 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 17:11:29,166 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 17:11:29,177 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 17:11:29,178 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 17:11:29,184 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 17:11:29,297 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 17:11:29,301 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 17:11:29,501 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 17:11:30,550 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 162mS.
+2023-10-12 17:11:30,555 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 17:11:31,375 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 17:11:33,546 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 2991mS.
+2023-10-12 17:11:33,547 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 1mS.
+2023-10-12 17:11:33,549 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 17:12:17,680 [INFO] NvicIntPanel:100 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2023-10-12 17:12:22,211 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 692300704 Bytes (1073741824)
+2023-10-12 17:12:23,607 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 797158304 Bytes (1073741824)
+2023-10-12 17:12:24,145 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: DAC
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM6_7F0
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F0
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2023-10-12 17:12:24,146 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2023-10-12 17:12:24,147 [INFO] CodeGenerator:692 - code generatio: config db path: F:\Program Files\STM32CubeIDE_1.11.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.7.0.202211181646\\db\
+2023-10-12 17:12:24,619 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp_save
+2023-10-12 17:12:24,718 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\license.tmp
+2023-10-12 17:12:24,802 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp_save
+2023-10-12 17:12:24,936 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\gpio.tmp
+2023-10-12 17:12:25,468 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c_save
+2023-10-12 17:12:25,578 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_it.c
+2023-10-12 17:12:25,583 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h_save
+2023-10-12 17:12:25,681 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_it.h
+2023-10-12 17:12:25,691 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c_save
+2023-10-12 17:12:25,834 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\stm32f0xx_hal_msp.c
+2023-10-12 17:12:25,838 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp_save
+2023-10-12 17:12:25,931 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\MXTmpFiles\system.tmp
+2023-10-12 17:12:25,938 [INFO] CodeEngine:303 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h_save
+2023-10-12 17:12:26,096 [INFO] CodeEngine:327 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\stm32f0xx_hal_conf.h
+2023-10-12 17:12:26,152 [WARN] IPConfigManager:3414 - IP not found : TIM
+2023-10-12 17:12:26,152 [WARN] CodeGenerator:3583 - IP not found : null
+2023-10-12 17:12:26,159 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h_save
+2023-10-12 17:12:26,264 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Inc\main.h
+2023-10-12 17:12:26,269 [INFO] CodeEngine:247 - oldGeneratedFile, E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c_save
+2023-10-12 17:12:26,462 [INFO] CodeEngine:271 - Generated code: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3\Core\Src\main.c
+2023-10-12 17:12:27,406 [INFO] ProjectBuilder:2919 - Time for Copy HAL[1] : 153mS.
+2023-10-12 17:12:27,410 [INFO] ProjectBuilder:4183 - Project Generator version: 3.18.0-B7
+2023-10-12 17:12:27,978 [INFO] ConfigFileManager:1396 - The Die is : DIE440
+2023-10-12 17:12:30,077 [INFO] ProjectBuilder:4351 - Time for Generating toolchain IDE Files: 2667mS.
+2023-10-12 17:12:30,078 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 17:12:30,081 [INFO] ProjectBuilder:2790 - Time for Copy CMSIS : 0mS.
+2023-10-12 17:50:21,474 [INFO] JxBrowserEngine:114 - Initiate JxBrowser Engine with user profile folder
+2023-10-12 17:50:27,339 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-10-12 17:50:27,401 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-10-12 17:50:28,512 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2023-10-12 17:51:07,919 [INFO] Activator:179 - 
+
+
+2023-10-12 17:51:07,920 [INFO] Activator:180 - !SESSION log4j initialized

@@ -1,4 +1,5 @@
 "./Core/Src/Anglas_ENCODER_ROT.o"
+"./Core/Src/Anglas_FUNCION_MAP.o"
 "./Core/Src/Anglas_INA226.o"
 "./Core/Src/Anglas_OLED_SSD1306.o"
 "./Core/Src/eeprom.o"
