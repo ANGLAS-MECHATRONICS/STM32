@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LCD_I2C Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ENCODER_ROTARY Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ENCODER_ROTATIVO_LCD_I2C Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INA226,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:OLED_SSD1306 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INA226_LCD_I2C
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LCD_I2C Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ENCODER_ROTARY Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ENCODER_ROTATIVO_LCD_I2C Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INA226,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:INA226_LCD_I2C,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:OLED_SSD1306 Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ENCODER_ROTARY\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ENCODER_ROTARY\ Debug/activeLaunchTarget=null\:---

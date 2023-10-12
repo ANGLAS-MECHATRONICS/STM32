@@ -3,3 +3,8 @@ PWM
 VoutMath
 voltage
 difference
+ina.current_LSB
+ina.calibration
+current
+paso_Encoder
+valor_Encoder
