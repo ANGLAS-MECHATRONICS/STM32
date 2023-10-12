@@ -236,6 +236,7 @@ int main(void)
       //medirPotencia();
 
       voltage = INA226_Vbus();//medimos el voltaje de salida
+      Vshunt = INA226_Vshunt();
 
       ///////////////////////////// SETEAR VOLTAJE DE SALIDA (VOUTMATH) ///////////////////////////////////////////////////////////
       /* La formula es la siguiente:

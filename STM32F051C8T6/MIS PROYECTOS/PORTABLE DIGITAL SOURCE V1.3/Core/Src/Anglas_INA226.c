@@ -114,7 +114,7 @@ float INA226_Current(void){
 
 		HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 		dato = ((datos[0]<<8)|datos[1]);
-		current = (uint32_t)dato * ina.current_LSB;
+		current = (uint32_t)dato * (ina.current_LSB - 3750);//restar un valor entre 3000 y 5000 para calibrar las medidas (estoy lo hice con prueba error)
 		return current/1000000;//mA;
 	}
 
