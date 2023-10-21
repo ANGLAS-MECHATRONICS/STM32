@@ -149,19 +149,19 @@ int main(void)
 
   ee_read(0, sizeof(float), (uint8_t*)&valor_Encoder);//leo el valor de la eeprom
 
-  OLED_Init();
+  OLED_Init_DMA();
   //OLED_Imagen(AM_INTRO);
-  OLED_Imagen_Small(2,0, AM_INTRO, 128, 64);
-  OLED_Print_Text(1,0,1,"Designed by G. Anglas");
+  OLED_Imagen_Small_DMA(2,0, AM_INTRO, 128, 64);
+  OLED_Print_Text_DMA(1,0,1,"Designed by G. Anglas");
   while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
   HAL_TIM_Base_Start_IT(&htim6);
 
 
-  OLED_Clear();
+  OLED_Clear_DMA();
 
-  INA226_Init(3.2768,25,AVG_64,T_Vbus_588us,T_Vshunt_588us,MODE_SHUNT_BUS_CONTINUOUS);
-  OLED_Print_Text(3,104,2,"OFF");
-  OLED_Print_Text(2,104,1,"0.1");
+  INA226_Init_DMA(3.2768,25,AVG_64,T_Vbus_588us,T_Vshunt_588us,MODE_SHUNT_BUS_CONTINUOUS);
+  OLED_Print_Text_DMA(3,104,2,"OFF");
+  OLED_Print_Text_DMA(2,104,1,"0.1");
 
   /* USER CODE END 2 */
 
@@ -176,7 +176,7 @@ int main(void)
 
 	  ///////////////////////////// ICONO DE CARGA BATERIA////////////////////////////////////////////////////
 	  if(HAL_GPIO_ReadPin(stateCharger_GPIO_Port, stateCharger_Pin)==1){//Cuando se conecta el cargador
-		  OLED_Print_Text(1,104,1,"ON ");
+		  OLED_Print_Text_DMA(1,104,1,"ON ");
 	  }else{
 		  //OLED_Print_Text(0,88,2,".5V");
 	  }
@@ -188,13 +188,13 @@ int main(void)
       if(suma==1){
           suma=2;  //cambio el contador para que solo haga una vez todo lo que esta dentro del if
           paso_Encoder = 1.0;
-          OLED_Print_Text(2,104,1,"1.0");
+          OLED_Print_Text_DMA(2,104,1,"1.0");
       }
 
       if(suma==3){
           suma=0; //cambio el contador para que solo haga una vez todo lo que esta dentro del if
           paso_Encoder = 0.1;
-          OLED_Print_Text(2,104,1,"0.1");
+          OLED_Print_Text_DMA(2,104,1,"0.1");
       }
 
       //Mantener presionado el SW2 por cierto tiempo
@@ -210,7 +210,7 @@ int main(void)
 
       if(powerSupply==1){
     	  powerSupply=2;
-    	  OLED_Print_Text(3,104,2,"ON ");
+    	  OLED_Print_Text_DMA(3,104,2,"ON ");
     	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
     	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
     	  PWM_set_Freq_DutyCycle(4000,50,100);
@@ -220,7 +220,7 @@ int main(void)
 
       if(powerSupply==3){
     	  powerSupply=0;
-    	  OLED_Print_Text(3,104,2,"OFF");
+    	  OLED_Print_Text_DMA(3,104,2,"OFF");
     	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
     	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
     	  PWM_set_Freq_DutyCycle(1000,50,100);
@@ -239,8 +239,8 @@ int main(void)
       //medirCorriente();
       //medirPotencia();
 
-      voltage = INA226_Vbus();//medimos el voltaje de salida
-      Vshunt = INA226_Vshunt();
+      voltage = INA226_Vbus_DMA();//medimos el voltaje de salida
+      Vshunt = INA226_Vshunt_DMA();
 
       ///////////////////////////// SETEAR VOLTAJE DE SALIDA (VOUTMATH) ///////////////////////////////////////////////////////////
       /* La formula es la siguiente:
@@ -257,7 +257,7 @@ int main(void)
       */
 
       sprintf(buff,"SET:%2.1fV ",VoutMath);
-      OLED_Print_Text(0,0,2,buff);
+      OLED_Print_Text_DMA(0,0,2,buff);
 
       Vdac = 3.1677 - VoutMath*0.09825;//coloque R1=560k pero para mejorar los calculos utilizo el valor de 570k y obtuve esta formula
       encoder = Vdac * 4096.0/3.26;
@@ -280,25 +280,25 @@ int main(void)
       Vbat = adcVbat*0.05826;//(3.3/2^8)*4.3 ------ divisor resistivo V*10k/(10K+33K) -> V = 4.3
 
       ///////////////////////////// MILLIS ///////////////////////////////////////////////////////////
-      if(voltage <= 9.9) OLED_Print_Text(2,80,3," ");
+      if(voltage <= 9.9) OLED_Print_Text_DMA(2,80,3," ");
 
       if(contMillis>=120){//cada (Xms * 5) imprimo en el oled
     	  //sprintf(buff,"%2.2fV",Vbat); OLED_Print_Text(0,88,1,buff);
     	  if(Vbat>9 && Vbat<=9.9){
-    		  OLED_Imagen_Small(0, 96, bateria0, 32, 16);
+    		  OLED_Imagen_Small_DMA(0, 96, bateria0, 32, 16);
     	  }else if(Vbat>9.9 && Vbat<=10.5){
-    		  OLED_Imagen_Small(0, 96, bateria25, 32, 16);
+    		  OLED_Imagen_Small_DMA(0, 96, bateria25, 32, 16);
     	  }else if(Vbat>10.5 && Vbat<=11.1){
-    		  OLED_Imagen_Small(0, 96, bateria50, 32, 16);
+    		  OLED_Imagen_Small_DMA(0, 96, bateria50, 32, 16);
     	  }else if(Vbat>11.1 && Vbat<=11.7){
-    		  OLED_Imagen_Small(0, 96, bateria75, 32, 16);
+    		  OLED_Imagen_Small_DMA(0, 96, bateria75, 32, 16);
     	  }else if(Vbat>11.7 && Vbat<=12.6){
-    		  OLED_Imagen_Small(0, 96, bateria100, 32, 16);
+    		  OLED_Imagen_Small_DMA(0, 96, bateria100, 32, 16);
     	  }
 
-    	  if(voltage <= 9.9) OLED_Print_Text(2,80,3," ");
+    	  if(voltage <= 9.9) OLED_Print_Text_DMA(2,80,3," ");
     	  sprintf(buff,"%2.1fV",voltage);
-    	  OLED_Print_Text(2,0,3,buff);
+    	  OLED_Print_Text_DMA(2,0,3,buff);
 
     	  medirCorriente();
     	  medirPotencia();
@@ -709,29 +709,29 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 }
 
 void medirVoltage(void){
-	voltage = INA226_Vbus();
-	if(voltage <= 9.9) OLED_Print_Text(2,80,3," ");
+	voltage = INA226_Vbus_DMA();
+	if(voltage <= 9.9) OLED_Print_Text_DMA(2,80,3," ");
 	sprintf(buff,"%2.1fV",voltage);
-	OLED_Print_Text(2,0,3,buff);
+	OLED_Print_Text_DMA(2,0,3,buff);
 }
 
 void medirCorriente(void){
-	current = INA226_Current();
+	current = INA226_Current_DMA();
 	if(current>=0){
 		sprintf(buff,"%4.0fmA",current);
-		OLED_Print_Text(6,0,2,buff);
+		OLED_Print_Text_DMA(6,0,2,buff);
 	}else{
-		OLED_Print_Text(6,0,2,"   0mA");
+		OLED_Print_Text_DMA(6,0,2,"   0mA");
 	}
 }
 
 void medirPotencia(void){
-	power = INA226_Power();
+	power = INA226_Power_DMA();
     if(power>=0){
 	    sprintf(buff,"%2.1fW ",power);
-	    OLED_Print_Text(5,96,1,buff);
+	    OLED_Print_Text_DMA(5,96,1,buff);
     }else{
-	    OLED_Print_Text(5,96,1,"0.0W ");
+	    OLED_Print_Text_DMA(5,96,1,"0.0W ");
     }
 }
 

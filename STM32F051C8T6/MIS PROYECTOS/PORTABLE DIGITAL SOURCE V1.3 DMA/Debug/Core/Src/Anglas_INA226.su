@@ -1,7 +1,7 @@
-../Core/Src/Anglas_INA226.c:20:6:INA226_Init	48	static
-../Core/Src/Anglas_INA226.c:62:7:INA226_Vshunt	32	static
-../Core/Src/Anglas_INA226.c:81:7:INA226_Vbus	32	static
-../Core/Src/Anglas_INA226.c:96:7:INA226_Current	40	static
-../Core/Src/Anglas_INA226.c:135:7:INA226_Power	32	static
-../Core/Src/Anglas_INA226.c:149:10:INA226_Mode_pinAlert	40	static
-../Core/Src/Anglas_INA226.c:187:10:INA226_Alert_Limit	40	static
+../Core/Src/Anglas_INA226.c:20:6:INA226_Init_DMA	40	static
+../Core/Src/Anglas_INA226.c:64:7:INA226_Vshunt_DMA	16	static
+../Core/Src/Anglas_INA226.c:86:7:INA226_Vbus_DMA	16	static
+../Core/Src/Anglas_INA226.c:104:7:INA226_Current_DMA	24	static
+../Core/Src/Anglas_INA226.c:149:7:INA226_Power_DMA	16	static
+../Core/Src/Anglas_INA226.c:166:10:INA226_Mode_pinAlert_DMA	24	static
+../Core/Src/Anglas_INA226.c:207:10:INA226_Alert_Limit_DMA	32	static

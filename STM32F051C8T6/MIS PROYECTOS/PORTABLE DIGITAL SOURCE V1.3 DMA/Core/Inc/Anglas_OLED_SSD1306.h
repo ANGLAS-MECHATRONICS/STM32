@@ -87,16 +87,16 @@ extern I2C_HandleTypeDef hi2c1;
 
 /* Exported functions prototypes ---------------------------------------------*/
 void OLED_Write(void);
-void OLED_Init(void);
 void OLED_Write_Command_3bytes(uint8_t byte1, uint8_t byte2, uint8_t byte3);
 void OLED_Write_Data_1byte(uint8_t byte1);
 void OLED_Draw_Pixel(uint8_t pag_inicio, uint8_t pag_final, uint8_t col_inicio, uint16_t col_final, uint8_t pixel);
-void OLED_Clear(void);
 void OLED_Draw_8_Pixel(uint8_t pag_inicio, uint8_t col_inicio, uint8_t pixel_8bits);
 void OLED_Print_Letra(uint8_t pag, uint8_t col, uint8_t font_size, char letra);
-void OLED_Print_Text(uint8_t pag, uint8_t col, uint8_t font_size, char *texto);
-void OLED_Imagen(const unsigned char imagen[]);
-void OLED_Imagen_Small(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y);
 
+void OLED_Init_DMA(void);
+void OLED_Print_Text_DMA(uint8_t pag, uint8_t col, uint8_t font_size, char *texto);
+void OLED_Imagen_DMA(const unsigned char imagen[]);
+void OLED_Imagen_Small_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y);
+void OLED_Clear_DMA(void);
 
 #endif /* INC_ANGLAS_OLED_SSD1306_H_ */

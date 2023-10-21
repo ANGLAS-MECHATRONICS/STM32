@@ -97,15 +97,15 @@ typedef struct {                                                            // S
   uint16_t mask_Enable;
 } Anglas_IN226; // of structure
 /* Exported functions prototypes ---------------------------------------------*/
-void INA226_Init(const double Maximum_Expected_Current, const uint16_t resMiliohmios, uint16_t AVG, uint16_t Time_Vbus, uint16_t Time_Vshunt, uint16_t ModeOperation);
+void INA226_Init_DMA(const double Maximum_Expected_Current, const uint16_t resMiliohmios, uint16_t AVG, uint16_t Time_Vbus, uint16_t Time_Vshunt, uint16_t ModeOperation);
 
-float INA226_Vshunt(void);
-float INA226_Vbus(void);
-float INA226_Current(void);
-float INA226_Power(void);
+float INA226_Vshunt_DMA(void);
+float INA226_Vbus_DMA(void);
+float INA226_Current_DMA(void);
+float INA226_Power_DMA(void);
 
-uint16_t INA226_Mode_pinAlert(uint16_t umbral);
-uint16_t INA226_Alert_Limit(uint16_t limite);
+uint16_t INA226_Mode_pinAlert_DMA(uint16_t umbral);
+uint16_t INA226_Alert_Limit_DMA(uint16_t limite);
 
 
 #endif /* INC_ANGLAS_INA226_H_ */

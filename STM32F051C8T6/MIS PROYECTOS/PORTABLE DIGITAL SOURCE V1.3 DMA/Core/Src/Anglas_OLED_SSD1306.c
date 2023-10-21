@@ -330,7 +330,7 @@ const uint8_t FONT_3[5760] =
 //Funcion para mandar un byte de datos que actuara como "comando" o "dato"
 
 
-void OLED_Init(void){
+void OLED_Init_DMA(void){
 
 	uint8_t datos[26];
 
@@ -368,19 +368,22 @@ void OLED_Init(void){
 
 	HAL_Delay(100);
 
-	HAL_I2C_Master_Transmit (&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 26, 100);
+	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 26);
+	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	OLED_Clear();
+	OLED_Clear_DMA();
 }
 
 void OLED_Write_Command_3bytes(uint8_t byte1, uint8_t byte2, uint8_t byte3){
 	uint8_t datos[4] = {CMD, byte1, byte2, byte3};
-	HAL_I2C_Master_Transmit (&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 4, 100);
+	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 4);
+	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
 void OLED_Write_Data_1byte(uint8_t byte1){
 	uint8_t datos[2] = {DAT, byte1};
-	HAL_I2C_Master_Transmit (&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 2, 100);
+	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 2);
+	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
 void OLED_Draw_Pixel(uint8_t pag_inicio, uint8_t pag_final, uint8_t col_inicio, uint16_t col_final, uint8_t pixel){
@@ -391,14 +394,15 @@ void OLED_Draw_Pixel(uint8_t pag_inicio, uint8_t pag_final, uint8_t col_inicio, 
 	datos[0] = DAT;
 	datos[1] = pixel;
 
-	HAL_I2C_Master_Transmit (&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 2, 100);
+	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 2);
+	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
 //Para limpiar la pantalla oled, esta funcion va desde la pag 0 hasta la pag 7
 //Para la columna el datasheet menciona (en modo de direccionamiento horizontal):
 //Si el puntero de la dirección de la columna alcanza la dirección final de la columna, el puntero de la dirección de la columna se restablece a la dirección de inicio de la columna y el puntero de dirección de página aumenta en 1.
 //Es por eso que pongo de la columna 0 hasta la columna 1023(128columnas*8paginas)
-void OLED_Clear(void){
+void OLED_Clear_DMA(void){
 	uint8_t  pag_inicio = 0;
 	uint8_t  pag_final = ((SSD1306_LCDHEIGHT/8)-1);//128x32:4paginas(0-3)    128x64:8paginas(0-7)
 	uint8_t  col_inicio = 0;
@@ -420,7 +424,8 @@ void OLED_Clear(void){
 		//HAL_Delay(10); //descomentar para probar la libreria y ver la impresion de pixeles de manera lenta
 	}
 
-	HAL_I2C_Master_Transmit (&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, col_final+2, 100);
+	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, col_final+2);
+	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
 void OLED_Draw_8_Pixel(uint8_t pag_inicio, uint8_t col_inicio, uint8_t pixel_8bits){
@@ -481,7 +486,7 @@ void OLED_Print_Letra(uint8_t pag, uint8_t col, uint8_t font_size, char letra){ 
 }
 
 
-void OLED_Print_Text(uint8_t pag, uint8_t col, uint8_t font_size, char *texto){
+void OLED_Print_Text_DMA(uint8_t pag, uint8_t col, uint8_t font_size, char *texto){
 
 	switch(font_size){
 		case 1:
@@ -508,7 +513,7 @@ void OLED_Print_Text(uint8_t pag, uint8_t col, uint8_t font_size, char *texto){
 	}
 }
 
-void OLED_Imagen(const unsigned char imagen[]){
+void OLED_Imagen_DMA(const unsigned char imagen[]){
 
 	int k=0;
 
@@ -520,7 +525,7 @@ void OLED_Imagen(const unsigned char imagen[]){
 	}
 }
 
-void OLED_Imagen_Small(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y){
+void OLED_Imagen_Small_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y){
 
 	int k=0;
 
