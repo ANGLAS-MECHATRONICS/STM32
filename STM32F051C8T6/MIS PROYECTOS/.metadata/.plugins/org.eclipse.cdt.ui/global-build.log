@@ -1,7 +1,20 @@
-17:51:51 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 ****
+16:58:42 **** Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
 make -j4 all 
-arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.3.elf 
+arm-none-eabi-gcc -o "PORTABLE DIGITAL SOURCE V1.3 DMA.elf" @"objects.list"   -mcpu=cortex-m0 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3 DMA\STM32F051C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PORTABLE DIGITAL SOURCE V1.3 DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PORTABLE DIGITAL SOURCE V1.3 DMA.elf
+ 
+arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf 
+arm-none-eabi-objdump -h -S  PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf  > "PORTABLE DIGITAL SOURCE V1.3 DMA.list"
    text	   data	    bss	    dec	    hex	filename
-  49904	    508	   3056	  53468	   d0dc	PORTABLE DIGITAL SOURCE V1.3.elf
+  50020	    508	   3064	  53592	   d158	PORTABLE DIGITAL SOURCE V1.3 DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: PORTABLE DIGITAL SOURCE V1.3 DMA.list
+ 
+16:58:57 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
+make -j4 all 
+arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  50020	    508	   3064	  53592	   d158	PORTABLE DIGITAL SOURCE V1.3 DMA.elf
 Finished building: default.size.stdout
  

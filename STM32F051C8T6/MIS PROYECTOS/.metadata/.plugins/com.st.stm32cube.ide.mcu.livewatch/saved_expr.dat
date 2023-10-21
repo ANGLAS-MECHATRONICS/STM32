@@ -10,5 +10,4 @@ paso_Encoder
 valor_Encoder
 encoder
 Vdac
-__HAL_TIM_GET_AUTORELOAD(&htim15)
-valor_CCR
+Vshunt

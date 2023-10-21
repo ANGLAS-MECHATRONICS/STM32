@@ -1,10 +1,140 @@
-15:09:59 **** Incremental Build of configuration Debug for project ENCODER_ROTATIVO_LCD_I2C ****
+19:46:40 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
 make -j4 all 
-arm-none-eabi-size   ENCODER_ROTATIVO_LCD_I2C.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
    text	   data	    bss	    dec	    hex	filename
-  27608	    488	   1776	  29872	   74b0	ENCODER_ROTATIVO_LCD_I2C.elf
+  17692	     20	   1852	  19564	   4c6c	MCP4725_DMA.elf
 Finished building: default.size.stdout
  
-
-15:09:59 Build Finished. 0 errors, 0 warnings. (took 624ms)
-
+Finished building: MCP4725_DMA.list
+ 
+19:47:40 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17800	     20	   1852	  19672	   4cd8	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:48:30 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17800	     20	   1852	  19672	   4cd8	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:49:38 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17800	     20	   1852	  19672	   4cd8	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:50:12 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17780	     20	   1844	  19644	   4cbc	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:51:04 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17796	     20	   1844	  19660	   4ccc	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:51:23 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17796	     20	   1844	  19660	   4ccc	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:52:20 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17796	     20	   1844	  19660	   4ccc	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:53:11 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17796	     20	   1844	  19660	   4ccc	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 
+19:53:47 **** Incremental Build of configuration Debug for project MCP4725_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_DMA.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\MCP4725_DMA\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_DMA.elf  > "MCP4725_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+  17796	     20	   1844	  19660	   4ccc	MCP4725_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_DMA.list
+ 

@@ -1,14 +1,63 @@
-22:22:12 **** Build of configuration Debug for project OLED_SSD1306 ****
+13:13:17 **** Incremental Build of configuration Debug for project MCP4725_I2C_DMA ****
 make -j4 all 
-arm-none-eabi-size   OLED_SSD1306.elf 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_I2C_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\MCP4725_I2C_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_I2C_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_I2C_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_I2C_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_I2C_DMA.elf  > "MCP4725_I2C_DMA.list"
    text	   data	    bss	    dec	    hex	filename
-  36808	    484	   1692	  38984	   9848	OLED_SSD1306.elf
+   9272	     20	   1660	  10952	   2ac8	MCP4725_I2C_DMA.elf
 Finished building: default.size.stdout
  
-22:22:18 **** Incremental Build of configuration Debug for project OLED_SSD1306 ****
+Finished building: MCP4725_I2C_DMA.list
+ 
+13:13:36 **** Incremental Build of configuration Debug for project MCP4725_I2C_DMA ****
 make -j4 all 
-arm-none-eabi-size   OLED_SSD1306.elf 
+arm-none-eabi-size   MCP4725_I2C_DMA.elf 
    text	   data	    bss	    dec	    hex	filename
-  36808	    484	   1692	  38984	   9848	OLED_SSD1306.elf
+   9272	     20	   1660	  10952	   2ac8	MCP4725_I2C_DMA.elf
 Finished building: default.size.stdout
+ 
+13:17:39 **** Incremental Build of configuration Debug for project MCP4725_I2C_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_I2C_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\MCP4725_I2C_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_I2C_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_I2C_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_I2C_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_I2C_DMA.elf  > "MCP4725_I2C_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+   9280	     20	   1660	  10960	   2ad0	MCP4725_I2C_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_I2C_DMA.list
+ 
+13:18:24 **** Incremental Build of configuration Debug for project MCP4725_I2C_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_I2C_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\MCP4725_I2C_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_I2C_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_I2C_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_I2C_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_I2C_DMA.elf  > "MCP4725_I2C_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+   9280	     20	   1660	  10960	   2ad0	MCP4725_I2C_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_I2C_DMA.list
+ 
+13:18:54 **** Incremental Build of configuration Debug for project MCP4725_I2C_DMA ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCP4725_I2C_DMA.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F103C8T6\LIBRERIAS CON HAL\MCP4725_I2C_DMA\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCP4725_I2C_DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCP4725_I2C_DMA.elf
+ 
+arm-none-eabi-size   MCP4725_I2C_DMA.elf 
+arm-none-eabi-objdump -h -S  MCP4725_I2C_DMA.elf  > "MCP4725_I2C_DMA.list"
+   text	   data	    bss	    dec	    hex	filename
+   9280	     20	   1660	  10960	   2ad0	MCP4725_I2C_DMA.elf
+Finished building: default.size.stdout
+ 
+Finished building: MCP4725_I2C_DMA.list
  

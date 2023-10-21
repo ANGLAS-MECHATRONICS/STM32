@@ -1,0 +1,10 @@
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:726:13:DAC_DMAErrorCh1	8	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:713:13:DAC_DMAHalfConvCpltCh1	8	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:698:13:DAC_DMAConvCpltCh1	8	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:164:19:HAL_DAC_ConfigChannel	12	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:251:10:HAL_DAC_GetValue	0	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:461:19:HAL_DAC_Start	12	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:511:19:HAL_DAC_Start_DMA	32	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:649:6:HAL_DAC_IRQHandler	8	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:895:10:HAL_DACEx_DualGetValue	0	static
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:1045:19:HAL_DACEx_DualSetValue	0	static

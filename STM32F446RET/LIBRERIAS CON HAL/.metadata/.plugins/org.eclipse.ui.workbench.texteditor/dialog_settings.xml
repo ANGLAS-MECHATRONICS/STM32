@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="pData"/>
+		<item key="selection" value="SystemCoreClockUpdate"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="SystemCoreClockUpdate"/>
+			<item value="SystemInit"/>
+			<item value="I2C_Master_Functions_Handler"/>
+			<item value="HAL_MspInit"/>
 			<item value="OLED_Draw_Pixel"/>
 			<item value="__delay_ms"/>
 			<item value="LCD_WriteCommand"/>
 			<item value="variables"/>
-			<item value="Exported functions"/>
-			<item value="Exported functions "/>
-			<item value="check_DHT11"/>
 		</list>
 		<list key="replacehistory">
 			<item value="HAL_Delay"/>

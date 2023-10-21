@@ -1,0 +1,9 @@
+../Core/Src/main.c:316:6:SystemClock_Config	104	static,ignoring_inline_asm
+../Core/Src/main.c:679:6:HAL_TIM_PeriodElapsedCallback	8	static
+../Core/Src/main.c:687:6:medirVoltage	8	static
+../Core/Src/main.c:694:6:medirCorriente	8	static
+../Core/Src/main.c:704:6:medirPotencia	8	static
+../Core/Src/main.c:715:6:Control_Estabilizar	32	static
+../Core/Src/main.c:769:6:PWM_set_Freq_DutyCycle	32	static
+../Core/Src/main.c:110:5:main	144	static,ignoring_inline_asm
+../Core/Src/main.c:791:6:Error_Handler	0	static,ignoring_inline_asm
