@@ -1,10 +1,8 @@
-../Core/Src/Anglas_OLED_SSD1306.c:377:6:OLED_Write_Command_3bytes	24	static
-../Core/Src/Anglas_OLED_SSD1306.c:383:6:OLED_Write_Data_1byte	16	static
-../Core/Src/Anglas_OLED_SSD1306.c:389:6:OLED_Draw_Pixel	24	static
+../Core/Src/Anglas_OLED_SSD1306.c:377:13:OLED_Write_Command_3bytes	24	static
+../Core/Src/Anglas_OLED_SSD1306.c:431:13:OLED_Draw_8_Pixel	24	static
+../Core/Src/Anglas_OLED_SSD1306.c:389:13:OLED_Draw_Pixel	24	static
 ../Core/Src/Anglas_OLED_SSD1306.c:405:6:OLED_Clear_DMA	1048	dynamic,bounded
 ../Core/Src/Anglas_OLED_SSD1306.c:333:6:OLED_Init_DMA	48	static
-../Core/Src/Anglas_OLED_SSD1306.c:431:6:OLED_Draw_8_Pixel	16	static
-../Core/Src/Anglas_OLED_SSD1306.c:437:6:OLED_Print_Letra	48	static
-../Core/Src/Anglas_OLED_SSD1306.c:489:6:OLED_Print_Text_DMA	16	static
+../Core/Src/Anglas_OLED_SSD1306.c:489:6:OLED_Print_Text_DMA	48	static
 ../Core/Src/Anglas_OLED_SSD1306.c:516:6:OLED_Imagen_DMA	32	static
 ../Core/Src/Anglas_OLED_SSD1306.c:528:6:OLED_Imagen_Small_DMA	48	static

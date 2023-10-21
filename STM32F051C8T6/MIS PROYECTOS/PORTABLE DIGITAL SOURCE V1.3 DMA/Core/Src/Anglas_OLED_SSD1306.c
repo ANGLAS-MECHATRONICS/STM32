@@ -374,19 +374,19 @@ void OLED_Init_DMA(void){
 	OLED_Clear_DMA();
 }
 
-void OLED_Write_Command_3bytes(uint8_t byte1, uint8_t byte2, uint8_t byte3){
+static void OLED_Write_Command_3bytes(uint8_t byte1, uint8_t byte2, uint8_t byte3){
 	uint8_t datos[4] = {CMD, byte1, byte2, byte3};
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 4);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
-void OLED_Write_Data_1byte(uint8_t byte1){
+static void OLED_Write_Data_1byte(uint8_t byte1){
 	uint8_t datos[2] = {DAT, byte1};
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, SSD1306_I2C_ADDRESS, (uint8_t*)datos, 2);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
-void OLED_Draw_Pixel(uint8_t pag_inicio, uint8_t pag_final, uint8_t col_inicio, uint16_t col_final, uint8_t pixel){
+static void OLED_Draw_Pixel(uint8_t pag_inicio, uint8_t pag_final, uint8_t col_inicio, uint16_t col_final, uint8_t pixel){
 	uint8_t datos[2];
 	OLED_Write_Command_3bytes(SSD1306_PAGEADDR,pag_inicio,pag_final);
 	OLED_Write_Command_3bytes(SSD1306_COLUMNADDR,col_inicio,col_final);
@@ -428,13 +428,13 @@ void OLED_Clear_DMA(void){
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 }
 
-void OLED_Draw_8_Pixel(uint8_t pag_inicio, uint8_t col_inicio, uint8_t pixel_8bits){
+static void OLED_Draw_8_Pixel(uint8_t pag_inicio, uint8_t col_inicio, uint8_t pixel_8bits){
 	OLED_Write_Command_3bytes(SSD1306_PAGEADDR,pag_inicio,pag_inicio);
 	OLED_Write_Command_3bytes(SSD1306_COLUMNADDR,col_inicio,col_inicio);
 	OLED_Write_Data_1byte(pixel_8bits);
 }
 
-void OLED_Print_Letra(uint8_t pag, uint8_t col, uint8_t font_size, char letra){ //pagina(0,7)  columna(0-127)    letra
+static void OLED_Print_Letra(uint8_t pag, uint8_t col, uint8_t font_size, char letra){ //pagina(0,7)  columna(0-127)    letra
 	uint16_t pos;     //variable para almacenar la posicion recuperada de la matriz o arreglo
 	letra = letra-32; //resto menos 32 para tener el codigo ASCCI
 

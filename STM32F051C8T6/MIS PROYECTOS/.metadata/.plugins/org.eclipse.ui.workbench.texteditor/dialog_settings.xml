@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="ina.current_LSB"/>
+		<item key="selection" value=""/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="OLED"/>
+			<item value="INA226"/>
 			<item value="ina.current_LSB"/>
 			<item value="hi2c1"/>
 			<item value="OLED_Write_Command_3bytes"/>
 			<item value="tim6"/>
 			<item value="HAL_ADC_"/>
 			<item value="medirVoltBateria"/>
-			<item value="encoder"/>
-			<item value="valor_Encoder"/>
 		</list>
 		<list key="replacehistory">
 		</list>
