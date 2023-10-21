@@ -1,0 +1,9 @@
+../Core/Src/main.c:320:6:SystemClock_Config	4
+../Core/Src/main.c:703:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:711:6:medirVoltage	2
+../Core/Src/main.c:718:6:medirCorriente	2
+../Core/Src/main.c:728:6:medirPotencia	2
+../Core/Src/main.c:739:6:Control_Estabilizar	35
+../Core/Src/main.c:793:6:PWM_set_Freq_DutyCycle	2
+../Core/Src/main.c:113:5:main	44
+../Core/Src/main.c:815:6:Error_Handler	1

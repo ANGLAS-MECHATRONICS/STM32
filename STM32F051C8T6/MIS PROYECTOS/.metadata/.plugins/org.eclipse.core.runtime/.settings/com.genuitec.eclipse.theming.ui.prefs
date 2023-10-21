@@ -1,10 +1,12 @@
 applyBackground=false
 approved.defs.file.last.changed.time=1693315978000
 codetogether.staging.view.first.use=1695829262893
-configurationInstallLocation=/F\:/Program Files/STM32CubeIDE_1.11.0/STM32CubeIDE/
+configurationInstallLocation=/F\:/Program Files/STM32CubeIDE_1.13.2/STM32CubeIDE/
+ct.upsell.display.after=1698022766972
 eclipse.preferences.version=1
 iconcolormode=primary
-last.download.attempt.time=1697838418847
-lastConfiguration=1697838399743
-newinstall=true
+last.download.attempt.time=1697849933814
+lastConfiguration=1697846362474
+newinstall=false
+showWelcomeDialog=false
 workbench.theme=Dark Gray

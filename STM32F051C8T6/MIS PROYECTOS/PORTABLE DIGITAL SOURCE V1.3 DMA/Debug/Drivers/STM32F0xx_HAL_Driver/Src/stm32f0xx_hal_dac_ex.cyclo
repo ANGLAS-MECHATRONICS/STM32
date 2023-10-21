@@ -1,0 +1,10 @@
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:726:13:DAC_DMAErrorCh1	1
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:713:13:DAC_DMAHalfConvCpltCh1	1
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:698:13:DAC_DMAConvCpltCh1	1
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:164:19:HAL_DAC_ConfigChannel	2
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:251:10:HAL_DAC_GetValue	1
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:461:19:HAL_DAC_Start	4
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:511:19:HAL_DAC_Start_DMA	5
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:649:6:HAL_DAC_IRQHandler	3
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:895:10:HAL_DACEx_DualGetValue	1
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c:1045:19:HAL_DACEx_DualSetValue	2
