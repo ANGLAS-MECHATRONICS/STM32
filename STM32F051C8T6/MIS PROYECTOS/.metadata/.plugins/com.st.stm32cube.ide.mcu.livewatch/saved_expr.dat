@@ -11,3 +11,4 @@ valor_Encoder
 encoder
 Vdac
 Vshunt
+dacDMA[0]

@@ -1,7 +1,7 @@
-21:08:29 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
+18:02:51 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
 make -j4 all 
 arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf 
    text	   data	    bss	    dec	    hex	filename
-  53124	    500	   3520	  57144	   df38	PORTABLE DIGITAL SOURCE V1.3 DMA.elf
+  54156	    500	   3744	  58400	   e420	PORTABLE DIGITAL SOURCE V1.3 DMA.elf
 Finished building: default.size.stdout
  

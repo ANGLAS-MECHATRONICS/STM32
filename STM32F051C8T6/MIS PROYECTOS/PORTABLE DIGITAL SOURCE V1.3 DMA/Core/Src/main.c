@@ -53,13 +53,16 @@
 ADC_HandleTypeDef hadc;
 
 DAC_HandleTypeDef hdac1;
+DMA_HandleTypeDef hdma_dac1_ch1;
 
 I2C_HandleTypeDef hi2c1;
 DMA_HandleTypeDef hdma_i2c1_tx;
-DMA_HandleTypeDef hdma_i2c1_rx;
 
 TIM_HandleTypeDef htim6;
+TIM_HandleTypeDef htim14;
 TIM_HandleTypeDef htim15;
+TIM_HandleTypeDef htim16;
+TIM_HandleTypeDef htim17;
 
 /* USER CODE BEGIN PV */
 char buff[16];
@@ -67,6 +70,7 @@ float encoder;
 float power,current,voltage,shunt,Vshunt;
 float Vbat,Vdac,VoutMath,difference,PWM,ENCO=0;
 float adcVbat=0,VbatADC,previous;
+uint32_t dacDMA[1];
 
 uint16_t contMillis=0;
 uint8_t muestras=50;
@@ -77,7 +81,9 @@ uint16_t contButton=0;
 uint8_t memButton=0;
 uint8_t powerSupply=0;
 uint8_t mem=0,suma=0;//variables para el pulsador del encoder
-uint16_t FFF,AAA=5050;
+
+uint16_t timerShowIconBattery=0;
+uint16_t timerShowAllData=0;
 
 extern float valor_Encoder;
 extern float paso_Encoder;
@@ -89,16 +95,20 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_I2C1_Init(void);
-static void MX_TIM6_Init(void);
 static void MX_DAC1_Init(void);
 static void MX_ADC_Init(void);
 static void MX_TIM15_Init(void);
+static void MX_TIM14_Init(void);
+static void MX_TIM6_Init(void);
+static void MX_TIM16_Init(void);
+static void MX_TIM17_Init(void);
 /* USER CODE BEGIN PFP */
 void medirVoltage(void);
 void medirCorriente(void);
 void medirPotencia(void);
 void Control_Estabilizar(void);
 void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo);
+void medirCargaBateria(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -136,10 +146,13 @@ int main(void)
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_I2C1_Init();
-  MX_TIM6_Init();
   MX_DAC1_Init();
   MX_ADC_Init();
   MX_TIM15_Init();
+  MX_TIM14_Init();
+  MX_TIM6_Init();
+  MX_TIM16_Init();
+  MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
 
 
@@ -154,12 +167,17 @@ int main(void)
   OLED_Imagen_Small_DMA(2,0, AM_INTRO, 128, 64);
   OLED_Print_Text_DMA(1,0,1,"Designed by G. Anglas");
   while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
+  HAL_TIM_Base_Start_IT(&htim14);
   HAL_TIM_Base_Start_IT(&htim6);
+  HAL_TIM_Base_Start_IT(&htim16);
+  HAL_TIM_Base_Start_IT(&htim17);
 
+  HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
 
   OLED_Clear_DMA();
 
-  INA226_Init_DMA(3.2768,25,AVG_64,T_Vbus_588us,T_Vshunt_588us,MODE_SHUNT_BUS_CONTINUOUS);
+  INA226_Init_DMA(3.2768,25,AVG_64,T_Vbus_1_1ms,T_Vshunt_1_1ms,MODE_SHUNT_BUS_CONTINUOUS);
   OLED_Print_Text_DMA(3,104,2,"OFF");
   OLED_Print_Text_DMA(2,104,1,"0.1");
 
@@ -226,12 +244,13 @@ int main(void)
     	  PWM_set_Freq_DutyCycle(1000,50,100);
     	  ENCO=0;//ver si eliminar esta linea
       }
+
       //SWITCH SW1
-      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0){
-    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
-      }else{
-    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
-      }
+//      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0){
+//    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
+//      }else{
+//    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
+//      }
 
 
 
@@ -266,10 +285,7 @@ int main(void)
 
       encoder = encoder - (0.00001*encoder*encoder-0.0156*encoder+6.4948);
 
-
       Control_Estabilizar();
-      //HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
-      //HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, encoder);
 
       ///////////////////////////// MEDIR VBAT 12VDC - ADC ///////////////////////////////////////////////////////////
 
@@ -279,32 +295,21 @@ int main(void)
       adcVbat /= muestras;
       Vbat = adcVbat*0.05826;//(3.3/2^8)*4.3 ------ divisor resistivo V*10k/(10K+33K) -> V = 4.3
 
-      ///////////////////////////// MILLIS ///////////////////////////////////////////////////////////
-      if(voltage <= 9.9) OLED_Print_Text_DMA(2,80,3," ");
+      ///////////////////////////// MOSTRAR EN EL DISPLAY CADA CIERTO TIEMPO //////////////////////////////////////////
 
-      if(contMillis>=120){//cada (Xms * 5) imprimo en el oled
-    	  //sprintf(buff,"%2.2fV",Vbat); OLED_Print_Text(0,88,1,buff);
-    	  if(Vbat>9 && Vbat<=9.9){
-    		  OLED_Imagen_Small_DMA(0, 96, bateria0, 32, 16);
-    	  }else if(Vbat>9.9 && Vbat<=10.5){
-    		  OLED_Imagen_Small_DMA(0, 96, bateria25, 32, 16);
-    	  }else if(Vbat>10.5 && Vbat<=11.1){
-    		  OLED_Imagen_Small_DMA(0, 96, bateria50, 32, 16);
-    	  }else if(Vbat>11.1 && Vbat<=11.7){
-    		  OLED_Imagen_Small_DMA(0, 96, bateria75, 32, 16);
-    	  }else if(Vbat>11.7 && Vbat<=12.6){
-    		  OLED_Imagen_Small_DMA(0, 96, bateria100, 32, 16);
-    	  }
-
-    	  if(voltage <= 9.9) OLED_Print_Text_DMA(2,80,3," ");
-    	  sprintf(buff,"%2.1fV",voltage);
-    	  OLED_Print_Text_DMA(2,0,3,buff);
-
-    	  medirCorriente();
-    	  medirPotencia();
-
-    	  contMillis=0;
+      if(timerShowAllData>=7){//cada x * 100ms
+    	  medirVoltage();
+		  medirCorriente();
+		  medirPotencia();
+		  timerShowAllData=0;
       }
+
+      if(timerShowIconBattery>=1){//cada 1 segundo
+    	  medirCargaBateria();
+    	  timerShowIconBattery=0;
+      }
+
+
 
     /* USER CODE END WHILE */
 
@@ -442,7 +447,7 @@ static void MX_DAC1_Init(void)
 
   /** DAC channel OUT1 config
   */
-  sConfig.DAC_Trigger = DAC_TRIGGER_NONE;
+  sConfig.DAC_Trigger = DAC_TRIGGER_T6_TRGO;
   sConfig.DAC_OutputBuffer = DAC_OUTPUTBUFFER_ENABLE;
   if (HAL_DAC_ConfigChannel(&hdac1, &sConfig, DAC_CHANNEL_1) != HAL_OK)
   {
@@ -524,15 +529,15 @@ static void MX_TIM6_Init(void)
 
   /* USER CODE END TIM6_Init 1 */
   htim6.Instance = TIM6;
-  htim6.Init.Prescaler = 48000-1;
+  htim6.Init.Prescaler = 0;
   htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim6.Init.Period = 5-1;
-  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim6.Init.Period = 32000;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
   {
     Error_Handler();
   }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
   if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
   {
@@ -541,6 +546,37 @@ static void MX_TIM6_Init(void)
   /* USER CODE BEGIN TIM6_Init 2 */
 
   /* USER CODE END TIM6_Init 2 */
+
+}
+
+/**
+  * @brief TIM14 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM14_Init(void)
+{
+
+  /* USER CODE BEGIN TIM14_Init 0 */
+
+  /* USER CODE END TIM14_Init 0 */
+
+  /* USER CODE BEGIN TIM14_Init 1 */
+
+  /* USER CODE END TIM14_Init 1 */
+  htim14.Instance = TIM14;
+  htim14.Init.Prescaler = 48000-1;
+  htim14.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim14.Init.Period = 5-1;
+  htim14.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim14.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim14) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM14_Init 2 */
+
+  /* USER CODE END TIM14_Init 2 */
 
 }
 
@@ -616,6 +652,70 @@ static void MX_TIM15_Init(void)
 
   /* USER CODE END TIM15_Init 2 */
   HAL_TIM_MspPostInit(&htim15);
+
+}
+
+/**
+  * @brief TIM16 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM16_Init(void)
+{
+
+  /* USER CODE BEGIN TIM16_Init 0 */
+
+  /* USER CODE END TIM16_Init 0 */
+
+  /* USER CODE BEGIN TIM16_Init 1 */
+
+  /* USER CODE END TIM16_Init 1 */
+  htim16.Instance = TIM16;
+  htim16.Init.Prescaler = 48000-1;
+  htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim16.Init.Period = 1000-1;
+  htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim16.Init.RepetitionCounter = 0;
+  htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM16_Init 2 */
+
+  /* USER CODE END TIM16_Init 2 */
+
+}
+
+/**
+  * @brief TIM17 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM17_Init(void)
+{
+
+  /* USER CODE BEGIN TIM17_Init 0 */
+
+  /* USER CODE END TIM17_Init 0 */
+
+  /* USER CODE BEGIN TIM17_Init 1 */
+
+  /* USER CODE END TIM17_Init 1 */
+  htim17.Instance = TIM17;
+  htim17.Init.Prescaler = 48000-1;
+  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim17.Init.Period = 100-1;
+  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim17.Init.RepetitionCounter = 0;
+  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM17_Init 2 */
+
+  /* USER CODE END TIM17_Init 2 */
 
 }
 
@@ -701,18 +801,32 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	if (htim->Instance == TIM6) {//Leemos el encoder cada 5ms
-		//HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
+	if (htim->Instance == TIM14) {//Leemos el encoder cada 5ms
 		VoutMath = Encoder_Run();
-		contMillis++;
 	}
+
+	if (htim->Instance == TIM16) {//Mostramos el icono de bateria en el oled cada 1000ms
+		timerShowIconBattery++;
+	}
+
+	if (htim->Instance == TIM17) {//Mostramos el todos los datos en el oled cada 100ms
+		timerShowAllData++;
+	}
+
+
 }
 
 void medirVoltage(void){
 	voltage = INA226_Vbus_DMA();
-	if(voltage <= 9.9) OLED_Print_Text_DMA(2,80,3," ");
-	sprintf(buff,"%2.1fV",voltage);
-	OLED_Print_Text_DMA(2,0,3,buff);
+    if(voltage <= 9.9) {
+    	OLED_Print_Text_DMA(2,80,3," ");
+    	sprintf(buff,"%1.1fV ",voltage);
+    	OLED_Print_Text_DMA(2,0,3,buff);
+    }else{
+    	sprintf(buff,"%2.1fV",voltage);
+    	OLED_Print_Text_DMA(2,0,3,buff);
+    }
+
 }
 
 void medirCorriente(void){
@@ -739,6 +853,7 @@ void medirPotencia(void){
 void Control_Estabilizar(void){
 
     HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+
     if(VoutMath > voltage){
     	difference = VoutMath - voltage;
     	if(difference>=0.001 && difference<=rango){
@@ -759,10 +874,8 @@ void Control_Estabilizar(void){
     		ENCO=ENCO-step*4;
     	}
     	PWM = encoder+ENCO;
-    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, PWM);
+    	dacDMA[0]=PWM;
     }
-
-    //if(VoutMath > voltage) ENCO=0;
 
 
     if(VoutMath < voltage){
@@ -785,7 +898,7 @@ void Control_Estabilizar(void){
     		ENCO=ENCO+step*4;
     	}
     	PWM = encoder+ENCO;
-    	HAL_DAC_SetValue(&hdac1, DAC_CHANNEL_1, DAC_ALIGN_12B_R, PWM);
+    	dacDMA[0]=PWM;
 
     }
 }
@@ -798,13 +911,26 @@ void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo){
 	if(duty > 100) duty = 100;
 	freq = freqOsc/(freq*prescaler);
 
-
     HAL_TIM_PWM_Start(&htim15, TIM_CHANNEL_1);
 	__HAL_TIM_SET_AUTORELOAD(&htim15,freq);//Si quiero cambiar la frecuencia modifico: __HAL_TIM_SET_AUTORELOAD(&htim15, frecuencia que quiero)
 	valor_CCR = (__HAL_TIM_GET_AUTORELOAD(&htim15)+1)*duty/100;//__HAL_TIM_GET_AUTORELOAD(&htim15): esto es el valor de 10-1 osea 9, por eso le sumo 1 para volver a tener 10, y por 0.5 ya que quiero 50% del duty cycle
     __HAL_TIM_SET_COMPARE(&htim15, TIM_CHANNEL_1, valor_CCR);
     HAL_Delay(tiempo);
     HAL_TIM_PWM_Stop(&htim15, TIM_CHANNEL_1);
+}
+
+void medirCargaBateria(void){
+	if(Vbat>9 && Vbat<=9.9){
+		OLED_Imagen_Small_DMA(0, 96, bateria0, 32, 16);
+	}else if(Vbat>9.9 && Vbat<=10.5){
+		OLED_Imagen_Small_DMA(0, 96, bateria25, 32, 16);
+	}else if(Vbat>10.5 && Vbat<=11.1){
+		OLED_Imagen_Small_DMA(0, 96, bateria50, 32, 16);
+	}else if(Vbat>11.1 && Vbat<=11.7){
+		OLED_Imagen_Small_DMA(0, 96, bateria75, 32, 16);
+	}else if(Vbat>11.7 && Vbat<=12.6){
+		OLED_Imagen_Small_DMA(0, 96, bateria100, 32, 16);
+	}
 }
 /* USER CODE END 4 */
 

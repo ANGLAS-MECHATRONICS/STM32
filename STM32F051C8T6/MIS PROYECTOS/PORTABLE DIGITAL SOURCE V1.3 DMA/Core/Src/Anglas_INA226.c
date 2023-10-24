@@ -70,8 +70,7 @@ float INA226_Vshunt_DMA(void){
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 
 	dato = ((datos[0]<<8)|datos[1]);
 
@@ -92,8 +91,7 @@ float INA226_Vbus_DMA(void){
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 
 	dato = ((datos[0]<<8)|datos[1]);
 	Vbus = (uint32_t)dato * INA_BUS_VOLTAGE_LSB;
@@ -111,8 +109,7 @@ float INA226_Current_DMA(void){
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 
 	dato = ((datos[0]<<8)|datos[1]);
 
@@ -124,8 +121,8 @@ float INA226_Current_DMA(void){
 		HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 		while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-		HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-		while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+		HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
+
 
 		dato = ((datos[0]<<8)|datos[1]);
 		current = (uint32_t)dato * (ina.current_LSB - 3750);//restar un valor entre 3000 y 5000 para calibrar las medidas (estoy lo hice con prueba error)
@@ -155,8 +152,7 @@ float INA226_Power_DMA(void){
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 
 	dato = ((datos[0]<<8)|datos[1]);
 	power = (uint32_t)dato * ina.power_LSB;
@@ -198,8 +194,7 @@ uint16_t INA226_Mode_pinAlert_DMA(uint16_t umbral){// 1000 0xxx xxx0 0010 = 0x20
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 	dato = ((datos[0]<<8)|datos[1]);
 	return dato;
 }
@@ -258,8 +253,7 @@ uint16_t INA226_Alert_Limit_DMA(uint16_t limite){//presicion ±2mA, el mV y mW f
 	HAL_I2C_Master_Transmit_DMA(&hi2c1, INA226_I2C_ADDRESS_WRITE, (uint8_t*)datos, 1);
 	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
 
-	HAL_I2C_Master_Receive_DMA(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2);
-	while (HAL_I2C_GetState(&hi2c1) != HAL_I2C_STATE_READY) {}
+	HAL_I2C_Master_Receive(&hi2c1, INA226_I2C_ADDRESS_READ, (uint8_t*)datos, 2, 100);
 	dato = ((datos[0]<<8)|datos[1]);
 	return dato;
 }
