@@ -47,9 +47,9 @@ void INA226_Init_DMA(const double Maximum_Expected_Current, const uint16_t resMi
 	ina.calibration = (float)5120000 / ((float)ina.current_LSB * ina.Rshunt/1000);  // Compute calibration register(CAL)
 
 	//La formula para "power_LSB" es solo multiplicar "current_LSB" por 25 (pag.16 datasheet)
-	//Lo resto 900 para calibrar(probar desde 600 - 1500 )
+	//Lo resto 3750 para calibrar(probar desde 2000 - 7000 )
 	//Lo divido entre 1000 porq el numero es muy grande y para la operacion de "INA226_Power()" el numero excede de uint32_t
-	ina.power_LSB   = (float)25 * ina.current_LSB/1000;
+	ina.power_LSB   = (float)25 * (ina.current_LSB-3750)/1000;
 
 	MSB = (uint8_t)(ina.calibration >> 8);
 	LSB = (uint8_t)(ina.calibration & 0xFF);

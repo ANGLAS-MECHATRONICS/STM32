@@ -181,6 +181,10 @@ int main(void)
   OLED_Print_Text_DMA(3,104,2,"OFF");
   OLED_Print_Text_DMA(2,104,1,"0.1");
 
+  OLED_Print_Text_DMA(2,0,3,"0.0V ");
+  OLED_Print_Text_DMA(6,0,2,"   0mA");
+  OLED_Print_Text_DMA(5,96,1,"0.0W ");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
