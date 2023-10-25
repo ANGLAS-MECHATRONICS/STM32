@@ -71,8 +71,9 @@ void Error_Handler(void);
 #define LED1_GPIO_Port GPIOF
 #define LED2_Pin GPIO_PIN_7
 #define LED2_GPIO_Port GPIOF
-#define ALERT_Pin GPIO_PIN_4
-#define ALERT_GPIO_Port GPIOB
+#define INT_OVER_CURRENT_Pin GPIO_PIN_4
+#define INT_OVER_CURRENT_GPIO_Port GPIOB
+#define INT_OVER_CURRENT_EXTI_IRQn EXTI4_15_IRQn
 #define CLK_Pin GPIO_PIN_5
 #define CLK_GPIO_Port GPIOB
 #define DT_Pin GPIO_PIN_6
