@@ -73,7 +73,7 @@ float adcVbat=0,VbatADC;
 float rango=0.05;//0.08
 float step=0.3;//0.5
 
-uint8_t sumaSW1=0,flagSW1=0,contSW1=0,mem=0,suma=0,mem1=0,suma1=0,mem2=0,suma2=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;//variables para el pulsador del encoder
+uint8_t flagBattery=0,sumaSW1=0,flagSW1=0,contSW1=0,mem=0,suma=0,mem1=0,suma1=0,mem2=0,suma2=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;//variables para el pulsador del encoder
 uint16_t contButton=0,timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
 
@@ -170,7 +170,7 @@ int main(void)
 
   INA226_Init_DMA(3.2768,25,AVG_64,T_Vbus_1_1ms,T_Vshunt_1_1ms,MODE_SHUNT_BUS_CONTINUOUS);
   INA226_Mode_pinAlert_DMA(SHUNT_VOLTAGE_OVER);
-  INA226_Alert_Limit_DMA(2100);
+  INA226_Alert_Limit_DMA(2550);
 
   OLED_Print_Text_DMA(3,104,2,"OFF");
   OLED_Print_Text_DMA(2,104,1,"1.0");
@@ -184,15 +184,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
-
-	  ///////////////////////////// ICONO DE CARGA BATERIA////////////////////////////////////////////////////
-	  if(HAL_GPIO_ReadPin(stateCharger_GPIO_Port, stateCharger_Pin)==1){//Cuando se conecta el cargador
-		  OLED_Print_Text_DMA(1,104,1,"ON ");
-	  }else{
-		  //OLED_Print_Text(0,88,2,".5V");
-	  }
-
 	  ///////////////////////////// BUTTON ENCODER - SW ///////////////////////////////////////////////////////
       if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 0 && mem == 0){mem = 1;}
       if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 1 && mem == 1){suma++; mem = 0;}
@@ -252,8 +243,8 @@ int main(void)
     	  contSW1++;
     	  if(contSW1>25){
     		  OLED_Clear_DMA();
-			  OLED_Print_Text_DMA(0,0,1,"1.8V  3000mA");
-			  OLED_Print_Text_DMA(1,0,1,"3.3V  2500mA");
+			  OLED_Print_Text_DMA(0,0,1,"1.8V  2500mA");
+			  OLED_Print_Text_DMA(1,0,1,"3.3V  2250mA");
 			  OLED_Print_Text_DMA(2,0,1,"5.0V  2000mA");
 			  OLED_Print_Text_DMA(3,0,1,"9.0V  1250mA");
 			  OLED_Print_Text_DMA(4,0,1,"12.0V 1000mA");
@@ -334,9 +325,20 @@ int main(void)
       }
 
       if(timerShowIconBattery>=1){//cada 1 segundo
-    	  medirCargaBateria();
+    	  if(HAL_GPIO_ReadPin(stateCharger_GPIO_Port, stateCharger_Pin)==0){
+    		  medirCargaBateria();
+    	  }else{
+    		  //blink icono bateria al momento de conectar el cargador
+    		  flagBattery = !flagBattery;
+    		  if(flagBattery){
+    			  OLED_Imagen_Small_DMA(0, 96, chargerBattery, 32, 16);
+    		  }else{
+    			  OLED_Imagen_Small_DMA(0, 96, chargerBattery2, 32, 16);
+    		  }
+    	  }
     	  timerShowIconBattery=0;
       }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

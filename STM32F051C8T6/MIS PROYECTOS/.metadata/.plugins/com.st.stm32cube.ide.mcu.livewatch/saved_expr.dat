@@ -14,3 +14,6 @@ Vshunt
 dacDMA[0]
 power
 alertCurrent
+contSW1
+mem1
+flagSW1

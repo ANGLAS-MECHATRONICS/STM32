@@ -525,20 +525,37 @@ void OLED_Imagen_DMA(const unsigned char imagen[]){
 	}
 }
 
+void OLED_Imagen_Invert_DMA(const unsigned char imagen[]){
+
+	int k=0;
+
+	for(int i=0;i<8;i++){
+		for(int j=0;j<128;j++){
+			OLED_Draw_Pixel(i,i, j,j, ~imagen[k]);
+			k++;
+		}
+	}
+}
+
 void OLED_Imagen_Small_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y){
 
 	int k=0;
 
-//	for(int i=pag;i<size_y/8;i++){
-//		for(int j=col;j<col+size_x;j++){
-//			OLED_Draw_Pixel(pag,size_y/8, col,col+size_x, imagen[k]);
-//			k++;
-//		}
-//	}
-
 	for(int i=pag;i<pag+size_y/8;i++){
 		for(int j=col;j<col+size_x;j++){
 			OLED_Draw_Pixel(i,i, j,j, imagen[k]);
+			k++;
+		}
+	}
+}
+
+void OLED_Imagen_Small_Invert_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y){
+
+	int k=0;
+
+	for(int i=pag;i<pag+size_y/8;i++){
+		for(int j=col;j<col+size_x;j++){
+			OLED_Draw_Pixel(i,i, j,j, ~imagen[k]);
 			k++;
 		}
 	}

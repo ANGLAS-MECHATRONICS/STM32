@@ -16,8 +16,8 @@
 
 /* Variables -----------------------------------------------------------------*/
 uint8_t bit_anterior = 0, bit_actual = 0, bit_armado = 0;
-float val_Min_Encoder = 0.0;//30.0V
-float val_Max_Encoder = 30.0;//0.1V
+float val_Min_Encoder = 0.1;
+float val_Max_Encoder = 30.0;
 float valor_Encoder   = 12.0;//valor inicial del encoder
 float paso_Encoder    = 1.0;
 /* Private functions ---------------------------------------------------------*/

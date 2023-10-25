@@ -89,8 +89,12 @@ extern I2C_HandleTypeDef hi2c1;
 
 void OLED_Init_DMA(void);
 void OLED_Print_Text_DMA(uint8_t pag, uint8_t col, uint8_t font_size, char *texto);
-void OLED_Imagen_DMA(const unsigned char imagen[]);
-void OLED_Imagen_Small_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y);
 void OLED_Clear_DMA(void);
+
+void OLED_Imagen_DMA(const unsigned char imagen[]);
+void OLED_Imagen_Invert_DMA(const unsigned char imagen[]);
+
+void OLED_Imagen_Small_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y);
+void OLED_Imagen_Small_Invert_DMA(uint8_t pag, uint8_t col, const unsigned char imagen[], uint8_t size_x, uint8_t size_y);
 
 #endif /* INC_ANGLAS_OLED_SSD1306_H_ */

@@ -5,4 +5,6 @@
 ../Core/Src/Anglas_OLED_SSD1306.c:333:6:OLED_Init_DMA	2
 ../Core/Src/Anglas_OLED_SSD1306.c:489:6:OLED_Print_Text_DMA	13
 ../Core/Src/Anglas_OLED_SSD1306.c:516:6:OLED_Imagen_DMA	3
-../Core/Src/Anglas_OLED_SSD1306.c:528:6:OLED_Imagen_Small_DMA	3
+../Core/Src/Anglas_OLED_SSD1306.c:528:6:OLED_Imagen_Invert_DMA	3
+../Core/Src/Anglas_OLED_SSD1306.c:540:6:OLED_Imagen_Small_DMA	3
+../Core/Src/Anglas_OLED_SSD1306.c:552:6:OLED_Imagen_Small_Invert_DMA	3
