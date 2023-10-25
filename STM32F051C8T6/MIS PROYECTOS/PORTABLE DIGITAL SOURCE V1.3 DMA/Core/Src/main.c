@@ -73,7 +73,7 @@ float adcVbat=0,VbatADC;
 float rango=0.05;//0.08
 float step=0.3;//0.5
 
-uint8_t mem=0,suma=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;//variables para el pulsador del encoder
+uint8_t sumaSW1=0,flagSW1=0,contSW1=0,mem=0,suma=0,mem1=0,suma1=0,mem2=0,suma2=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;//variables para el pulsador del encoder
 uint16_t contButton=0,timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
 
@@ -240,12 +240,47 @@ int main(void)
     	  ENCO=0;//ver si eliminar esta linea
       }
 
-      //SWITCH SW1
-//      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0){
-//    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
-//      }else{
-//    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
-//      }
+      ////////////////////////////// SWITCH SW1 - VOUT FIJOS 3.3 5 9 12 15 24/////////////////////////////////////////////////////////////
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0){
+    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
+      }else{
+    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
+      }
+
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 1){
+    	  contSW1++;
+    	  if(contSW1>25){
+    		  OLED_Clear_DMA();
+			  OLED_Print_Text_DMA(0,0,1,"1.8V  3000mA");
+			  OLED_Print_Text_DMA(1,0,1,"3.3V  2500mA");
+			  OLED_Print_Text_DMA(2,0,1,"5.0V  2000mA");
+			  OLED_Print_Text_DMA(3,0,1,"9.0V  1250mA");
+			  OLED_Print_Text_DMA(4,0,1,"12.0V 1000mA");
+			  OLED_Print_Text_DMA(5,0,1,"15.0V 750mA");
+			  OLED_Print_Text_DMA(6,0,1,"24.0V 500mA");
+			  OLED_Print_Text_DMA(7,0,1,"30.0V 250mA");
+
+			  mem1 = 0;
+			  contSW1=0;
+			  flagSW1 = 1;
+			  while(flagSW1 == 1){
+				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
+				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){sumaSW1++; mem1 = 0; contSW1=0;}
+				  if(sumaSW1==1) {sumaSW1=2;}
+				  if(sumaSW1==3) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
+			  }
+    	  }
+      }
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){suma1++; mem1 = 0; contSW1=0;}
+
+
+      if(suma1==1) {suma1=2; valor_Encoder = 3.3; }
+      if(suma1==3) {suma1=4; valor_Encoder = 5.0; }
+      if(suma1==5) {suma1=6; valor_Encoder = 9.0; }
+      if(suma1==7) {suma1=8; valor_Encoder = 12.0;}
+      if(suma1==9) {suma1=10;valor_Encoder = 15.0;}
+      if(suma1==11){suma1=0; valor_Encoder = 24.0;}
 
       ///////////////////////////// MEDIR VOLTAJE-CORRIENTE-POTENCIA//////////////////////////////////////////
       voltage = INA226_Vbus_DMA();
