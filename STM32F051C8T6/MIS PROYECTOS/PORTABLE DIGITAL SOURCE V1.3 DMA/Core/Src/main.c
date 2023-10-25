@@ -70,8 +70,8 @@ float encoder;
 float power,current,voltage,shunt,Vshunt;
 float Vbat,Vdac,VoutMath,difference,PWM,ENCO=0;
 float adcVbat=0,VbatADC;
-float rango=0.08;
-float step=0.5;
+float rango=0.05;//0.08
+float step=0.3;//0.5
 
 uint8_t mem=0,suma=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;//variables para el pulsador del encoder
 uint16_t contButton=0,timerShowIconBattery=0,timerShowAllData=0;
@@ -271,10 +271,16 @@ int main(void)
       Vdac = 3.1677 - VoutMath*0.09825;//coloque R1=560k pero para mejorar los calculos utilizo el valor de 570k y obtuve esta formula
       encoder = Vdac * 4096.0/3.26;
 
+
+
+      //ver el dac y el pid
+      sprintf(buff,"%4.0f",encoder);
+      OLED_Print_Text_DMA(6,96,1,buff);
       sprintf(buff,"%4.0f",PWM);
       OLED_Print_Text_DMA(7,96,1,buff);
 
-      encoder = encoder - (0.00001*encoder*encoder-0.0156*encoder+6.4948);
+      encoder = encoder - (8.0E-06 * encoder * encoder + 0.002 * encoder + 1.1844);
+      //encoder = encoder - (0.00001*encoder*encoder-0.0156*encoder+6.4948);
       Control_Estabilizar();
 
       ///////////////////////////// MEDIR VBAT 12VDC - ADC ///////////////////////////////////////////////////////////

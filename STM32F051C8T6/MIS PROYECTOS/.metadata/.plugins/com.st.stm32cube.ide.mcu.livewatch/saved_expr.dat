@@ -12,3 +12,5 @@ encoder
 Vdac
 Vshunt
 dacDMA[0]
+power
+alertCurrent

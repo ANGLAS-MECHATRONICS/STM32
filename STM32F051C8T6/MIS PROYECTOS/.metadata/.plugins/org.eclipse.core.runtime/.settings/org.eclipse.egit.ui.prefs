@@ -1,4 +1,4 @@
-commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>PDS DMA BIEN</message>\r\n<message>PDS V1.3 DMA EXIT</message>\r\n<message>PDS DMA</message>\r\n<message>PDS V1.3 AUN FALTA</message>\r\n<message>PDS V1.3 CASI TERMINADO</message>\r\n<message>PD&\#x0A;S</message>\r\n<message>save</message>\r\n<message>yaaa</message>\r\n<message>ahora si</message>\r\n<message>otra vez</message>\r\n</messages>
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>PDS V1.3 DMA BIEN2</message>\r\n<message>PDS 1.3 DMA END1</message>\r\n<message>PDS V1.3 DMA BIEN</message>\r\n<message>PDS DMA BIEN</message>\r\n<message>PDS V1.3 DMA EXIT</message>\r\n<message>PDS DMA</message>\r\n<message>PDS V1.3 AUN FALTA</message>\r\n<message>PDS V1.3 CASI TERMINADO</message>\r\n<message>PD&\#x0A;S</message>\r\n<message>save</message>\r\n</messages>
 eclipse.preferences.version=1
 resourcehistory_graph_split=500,500
 resourcehistory_rev_split=700,300
