@@ -22,14 +22,12 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
-//#include "string.h"
 #include "math.h"
 
 #include "Anglas_OLED_SSD1306.h"
 #include "Anglas_IMAGENES.h"
 #include "Anglas_ENCODER_ROT.h"
 #include "Anglas_INA226.h"
-#include "Anglas_FUNCION_MAP.h"
 
 #include "eeprom.h"
 #include "eeprom_Config.h"
@@ -66,18 +64,20 @@ TIM_HandleTypeDef htim17;
 
 /* USER CODE BEGIN PV */
 char buff[16];
-//float encoder;
-float dac_12bits;
-float power,current,voltage,shunt,Vshunt;
-float Vbat,Vdac,set_Voltage_Encoder,difference,PWM,ENCO=0;
-float adcVbat=0,VbatADC;
-float rango=0.05;//0.08
-float step=0.3;//0.5
-float limitCurrent;
 
-uint8_t flagBattery=0,sumaSW1=0,flagSW1=0,contSW1=0,mem=0,suma=0,mem1=0,suma1=0,mem2=0,suma2=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;
-uint8_t activate_Protec_Current=0,flag_Exceed_CurrentLimit=0,flag_Exceed_CurrentLimit2=0;
-uint16_t contButton=0,timerShowIconBattery=0,timerShowAllData=0;
+float dac_12bits;
+float power,current,voltage;
+float Vbat,Vdac,set_Voltage_Encoder,difference,limitCurrent;
+float adcVbat=0,PWM,ENCO=0;
+float rango=0.05,step=0.3;
+
+uint8_t sumaSW1=0,contSW1=0,contSW2=0,powerSupply=0,muestrasADC=50;
+uint8_t mem=0,mem1=0,mem2=0,memButton=0;
+uint8_t suma=0,suma1=0,suma2=0;
+uint8_t flagSW1=0,flagBattery=0,flag_Exceed_CurrentLimit=0,flag_Exceed_CurrentLimit2=0;
+uint8_t activate_Protec_Current=0;
+
+uint16_t timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
 
 extern float valor_Encoder;
@@ -212,55 +212,7 @@ int main(void)
       if(flag_Exceed_CurrentLimit==1) show_Exceed_CurrentLimit();
 
 
-
-
-
-
-      //Mantener presionado el SW2 por cierto tiempo, para encender o apagar el XL6019
-      if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 0){
-    	  contButton++;
-    	  if(contButton>15){// 1.5seg aprox
-    		  contButton=0;
-    		  powerSupply++;
-    	  }
-      }
-
-      //Garantiza que el contButton siempre inicie de 0
-      if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 1 && contButton>0){contButton=0;}
-
-      //Salida de voltaje de XL6019 ON
-      if(powerSupply==1){
-    	  powerSupply=2;
-    	  OLED_Print_Text_DMA(3,100,2,"ON ");
-    	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
-    	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
-    	  HAL_Delay(6);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
-
-          if(flag_Exceed_CurrentLimit==1){
-        	  show_Exceed_CurrentLimit();
-          }else{
-        	  PWM_set_Freq_DutyCycle(4000,50,100);
-        	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
-        	  ee_commit();
-          }
-      }
-
-      //Salida de voltaje de XL6019 OFF, luego de detectar sobrecorriente
-      if(powerSupply==3 && flag_Exceed_CurrentLimit2==1){
-    	  powerSupply=0;
-    	  flag_Exceed_CurrentLimit2=0;
-      }
-
-      //Salida de voltaje de XL6019 OFF
-      if(powerSupply==3 && flag_Exceed_CurrentLimit2==0){
-    	  powerSupply=0;
-    	  OLED_Print_Text_DMA(3,100,2,"OFF");
-    	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
-    	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
-    	  PWM_set_Freq_DutyCycle(1000,50,100);
-    	  ENCO=0;//ver si eliminar esta linea
-      }
-
+      control_SW2();
       control_SW1();
 
       //Mido el volaje de salida del XL6019 constantemente
@@ -949,7 +901,7 @@ void show_Exceed_CurrentLimit(void){
 	for(uint8_t i=0; i<3; i++){
 		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
-		PWM_set_Freq_DutyCycle(6000,50,300);
+		PWM_set_Freq_DutyCycle(3850,50,300);
 		HAL_Delay(200);
 		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
 		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
@@ -981,8 +933,8 @@ void update_Data_on_Display(void){//actualizo 0.1, OFF, que no son tan relevante
 void medirVoltageBattery(void){
 	HAL_ADC_Start(&hadc);
 	adcVbat=0;
-    for(uint8_t i=0; i<muestras; i++) adcVbat += HAL_ADC_GetValue(&hadc);//Leo 20 muestras del adc para tener una lectura mas precisa
-    adcVbat /= muestras;
+    for(uint8_t i=0; i<muestrasADC; i++) adcVbat += HAL_ADC_GetValue(&hadc);//Leo 20 muestrasADC del adc para tener una lectura mas precisa
+    adcVbat /= muestrasADC;
     Vbat = adcVbat*0.05768;//(3.3/2^8)*4.3 ------ divisor resistivo V*10k/(10K+33K) -> V = 4.3
 }
 
@@ -1019,6 +971,10 @@ void control_SW(void){
 void control_SW1(void){
     //Control del pulsador SW1 - VOUT FIJOS 3.3, 5, 9, 12, 15 y 24
     //solo funciona cuando esta desactivada la salida de voltaje (powerSupply==0)
+
+	//Garantiza que el contSW1 siempre inicie de 0
+	if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && contSW1>0){contSW1=0;}
+
     if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0 && powerSupply==0){mem1 = 1;}
     if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 1 && powerSupply==0){
   	  contSW1++;
@@ -1066,6 +1022,53 @@ void control_SW1(void){
     if(suma1==7) {suma1=8; valor_Encoder = 12.0;}
     if(suma1==9) {suma1=10;valor_Encoder = 15.0;}
     if(suma1==11){suma1=0; valor_Encoder = 24.0;}
+}
+
+void control_SW2(void){
+    //Mantener presionado el SW2 por cierto tiempo, para encender o apagar el XL6019
+    if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 0){
+  	  contSW2++;
+  	  if(contSW2>15){// 1.5seg aprox
+  		  contSW2=0;
+  		  powerSupply++;
+  	  }
+    }
+
+    //Garantiza que el contSW2 siempre inicie de 0
+    if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 1 && contSW2>0){contSW2=0;}
+
+    //Salida de voltaje de XL6019 ON
+    if(powerSupply==1){
+  	  powerSupply=2;
+  	  OLED_Print_Text_DMA(3,100,2,"ON ");
+  	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
+  	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
+  	  HAL_Delay(6);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
+
+        if(flag_Exceed_CurrentLimit==1){
+      	  show_Exceed_CurrentLimit();
+        }else{
+      	  PWM_set_Freq_DutyCycle(4000,50,100);
+      	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
+      	  ee_commit();
+        }
+    }
+
+    //Salida de voltaje de XL6019 OFF, luego de detectar sobrecorriente
+    if(powerSupply==3 && flag_Exceed_CurrentLimit2==1){
+  	  powerSupply=0;
+  	  flag_Exceed_CurrentLimit2=0;
+    }
+
+    //Salida de voltaje de XL6019 OFF
+    if(powerSupply==3 && flag_Exceed_CurrentLimit2==0){
+  	  powerSupply=0;
+  	  OLED_Print_Text_DMA(3,100,2,"OFF");
+  	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
+  	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
+  	  PWM_set_Freq_DutyCycle(1000,50,100);
+  	  ENCO=0;//ver si eliminar esta linea
+    }
 }
 
 /* USER CODE END 4 */
