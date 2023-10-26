@@ -77,6 +77,7 @@ uint8_t flagBattery=0,sumaSW1=0,flagSW1=0,contSW1=0,mem=0,suma=0,mem1=0,suma1=0,
 uint16_t contButton=0,timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
 uint8_t adittional_mA = 0;//5mA adicional
+uint8_t activate_Protec_Current=0;
 float limitCurrent;
 extern float valor_Encoder;
 extern float paso_Encoder;
@@ -160,6 +161,11 @@ int main(void)
   OLED_Print_Text_DMA(1,0,1,"Designed by G. Anglas");
   while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
 
+  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin)==0){
+	  activate_Protec_Current = 1;
+	  HAL_Delay(1500);
+  }
+
   HAL_TIM_Base_Start_IT(&htim14);//encoder
   HAL_TIM_Base_Start_IT(&htim6);//dac_dma
   HAL_TIM_Base_Start_IT(&htim16);//icono de bateria
@@ -200,7 +206,9 @@ int main(void)
     	  }
       }
       //limite de corriente cortar
-      cutCurrenteLimit();
+      if(activate_Protec_Current){
+    	  cutCurrenteLimit();
+      }
 
       //Garantiza que el contButton siempre inicie de 0
       if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 1 && contButton>0){contButton=0;}
@@ -967,10 +975,10 @@ void medirCargaBateria(void){
 }
 
 void cutCurrenteLimit(void){
-	limitCurrent = -0.032 * pow(VoutMath, 4) + 2.1224 * pow(VoutMath, 3) - 43.522 * pow(VoutMath, 2) + 210.64 * VoutMath + 1813.9;
+	limitCurrent = -0.012 * pow(VoutMath, 4) + 0.7163 * pow(VoutMath, 3) - 11.064 * pow(VoutMath, 2) - 59 * VoutMath + 2541.3;
 	INA226_Alert_Limit_DMA(limitCurrent);
-	sprintf(buff,"%4.0f",limitCurrent);
-	OLED_Print_Text_DMA(7,96,1,buff);
+	sprintf(buff,"%4.0fmA",limitCurrent);
+	OLED_Print_Text_DMA(7,90,1,buff);
 }
 /* USER CODE END 4 */
 
