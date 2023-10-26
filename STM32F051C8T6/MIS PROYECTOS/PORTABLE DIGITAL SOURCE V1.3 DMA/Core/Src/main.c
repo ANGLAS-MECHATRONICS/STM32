@@ -158,10 +158,10 @@ int main(void)
   OLED_Print_Text_DMA(1,0,1,"Designed by G. Anglas");
   while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
 
-  HAL_TIM_Base_Start_IT(&htim14);
-  HAL_TIM_Base_Start_IT(&htim6);
-  HAL_TIM_Base_Start_IT(&htim16);
-  HAL_TIM_Base_Start_IT(&htim17);
+  HAL_TIM_Base_Start_IT(&htim14);//encoder
+  HAL_TIM_Base_Start_IT(&htim6);//dac_dma
+  HAL_TIM_Base_Start_IT(&htim16);//icono de bateria
+  HAL_TIM_Base_Start_IT(&htim17);//todos los datos del oled
 
   HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
   HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
@@ -232,35 +232,49 @@ int main(void)
       }
 
       ////////////////////////////// SWITCH SW1 - VOUT FIJOS 3.3 5 9 12 15 24/////////////////////////////////////////////////////////////
-      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0){
-    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
-      }else{
-    	  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
-      }
 
-      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
-      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 1){
+      //solo funciona cuando esta desactivada la salida de voltaje (powerSupply==0)
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0 && powerSupply==0){mem1 = 1;}
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 1 && powerSupply==0){
     	  contSW1++;
     	  if(contSW1>25){
+
+    		  HAL_TIM_Base_Stop_IT(&htim14);//desactivo la lectura del encoder
+    		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
     		  OLED_Clear_DMA();
-			  OLED_Print_Text_DMA(0,0,1,"1.8V  2500mA");
-			  OLED_Print_Text_DMA(1,0,1,"3.3V  2250mA");
-			  OLED_Print_Text_DMA(2,0,1,"5.0V  2000mA");
-			  OLED_Print_Text_DMA(3,0,1,"9.0V  1250mA");
-			  OLED_Print_Text_DMA(4,0,1,"12.0V 1000mA");
-			  OLED_Print_Text_DMA(5,0,1,"15.0V 750mA");
-			  OLED_Print_Text_DMA(6,0,1,"24.0V 500mA");
-			  OLED_Print_Text_DMA(7,0,1,"30.0V 250mA");
+			  OLED_Print_Text_DMA(0,27,1," 1.8V 2500mA");
+			  OLED_Print_Text_DMA(1,27,1," 3.3V 2250mA");
+			  OLED_Print_Text_DMA(2,27,1," 5.0V 2000mA");
+			  OLED_Print_Text_DMA(3,27,1," 9.0V 1250mA");
+			  OLED_Print_Text_DMA(4,27,1,"12.0V 1000mA");
+			  OLED_Print_Text_DMA(5,27,1,"15.0V  750mA");
+			  OLED_Print_Text_DMA(6,27,1,"24.0V  500mA");
+			  OLED_Print_Text_DMA(7,27,1,"30.0V  250mA");
 
 			  mem1 = 0;
 			  contSW1=0;
 			  flagSW1 = 1;
+
+    		  for(uint8_t i=0; i<3; i++){
+    			  PWM_set_Freq_DutyCycle(2000,50,100);
+    			  HAL_Delay(100);
+    		  }
+    		  HAL_Delay(1000);//tiempo para soltar el pulsador luego de entrar a esta pantalla o de escuchar el buzzer
+
 			  while(flagSW1 == 1){
 				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
 				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){sumaSW1++; mem1 = 0; contSW1=0;}
-				  if(sumaSW1==1) {sumaSW1=2;}
-				  if(sumaSW1==3) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
+				  //if(sumaSW1==1) {sumaSW1=2;}
+				  //if(sumaSW1==3) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
+				  if(sumaSW1==1) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
 			  }
+			  //Una vez sale del while actualizo los siguientes datos
+			  sprintf(buff,"%1.1f",paso_Encoder);
+			  OLED_Print_Text_DMA(2,104,1,buff);
+			  if(powerSupply==2) OLED_Print_Text_DMA(3,104,2,"ON ");
+			  if(powerSupply==0) OLED_Print_Text_DMA(3,104,2,"OFF");
+			  HAL_TIM_Base_Start_IT(&htim14);//activo nuevamente la lectura del encoder
+			  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
     	  }
       }
       if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){suma1++; mem1 = 0; contSW1=0;}
@@ -832,7 +846,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){//interrupcion externa que viene de pinAlert del INA226
 	powerSupply=3;
 }
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
