@@ -206,7 +206,7 @@ int main(void)
     	  }
       }
       //limite de corriente cortar
-      if(activate_Protec_Current){
+      if(!activate_Protec_Current){
     	  cutCurrenteLimit();
       }
 

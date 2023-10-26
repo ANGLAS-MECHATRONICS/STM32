@@ -9866,11 +9866,11 @@ void cutCurrenteLimit(void){
  8004898:	e232      	b.n	8004d00 <main+0x9ac>
     	  contButton++;
  800489a:	8013      	strh	r3, [r2, #0]
-      if(activate_Protec_Current){
+      if(!activate_Protec_Current){
  800489c:	4b8b      	ldr	r3, [pc, #556]	; (8004acc <main+0x778>)
  800489e:	781b      	ldrb	r3, [r3, #0]
  80048a0:	2b00      	cmp	r3, #0
- 80048a2:	d001      	beq.n	80048a8 <main+0x554>
+ 80048a2:	d101      	bne.n	80048a8 <main+0x554>
     	  cutCurrenteLimit();
  80048a4:	f7ff fccc 	bl	8004240 <cutCurrenteLimit>
       if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 1 && contButton>0){contButton=0;}
