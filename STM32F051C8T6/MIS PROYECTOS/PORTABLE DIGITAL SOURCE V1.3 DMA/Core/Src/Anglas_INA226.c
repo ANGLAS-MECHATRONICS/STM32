@@ -203,7 +203,7 @@ uint16_t INA226_Alert_Limit_DMA(uint16_t limite){//presicion ±2mA, el mV y mW f
 	uint16_t dato;
 	uint8_t datos[3];
 	uint8_t MSB,LSB;
-	float calibrar=1.0099;////lo multiplico por 1.0099 para calibrarlo, esto lo hice con varias pruebas fisicas y probando con varios Rload
+	float calibrar=1.05;////lo multiplico por 1.0099 para calibrarlo, esto lo hice con varias pruebas fisicas y probando con varios Rload
 
 	/* PARA "SHUNT_VOLTAGE_OVER" o "SHUNT_VOLTAGE_UNDER"
 	 *

@@ -23,7 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include "stdio.h"
 //#include "string.h"
-//#include "math.h"
+#include "math.h"
 
 #include "Anglas_OLED_SSD1306.h"
 #include "Anglas_IMAGENES.h"
@@ -76,7 +76,8 @@ float step=0.3;//0.5
 uint8_t flagBattery=0,sumaSW1=0,flagSW1=0,contSW1=0,mem=0,suma=0,mem1=0,suma1=0,mem2=0,suma2=0,memButton=0,powerSupply=0,muestras=50, alertCurrent;//variables para el pulsador del encoder
 uint16_t contButton=0,timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
-
+uint8_t adittional_mA = 0;//5mA adicional
+float limitCurrent;
 extern float valor_Encoder;
 extern float paso_Encoder;
 
@@ -101,6 +102,7 @@ void medirPotencia(void);
 void Control_Estabilizar(void);
 void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo);
 void medirCargaBateria(void);
+void cutCurrenteLimit(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -170,7 +172,7 @@ int main(void)
 
   INA226_Init_DMA(3.2768,25,AVG_64,T_Vbus_1_1ms,T_Vshunt_1_1ms,MODE_SHUNT_BUS_CONTINUOUS);
   INA226_Mode_pinAlert_DMA(SHUNT_VOLTAGE_OVER);
-  INA226_Alert_Limit_DMA(2550);
+  INA226_Alert_Limit_DMA(2000);
 
   OLED_Print_Text_DMA(3,104,2,"OFF");
   OLED_Print_Text_DMA(2,104,1,"1.0");
@@ -187,32 +189,23 @@ int main(void)
 	  ///////////////////////////// BUTTON ENCODER - SW ///////////////////////////////////////////////////////
       if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 0 && mem == 0){mem = 1;}
       if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 1 && mem == 1){suma++; mem = 0;}
+      if(suma==1){suma=2;paso_Encoder = 0.1;OLED_Print_Text_DMA(2,104,1,"0.1");}
+      if(suma==3){suma=0;paso_Encoder = 1.0;OLED_Print_Text_DMA(2,104,1,"1.0");}
 
-      if(suma==1){
-          suma=2;
-          paso_Encoder = 0.1;
-          OLED_Print_Text_DMA(2,104,1,"0.1");
-      }
-
-      if(suma==3){
-          suma=0;
-          paso_Encoder = 1.0;
-          OLED_Print_Text_DMA(2,104,1,"1.0");
-      }
-
-      //Mantener presionado el SW2 por cierto tiempo
-      if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 0){
+      if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 0){//Mantener presionado el SW2 por cierto tiempo
     	  contButton++;
     	  if(contButton>15){// 1.5seg aprox
     		  contButton=0;
     		  powerSupply++;
     	  }
       }
+      //limite de corriente cortar
+      cutCurrenteLimit();
 
       //Garantiza que el contButton siempre inicie de 0
       if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 1 && contButton>0){contButton=0;}
 
-      if(powerSupply==1){
+      if(powerSupply==1){//Salida de voltaje de XL6019 ON
     	  powerSupply=2;
     	  OLED_Print_Text_DMA(3,104,2,"ON ");
     	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
@@ -222,7 +215,7 @@ int main(void)
     	  ee_commit();
       }
 
-      if(powerSupply==3){
+      if(powerSupply==3){//Salida de voltaje de XL6019 OFF
     	  powerSupply=0;
     	  OLED_Print_Text_DMA(3,104,2,"OFF");
     	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
@@ -237,8 +230,8 @@ int main(void)
       if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0 && powerSupply==0){mem1 = 1;}
       if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 1 && powerSupply==0){
     	  contSW1++;
-    	  if(contSW1>25){
 
+    	  if(contSW1>25){
     		  HAL_TIM_Base_Stop_IT(&htim14);//desactivo la lectura del encoder
     		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
     		  OLED_Clear_DMA();
@@ -259,13 +252,12 @@ int main(void)
     			  PWM_set_Freq_DutyCycle(2000,50,100);
     			  HAL_Delay(100);
     		  }
+
     		  HAL_Delay(1000);//tiempo para soltar el pulsador luego de entrar a esta pantalla o de escuchar el buzzer
 
 			  while(flagSW1 == 1){
 				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
 				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){sumaSW1++; mem1 = 0; contSW1=0;}
-				  //if(sumaSW1==1) {sumaSW1=2;}
-				  //if(sumaSW1==3) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
 				  if(sumaSW1==1) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
 			  }
 			  //Una vez sale del while actualizo los siguientes datos
@@ -277,7 +269,8 @@ int main(void)
 			  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
     	  }
       }
-      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){suma1++; mem1 = 0; contSW1=0;}
+
+      if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){suma1++; mem1 = 0; contSW1=0;}//aqui no se si importa el powerSupply==0, pero funciona!
 
 
       if(suma1==1) {suma1=2; valor_Encoder = 3.3; }
@@ -302,7 +295,7 @@ int main(void)
        * Vdac = encoder*3.26/4096.0;
        * encoder = Vdac*4096.0/3.26
        *
-       * Formula para corregier la salida: (0.00001*encoder*encoder-0.0156*encoder+6.4948);
+       * Formula para corregier la salida: (8.0E-06 * encoder * encoder + 0.002 * encoder + 1.1844);
       */
 
       sprintf(buff,"SET:%2.1fV ",VoutMath);
@@ -311,16 +304,13 @@ int main(void)
       Vdac = 3.1677 - VoutMath*0.09825;//coloque R1=560k pero para mejorar los calculos utilizo el valor de 570k y obtuve esta formula
       encoder = Vdac * 4096.0/3.26;
 
-
-
       //ver el dac y el pid
-      sprintf(buff,"%4.0f",encoder);
-      OLED_Print_Text_DMA(6,96,1,buff);
+      //sprintf(buff,"%4.0f",encoder);
+      //OLED_Print_Text_DMA(7,96,1,buff);
       sprintf(buff,"%4.0f",PWM);
-      OLED_Print_Text_DMA(7,96,1,buff);
+      OLED_Print_Text_DMA(6,96,1,buff);
 
       encoder = encoder - (8.0E-06 * encoder * encoder + 0.002 * encoder + 1.1844);
-      //encoder = encoder - (0.00001*encoder*encoder-0.0156*encoder+6.4948);
       Control_Estabilizar();
 
       ///////////////////////////// MEDIR VBAT 12VDC - ADC ///////////////////////////////////////////////////////////
@@ -338,7 +328,7 @@ int main(void)
 		  timerShowAllData=0;
       }
 
-      if(timerShowIconBattery>=1){//cada 1 segundo
+      if(timerShowIconBattery>=1){//cada x * 1s
     	  if(HAL_GPIO_ReadPin(stateCharger_GPIO_Port, stateCharger_Pin)==0){
     		  medirCargaBateria();
     	  }else{
@@ -352,7 +342,6 @@ int main(void)
     	  }
     	  timerShowIconBattery=0;
       }
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -849,6 +838,7 @@ static void MX_GPIO_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){//interrupcion externa que viene de pinAlert del INA226
 	powerSupply=3;
 }
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM14) {//Leemos el encoder cada 5ms
 		VoutMath = Encoder_Run();
@@ -861,8 +851,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM17) {//Mostramos el todos los datos en el oled cada 100ms
 		timerShowAllData++;
 	}
-
-
 }
 
 void medirVoltage(void){
@@ -897,7 +885,6 @@ void medirPotencia(void){
     }
 }
 
-
 void Control_Estabilizar(void){
 
     HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
@@ -925,7 +912,6 @@ void Control_Estabilizar(void){
     	dacDMA[0]=PWM;
     }
 
-
     if(VoutMath < voltage){
     	difference = voltage - VoutMath;
     	if(difference>=0.001 && difference<=rango){
@@ -947,7 +933,6 @@ void Control_Estabilizar(void){
     	}
     	PWM = encoder+ENCO;
     	dacDMA[0]=PWM;
-
     }
 }
 
@@ -979,6 +964,13 @@ void medirCargaBateria(void){
 	}else if(Vbat>11.7 && Vbat<=12.6){
 		OLED_Imagen_Small_DMA(0, 96, bateria100, 32, 16);
 	}
+}
+
+void cutCurrenteLimit(void){
+	limitCurrent = -0.032 * pow(VoutMath, 4) + 2.1224 * pow(VoutMath, 3) - 43.522 * pow(VoutMath, 2) + 210.64 * VoutMath + 1813.9;
+	INA226_Alert_Limit_DMA(limitCurrent);
+	sprintf(buff,"%4.0f",limitCurrent);
+	OLED_Print_Text_DMA(7,96,1,buff);
 }
 /* USER CODE END 4 */
 
