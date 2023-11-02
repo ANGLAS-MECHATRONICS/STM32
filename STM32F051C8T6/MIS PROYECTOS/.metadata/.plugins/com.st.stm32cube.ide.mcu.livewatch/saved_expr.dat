@@ -1,3 +1,7 @@
 ENCO
 PWM
 VoutMath
+adcVbat
+Vbat
+flag_Exceed_CurrentLimit
+flag_Exceed_CurrentLimit2

@@ -1,7 +1,7 @@
-18:11:23 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE2 ****
+11:39:43 **** Incremental Build of configuration Debug for project DAC ****
 make -j4 all 
-arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE2.elf 
+arm-none-eabi-size   DAC.elf 
    text	   data	    bss	    dec	    hex	filename
-  42784	    492	   1884	  45160	   b068	PORTABLE DIGITAL SOURCE2.elf
+   9092	     20	   1668	  10780	   2a1c	DAC.elf
 Finished building: default.size.stdout
  
