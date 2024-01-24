@@ -254,8 +254,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1){
 
 	  update_Data_on_Display();
 	  control_SW();
@@ -278,7 +277,6 @@ int main(void)
       }else{
 
       }
-
 
       //Mido el volaje de salida del XL6019 constantemente
       voltage = INA226_Vbus_DMA();
