@@ -109,6 +109,8 @@ int main(void)
 	  HAL_DAC_Start(&hdac, DAC_CHANNEL_1);
 	  HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, adc0);
 
+	  HAL_Delay(10);
+
 
     /* USER CODE END WHILE */
 

@@ -68,7 +68,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=6;
+uint8_t cantLeds=11;
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -619,8 +619,18 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
-	uint8_t secuencia1[8]={6,2,4,1,3,5};
-	uint8_t secuencia2[8]={5,1,4,2,6,3};
+	// 5 letras
+	uint8_t secuencia1[5]={2,4,1,3,5};
+	uint8_t secuencia2[5]={5,1,4,2,3};
+
+	// 6 letras
+	//uint8_t secuencia1[8]={6,2,4,1,3,5};
+	//uint8_t secuencia2[8]={5,1,4,2,6,3};
+
+	// 12 letras
+	//uint8_t secuencia1[12]={2,8,10,4,1,6,7,12,5,11,3,9};
+	//uint8_t secuencia2[12]={5,12,3,7,8,1,2,10,11,9,4,6};
+
 
 
 	for(uint8_t i=0;i<cantLeds;i++){

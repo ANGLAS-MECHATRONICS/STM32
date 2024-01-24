@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="muestrasADC"/>
+		<item key="selection" value="flag_Exceed_CurrentLimit"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="flag_Exceed_CurrentLimit"/>
+			<item value="flag_Exceed_CurrentLimit2"/>
 			<item value="muestras"/>
 			<item value="PWM_set_Freq_DutyCycle"/>
 			<item value="VoutMath"/>
 			<item value="encoder"/>
 			<item value="medirbater"/>
 			<item value="update_Data_on_Display"/>
-			<item value="flag_Exceed_CurrentLimit"/>
-			<item value="6000"/>
 		</list>
 		<list key="replacehistory">
 			<item value="muestrasADC"/>

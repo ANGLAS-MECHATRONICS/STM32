@@ -73,21 +73,28 @@ char buff[16];
 
 float dac_12bits;
 float power,current,voltage;
-float Vbat,Vdac,set_Voltage_Encoder,difference,limitCurrent;
+float Vbat,Vdac,set_Voltage_Encoder,difference;
+static float limitCurrent;
 float adcVbat=0,PWM,ENCO=0;
 float rango=0.05,step=0.3;
 
 uint8_t sumaSW1=0,contSW1=0,contSW2=0,powerSupply=0,muestrasADC=50;
 uint8_t mem=0,mem1=0,mem2=0,memButton=0;
 uint8_t suma=0,suma1=0,suma2=0;
-uint8_t flagSW1=0,flagBattery=0,flag_Exceed_CurrentLimit=0,flag_Exceed_CurrentLimit2=0;
+uint8_t flagSW1=0,flagBattery=0,flag_Exceed_CurrentLimit=0;
 uint8_t activate_Protec_Current=0;
 
 uint16_t timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
 
+static float _cut_CurrenteLimit_ON;
+static float _cut_CurrenteLimit_ON_Set;
+
 extern float valor_Encoder;
 extern float paso_Encoder;
+
+uint8_t flagInicio=0;
+uint8_t flagMode=0, flagModeSelect=1;
 
 /* USER CODE END PV */
 
@@ -110,8 +117,8 @@ void medirPotencia(void);
 void Control_Estabilizar(void);
 void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo);
 void medirCargaBateria(void);
-void cut_CurrenteLimit_ON(void);
-void cut_CurrenteLimit_ON_Set(float limitCurrentSet);
+uint16_t cut_CurrenteLimit_ON(void);
+uint16_t cut_CurrenteLimit_ON_Set(float limitCurrentSet);
 void show_Exceed_CurrentLimit(void);
 void update_Data_on_Display(void);
 void medirVoltageBattery(void);
@@ -174,12 +181,40 @@ int main(void)
   OLED_Init_DMA();
   OLED_Imagen_Small_DMA(2,0, AM_INTRO, 128, 64);
   OLED_Print_Text_DMA(1,0,1,"Designed by G. Anglas");
-  while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
 
-  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin)==0){
-	  activate_Protec_Current = 1;
-	  HAL_Delay(1500);
-  }
+  while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
+  OLED_Clear_DMA();
+  HAL_Delay(200);
+  //////////////////// MODOS ///////////////////////////////////
+  while(flagMode==0){
+
+	  if(!HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin)){
+		  HAL_Delay(180);
+		  flagModeSelect++;
+		  OLED_Clear_DMA();
+		  if(flagModeSelect>=4) flagModeSelect=1;
+	  }
+
+	  switch(flagModeSelect){
+	  	case 1: OLED_Print_Text_DMA(0,34,2,"ENABLE");
+				OLED_Print_Text_DMA(3,5,2, "CURRENT LIMIT");
+				OLED_Print_Text_DMA(6,18,2,"PROTECTION");
+				activate_Protec_Current = 0;
+	  		break;
+	  	case 2: OLED_Print_Text_DMA(0,32,2,"DISABLE");
+				OLED_Print_Text_DMA(3,5,2, "CURRENT LIMIT");
+				OLED_Print_Text_DMA(6,18,2,"PROTECTION");
+				activate_Protec_Current = 1;
+	  		break;
+	  	case 3: OLED_Print_Text_DMA(0,0,2,"CHARGER 5V EN");
+				OLED_Print_Text_DMA(3,5,2, "CURRENT LIMIT");
+				OLED_Print_Text_DMA(6,18,2,"PROTECTION");
+				activate_Protec_Current = 2;
+	  		break;
+	  }
+
+	  if(!HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin)) flagMode=1;
+  }///////////////////////////////////////////////////////////////////
 
   HAL_TIM_Base_Start_IT(&htim14);//encoder
   HAL_TIM_Base_Start_IT(&htim6);//dac_dma
@@ -192,8 +227,21 @@ int main(void)
   OLED_Clear_DMA();
 
   INA226_Init_DMA(3.2768,25,AVG_64,T_Vbus_1_1ms,T_Vshunt_1_1ms,MODE_SHUNT_BUS_CONTINUOUS);
-  INA226_Mode_pinAlert_DMA(SHUNT_VOLTAGE_OVER);
-  INA226_Alert_Limit_DMA(2000);
+
+  //Aqui recien activos los modos ENABLE o DISABLE CURRENT LIMIT
+  switch(activate_Protec_Current){//proteccion ENABLE
+  	case 0: INA226_Mode_pinAlert_DMA(SHUNT_VOLTAGE_OVER);
+	  	    flagInicio=0;//bandera para habilitar las interrupciones
+  		break;
+  	case 1: HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
+	  	  	flagInicio=1;//bandera para no entrar a la condicion donde habilita las interrupciones
+  		break;
+  	case 2: HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
+	  		flagInicio=1;//bandera para no entrar a la condicion donde habilita las interrupciones
+	  		HAL_TIM_Base_Stop_IT(&htim14);//STOP ENCODER
+	  		set_Voltage_Encoder = 5.3;
+  		break;
+  }
 
   OLED_Print_Text_DMA(3,100,2,"OFF");
   OLED_Print_Text_DMA(5,104,1,"1.0");
@@ -201,25 +249,36 @@ int main(void)
   OLED_Print_Text_DMA(6,25,2,"   0mA");
   OLED_Print_Text_DMA(7,96,1,"0.0W ");
 
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+
 	  update_Data_on_Display();
 	  control_SW();
 
-      //Modo proteccion de sobrecorriente
-      if(!activate_Protec_Current) cut_CurrenteLimit_ON();//corte automatico por limite de corriente fija establecida
-      else cut_CurrenteLimit_ON_Set(2500);//corte automatico por limite de corriente 2500mA a todos los voltajes
+      //Modos de proteccion de sobrecorriente
+      switch(activate_Protec_Current){
+      	case 0: _cut_CurrenteLimit_ON = cut_CurrenteLimit_ON();//proteccion ENABLE:corte automatico por limite de corriente fija establecida
+      		break;
+      	case 1: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_ON_Set(3000);//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
+      		break;
+      	case 2: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_ON_Set(3000);//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
 
-      //Evento de corte de sobrecorriente y mensaje de alerta el en OLED
-      if(flag_Exceed_CurrentLimit==1) show_Exceed_CurrentLimit();
-
+      	break;
+      }
 
       control_SW2();
-      control_SW1();
+
+      if(activate_Protec_Current<2){
+    	  control_SW1();
+      }else{
+
+      }
+
 
       //Mido el volaje de salida del XL6019 constantemente
       voltage = INA226_Vbus_DMA();
@@ -251,6 +310,18 @@ int main(void)
 
     	  timerShowIconBattery=0;
       }
+
+      //Activo las interrupciones despues de hacer todo el codigo 1 vez
+      //Hago esto porque aveces iniciaba generando una interrupcion y daba el mensaje "show_Exceed_CurrentLimit()"
+      //Esto pienso que es porque al incio el INA226 lee una corriente de 2000 o 3000mA y esto hace activar el pinAlert
+      //Osea el pinAlert se activa de alguna manera y para evitar eso hago esta linea
+      //Habilitando las interrupciones luego de hacer todo el codigo 1 vez y funciono
+	  if(flagInicio==0){
+		  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
+		  powerSupply=0;
+		  flag_Exceed_CurrentLimit=0;
+		  flagInicio=1;
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -737,7 +808,7 @@ static void MX_GPIO_Init(void)
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
+  //HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */
@@ -747,7 +818,6 @@ static void MX_GPIO_Init(void)
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){//interrupcion externa que viene de pinAlert del INA226
 	powerSupply=3;
 	flag_Exceed_CurrentLimit=1;
-	flag_Exceed_CurrentLimit2=1;
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
@@ -877,20 +947,24 @@ void medirCargaBateria(void){
 	}
 }
 
-void cut_CurrenteLimit_ON(void){
+uint16_t cut_CurrenteLimit_ON(void){
 	limitCurrent = -0.012 * pow(set_Voltage_Encoder, 4) + 0.7163 * pow(set_Voltage_Encoder, 3) - 11.064 * pow(set_Voltage_Encoder, 2) - 59 * set_Voltage_Encoder + 2541.3;
 	INA226_Alert_Limit_DMA(limitCurrent);
 	sprintf(buff,"Current: %4.0fmA",limitCurrent);
 	OLED_Print_Text_DMA(1,0,1,buff);
+	return INA226_Alert_Limit_DMA(limitCurrent);
 }
 
-void cut_CurrenteLimit_ON_Set(float limitCurrentSet){
-	INA226_Alert_Limit_DMA(limitCurrentSet);
+uint16_t cut_CurrenteLimit_ON_Set(float limitCurrentSet){
+	//INA226_Alert_Limit_DMA(limitCurrentSet);
 	sprintf(buff,"Current: %4.0fmA",limitCurrentSet);
 	OLED_Print_Text_DMA(1,0,1,buff);
+	//return INA226_Alert_Limit_DMA(limitCurrentSet);
+	return limitCurrentSet;
 }
 
 void show_Exceed_CurrentLimit(void){
+	powerSupply=0;
 	HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
 
@@ -899,10 +973,17 @@ void show_Exceed_CurrentLimit(void){
     sprintf(buff,"%2.1fV ",set_Voltage_Encoder);
     OLED_Print_Text_DMA(2,45,2,buff);
 
-	OLED_Print_Text_DMA(0,0,1,"EXCEED CURRENT LIMIT!");
+	OLED_Print_Text_DMA(0,0,1,"EXCEEDS CURRENT LIMIT");
 	OLED_Print_Text_DMA(1,0,1,"   AT A VOLTAGE OF   ");
-	sprintf(buff,"%4.0fmA",limitCurrent);
-	OLED_Print_Text_DMA(4,0,3,buff);
+
+    //Modo proteccion de sobrecorriente
+    if(!activate_Protec_Current){//corte automatico por limite de corriente fija establecida
+    	sprintf(buff,"%4.0fmA",limitCurrent);
+    	OLED_Print_Text_DMA(4,0,3,buff);
+    }else{//corte automatico por limite de corriente 2500mA a todos los voltajes
+    	sprintf(buff,"%4.0fmA",_cut_CurrenteLimit_ON_Set);
+    	OLED_Print_Text_DMA(4,0,3,buff);
+    }
 
 	for(uint8_t i=0; i<3; i++){
 		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
@@ -989,18 +1070,18 @@ void control_SW1(void){
   		  HAL_TIM_Base_Stop_IT(&htim14);//desactivo la lectura del encoder
   		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
   		  OLED_Clear_DMA();
-			  OLED_Print_Text_DMA(0,27,1," 1.8V 2500mA");
-			  OLED_Print_Text_DMA(1,27,1," 3.3V 2250mA");
-			  OLED_Print_Text_DMA(2,27,1," 5.0V 2000mA");
-			  OLED_Print_Text_DMA(3,27,1," 9.0V 1250mA");
-			  OLED_Print_Text_DMA(4,27,1,"12.0V 1000mA");
-			  OLED_Print_Text_DMA(5,27,1,"15.0V  750mA");
-			  OLED_Print_Text_DMA(6,27,1,"24.0V  500mA");
-			  OLED_Print_Text_DMA(7,27,1,"30.0V  250mA");
+		  OLED_Print_Text_DMA(0,27,1," 1.8V 2500mA");
+		  OLED_Print_Text_DMA(1,27,1," 3.3V 2250mA");
+		  OLED_Print_Text_DMA(2,27,1," 5.0V 2000mA");
+		  OLED_Print_Text_DMA(3,27,1," 9.0V 1250mA");
+		  OLED_Print_Text_DMA(4,27,1,"12.0V 1000mA");
+		  OLED_Print_Text_DMA(5,27,1,"15.0V  750mA");
+		  OLED_Print_Text_DMA(6,27,1,"24.0V  500mA");
+		  OLED_Print_Text_DMA(7,27,1,"30.0V  250mA");
 
-			  mem1 = 0;
-			  contSW1=0;
-			  flagSW1 = 1;
+		  mem1 = 0;
+		  contSW1=0;
+		  flagSW1 = 1;
 
   		  for(uint8_t i=0; i<3; i++){
   			  PWM_set_Freq_DutyCycle(2000,50,100);
@@ -1009,13 +1090,14 @@ void control_SW1(void){
 
   		  HAL_Delay(1000);//tiempo para soltar el pulsador luego de entrar a esta pantalla o de escuchar el buzzer
 
-			  while(flagSW1 == 1){
-				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
-				  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){sumaSW1++; mem1 = 0; contSW1=0;}
-				  if(sumaSW1==1) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
-			  }
-			  HAL_TIM_Base_Start_IT(&htim14);//activo nuevamente la lectura del encoder
-			  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
+		  while(flagSW1 == 1){
+			  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 0){mem1 = 1;}
+			  if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 1 && mem1 == 1 && contSW1<=10){sumaSW1++; mem1 = 0; contSW1=0;}
+			  if(sumaSW1==1) {sumaSW1=0; OLED_Clear_DMA(); flagSW1=0;}
+		  }
+
+		  HAL_TIM_Base_Start_IT(&htim14);//activo nuevamente la lectura del encoder
+		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
   	  }
     }
 
@@ -1051,23 +1133,24 @@ void control_SW2(void){
   	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
   	  HAL_Delay(6);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
 
-        if(flag_Exceed_CurrentLimit==1){
-      	  show_Exceed_CurrentLimit();
-        }else{
-      	  PWM_set_Freq_DutyCycle(4000,50,100);
-      	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
-      	  ee_commit();
-        }
+      if(flag_Exceed_CurrentLimit==1){
+    	  show_Exceed_CurrentLimit();
+      }else{
+    	  PWM_set_Freq_DutyCycle(4000,50,100);
+    	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
+    	  ee_commit();
+      }
     }
 
     //Salida de voltaje de XL6019 OFF, luego de detectar sobrecorriente
-    if(powerSupply==3 && flag_Exceed_CurrentLimit2==1){
+    if(powerSupply==3 && flag_Exceed_CurrentLimit==1){
   	  powerSupply=0;
-  	  flag_Exceed_CurrentLimit2=0;
+  	  show_Exceed_CurrentLimit();
+  	  flag_Exceed_CurrentLimit=0;
     }
 
     //Salida de voltaje de XL6019 OFF
-    if(powerSupply==3 && flag_Exceed_CurrentLimit2==0){
+    if(powerSupply==3 && flag_Exceed_CurrentLimit==0){
   	  powerSupply=0;
   	  OLED_Print_Text_DMA(3,100,2,"OFF");
   	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
