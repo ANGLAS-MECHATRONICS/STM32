@@ -1041,7 +1041,7 @@ void calculate_value_dac_12bits(void){
 
     //Calculo el valor "dac_12bits"(0-4095) a partir del set_Voltage_Encoder(0-30V) y Vdac(0-3.3V)
     Vdac = 3.1677 - set_Voltage_Encoder*0.09825;//coloque R1=560k pero para mejorar los calculos utilizo el valor de 570k y obtuve esta formula
-    dac_12bits = Vdac * 4096.0/3.26;//teniendo el Voltaje de salida del dac, calculo "dac_12bits" osea un valor de 0-4095
+    dac_12bits = Vdac * 4096.0/3.3;//teniendo el Voltaje de salida del dac, calculo "dac_12bits" osea un valor de 0-4095
     dac_12bits = dac_12bits - (8.0E-06 * dac_12bits * dac_12bits + 0.002 * dac_12bits + 1.1844);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
 }
 

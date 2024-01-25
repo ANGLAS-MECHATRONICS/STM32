@@ -9352,7 +9352,7 @@ void calculate_value_dac_12bits(void){
  8004616:	f7fe fd65 	bl	80030e4 <__aeabi_d2f>
  800461a:	4b21      	ldr	r3, [pc, #132]	; (80046a0 <calculate_value_dac_12bits+0xa8>)
  800461c:	6018      	str	r0, [r3, #0]
-    dac_12bits = Vdac * 4096.0/3.26;//teniendo el Voltaje de salida del dac, calculo "dac_12bits" osea un valor de 0-4095
+    dac_12bits = Vdac * 4096.0/3.3;//teniendo el Voltaje de salida del dac, calculo "dac_12bits" osea un valor de 0-4095
  800461e:	f7fe fd19 	bl	8003054 <__aeabi_f2d>
  8004622:	2200      	movs	r2, #0
  8004624:	4b1f      	ldr	r3, [pc, #124]	; (80046a4 <calculate_value_dac_12bits+0xac>)
@@ -9405,8 +9405,8 @@ void calculate_value_dac_12bits(void){
  800469c:	40095773 	.word	0x40095773
  80046a0:	20000640 	.word	0x20000640
  80046a4:	40b00000 	.word	0x40b00000
- 80046a8:	e147ae14 	.word	0xe147ae14
- 80046ac:	400a147a 	.word	0x400a147a
+ 80046a8:	66666666 	.word	0x66666666
+ 80046ac:	400a6666 	.word	0x400a6666
  80046b0:	2000066c 	.word	0x2000066c
  80046b4:	a0b5ed8d 	.word	0xa0b5ed8d
  80046b8:	3ee0c6f7 	.word	0x3ee0c6f7
