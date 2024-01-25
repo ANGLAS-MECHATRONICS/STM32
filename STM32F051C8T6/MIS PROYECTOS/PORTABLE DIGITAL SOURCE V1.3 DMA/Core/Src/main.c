@@ -196,19 +196,29 @@ int main(void)
 	  }
 
 	  switch(flagModeSelect){
-	  	case 1: OLED_Print_Text_DMA(0,34,2,"ENABLE");
-				OLED_Print_Text_DMA(3,5,2, "CURRENT LIMIT");
-				OLED_Print_Text_DMA(6,18,2,"PROTECTION");
+	  	case 1: //OLED_Print_Text_DMA(0,34,2,"ENABLE");
+	  			OLED_Print_Text_DMA(0,0,2,"MODE 1: ENABLE");
+				OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
+				OLED_Print_Text_DMA(4,18,2,"PROTECTION");
+				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
+				OLED_Imagen_Small_DMA(6, 113, Icon_Check, 13, 16);
 				activate_Protec_Current = 0;
 	  		break;
-	  	case 2: OLED_Print_Text_DMA(0,32,2,"DISABLE");
-				OLED_Print_Text_DMA(3,5,2, "CURRENT LIMIT");
-				OLED_Print_Text_DMA(6,18,2,"PROTECTION");
+	  	case 2: //OLED_Print_Text_DMA(0,32,2,"DISABLE");
+	  			OLED_Print_Text_DMA(0,0,2,"MODE 2:DISABLE");
+				OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
+				OLED_Print_Text_DMA(4,18,2,"PROTECTION");
+				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
+				OLED_Imagen_Small_DMA(6, 113, Icon_Check, 13, 16);
 				activate_Protec_Current = 1;
 	  		break;
-	  	case 3: OLED_Print_Text_DMA(0,0,2,"CHARGER 5V EN");
-				OLED_Print_Text_DMA(3,5,2, "CURRENT LIMIT");
-				OLED_Print_Text_DMA(6,18,2,"PROTECTION");
+	  	case 3: OLED_Print_Text_DMA(0,0,2,"MODE 3:CHARGER");
+				//OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
+				OLED_Print_Text_DMA(2,19,2, "FIXED 5.3V");
+				//OLED_Print_Text_DMA(4,18,2,"PROTECTION");
+				OLED_Print_Text_DMA(4,37,2,"OUTPUT");
+				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
+				OLED_Imagen_Small_DMA(6, 113, Icon_Check, 13, 16);
 				activate_Protec_Current = 2;
 	  		break;
 	  }
