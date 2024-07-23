@@ -21,7 +21,7 @@ extern I2C_HandleTypeDef hi2c1;
 #define DAT							0x40
 
 #define SSD1306_LCDWIDTH            128
-#define SSD1306_LCDHEIGHT           64 //32
+#define SSD1306_LCDHEIGHT           32 //64
 
 #define SSD1306_SETCONTRAST		    0x81
 #define SET_ENTIRE_DISPLAY_ON	    0xA4

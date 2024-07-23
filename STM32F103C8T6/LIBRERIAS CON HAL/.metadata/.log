@@ -1563,3 +1563,6 @@ org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONI
 
 !ENTRY org.eclipse.egit.ui 4 0 2024-07-22 09:48:32.497
 !MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: not authorized)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-07-22 10:06:49.034
+!MESSAGE Indexed 'ST7789_IPS_TFT' (9 sources, 67 headers) in 2.44 sec: 3,381 declarations; 7,039 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.019%)

@@ -1,7 +1,7 @@
-09:31:36 **** Incremental Build of configuration Debug for project DAC_DMA ****
+19:29:49 **** Incremental Build of configuration Debug for project ST7789 ****
 make -j4 all 
-arm-none-eabi-size   DAC_DMA.elf 
+arm-none-eabi-size   ST7789.elf 
    text	   data	    bss	    dec	    hex	filename
-   7004	     20	   1596	   8620	   21ac	DAC_DMA.elf
+ 222860	     44	   1668	 224572	  36d3c	ST7789.elf
 Finished building: default.size.stdout
  

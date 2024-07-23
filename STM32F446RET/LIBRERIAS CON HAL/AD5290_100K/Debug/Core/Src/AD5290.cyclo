@@ -1,0 +1,2 @@
+../Core/Src/AD5290.c:19:7:AD5290_Write	1
+../Core/Src/AD5290.c:27:7:AD5290_Init	1
