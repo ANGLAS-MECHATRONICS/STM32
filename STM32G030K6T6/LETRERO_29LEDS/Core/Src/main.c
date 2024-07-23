@@ -68,7 +68,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=11;
+uint8_t cantLeds=10;//cambiar Encender aleatorio
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -144,6 +144,7 @@ int main(void)
   while (1)
   {
 
+	  //NORMAL DE 4 A 26 LETRAS (actual 2024)
 	  Barrido1(2,60,2500);Blink(2,2000);
 	  ArmarIzquierda(2,30,2000);Blink(2,2000);
 	  VolumenAbrir(2,30,2500);Blink(2,2000);
@@ -156,6 +157,11 @@ int main(void)
 	  AbrirApagar(1,150,2000);
 	  CerrarApagar(1,150,2000);
 	  Blink(2,2000);
+	  //END NORMAL DE 4 A 26 LETRAS
+
+
+
+
 
 	  /*Barrido1(2,60,2500);
 	  Blink(3,2000);
@@ -179,23 +185,51 @@ int main(void)
 
 
 	  // para 3 letras
-//	  Barrido1(2,60,1500);
-//	  Blink(1,1000);
-//
-//	  ArmarIzquierda(4,30,1000);
-//	  Blink(1,1000);
-//
-//	  Girar(4,100);
-//	  Blink(1,1000);
-//
-//	  VolumenAbrir(2,80,1500);
-//	  Blink(1,1000);
-//
-//	  CerrarApagar(4,150,1200);
-//	  Blink(1,1000);
-//
-//	  ArmarIzquierda(3,30,1000);
-//	  Blink(3,1000);
+	  /*
+	  Barrido1(2,60,1500);
+	  Blink(1,1000);
+
+	  ArmarIzquierda(4,30,1000);
+	  Blink(1,1000);
+
+	  Girar(4,100);
+	  Blink(1,1000);
+
+	  VolumenAbrir(2,80,1500);
+	  Blink(1,1000);
+
+	  CerrarApagar(4,150,1200);
+	  Blink(1,1000);
+
+	  ArmarIzquierda(3,30,1000);
+	  Blink(3,1000);
+	  */
+
+	  //END 3 LETRAS
+
+	  /*
+	  // para 2 letras
+	  Barrido1(2,100,1500);
+	  Blink(1,1000);
+
+	  ArmarIzquierda(4,50,1000);
+	  Blink(1,1000);
+
+	  Girar(4,100);
+	  Blink(1,1000);
+
+	  VolumenAbrir(2,100,1500);
+	  Blink(1,1000);
+
+	  CerrarApagar(2,200,1200);
+	  Blink(1,1000);
+
+	  ArmarIzquierda(2,50,1000);
+	  Blink(1,1000);
+	  */
+	  //END 2 LETRAS
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -310,6 +344,8 @@ static void MX_ADC1_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -361,6 +397,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -619,18 +657,41 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
+	// 2 letras
+	//uint8_t secuencia1[2]={1,2};
+	//uint8_t secuencia2[2]={2,1};
+
+
 	// 5 letras
-	uint8_t secuencia1[5]={2,4,1,3,5};
-	uint8_t secuencia2[5]={5,1,4,2,3};
+	//uint8_t secuencia1[5]={2,4,1,3,5};
+	//uint8_t secuencia2[5]={5,1,4,2,3};
 
 	// 6 letras
-	//uint8_t secuencia1[8]={6,2,4,1,3,5};
-	//uint8_t secuencia2[8]={5,1,4,2,6,3};
+	//uint8_t secuencia1[6]={6,2,4,1,3,5};
+	//uint8_t secuencia2[6]={5,1,4,2,6,3};
+
+	// 7 letras
+	//uint8_t secuencia1[7]={6,2,7,4,1,3,5};
+	//uint8_t secuencia2[7]={5,1,4,2,6,3,7};
+
+	// 8 letras
+	//uint8_t secuencia1[8]={6,2,7,4,8,1,3,5};
+	//uint8_t secuencia2[8]={5,8,1,4,2,6,3,7};
+
+	// 9 letras
+	//uint8_t secuencia1[9]={6,2,7,4,9,8,1,3,5};
+	//uint8_t secuencia2[9]={5,8,1,4,2,6,9,3,7};
+
+
+	// 10 letras
+	uint8_t secuencia1[10]={6,2,7,4,9,8,1,10,3,5};
+	uint8_t secuencia2[10]={5,8,10,1,4,2,6,9,3,7};
+
+
 
 	// 12 letras
 	//uint8_t secuencia1[12]={2,8,10,4,1,6,7,12,5,11,3,9};
 	//uint8_t secuencia2[12]={5,12,3,7,8,1,2,10,11,9,4,6};
-
 
 
 	for(uint8_t i=0;i<cantLeds;i++){

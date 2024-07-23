@@ -21,13 +21,15 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#define L1(state)  HAL_GPIO_WritePin(LED1_GPIO_Port,  LED1_Pin,  state); HAL_GPIO_WritePin(LED7_GPIO_Port,  LED7_Pin, state)
-#define L2(state)  HAL_GPIO_WritePin(LED2_GPIO_Port,  LED2_Pin,  state); HAL_GPIO_WritePin(LED8_GPIO_Port,  LED8_Pin, state)
-#define L3(state)  HAL_GPIO_WritePin(LED3_GPIO_Port,  LED3_Pin,  state); HAL_GPIO_WritePin(LED9_GPIO_Port,  LED9_Pin, state)
-#define L4(state)  HAL_GPIO_WritePin(LED4_GPIO_Port,  LED4_Pin,  state); HAL_GPIO_WritePin(LED10_GPIO_Port,LED10_Pin, state)
-#define L5(state)  HAL_GPIO_WritePin(LED5_GPIO_Port,  LED5_Pin,  state); HAL_GPIO_WritePin(LED11_GPIO_Port,LED11_Pin, state)
-#define L6(state)  HAL_GPIO_WritePin(LED6_GPIO_Port,  LED6_Pin,  state); HAL_GPIO_WritePin(LED12_GPIO_Port,LED12_Pin, state)
-
+#define L1(state)  HAL_GPIO_WritePin(LED1_GPIO_Port,  LED1_Pin,  state); HAL_GPIO_WritePin(LED10_GPIO_Port,LED10_Pin, state)
+#define L2(state)  HAL_GPIO_WritePin(LED2_GPIO_Port,  LED2_Pin,  state); HAL_GPIO_WritePin(LED11_GPIO_Port,LED11_Pin, state)
+#define L3(state)  HAL_GPIO_WritePin(LED3_GPIO_Port,  LED3_Pin,  state); HAL_GPIO_WritePin(LED12_GPIO_Port,LED12_Pin, state)
+#define L4(state)  HAL_GPIO_WritePin(LED4_GPIO_Port,  LED4_Pin,  state); HAL_GPIO_WritePin(LED13_GPIO_Port,LED13_Pin, state)
+#define L5(state)  HAL_GPIO_WritePin(LED5_GPIO_Port,  LED5_Pin,  state); HAL_GPIO_WritePin(LED14_GPIO_Port,LED14_Pin, state)
+#define L6(state)  HAL_GPIO_WritePin(LED6_GPIO_Port,  LED6_Pin,  state); HAL_GPIO_WritePin(LED15_GPIO_Port,LED15_Pin, state)
+#define L7(state)  HAL_GPIO_WritePin(LED7_GPIO_Port,  LED7_Pin,  state); HAL_GPIO_WritePin(LED16_GPIO_Port,LED16_Pin, state)
+#define L8(state)  HAL_GPIO_WritePin(LED8_GPIO_Port,  LED8_Pin,  state); HAL_GPIO_WritePin(LED17_GPIO_Port,LED17_Pin, state)
+#define L9(state)  HAL_GPIO_WritePin(LED9_GPIO_Port,  LED9_Pin,  state); HAL_GPIO_WritePin(LED18_GPIO_Port,LED18_Pin, state)
 
 //#define L8(state)  HAL_GPIO_WritePin(LED8_GPIO_Port,  LED8_Pin,  state)
 //#define L9(state)  HAL_GPIO_WritePin(LED9_GPIO_Port,  LED9_Pin,  state)
@@ -69,7 +71,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=6;
+uint8_t cantLeds=9;//tambien cambiar EncenderAleatorio y control leds agregar o quitar la cantidad de leds en ControlLeds
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -146,18 +148,18 @@ int main(void)
   {
 
 
-	  Barrido1(2,60,1500);Blink(2,1500);
-	  ArmarIzquierda(2,30,1000);Blink(2,1500);
-	  VolumenAbrir(2,30,1000);Blink(2,1500);
-	  EncenderAleatorio(2,150,1500);Blink(2,1500);
-	  Girar(3,100);Blink(2,1500);
-	  VolumenCerrar(2,30,1500);Blink(2,1500);
+	  Barrido1(2,60,2500);Blink(2,2000);
+	  ArmarIzquierda(2,30,2000);Blink(2,2000);
+	  VolumenAbrir(2,30,2500);Blink(2,2000);
+	  EncenderAleatorio(2,150,2000);Blink(2,2000);
+	  Girar(4,100);Blink(2,2000);
+	  VolumenCerrar(2,30,2500);Blink(2,2000);
 
-	  CerrarApagar(1,150,1500);
-	  AbrirApagar(1,150,1500);
-	  AbrirApagar(1,150,1500);
-	  CerrarApagar(1,150,1500);
-	  Blink(2,1500);
+	  CerrarApagar(1,150,2000);
+	  AbrirApagar(1,150,2000);
+	  AbrirApagar(1,150,2000);
+	  CerrarApagar(1,150,2000);
+	  Blink(2,2000);
 
 
 
@@ -293,6 +295,8 @@ static void MX_ADC1_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -344,6 +348,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -368,9 +374,9 @@ void ControlLeds(uint8_t led, uint8_t state){
 		case 4:  L4(state); break;
 		case 5:  L5(state); break;
 		case 6:  L6(state); break;
-//		case 7:  L7(state); break;
-//		case 8:  L8(state); break;
-//		case 9:  L9(state); break;
+		case 7:  L7(state); break;
+		case 8:  L8(state); break;
+		case 9:  L9(state); break;
 //		case 10: L10(state);break;
 //		case 11: L11(state);break;
 //		case 12: L12(state);break;
@@ -603,8 +609,17 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
-	uint8_t secuencia1[6]={6,2,4,1,3,5};
-	uint8_t secuencia2[6]={5,1,4,2,6,3};
+	//9 letras
+	//uint8_t secuencia1[9]={9,6,2,4,7,1,3,5,8};
+	//uint8_t secuencia2[9]={7,5,1,8,4,2,6,3,9};
+
+	//8 letras
+	uint8_t secuencia1[8]={6,2,4,7,1,3,5,8};
+	uint8_t secuencia2[8]={7,5,1,8,4,2,6,3};
+
+	//5 letras
+	//uint8_t secuencia1[5]={4,3,5,1,2};
+	//uint8_t secuencia2[5]={2,5,1,3,4};
 
 
 	for(uint8_t i=0;i<cantLeds;i++){

@@ -11053,11 +11053,11 @@ void control_SW2(void){
  800519c:	0008      	movs	r0, r1
  800519e:	4b47      	ldr	r3, [pc, #284]	; (80052bc <main+0x778>)
  80051a0:	f7fe fb3a 	bl	8003818 <OLED_Print_Text_DMA>
-				OLED_Print_Text_DMA(2,19,2, "FIXED 5.3V");
+				OLED_Print_Text_DMA(2,19,2, "FIXED 5.5V");
  80051a4:	2202      	movs	r2, #2
 				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
  80051a6:	2410      	movs	r4, #16
-				OLED_Print_Text_DMA(2,19,2, "FIXED 5.3V");
+				OLED_Print_Text_DMA(2,19,2, "FIXED 5.5V");
  80051a8:	0010      	movs	r0, r2
  80051aa:	2113      	movs	r1, #19
  80051ac:	4b44      	ldr	r3, [pc, #272]	; (80052c0 <main+0x77c>)
@@ -11101,7 +11101,7 @@ void control_SW2(void){
  80051f2:	7023      	strb	r3, [r4, #0]
 	  		HAL_TIM_Base_Stop_IT(&htim14);//STOP ENCODER
  80051f4:	f002 fe68 	bl	8007ec8 <HAL_TIM_Base_Stop_IT>
-	  		set_Voltage_Encoder = 5.3;
+	  		set_Voltage_Encoder = 5.5;
  80051f8:	4b33      	ldr	r3, [pc, #204]	; (80052c8 <main+0x784>)
  80051fa:	4a34      	ldr	r2, [pc, #208]	; (80052cc <main+0x788>)
  80051fc:	601a      	str	r2, [r3, #0]
@@ -11175,7 +11175,7 @@ void control_SW2(void){
  80052c0:	0800e472 	.word	0x0800e472
  80052c4:	0800e47d 	.word	0x0800e47d
  80052c8:	20000924 	.word	0x20000924
- 80052cc:	40a9999a 	.word	0x40a9999a
+ 80052cc:	40b00000 	.word	0x40b00000
  80052d0:	453b8000 	.word	0x453b8000
  80052d4:	20000644 	.word	0x20000644
  80052d8:	20000674 	.word	0x20000674

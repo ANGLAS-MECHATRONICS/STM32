@@ -214,7 +214,7 @@ int main(void)
 	  		break;
 	  	case 3: OLED_Print_Text_DMA(0,0,2,"MODE 3:CHARGER");
 				//OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
-				OLED_Print_Text_DMA(2,19,2, "FIXED 5.3V");
+				OLED_Print_Text_DMA(2,19,2, "FIXED 5.5V");
 				//OLED_Print_Text_DMA(4,18,2,"PROTECTION");
 				OLED_Print_Text_DMA(4,37,2,"OUTPUT");
 				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
@@ -249,7 +249,7 @@ int main(void)
   	case 2: HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
 	  		flagInicio=1;//bandera para no entrar a la condicion donde habilita las interrupciones
 	  		HAL_TIM_Base_Stop_IT(&htim14);//STOP ENCODER
-	  		set_Voltage_Encoder = 5.3;
+	  		set_Voltage_Encoder = 5.5;
   		break;
   }
 

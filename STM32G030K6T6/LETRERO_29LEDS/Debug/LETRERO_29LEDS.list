@@ -7,45 +7,45 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         00005870  080000b8  080000b8  000100b8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       0000013c  08005928  08005928  00015928  2**2
+  2 .rodata       00000144  08005928  08005928  00015928  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08005a64  08005a64  00020010  2**0
+  3 .ARM.extab    00000000  08005a6c  08005a6c  00020010  2**0
                   CONTENTS
-  4 .ARM          00000000  08005a64  08005a64  00020010  2**0
+  4 .ARM          00000000  08005a6c  08005a6c  00020010  2**0
                   CONTENTS
-  5 .preinit_array 00000000  08005a64  08005a64  00020010  2**0
+  5 .preinit_array 00000000  08005a6c  08005a6c  00020010  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08005a64  08005a64  00015a64  2**2
+  6 .init_array   00000004  08005a6c  08005a6c  00015a6c  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08005a68  08005a68  00015a68  2**2
+  7 .fini_array   00000004  08005a70  08005a70  00015a70  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000010  20000000  08005a6c  00020000  2**2
+  8 .data         00000010  20000000  08005a74  00020000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000008c  20000010  08005a7c  00020010  2**2
+  9 .bss          0000008c  20000010  08005a84  00020010  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  2000009c  08005a7c  0002009c  2**0
+ 10 ._user_heap_stack 00000604  2000009c  08005a84  0002009c  2**0
                   ALLOC
  11 .ARM.attributes 00000028  00000000  00000000  00020010  2**0
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  00020038  2**0
                   CONTENTS, READONLY
- 13 .debug_info   000071a9  00000000  00000000  0002007b  2**0
+ 13 .debug_info   000072e0  00000000  00000000  0002007b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000017cd  00000000  00000000  00027224  2**0
+ 14 .debug_abbrev 00001789  00000000  00000000  0002735b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000788  00000000  00000000  000289f8  2**3
+ 15 .debug_aranges 000007a8  00000000  00000000  00028ae8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 0000059c  00000000  00000000  00029180  2**0
+ 16 .debug_rnglists 000005b3  00000000  00000000  00029290  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00014280  00000000  00000000  0002971c  2**0
+ 17 .debug_macro  000142e4  00000000  00000000  00029843  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00008835  00000000  00000000  0003d99c  2**0
+ 18 .debug_line   0000898f  00000000  00000000  0003db27  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00080517  00000000  00000000  000461d1  2**0
+ 19 .debug_str    00080a48  00000000  00000000  000464b6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00001d88  00000000  00000000  000c66e8  2**2
+ 20 .debug_frame  00001e08  00000000  00000000  000c6f00  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006a  00000000  00000000  000c8470  2**0
+ 21 .debug_line_str 0000006a  00000000  00000000  000c8d08  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -968,9 +968,9 @@ Disassembly of section .text:
  80007e6:	2000      	movs	r0, #0
  80007e8:	0a52      	lsrs	r2, r2, #9
  80007ea:	e74b      	b.n	8000684 <__aeabi_fdiv+0xc0>
- 80007ec:	08005938 	.word	0x08005938
+ 80007ec:	08005940 	.word	0x08005940
  80007f0:	f7ffffff 	.word	0xf7ffffff
- 80007f4:	08005978 	.word	0x08005978
+ 80007f4:	08005980 	.word	0x08005980
 
 080007f8 <__aeabi_fmul>:
  80007f8:	0243      	lsls	r3, r0, #9
@@ -4270,11 +4270,11 @@ int main(void)
  800218c:	4b38      	ldr	r3, [pc, #224]	; (8002270 <main+0x100>)
  800218e:	0018      	movs	r0, r3
  8002190:	f001 fd20 	bl	8003bd4 <HAL_Delay>
-  /* USER CODE BEGIN WHILE */
 
   while (1)
   {
 
+	  //NORMAL DE 4 A 26 LETRAS (actual 2024)
 	  Barrido1(2,60,2500);Blink(2,2000);
  8002194:	4b37      	ldr	r3, [pc, #220]	; (8002274 <main+0x104>)
  8002196:	001a      	movs	r2, r3
@@ -4664,6 +4664,8 @@ static void MX_GPIO_Init(void)
  80023ee:	001a      	movs	r2, r3
  80023f0:	2100      	movs	r1, #0
  80023f2:	f003 fa61 	bl	80058b8 <memset>
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -4818,6 +4820,8 @@ static void MX_GPIO_Init(void)
  80024ce:	0018      	movs	r0, r3
  80024d0:	f002 fb96 	bl	8004c00 <HAL_GPIO_Init>
 
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
  80024d4:	46c0      	nop			; (mov r8, r8)
  80024d6:	46bd      	mov	sp, r7
@@ -5178,7 +5182,7 @@ void ControlLeds(uint8_t led, uint8_t state){
  8002796:	b002      	add	sp, #8
  8002798:	bd80      	pop	{r7, pc}
  800279a:	46c0      	nop			; (mov r8, r8)
- 800279c:	080059b8 	.word	0x080059b8
+ 800279c:	080059c0 	.word	0x080059c0
  80027a0:	50000400 	.word	0x50000400
  80027a4:	50000800 	.word	0x50000800
 
@@ -7011,7 +7015,7 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  800356c:	b5b0      	push	{r4, r5, r7, lr}
- 800356e:	b088      	sub	sp, #32
+ 800356e:	b08a      	sub	sp, #40	; 0x28
  8003570:	af00      	add	r7, sp, #0
  8003572:	0004      	movs	r4, r0
  8003574:	0008      	movs	r0, r1
@@ -7025,40 +7029,43 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  8003584:	1cbb      	adds	r3, r7, #2
  8003586:	1c0a      	adds	r2, r1, #0
  8003588:	801a      	strh	r2, [r3, #0]
+	//uint8_t secuencia1[9]={6,2,7,4,9,8,1,3,5};
+	//uint8_t secuencia2[9]={5,8,1,4,2,6,9,3,7};
 
-	// 5 letras
-	uint8_t secuencia1[5]={2,4,1,3,5};
- 800358a:	2314      	movs	r3, #20
+
+	// 10 letras
+	uint8_t secuencia1[10]={6,2,7,4,9,8,1,10,3,5};
+ 800358a:	2318      	movs	r3, #24
  800358c:	18fb      	adds	r3, r7, r3
  800358e:	4aa1      	ldr	r2, [pc, #644]	; (8003814 <EncenderAleatorio+0x2a8>)
- 8003590:	6811      	ldr	r1, [r2, #0]
- 8003592:	6019      	str	r1, [r3, #0]
- 8003594:	7912      	ldrb	r2, [r2, #4]
- 8003596:	711a      	strb	r2, [r3, #4]
-	uint8_t secuencia2[5]={5,1,4,2,3};
+ 8003590:	ca03      	ldmia	r2!, {r0, r1}
+ 8003592:	c303      	stmia	r3!, {r0, r1}
+ 8003594:	8812      	ldrh	r2, [r2, #0]
+ 8003596:	801a      	strh	r2, [r3, #0]
+	uint8_t secuencia2[10]={5,8,10,1,4,2,6,9,3,7};
  8003598:	230c      	movs	r3, #12
  800359a:	18fb      	adds	r3, r7, r3
  800359c:	4a9e      	ldr	r2, [pc, #632]	; (8003818 <EncenderAleatorio+0x2ac>)
- 800359e:	6811      	ldr	r1, [r2, #0]
- 80035a0:	6019      	str	r1, [r3, #0]
- 80035a2:	7912      	ldrb	r2, [r2, #4]
- 80035a4:	711a      	strb	r2, [r3, #4]
+ 800359e:	ca03      	ldmia	r2!, {r0, r1}
+ 80035a0:	c303      	stmia	r3!, {r0, r1}
+ 80035a2:	8812      	ldrh	r2, [r2, #0]
+ 80035a4:	801a      	strh	r2, [r3, #0]
+	// 12 letras
 	//uint8_t secuencia1[12]={2,8,10,4,1,6,7,12,5,11,3,9};
 	//uint8_t secuencia2[12]={5,12,3,7,8,1,2,10,11,9,4,6};
 
 
-
 	for(uint8_t i=0;i<cantLeds;i++){
- 80035a6:	231f      	movs	r3, #31
+ 80035a6:	2327      	movs	r3, #39	; 0x27
  80035a8:	18fb      	adds	r3, r7, r3
  80035aa:	2200      	movs	r2, #0
  80035ac:	701a      	strb	r2, [r3, #0]
  80035ae:	e023      	b.n	80035f8 <EncenderAleatorio+0x8c>
 		ControlLeds(secuencia1[i], 1);
- 80035b0:	251f      	movs	r5, #31
+ 80035b0:	2527      	movs	r5, #39	; 0x27
  80035b2:	197b      	adds	r3, r7, r5
  80035b4:	781b      	ldrb	r3, [r3, #0]
- 80035b6:	2214      	movs	r2, #20
+ 80035b6:	2218      	movs	r2, #24
  80035b8:	18ba      	adds	r2, r7, r2
  80035ba:	5cd3      	ldrb	r3, [r2, r3]
  80035bc:	2101      	movs	r1, #1
@@ -7089,7 +7096,7 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  80035f6:	701a      	strb	r2, [r3, #0]
  80035f8:	4b88      	ldr	r3, [pc, #544]	; (800381c <EncenderAleatorio+0x2b0>)
  80035fa:	781b      	ldrb	r3, [r3, #0]
- 80035fc:	221f      	movs	r2, #31
+ 80035fc:	2227      	movs	r2, #39	; 0x27
  80035fe:	18ba      	adds	r2, r7, r2
  8003600:	7812      	ldrb	r2, [r2, #0]
  8003602:	429a      	cmp	r2, r3
@@ -7119,16 +7126,16 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  8003632:	781b      	ldrb	r3, [r3, #0]
  8003634:	3b01      	subs	r3, #1
  8003636:	b2da      	uxtb	r2, r3
- 8003638:	231e      	movs	r3, #30
+ 8003638:	2326      	movs	r3, #38	; 0x26
  800363a:	18fb      	adds	r3, r7, r3
  800363c:	701a      	strb	r2, [r3, #0]
  800363e:	e027      	b.n	8003690 <EncenderAleatorio+0x124>
 		ControlLeds(secuencia1[i], 0);
- 8003640:	251e      	movs	r5, #30
+ 8003640:	2526      	movs	r5, #38	; 0x26
  8003642:	197b      	adds	r3, r7, r5
  8003644:	781b      	ldrb	r3, [r3, #0]
  8003646:	b25b      	sxtb	r3, r3
- 8003648:	2214      	movs	r2, #20
+ 8003648:	2218      	movs	r2, #24
  800364a:	18ba      	adds	r2, r7, r2
  800364c:	5cd3      	ldrb	r3, [r2, r3]
  800364e:	2100      	movs	r1, #0
@@ -7160,7 +7167,7 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  800368a:	b2da      	uxtb	r2, r3
  800368c:	197b      	adds	r3, r7, r5
  800368e:	701a      	strb	r2, [r3, #0]
- 8003690:	231e      	movs	r3, #30
+ 8003690:	2326      	movs	r3, #38	; 0x26
  8003692:	18fb      	adds	r3, r7, r3
  8003694:	781b      	ldrb	r3, [r3, #0]
  8003696:	2b7f      	cmp	r3, #127	; 0x7f
@@ -7194,13 +7201,13 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  80036d4:	f000 fa7e 	bl	8003bd4 <HAL_Delay>
 
 	for(uint8_t i=0;i<cantLeds;i++){
- 80036d8:	231d      	movs	r3, #29
+ 80036d8:	2325      	movs	r3, #37	; 0x25
  80036da:	18fb      	adds	r3, r7, r3
  80036dc:	2200      	movs	r2, #0
  80036de:	701a      	strb	r2, [r3, #0]
  80036e0:	e023      	b.n	800372a <EncenderAleatorio+0x1be>
 		ControlLeds(secuencia2[i], 1);
- 80036e2:	251d      	movs	r5, #29
+ 80036e2:	2525      	movs	r5, #37	; 0x25
  80036e4:	197b      	adds	r3, r7, r5
  80036e6:	781b      	ldrb	r3, [r3, #0]
  80036e8:	220c      	movs	r2, #12
@@ -7234,7 +7241,7 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  8003728:	701a      	strb	r2, [r3, #0]
  800372a:	4b3c      	ldr	r3, [pc, #240]	; (800381c <EncenderAleatorio+0x2b0>)
  800372c:	781b      	ldrb	r3, [r3, #0]
- 800372e:	221d      	movs	r2, #29
+ 800372e:	2225      	movs	r2, #37	; 0x25
  8003730:	18ba      	adds	r2, r7, r2
  8003732:	7812      	ldrb	r2, [r2, #0]
  8003734:	429a      	cmp	r2, r3
@@ -7264,12 +7271,12 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  8003764:	781b      	ldrb	r3, [r3, #0]
  8003766:	3b01      	subs	r3, #1
  8003768:	b2da      	uxtb	r2, r3
- 800376a:	231c      	movs	r3, #28
+ 800376a:	2324      	movs	r3, #36	; 0x24
  800376c:	18fb      	adds	r3, r7, r3
  800376e:	701a      	strb	r2, [r3, #0]
  8003770:	e027      	b.n	80037c2 <EncenderAleatorio+0x256>
 		ControlLeds(secuencia2[i], 0);
- 8003772:	251c      	movs	r5, #28
+ 8003772:	2524      	movs	r5, #36	; 0x24
  8003774:	197b      	adds	r3, r7, r5
  8003776:	781b      	ldrb	r3, [r3, #0]
  8003778:	b25b      	sxtb	r3, r3
@@ -7305,7 +7312,7 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  80037bc:	b2da      	uxtb	r2, r3
  80037be:	197b      	adds	r3, r7, r5
  80037c0:	701a      	strb	r2, [r3, #0]
- 80037c2:	231c      	movs	r3, #28
+ 80037c2:	2324      	movs	r3, #36	; 0x24
  80037c4:	18fb      	adds	r3, r7, r3
  80037c6:	781b      	ldrb	r3, [r3, #0]
  80037c8:	2b7f      	cmp	r3, #127	; 0x7f
@@ -7341,11 +7348,11 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 }
  800380a:	46c0      	nop			; (mov r8, r8)
  800380c:	46bd      	mov	sp, r7
- 800380e:	b008      	add	sp, #32
+ 800380e:	b00a      	add	sp, #40	; 0x28
  8003810:	bdb0      	pop	{r4, r5, r7, pc}
  8003812:	46c0      	nop			; (mov r8, r8)
  8003814:	08005928 	.word	0x08005928
- 8003818:	08005930 	.word	0x08005930
+ 8003818:	08005934 	.word	0x08005934
  800381c:	20000000 	.word	0x20000000
  8003820:	9999999a 	.word	0x9999999a
  8003824:	3fc99999 	.word	0x3fc99999
@@ -7900,7 +7907,7 @@ LoopForever:
   ldr r1, =_edata
  8003ab4:	20000010 	.word	0x20000010
   ldr r2, =_sidata
- 8003ab8:	08005a6c 	.word	0x08005a6c
+ 8003ab8:	08005a74 	.word	0x08005a74
   ldr r2, =_sbss
  8003abc:	20000010 	.word	0x20000010
   ldr r4, =_ebss
@@ -8216,7 +8223,7 @@ __STATIC_INLINE void LL_ADC_SetCommonPathInternalCh(ADC_Common_TypeDef *ADCxy_CO
   *         @arg @ref LL_ADC_PATH_INTERNAL_TEMPSENSOR
   *         @arg @ref LL_ADC_PATH_INTERNAL_VBAT
   */
-__STATIC_INLINE uint32_t LL_ADC_GetCommonPathInternalCh(ADC_Common_TypeDef *ADCxy_COMMON)
+__STATIC_INLINE uint32_t LL_ADC_GetCommonPathInternalCh(const ADC_Common_TypeDef *ADCxy_COMMON)
 {
  8003c44:	b580      	push	{r7, lr}
  8003c46:	b082      	sub	sp, #8
@@ -8280,7 +8287,7 @@ __STATIC_INLINE void LL_ADC_SetSamplingTimeCommonChannels(ADC_TypeDef *ADCx, uin
   *         @arg @ref LL_ADC_SAMPLINGTIME_79CYCLES_5
   *         @arg @ref LL_ADC_SAMPLINGTIME_160CYCLES_5
   */
-__STATIC_INLINE uint32_t LL_ADC_GetSamplingTimeCommonChannels(ADC_TypeDef *ADCx, uint32_t SamplingTimeY)
+__STATIC_INLINE uint32_t LL_ADC_GetSamplingTimeCommonChannels(const ADC_TypeDef *ADCx, uint32_t SamplingTimeY)
 {
  8003c98:	b580      	push	{r7, lr}
  8003c9a:	b082      	sub	sp, #8
@@ -8315,7 +8322,7 @@ __STATIC_INLINE uint32_t LL_ADC_GetSamplingTimeCommonChannels(ADC_TypeDef *ADCx,
   * @retval Value "0" if trigger source external trigger
   *         Value "1" if trigger source SW start.
   */
-__STATIC_INLINE uint32_t LL_ADC_REG_IsTriggerSourceSWStart(ADC_TypeDef *ADCx)
+__STATIC_INLINE uint32_t LL_ADC_REG_IsTriggerSourceSWStart(const ADC_TypeDef *ADCx)
 {
  8003cc6:	b580      	push	{r7, lr}
  8003cc8:	b082      	sub	sp, #8
@@ -8379,7 +8386,7 @@ __STATIC_INLINE void LL_ADC_REG_SetSequencerRanks(ADC_TypeDef *ADCx, uint32_t Ra
  8003d1e:	629a      	str	r2, [r3, #40]	; 0x28
              ADC_CHSELR_SQ1 << (Rank & ADC_REG_RANK_ID_SQRX_MASK),
              ((Channel & ADC_CHANNEL_ID_NUMBER_MASK_SEQ) >> ADC_CHANNEL_ID_NUMBER_BITOFFSET_POS)
-              << (Rank & ADC_REG_RANK_ID_SQRX_MASK));
+             << (Rank & ADC_REG_RANK_ID_SQRX_MASK));
 }
  8003d20:	46c0      	nop			; (mov r8, r8)
  8003d22:	46bd      	mov	sp, r7
@@ -8450,7 +8457,7 @@ __STATIC_INLINE void LL_ADC_REG_SetSequencerChRem(ADC_TypeDef *ADCx, uint32_t Ch
   *         @arg @ref LL_ADC_REG_DMA_TRANSFER_LIMITED
   *         @arg @ref LL_ADC_REG_DMA_TRANSFER_UNLIMITED
   */
-__STATIC_INLINE uint32_t LL_ADC_REG_GetDMATransfer(ADC_TypeDef *ADCx)
+__STATIC_INLINE uint32_t LL_ADC_REG_GetDMATransfer(const ADC_TypeDef *ADCx)
 {
  8003d6e:	b580      	push	{r7, lr}
  8003d70:	b082      	sub	sp, #8
@@ -8549,7 +8556,7 @@ __STATIC_INLINE void LL_ADC_EnableInternalRegulator(ADC_TypeDef *ADCx)
   * @param  ADCx ADC instance
   * @retval 0: internal regulator is disabled, 1: internal regulator is enabled.
   */
-__STATIC_INLINE uint32_t LL_ADC_IsInternalRegulatorEnabled(ADC_TypeDef *ADCx)
+__STATIC_INLINE uint32_t LL_ADC_IsInternalRegulatorEnabled(const ADC_TypeDef *ADCx)
 {
  8003de8:	b580      	push	{r7, lr}
  8003dea:	b082      	sub	sp, #8
@@ -8611,7 +8618,7 @@ __STATIC_INLINE void LL_ADC_Enable(ADC_TypeDef *ADCx)
   * @param  ADCx ADC instance
   * @retval 0: ADC is disabled, 1: ADC is enabled.
   */
-__STATIC_INLINE uint32_t LL_ADC_IsEnabled(ADC_TypeDef *ADCx)
+__STATIC_INLINE uint32_t LL_ADC_IsEnabled(const ADC_TypeDef *ADCx)
 {
  8003e34:	b580      	push	{r7, lr}
  8003e36:	b082      	sub	sp, #8
@@ -8671,7 +8678,7 @@ __STATIC_INLINE void LL_ADC_REG_StartConversion(ADC_TypeDef *ADCx)
   * @param  ADCx ADC instance
   * @retval 0: no conversion is on going on ADC group regular.
   */
-__STATIC_INLINE uint32_t LL_ADC_REG_IsConversionOngoing(ADC_TypeDef *ADCx)
+__STATIC_INLINE uint32_t LL_ADC_REG_IsConversionOngoing(const ADC_TypeDef *ADCx)
 {
  8003e7c:	b580      	push	{r7, lr}
  8003e7e:	b082      	sub	sp, #8
@@ -8710,10 +8717,10 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  8003eaa:	18fb      	adds	r3, r7, r3
  8003eac:	2200      	movs	r2, #0
  8003eae:	701a      	strb	r2, [r3, #0]
-  uint32_t tmpCFGR1 = 0UL;
+  uint32_t tmp_cfgr1 = 0UL;
  8003eb0:	2300      	movs	r3, #0
  8003eb2:	61bb      	str	r3, [r7, #24]
-  uint32_t tmpCFGR2 = 0UL;
+  uint32_t tmp_cfgr2 = 0UL;
  8003eb4:	2300      	movs	r3, #0
  8003eb6:	617b      	str	r3, [r7, #20]
   uint32_t tmp_adc_reg_is_conversion_on_going;
@@ -8896,28 +8903,28 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
       /*   - internal measurement paths (VrefInt, ...)                        */
       /*     (set into HAL_ADC_ConfigChannel() )                              */
 
-      tmpCFGR1 |= (hadc->Init.Resolution                                          |
+      tmp_cfgr1 |= (hadc->Init.Resolution                                          |
  8003f8e:	687b      	ldr	r3, [r7, #4]
  8003f90:	689a      	ldr	r2, [r3, #8]
-                   ADC_CFGR1_AUTOWAIT((uint32_t)hadc->Init.LowPowerAutoWait)      |
+                    ADC_CFGR1_AUTOWAIT((uint32_t)hadc->Init.LowPowerAutoWait)      |
  8003f92:	687b      	ldr	r3, [r7, #4]
  8003f94:	7e1b      	ldrb	r3, [r3, #24]
  8003f96:	039b      	lsls	r3, r3, #14
-      tmpCFGR1 |= (hadc->Init.Resolution                                          |
+      tmp_cfgr1 |= (hadc->Init.Resolution                                          |
  8003f98:	431a      	orrs	r2, r3
-                   ADC_CFGR1_AUTOOFF((uint32_t)hadc->Init.LowPowerAutoPowerOff)   |
+                    ADC_CFGR1_AUTOOFF((uint32_t)hadc->Init.LowPowerAutoPowerOff)   |
  8003f9a:	687b      	ldr	r3, [r7, #4]
  8003f9c:	7e5b      	ldrb	r3, [r3, #25]
  8003f9e:	03db      	lsls	r3, r3, #15
-                   ADC_CFGR1_AUTOWAIT((uint32_t)hadc->Init.LowPowerAutoWait)      |
+                    ADC_CFGR1_AUTOWAIT((uint32_t)hadc->Init.LowPowerAutoWait)      |
  8003fa0:	431a      	orrs	r2, r3
-                   ADC_CFGR1_CONTINUOUS((uint32_t)hadc->Init.ContinuousConvMode)  |
+                    ADC_CFGR1_CONTINUOUS((uint32_t)hadc->Init.ContinuousConvMode)  |
  8003fa2:	687b      	ldr	r3, [r7, #4]
  8003fa4:	7e9b      	ldrb	r3, [r3, #26]
  8003fa6:	035b      	lsls	r3, r3, #13
-                   ADC_CFGR1_AUTOOFF((uint32_t)hadc->Init.LowPowerAutoPowerOff)   |
+                    ADC_CFGR1_AUTOOFF((uint32_t)hadc->Init.LowPowerAutoPowerOff)   |
  8003fa8:	431a      	orrs	r2, r3
-                   ADC_CFGR1_OVERRUN(hadc->Init.Overrun)                          |
+                    ADC_CFGR1_OVERRUN(hadc->Init.Overrun)                          |
  8003faa:	687b      	ldr	r3, [r7, #4]
  8003fac:	6b1b      	ldr	r3, [r3, #48]	; 0x30
  8003fae:	2b00      	cmp	r3, #0
@@ -8926,14 +8933,14 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  8003fb4:	015b      	lsls	r3, r3, #5
  8003fb6:	e000      	b.n	8003fba <HAL_ADC_Init+0x11a>
  8003fb8:	2300      	movs	r3, #0
-                   ADC_CFGR1_CONTINUOUS((uint32_t)hadc->Init.ContinuousConvMode)  |
+                    ADC_CFGR1_CONTINUOUS((uint32_t)hadc->Init.ContinuousConvMode)  |
  8003fba:	431a      	orrs	r2, r3
-                   hadc->Init.DataAlign                                           |
+                    hadc->Init.DataAlign                                           |
  8003fbc:	687b      	ldr	r3, [r7, #4]
  8003fbe:	68db      	ldr	r3, [r3, #12]
-                   ADC_CFGR1_OVERRUN(hadc->Init.Overrun)                          |
+                    ADC_CFGR1_OVERRUN(hadc->Init.Overrun)                          |
  8003fc0:	431a      	orrs	r2, r3
-                   ADC_SCAN_SEQ_MODE(hadc->Init.ScanConvMode)                     |
+                    ADC_SCAN_SEQ_MODE(hadc->Init.ScanConvMode)                     |
  8003fc2:	687b      	ldr	r3, [r7, #4]
  8003fc4:	691b      	ldr	r3, [r3, #16]
  8003fc6:	2b00      	cmp	r3, #0
@@ -8945,16 +8952,16 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  8003fd2:	e001      	b.n	8003fd8 <HAL_ADC_Init+0x138>
  8003fd4:	2380      	movs	r3, #128	; 0x80
  8003fd6:	039b      	lsls	r3, r3, #14
-                   hadc->Init.DataAlign                                           |
+                    hadc->Init.DataAlign                                           |
  8003fd8:	431a      	orrs	r2, r3
-                   ADC_CFGR1_DMACONTREQ((uint32_t)hadc->Init.DMAContinuousRequests));
+                    ADC_CFGR1_DMACONTREQ((uint32_t)hadc->Init.DMAContinuousRequests));
  8003fda:	687b      	ldr	r3, [r7, #4]
  8003fdc:	212c      	movs	r1, #44	; 0x2c
  8003fde:	5c5b      	ldrb	r3, [r3, r1]
  8003fe0:	005b      	lsls	r3, r3, #1
-                   ADC_SCAN_SEQ_MODE(hadc->Init.ScanConvMode)                     |
+                    ADC_SCAN_SEQ_MODE(hadc->Init.ScanConvMode)                     |
  8003fe2:	4313      	orrs	r3, r2
-      tmpCFGR1 |= (hadc->Init.Resolution                                          |
+      tmp_cfgr1 |= (hadc->Init.Resolution                                          |
  8003fe4:	69ba      	ldr	r2, [r7, #24]
  8003fe6:	4313      	orrs	r3, r2
  8003fe8:	61bb      	str	r3, [r7, #24]
@@ -8974,7 +8981,7 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  8003ffa:	d105      	bne.n	8004008 <HAL_ADC_Init+0x168>
         {
           /* Enable the selected ADC group regular discontinuous mode */
-          tmpCFGR1 |= ADC_CFGR1_DISCEN;
+          tmp_cfgr1 |= ADC_CFGR1_DISCEN;
  8003ffc:	69bb      	ldr	r3, [r7, #24]
  8003ffe:	2280      	movs	r2, #128	; 0x80
  8004000:	0252      	lsls	r2, r2, #9
@@ -9013,16 +9020,16 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  8004024:	2b00      	cmp	r3, #0
  8004026:	d00a      	beq.n	800403e <HAL_ADC_Init+0x19e>
       {
-        tmpCFGR1 |= ((hadc->Init.ExternalTrigConv & ADC_CFGR1_EXTSEL) |
+        tmp_cfgr1 |= ((hadc->Init.ExternalTrigConv & ADC_CFGR1_EXTSEL) |
  8004028:	687b      	ldr	r3, [r7, #4]
  800402a:	6a5a      	ldr	r2, [r3, #36]	; 0x24
  800402c:	23e0      	movs	r3, #224	; 0xe0
  800402e:	005b      	lsls	r3, r3, #1
  8004030:	401a      	ands	r2, r3
-                     hadc->Init.ExternalTrigConvEdge);
+                      hadc->Init.ExternalTrigConvEdge);
  8004032:	687b      	ldr	r3, [r7, #4]
  8004034:	6a9b      	ldr	r3, [r3, #40]	; 0x28
-        tmpCFGR1 |= ((hadc->Init.ExternalTrigConv & ADC_CFGR1_EXTSEL) |
+        tmp_cfgr1 |= ((hadc->Init.ExternalTrigConv & ADC_CFGR1_EXTSEL) |
  8004036:	4313      	orrs	r3, r2
  8004038:	69ba      	ldr	r2, [r7, #24]
  800403a:	4313      	orrs	r3, r2
@@ -9042,25 +9049,25 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  800404e:	69ba      	ldr	r2, [r7, #24]
  8004050:	430a      	orrs	r2, r1
  8004052:	60da      	str	r2, [r3, #12]
-                 ADC_CFGR1_ALIGN   |
-                 ADC_CFGR1_SCANDIR |
+                 ADC_CFGR1_ALIGN     |
+                 ADC_CFGR1_SCANDIR   |
                  ADC_CFGR1_DMACFG,
-                 tmpCFGR1);
+                 tmp_cfgr1);
 
-      tmpCFGR2 |= ((hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
+      tmp_cfgr2 |= ((hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
  8004054:	687b      	ldr	r3, [r7, #4]
  8004056:	685b      	ldr	r3, [r3, #4]
  8004058:	0f9b      	lsrs	r3, r3, #30
  800405a:	079a      	lsls	r2, r3, #30
-                   hadc->Init.TriggerFrequencyMode
+                    hadc->Init.TriggerFrequencyMode
  800405c:	687b      	ldr	r3, [r7, #4]
  800405e:	6cdb      	ldr	r3, [r3, #76]	; 0x4c
-      tmpCFGR2 |= ((hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
+      tmp_cfgr2 |= ((hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
  8004060:	4313      	orrs	r3, r2
  8004062:	697a      	ldr	r2, [r7, #20]
  8004064:	4313      	orrs	r3, r2
  8004066:	617b      	str	r3, [r7, #20]
-                  );
+                   );
 
       if (hadc->Init.OversamplingMode == ENABLE)
  8004068:	687b      	ldr	r3, [r7, #4]
@@ -9069,34 +9076,34 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  800406e:	2b01      	cmp	r3, #1
  8004070:	d111      	bne.n	8004096 <HAL_ADC_Init+0x1f6>
       {
-        tmpCFGR2 |= (ADC_CFGR2_OVSE |
-                     (hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
+        tmp_cfgr2 |= (ADC_CFGR2_OVSE |
+                      (hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
  8004072:	687b      	ldr	r3, [r7, #4]
  8004074:	685b      	ldr	r3, [r3, #4]
  8004076:	0f9b      	lsrs	r3, r3, #30
  8004078:	079a      	lsls	r2, r3, #30
-                     hadc->Init.Oversampling.Ratio         |
+                      hadc->Init.Oversampling.Ratio         |
  800407a:	687b      	ldr	r3, [r7, #4]
  800407c:	6c1b      	ldr	r3, [r3, #64]	; 0x40
-                     (hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
+                      (hadc->Init.ClockPrescaler & ADC_CFGR2_CKMODE) |
  800407e:	431a      	orrs	r2, r3
-                     hadc->Init.Oversampling.RightBitShift |
+                      hadc->Init.Oversampling.RightBitShift |
  8004080:	687b      	ldr	r3, [r7, #4]
  8004082:	6c5b      	ldr	r3, [r3, #68]	; 0x44
-                     hadc->Init.Oversampling.Ratio         |
+                      hadc->Init.Oversampling.Ratio         |
  8004084:	431a      	orrs	r2, r3
-                     hadc->Init.Oversampling.TriggeredMode
+                      hadc->Init.Oversampling.TriggeredMode
  8004086:	687b      	ldr	r3, [r7, #4]
  8004088:	6c9b      	ldr	r3, [r3, #72]	; 0x48
-                     hadc->Init.Oversampling.RightBitShift |
+                      hadc->Init.Oversampling.RightBitShift |
  800408a:	431a      	orrs	r2, r3
-        tmpCFGR2 |= (ADC_CFGR2_OVSE |
+        tmp_cfgr2 |= (ADC_CFGR2_OVSE |
  800408c:	697b      	ldr	r3, [r7, #20]
  800408e:	4313      	orrs	r3, r2
  8004090:	2201      	movs	r2, #1
  8004092:	4313      	orrs	r3, r2
  8004094:	617b      	str	r3, [r7, #20]
-                    );
+                     );
       }
 
       MODIFY_REG(hadc->Instance->CFGR2,
@@ -9112,7 +9119,7 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  80040a8:	430a      	orrs	r2, r1
  80040aa:	611a      	str	r2, [r3, #16]
                  ADC_CFGR2_TOVS,
-                 tmpCFGR2);
+                 tmp_cfgr2);
 
       /* Configuration of ADC clock mode: asynchronous clock source           */
       /* with selectable prescaler.                                           */
@@ -9233,22 +9240,22 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  8004152:	681b      	ldr	r3, [r3, #0]
  8004154:	430a      	orrs	r2, r1
  8004156:	629a      	str	r2, [r3, #40]	; 0x28
-                );
+      /* Nothing to do */
     }
 
     /* Check back that ADC registers have effectively been configured to      */
     /* ensure of no potential problem of ADC core peripheral clocking.        */
-    if(LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
+    if (LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
  8004158:	687b      	ldr	r3, [r7, #4]
  800415a:	681b      	ldr	r3, [r3, #0]
  800415c:	2100      	movs	r1, #0
  800415e:	0018      	movs	r0, r3
  8004160:	f7ff fd9a 	bl	8003c98 <LL_ADC_GetSamplingTimeCommonChannels>
  8004164:	0002      	movs	r2, r0
-      == hadc->Init.SamplingTimeCommon1)
+        == hadc->Init.SamplingTimeCommon1)
  8004166:	687b      	ldr	r3, [r7, #4]
  8004168:	6b5b      	ldr	r3, [r3, #52]	; 0x34
-    if(LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
+    if (LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
  800416a:	429a      	cmp	r2, r3
  800416c:	d10b      	bne.n	8004186 <HAL_ADC_Init+0x2e6>
     {
@@ -9268,7 +9275,7 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  800417e:	431a      	orrs	r2, r3
  8004180:	687b      	ldr	r3, [r7, #4]
  8004182:	659a      	str	r2, [r3, #88]	; 0x58
-    if(LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
+    if (LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
  8004184:	e01c      	b.n	80041c0 <HAL_ADC_Init+0x320>
                         HAL_ADC_STATE_READY);
     }
@@ -9301,7 +9308,7 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  80041a4:	18fb      	adds	r3, r7, r3
  80041a6:	2201      	movs	r2, #1
  80041a8:	701a      	strb	r2, [r3, #0]
-    if(LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
+    if (LL_ADC_GetSamplingTimeCommonChannels(hadc->Instance, LL_ADC_SAMPLINGTIME_COMMON_1)
  80041aa:	e009      	b.n	80041c0 <HAL_ADC_Init+0x320>
 
   }
@@ -9336,7 +9343,7 @@ HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef *hadc)
  80041d0:	20000004 	.word	0x20000004
  80041d4:	00030d40 	.word	0x00030d40
  80041d8:	fffffefd 	.word	0xfffffefd
- 80041dc:	fffe0201 	.word	0xfffe0201
+ 80041dc:	ffde0201 	.word	0xffde0201
  80041e0:	1ffffc02 	.word	0x1ffffc02
  80041e4:	40012708 	.word	0x40012708
  80041e8:	ffc3ffff 	.word	0xffc3ffff
@@ -9547,7 +9554,7 @@ HAL_StatusTypeDef HAL_ADC_Start_IT(ADC_HandleTypeDef *hadc)
   * @param hadc ADC handle
   * @retval ADC group regular conversion data
   */
-uint32_t HAL_ADC_GetValue(ADC_HandleTypeDef *hadc)
+uint32_t HAL_ADC_GetValue(const ADC_HandleTypeDef *hadc)
 {
  80042e0:	b580      	push	{r7, lr}
  80042e2:	b082      	sub	sp, #8
@@ -10081,7 +10088,7 @@ __weak void HAL_ADC_ErrorCallback(ADC_HandleTypeDef *hadc)
   * @param pConfig Structure of ADC channel assigned to ADC group regular.
   * @retval HAL status
   */
-HAL_StatusTypeDef HAL_ADC_ConfigChannel(ADC_HandleTypeDef *hadc, ADC_ChannelConfTypeDef *pConfig)
+HAL_StatusTypeDef HAL_ADC_ConfigChannel(ADC_HandleTypeDef *hadc, const ADC_ChannelConfTypeDef *pConfig)
 {
  8004548:	b580      	push	{r7, lr}
  800454a:	b086      	sub	sp, #24
@@ -10740,7 +10747,7 @@ HAL_StatusTypeDef ADC_Enable(ADC_HandleTypeDef *hadc)
  8004940:	0018      	movs	r0, r3
  8004942:	f7ff fa65 	bl	8003e10 <LL_ADC_Enable>
 
-    if ((LL_ADC_GetCommonPathInternalCh(__LL_ADC_COMMON_INSTANCE(hadc->Instance)) & LL_ADC_PATH_INTERNAL_TEMPSENSOR) 
+    if ((LL_ADC_GetCommonPathInternalCh(__LL_ADC_COMMON_INSTANCE(hadc->Instance)) & LL_ADC_PATH_INTERNAL_TEMPSENSOR)
  8004946:	4b2c      	ldr	r3, [pc, #176]	; (80049f8 <ADC_Enable+0x100>)
  8004948:	0018      	movs	r0, r3
  800494a:	f7ff f97b 	bl	8003c44 <LL_ADC_GetCommonPathInternalCh>
@@ -10753,7 +10760,7 @@ HAL_StatusTypeDef ADC_Enable(ADC_HandleTypeDef *hadc)
       /* Note: Variable divided by 2 to compensate partially              */
       /*       CPU processing cycles, scaling in us split to not          */
       /*       exceed 32 bits register capacity and handle low frequency. */
-      wait_loop_index = ((LL_ADC_DELAY_TEMPSENSOR_BUFFER_STAB_US / 10UL) 
+      wait_loop_index = ((LL_ADC_DELAY_TEMPSENSOR_BUFFER_STAB_US / 10UL)
                          * ((SystemCoreClock / (100000UL * 2UL)) + 1UL));
  8004958:	4b28      	ldr	r3, [pc, #160]	; (80049fc <ADC_Enable+0x104>)
  800495a:	681b      	ldr	r3, [r3, #0]
@@ -10762,7 +10769,7 @@ HAL_StatusTypeDef ADC_Enable(ADC_HandleTypeDef *hadc)
  8004960:	f7fb fbce 	bl	8000100 <__udivsi3>
  8004964:	0003      	movs	r3, r0
  8004966:	3301      	adds	r3, #1
-      wait_loop_index = ((LL_ADC_DELAY_TEMPSENSOR_BUFFER_STAB_US / 10UL) 
+      wait_loop_index = ((LL_ADC_DELAY_TEMPSENSOR_BUFFER_STAB_US / 10UL)
  8004968:	60bb      	str	r3, [r7, #8]
       while (wait_loop_index != 0UL)
  800496a:	e002      	b.n	8004972 <ADC_Enable+0x7a>
@@ -13444,7 +13451,7 @@ HAL_StatusTypeDef HAL_RCC_ClockConfig(RCC_ClkInitTypeDef  *RCC_ClkInitStruct, ui
  800579c:	40021000 	.word	0x40021000
  80057a0:	fffff0ff 	.word	0xfffff0ff
  80057a4:	ffff8fff 	.word	0xffff8fff
- 80057a8:	08005a24 	.word	0x08005a24
+ 80057a8:	08005a2c 	.word	0x08005a2c
  80057ac:	20000004 	.word	0x20000004
  80057b0:	20000008 	.word	0x20000008
 
@@ -13673,10 +13680,10 @@ uint32_t HAL_RCC_GetSysClockFreq(void)
  80058fa:	4798      	blx	r3
  80058fc:	3601      	adds	r6, #1
  80058fe:	e7f2      	b.n	80058e6 <__libc_init_array+0x1e>
- 8005900:	08005a64 	.word	0x08005a64
- 8005904:	08005a64 	.word	0x08005a64
- 8005908:	08005a68 	.word	0x08005a68
- 800590c:	08005a64 	.word	0x08005a64
+ 8005900:	08005a6c 	.word	0x08005a6c
+ 8005904:	08005a6c 	.word	0x08005a6c
+ 8005908:	08005a70 	.word	0x08005a70
+ 800590c:	08005a6c 	.word	0x08005a6c
 
 08005910 <_init>:
  8005910:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
