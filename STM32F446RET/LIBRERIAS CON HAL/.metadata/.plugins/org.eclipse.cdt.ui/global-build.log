@@ -1,4 +1,4 @@
-19:29:49 **** Incremental Build of configuration Debug for project ST7789 ****
+19:33:13 **** Incremental Build of configuration Debug for project ST7789 ****
 make -j4 all 
 arm-none-eabi-size   ST7789.elf 
    text	   data	    bss	    dec	    hex	filename
