@@ -1,0 +1,1 @@
+Correr el script de python en pycharm para convertir las imagenes a color y mostrar en el ST7789

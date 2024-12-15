@@ -68,7 +68,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=10;//cambiar Encender aleatorio
+uint8_t cantLeds=18;//cambiar Encender aleatorio
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -148,14 +148,17 @@ int main(void)
 	  Barrido1(2,60,2500);Blink(2,2000);
 	  ArmarIzquierda(2,30,2000);Blink(2,2000);
 	  VolumenAbrir(2,30,2500);Blink(2,2000);
+	  //estos dos no quiere luis
 	  EncenderAleatorio(2,150,2000);Blink(2,2000);
 	  Girar(4,100);Blink(2,2000);
+
 	  VolumenCerrar(2,30,2500);Blink(2,2000);
 
 	  CerrarApagar(1,150,2000);
 	  AbrirApagar(1,150,2000);
 	  AbrirApagar(1,150,2000);
 	  CerrarApagar(1,150,2000);
+
 	  Blink(2,2000);
 	  //END NORMAL DE 4 A 26 LETRAS
 
@@ -684,14 +687,30 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 
 	// 10 letras
-	uint8_t secuencia1[10]={6,2,7,4,9,8,1,10,3,5};
-	uint8_t secuencia2[10]={5,8,10,1,4,2,6,9,3,7};
+	//uint8_t secuencia1[10]={6,2,7,4,9,8,1,10,3,5};
+	//uint8_t secuencia2[10]={5,8,10,1,4,2,6,9,3,7};
 
 
 
 	// 12 letras
 	//uint8_t secuencia1[12]={2,8,10,4,1,6,7,12,5,11,3,9};
 	//uint8_t secuencia2[12]={5,12,3,7,8,1,2,10,11,9,4,6};
+
+	// 15 letras
+	//uint8_t secuencia1[15]={2,8,13,10,4,1,15,6,7,12,5,11,3,9,14};
+	//uint8_t secuencia2[15]={5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
+
+	// 16 letras
+	//uint8_t secuencia1[16]={2,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
+	//uint8_t secuencia2[16]={16,5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
+
+	// 18 letras
+	uint8_t secuencia1[18]={16,2,8,13,10,4,17,1,15,6,7,12,18,5,11,3,9,14};
+	uint8_t secuencia2[18]={17,5,12,3,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
+
+	// 20 letras
+	//uint8_t secuencia1[20]={16,2,8,13,10,4,17,1,19,15,6,7,12,18,5,11,3,9,20,14};
+	//uint8_t secuencia2[20]={17,5,12,19,3,13,7,8,16,1,20,2,14,10,18,11,9,4,6,15};
 
 
 	for(uint8_t i=0;i<cantLeds;i++){

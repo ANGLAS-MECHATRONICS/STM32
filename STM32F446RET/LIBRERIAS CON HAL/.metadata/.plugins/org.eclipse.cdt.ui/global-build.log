@@ -1,7 +1,14 @@
-19:33:13 **** Incremental Build of configuration Debug for project ST7789 ****
+10:51:52 **** Incremental Build of configuration Debug for project ST7789 ****
 make -j4 all 
+arm-none-eabi-gcc "../Core/Src/Anglas_ST7789.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Anglas_ST7789.d" -MT"Core/Src/Anglas_ST7789.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Anglas_ST7789.o"
+arm-none-eabi-gcc -o "ST7789.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIAS CON HAL\ST7789\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789.elf
+ 
 arm-none-eabi-size   ST7789.elf 
+arm-none-eabi-objdump -h -S  ST7789.elf  > "ST7789.list"
    text	   data	    bss	    dec	    hex	filename
- 222860	     44	   1668	 224572	  36d3c	ST7789.elf
+ 238336	    500	   2044	 240880	  3acf0	ST7789.elf
 Finished building: default.size.stdout
+ 
+Finished building: ST7789.list
  

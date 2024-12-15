@@ -1,21 +1,14 @@
-11:41:55 **** Incremental Build of configuration Debug for project DAC ****
-make -j4 all 
-arm-none-eabi-size   DAC.elf 
-   text	   data	    bss	    dec	    hex	filename
-   9092	     20	   1668	  10780	   2a1c	DAC.elf
-Finished building: default.size.stdout
- 
-11:42:09 **** Incremental Build of configuration Debug for project DAC ****
+19:23:26 **** Incremental Build of configuration Debug for project SLEEP_MODE ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "DAC.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\MIS PROYECTOS\DAC\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DAC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DAC.elf
+arm-none-eabi-gcc -o "SLEEP_MODE.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\MIS PROYECTOS\SLEEP_MODE\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SLEEP_MODE.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SLEEP_MODE.elf
  
-arm-none-eabi-size   DAC.elf 
-arm-none-eabi-objdump -h -S  DAC.elf  > "DAC.list"
+arm-none-eabi-size   SLEEP_MODE.elf 
+arm-none-eabi-objdump -h -S  SLEEP_MODE.elf  > "SLEEP_MODE.list"
    text	   data	    bss	    dec	    hex	filename
-   9172	     20	   1668	  10860	   2a6c	DAC.elf
+   6832	     20	   1572	   8424	   20e8	SLEEP_MODE.elf
 Finished building: default.size.stdout
  
-Finished building: DAC.list
+Finished building: SLEEP_MODE.list
  

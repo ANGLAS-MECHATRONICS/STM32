@@ -71,7 +71,8 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=9;//tambien cambiar EncenderAleatorio y control leds agregar o quitar la cantidad de leds en ControlLeds
+//Agregar o quitar la cantidad de leds en Private includes
+uint8_t cantLeds=9;//tambien cambiar EncenderAleatorio y ControlLeds agregar o quitar la cantidad de leds
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -610,12 +611,12 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 	//9 letras
-	//uint8_t secuencia1[9]={9,6,2,4,7,1,3,5,8};
-	//uint8_t secuencia2[9]={7,5,1,8,4,2,6,3,9};
+	uint8_t secuencia1[9]={9,6,2,4,7,1,3,5,8};
+	uint8_t secuencia2[9]={7,5,1,8,4,2,6,3,9};
 
 	//8 letras
-	uint8_t secuencia1[8]={6,2,4,7,1,3,5,8};
-	uint8_t secuencia2[8]={7,5,1,8,4,2,6,3};
+	//uint8_t secuencia1[8]={6,2,4,7,1,3,5,8};
+	//uint8_t secuencia2[8]={7,5,1,8,4,2,6,3};
 
 	//5 letras
 	//uint8_t secuencia1[5]={4,3,5,1,2};

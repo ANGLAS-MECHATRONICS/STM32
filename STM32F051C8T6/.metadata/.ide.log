@@ -1,0 +1,316 @@
+2024-11-14 21:52:29,328 [INFO] Activator:176 - 
+
+
+2024-11-14 21:52:29,331 [INFO] Activator:177 - !SESSION log4j initialized
+2024-11-14 21:52:34,809 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-11-14 21:52:44,534 [INFO] ApplicationProperties:184 - Using Application install path: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412
+2024-11-14 21:52:44,563 [INFO] DbMcusXml:78 - Set database path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/mcu/
+2024-11-14 21:52:44,563 [INFO] ApiDb:274 - Set plugin database path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/boardmanager/
+2024-11-14 21:52:44,564 [WARN] ApiDb:259 - Overriding images path with different value:  => F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/mcufinder/images/
+2024-11-14 21:52:44,585 [INFO] ApiDb:250 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2024-11-14 21:52:44,587 [INFO] DbMcusAds:125 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2024-11-14 21:52:44,590 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2024-11-14 21:52:45,375 [INFO] RulesReader:64 - Compatibility file has been processed (293 Rules)
+2024-11-14 21:52:45,561 [INFO] DbMcusXml:78 - Set database path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/mcu/
+2024-11-14 21:52:45,561 [INFO] ApiDb:274 - Set plugin database path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/boardmanager/
+2024-11-14 21:52:45,561 [INFO] ApiDb:261 - Set plugin images path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/mcufinder/images/
+2024-11-14 21:52:45,562 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,562 [INFO] ApiDb:250 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2024-11-14 21:52:45,562 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,562 [INFO] DbMcusAds:125 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2024-11-14 21:52:45,562 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,562 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,562 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2024-11-14 21:52:45,739 [INFO] MainPanel:262 - HeapMemory: 268435456
+2024-11-14 21:52:45,969 [INFO] DbMcusXml:78 - Set database path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/mcu/
+2024-11-14 21:52:45,970 [INFO] ApiDb:274 - Set plugin database path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/boardmanager/
+2024-11-14 21:52:45,970 [INFO] ApiDb:261 - Set plugin images path to: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412\\db\/plugins/mcufinder/images/
+2024-11-14 21:52:45,971 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,971 [INFO] ApiDb:250 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2024-11-14 21:52:45,971 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,971 [INFO] DbMcusAds:125 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/
+2024-11-14 21:52:45,971 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,971 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\PC\.stmcufinder\plugins\mcufinder/ => C:\Users\PC\.stmcufinder\plugins\mcufinder
+2024-11-14 21:52:45,984 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\PC\.stmcufinder\plugins\mcufinder//mcu/cs/
+2024-11-14 21:52:46,029 [INFO] ApplicationProperties:184 - Using Application install path: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412
+2024-11-14 21:52:46,031 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2024-11-14 21:52:46,034 [INFO] PluginManage:310 - Check plugin analytics
+2024-11-14 21:52:48,753 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: 
+2024-11-14 21:52:48,754 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: 
+2024-11-14 21:52:48,754 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: 
+2024-11-14 21:52:48,763 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2024-11-14 21:52:48,763 [INFO] PluginManage:310 - Check plugin cadmodel
+2024-11-14 21:52:48,928 [INFO] CADModel:105 - Init CAD model plugin
+2024-11-14 21:52:48,929 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2024-11-14 21:52:48,929 [INFO] PluginManage:310 - Check plugin clock
+2024-11-14 21:52:48,958 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2024-11-14 21:52:48,958 [INFO] PluginManage:310 - Check plugin ddr
+2024-11-14 21:52:48,964 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2024-11-14 21:52:48,965 [INFO] PluginManage:310 - Check plugin filemanager
+2024-11-14 21:52:49,243 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2024-11-14 21:52:49,243 [INFO] PluginManage:310 - Check plugin ipmanager
+2024-11-14 21:52:49,256 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2024-11-14 21:52:49,256 [INFO] PluginManage:310 - Check plugin lpbam
+2024-11-14 21:52:49,276 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2024-11-14 21:52:49,277 [INFO] PluginManage:310 - Check plugin memorymap
+2024-11-14 21:52:49,303 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2024-11-14 21:52:49,303 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2024-11-14 21:52:49,325 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2024-11-14 21:52:49,326 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2024-11-14 21:52:49,496 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2024-11-14 21:52:51,543 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2024-11-14 21:52:51,543 [INFO] PluginManage:310 - Check plugin power
+2024-11-14 21:52:51,620 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2024-11-14 21:52:51,620 [INFO] PluginManage:310 - Check plugin projectmanager
+2024-11-14 21:52:51,647 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2024-11-14 21:52:51,647 [INFO] PluginManage:310 - Check plugin thirdparty
+2024-11-14 21:52:52,093 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2024-11-14 21:52:52,093 [INFO] PluginManage:310 - Check plugin tools
+2024-11-14 21:52:52,101 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2024-11-14 21:52:52,102 [INFO] PluginManage:310 - Check plugin tutovideos
+2024-11-14 21:52:52,107 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2024-11-14 21:52:52,107 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2024-11-14 21:52:52,108 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2024-11-14 21:52:52,460 [INFO] PluginManage:359 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2024-11-14 21:52:52,461 [INFO] PluginManage:310 - Check plugin updater
+2024-11-14 21:52:52,480 [INFO] PluginManage:359 - Loaded plugin updater (category:base,tabindex:12)
+2024-11-14 21:52:52,480 [INFO] PluginManage:310 - Check plugin userauth
+2024-11-14 21:52:52,488 [INFO] UserAuth:113 - Init User Auth plugin
+2024-11-14 21:52:52,489 [INFO] PluginManage:359 - Loaded plugin userauth (category:base,tabindex:14)
+2024-11-14 21:52:52,490 [INFO] PluginManage:283 - PluginManage : Loaded plugins [17]
+2024-11-14 21:52:52,953 [INFO] PinOutPanel:1499 - setPackage(No Configuration,No Configuration)
+2024-11-14 21:52:53,165 [INFO] CADModel:165 - CPN selected for project level
+2024-11-14 21:52:53,166 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-14 21:52:53,203 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,203 [INFO] PluginManager:220 - loadIPPluginJar : add adc
+2024-11-14 21:52:53,207 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,208 [INFO] PluginManager:220 - loadIPPluginJar : add aes
+2024-11-14 21:52:53,213 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,213 [INFO] PluginManager:220 - loadIPPluginJar : add can
+2024-11-14 21:52:53,217 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,218 [INFO] PluginManager:220 - loadIPPluginJar : add comp
+2024-11-14 21:52:53,222 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,222 [INFO] PluginManager:220 - loadIPPluginJar : add cryp
+2024-11-14 21:52:53,226 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,231 [INFO] PluginManager:220 - loadIPPluginJar : add dfsdm
+2024-11-14 21:52:53,242 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,243 [INFO] PluginManager:220 - loadIPPluginJar : add dma
+2024-11-14 21:52:53,251 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,251 [INFO] PluginManager:220 - loadIPPluginJar : add dma3
+2024-11-14 21:52:53,254 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,254 [INFO] PluginManager:220 - loadIPPluginJar : add fatfs
+2024-11-14 21:52:53,262 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,262 [INFO] PluginManager:220 - loadIPPluginJar : add fmc
+2024-11-14 21:52:53,278 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,278 [INFO] PluginManager:220 - loadIPPluginJar : add freertos
+2024-11-14 21:52:53,282 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,282 [INFO] PluginManager:220 - loadIPPluginJar : add genericplugin
+2024-11-14 21:52:53,285 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,285 [INFO] PluginManager:220 - loadIPPluginJar : add gfxmmu
+2024-11-14 21:52:53,292 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,292 [INFO] PluginManager:220 - loadIPPluginJar : add gic
+2024-11-14 21:52:53,298 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,299 [INFO] PluginManager:220 - loadIPPluginJar : add gpio
+2024-11-14 21:52:53,303 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,303 [INFO] PluginManager:220 - loadIPPluginJar : add gtzc
+2024-11-14 21:52:53,306 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,307 [INFO] PluginManager:220 - loadIPPluginJar : add hash
+2024-11-14 21:52:53,310 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,310 [INFO] PluginManager:220 - loadIPPluginJar : add i2c
+2024-11-14 21:52:53,314 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,314 [INFO] PluginManager:220 - loadIPPluginJar : add i2s
+2024-11-14 21:52:53,318 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,319 [INFO] PluginManager:220 - loadIPPluginJar : add i3c
+2024-11-14 21:52:53,324 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,324 [INFO] PluginManager:220 - loadIPPluginJar : add ipddr
+2024-11-14 21:52:53,335 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,335 [INFO] PluginManager:220 - loadIPPluginJar : add linkedlist
+2024-11-14 21:52:53,340 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,340 [INFO] PluginManager:220 - loadIPPluginJar : add lorawan
+2024-11-14 21:52:53,343 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,344 [INFO] PluginManager:220 - loadIPPluginJar : add ltdc
+2024-11-14 21:52:53,361 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,362 [INFO] PluginManager:220 - loadIPPluginJar : add mdma
+2024-11-14 21:52:53,372 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,372 [INFO] PluginManager:220 - loadIPPluginJar : add nvic
+2024-11-14 21:52:53,377 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,378 [INFO] PluginManager:220 - loadIPPluginJar : add opamp
+2024-11-14 21:52:53,385 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,394 [INFO] PluginManager:220 - loadIPPluginJar : add openamp
+2024-11-14 21:52:53,402 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,402 [INFO] PluginManager:220 - loadIPPluginJar : add pdm2pcm
+2024-11-14 21:52:53,414 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,419 [INFO] PluginManager:220 - loadIPPluginJar : add plateformsettings
+2024-11-14 21:52:53,422 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,423 [INFO] PluginManager:220 - loadIPPluginJar : add quadspi
+2024-11-14 21:52:53,444 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,444 [INFO] PluginManager:220 - loadIPPluginJar : add resmgrutility
+2024-11-14 21:52:53,450 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,451 [INFO] PluginManager:220 - loadIPPluginJar : add sai
+2024-11-14 21:52:53,455 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,455 [INFO] PluginManager:220 - loadIPPluginJar : add spi
+2024-11-14 21:52:53,463 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,463 [INFO] PluginManager:220 - loadIPPluginJar : add stm32_wpan
+2024-11-14 21:52:53,468 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,468 [INFO] PluginManager:220 - loadIPPluginJar : add tim
+2024-11-14 21:52:53,476 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,476 [INFO] PluginManager:220 - loadIPPluginJar : add touchsensing
+2024-11-14 21:52:53,480 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,481 [INFO] PluginManager:220 - loadIPPluginJar : add tracer_emb
+2024-11-14 21:52:53,484 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,485 [INFO] PluginManager:220 - loadIPPluginJar : add ts
+2024-11-14 21:52:53,488 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,488 [INFO] PluginManager:220 - loadIPPluginJar : add tsc
+2024-11-14 21:52:53,491 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,491 [INFO] PluginManager:220 - loadIPPluginJar : add ucpd
+2024-11-14 21:52:53,495 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,496 [INFO] PluginManager:220 - loadIPPluginJar : add usart
+2024-11-14 21:52:53,501 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2024-11-14 21:52:53,502 [INFO] PluginManager:220 - loadIPPluginJar : add usbx
+2024-11-14 21:52:53,670 [INFO] CADModel:165 - CPN selected for project level
+2024-11-14 21:52:53,670 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-14 21:52:53,670 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:53,670 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-11-14 21:52:54,525 [INFO] CADModel:165 - CPN selected for project level
+2024-11-14 21:52:54,526 [INFO] CADModel:114 - Register for checkConnection events
+2024-11-14 21:52:54,526 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:54,526 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2024-11-14 21:52:54,533 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,109 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [2/15]
+2024-11-14 21:52:55,302 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,321 [INFO] DbMcusAds:53 - JSON generation date=Fri Sep 20 08:04:38 PET 2024 (1726837478367)
+2024-11-14 21:52:55,321 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,398 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-11-14 21:52:55,569 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,572 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,573 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,573 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2024-11-14 21:52:55,574 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:55,983 [ERROR] Updater:1120 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2024-11-14 21:52:56,011 [INFO] Updater:1056 - Updater Version found : 6.9.2
+2024-11-14 21:52:56,086 [INFO] ApplicationProperties:184 - Using Application install path: F:\Program Files\STM32CubeIDE_1.13.2\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.9.2.202309101412
+2024-11-14 21:52:58,110 [FATAL] Updater:308 - Updater called before beeing initialized
+2024-11-14 21:52:58,110 [ERROR] IntegrityCheckThread:130 - Cannot retrieve database content from updater: error 21
+2024-11-14 21:52:58,111 [INFO] ThirdParty:978 - Integrity check success = false
+2024-11-14 21:52:58,111 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
+2024-11-14 21:52:58,111 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2024-11-14 21:52:58,121 [INFO] MainUpdater:2868 - connection check result : 10
+2024-11-14 21:52:58,121 [INFO] MainUpdater:3562 - Updater definition file requires update
+2024-11-14 21:52:58,123 [INFO] MainUpdater:285 - Updater Check For Update Now.
+2024-11-14 21:52:58,123 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.92
+2024-11-14 21:52:58,171 [INFO] ServerAccessManage:473 - Download File updaters.zip
+2024-11-14 21:52:58,199 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2024-11-14 21:52:58,376 [INFO] FileExtend:240 - Unzip File : updaters.zip
+2024-11-14 21:52:58,377 [INFO] FileExtend:255 - Standard Zip Deflate
+2024-11-14 21:53:01,402 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 14, 2024 9:53:01 PM org.glassfish.grizzly.http.server.NetworkListener start
+2024-11-14 21:53:01,403 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1596]
+2024-11-14 21:53:01,404 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-14 21:53:01,406 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Nov 14, 2024 9:53:01 PM org.glassfish.grizzly.http.server.HttpServer start
+2024-11-14 21:53:01,407 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2024-11-14 21:53:01,407 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2024-11-14 21:53:02,023 [INFO] ServerAccessManage:473 - Download File PacksControlFlags.xml
+2024-11-14 21:53:02,816 [INFO] ServerAccessManage:473 - Download File cubemx.pidx
+2024-11-14 21:53:03,750 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.FP-ATR-ASTRA1.pdsc
+2024-11-14 21:53:11,014 [INFO] ServerAccessManage:473 - Download File quantropi.X-CUBE-qispace-sdk-base.pdsc
+2024-11-14 21:53:11,863 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.1
+2024-11-14 21:53:11,873 [WARN] PopulateThirdPartyThread:106 - Error when creating pack: C:/Users/PC/.stm32cubemx/thirdparties/pdsc/quantropi.X-CUBE-qispace-sdk-base.pdsc
+2024-11-14 21:53:11,873 [INFO] PopulateThirdPartyThread:66 - Ending populate Thread
+2024-11-14 21:53:11,879 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.1
+2024-11-14 21:53:11,879 [INFO] LoadServerUpdatesThread:373 - End of LoadServerUpdate Thread
+2024-11-14 21:53:12,018 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2024-11-14 21:54:01,295 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.XZedRepository
+2024-11-14 21:54:01,301 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] java.lang.IllegalStateException: Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@6cd642c0
+2024-11-14 21:54:01,308 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.checkRunning(ProvisioningAgent.java:86)
+2024-11-14 21:54:01,319 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:50)
+2024-11-14 21:54:01,321 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.p2.core.IProvisioningAgent.getService(IProvisioningAgent.java:86)
+2024-11-14 21:54:01,324 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository.publishRepositoryReferences(LocalMetadataRepository.java:178)
+2024-11-14 21:54:01,336 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository.initialize(LocalMetadataRepository.java:171)
+2024-11-14 21:54:01,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryIO$Parser$RepositoryHandler.finished(MetadataRepositoryIO.java:334)
+2024-11-14 21:54:01,345 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.persistence.XMLParser$AbstractHandler.endElement(XMLParser.java:174)
+2024-11-14 21:54:01,348 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(AbstractSAXParser.java:618)
+2024-11-14 21:54:01,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(XMLDocumentFragmentScannerImpl.java:1728)
+2024-11-14 21:54:01,356 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2899)
+2024-11-14 21:54:01,361 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+2024-11-14 21:54:01,363 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+2024-11-14 21:54:01,367 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+2024-11-14 21:54:01,370 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+2024-11-14 21:54:01,374 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+2024-11-14 21:54:01,387 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+2024-11-14 21:54:01,390 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+2024-11-14 21:54:01,392 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+2024-11-14 21:54:01,395 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryIO$Parser.parse(MetadataRepositoryIO.java:206)
+2024-11-14 21:54:01,398 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryIO.read(MetadataRepositoryIO.java:66)
+2024-11-14 21:54:01,401 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.XZedSimpleMetadataRepositoryFactory.load(XZedSimpleMetadataRepositoryFactory.java:86)
+2024-11-14 21:54:01,404 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+2024-11-14 21:54:01,409 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+2024-11-14 21:54:01,412 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+2024-11-14 21:54:01,415 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,419 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,427 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+2024-11-14 21:54:01,431 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+2024-11-14 21:54:01,436 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+2024-11-14 21:54:01,439 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+2024-11-14 21:54:01,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+2024-11-14 21:54:01,446 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+2024-11-14 21:54:01,451 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,454 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,457 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+2024-11-14 21:54:01,460 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+2024-11-14 21:54:01,463 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+2024-11-14 21:54:01,467 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.simpleRepository
+2024-11-14 21:54:01,471 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] java.lang.IllegalStateException: Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@6cd642c0
+2024-11-14 21:54:01,473 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.checkRunning(ProvisioningAgent.java:86)
+2024-11-14 21:54:01,475 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:50)
+2024-11-14 21:54:01,480 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.p2.core.IProvisioningAgent.getService(IProvisioningAgent.java:86)
+2024-11-14 21:54:01,485 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+2024-11-14 21:54:01,489 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:89)
+2024-11-14 21:54:01,492 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+2024-11-14 21:54:01,496 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+2024-11-14 21:54:01,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+2024-11-14 21:54:01,504 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,508 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,512 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+2024-11-14 21:54:01,515 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+2024-11-14 21:54:01,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+2024-11-14 21:54:01,521 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+2024-11-14 21:54:01,525 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+2024-11-14 21:54:01,528 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+2024-11-14 21:54:01,531 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,535 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,537 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+2024-11-14 21:54:01,539 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+2024-11-14 21:54:01,542 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+2024-11-14 21:54:01,544 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] Unexpected error loading extension: org.eclipse.equinox.p2.metadata.repository.compositeRepository
+2024-11-14 21:54:01,546 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] java.lang.IllegalStateException: bundle org.eclipse.equinox.p2.repositoryis not started
+2024-11-14 21:54:01,548 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.Activator.getContext(Activator.java:65)
+2024-11-14 21:54:01,550 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreFromSystemProperty(AbstractRepositoryManager.java:1013)
+2024-11-14 21:54:01,553 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1033)
+2024-11-14 21:54:01,556 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getRepositoryProperty(AbstractRepositoryManager.java:571)
+2024-11-14 21:54:01,560 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:703)
+2024-11-14 21:54:01,562 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,565 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:171)
+2024-11-14 21:54:01,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:113)
+2024-11-14 21:54:01,572 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:124)
+2024-11-14 21:54:01,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+2024-11-14 21:54:01,577 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:787)
+2024-11-14 21:54:01,580 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:685)
+2024-11-14 21:54:01,582 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,585 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,587 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+2024-11-14 21:54:01,589 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+2024-11-14 21:54:01,591 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+2024-11-14 21:54:01,593 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] No repository found at https://sw-center.st.com/stm32cubeide/updatesite1.
+2024-11-14 21:54:01,594 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] Exception in update check thread
+2024-11-14 21:54:01,596 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] java.lang.IllegalStateException: bundle org.eclipse.equinox.p2.repositoryis not started
+2024-11-14 21:54:01,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.Activator.getContext(Activator.java:65)
+2024-11-14 21:54:01,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getPreferences(AbstractRepositoryManager.java:506)
+2024-11-14 21:54:01,603 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.remember(AbstractRepositoryManager.java:896)
+2024-11-14 21:54:01,605 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.addRepository(AbstractRepositoryManager.java:171)
+2024-11-14 21:54:01,608 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:672)
+2024-11-14 21:54:01,611 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+2024-11-14 21:54:01,613 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+2024-11-14 21:54:01,615 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+2024-11-14 21:54:01,617 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+2024-11-14 21:54:01,619 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+2024-11-14 21:54:02,583 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

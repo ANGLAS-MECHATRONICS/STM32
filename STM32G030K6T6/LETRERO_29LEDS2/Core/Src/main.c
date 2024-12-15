@@ -69,8 +69,9 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=15;
-uint8_t cantLeds2=10;
+//falta corregir para cantLeds par y cantLeds2 impar o algo asi
+uint8_t cantLeds=11;
+uint8_t cantLeds2=6;
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -150,31 +151,33 @@ int main(void)
   while (1)
   {
 	  Barrido1(2,60,2500);
-	  Blink(3,1500);
+	  Blink(2,1500);
 
-	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+10,1);}//encender todo 2
-	  ArmarIzquierda(1,30,2000);
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds(i,1);}//encender todo 1
 	  ArmarIzquierda2(1,30,2000);
+	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+cantLeds,1);}//encender todo 2
+	  ArmarIzquierda(1,30,2000);
 
 	  Blink(2,1500);
 	  Girar(2,100);
-	  Blink(4,2000);
+	  Blink(2,2000);
 
-	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+10,1);}//encender todo 2
-	  VolumenAbrir(1,30,2500);
+
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds(i,1);}//encender todo 1
 	  VolumenAbrir2(1,30,2500);
+	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+cantLeds,1);}//encender todo 2
+	  VolumenAbrir(1,30,2500);
 
 	  CerrarApagar(3,150,2000);
-	  Blink(3,1500);
+	  Blink(2,1500);
 
-	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+10,1);}//encender todo 2
-	  ArmarIzquierda(1,30,2000);
+
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds(i,1);}//encender todo 1
 	  ArmarIzquierda2(1,30,2000);
+	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+cantLeds,1);}//encender todo 2
+	  ArmarIzquierda(1,30,2000);
 
-	  Blink(2,1500);
+	  Blink(3,1500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -373,35 +376,27 @@ void ControlLeds(uint8_t led, uint8_t state){
 		case 8:  L8(state); break;
 		case 9:  L9(state); break;
 		case 10: L10(state);break;
+		case 11: L11(state);break;
 		default:break;
 	}
 }
 
 void ControlLeds2(uint8_t led, uint8_t state){
 	switch(led){
-		case 11: L11(state);break;
 		case 12: L12(state);break;
 		case 13: L13(state);break;
 		case 14: L14(state);break;
 		case 15: L15(state);break;
 		case 16: L16(state);break;
 		case 17: L17(state);break;
-		case 18: L18(state);break;
-		case 19: L19(state);break;
-		case 20: L20(state);break;
-		case 21: L21(state);break;
-		case 22: L22(state);break;
-		case 23: L23(state);break;
-		case 24: L24(state);break;
-		case 25: L25(state);break;
 	}
 }
 
 void Barrido1(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 	for(uint8_t v=0;v<veces;v++){
-		for(uint8_t i=1; i<=cantLeds; i++){ControlLeds(i,1);ControlLeds2(i+10,1);HAL_Delay(tiempo*Refresh_ADC_Value());}
+		for(uint8_t i=1; i<=cantLeds; i++){ControlLeds(i,1);ControlLeds2(i+cantLeds,1);HAL_Delay(tiempo*Refresh_ADC_Value());}
 		HAL_Delay(tiempo2*Refresh_ADC_Value());
-		for(uint8_t i=1; i<=cantLeds; i++){ControlLeds(i,0);ControlLeds2(i+10,0);HAL_Delay(tiempo*Refresh_ADC_Value());}
+		for(uint8_t i=1; i<=cantLeds; i++){ControlLeds(i,0);ControlLeds2(i+cantLeds,0);HAL_Delay(tiempo*Refresh_ADC_Value());}
 	}
 }
 
@@ -428,9 +423,9 @@ void Encender_1_Led_2(uint8_t num_led){
 void Encender_1_Led_2_1(uint8_t num_led){
 	for(uint8_t i=1; i<=cantLeds; i++){
 		if(i<=num_led){
-			ControlLeds2(i+10,1);
+			ControlLeds2(i+cantLeds,1);
 		}else{
-			ControlLeds2(i+10,0);
+			ControlLeds2(i+cantLeds,0);
 		}
 	}
 }
@@ -458,9 +453,9 @@ void Encender_1_Led_4(uint8_t num_led, uint8_t indice){
 void Encender_1_Led_4_1(uint8_t num_led, uint8_t indice){
 	for(uint8_t i=cantLeds;i>=indice;i--){
 		if(i == num_led){
-			ControlLeds2(i+10,1);
+			ControlLeds2(i+cantLeds,1);
 		}else{
-			ControlLeds2(i+10,0);
+			ControlLeds2(i+cantLeds,0);
 		}
 	}
 }
@@ -502,11 +497,13 @@ void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 			}
 
 		}else{//si es impar (aqui edito porq cantLeds=15)
-			centro = (cantLeds/2)+1;//8
-			centro2 = (cantLeds2/2);//5
+			centro = (cantLeds/2)+1;//7
+			centro2 = (cantLeds2/2);//3
 			for(uint8_t i=centro;i>=1;i--){
-				ControlLeds(i-(centro-centro2), 1);ControlLeds2(i+10,1);
-				ControlLeds(i+par-(centro-centro2-1), 1);ControlLeds2(i+10+par,1);
+				//ControlLeds(i-(centro-centro2), 1);ControlLeds2(i+cantLeds,1);
+				//ControlLeds(i+par-(centro-centro2-1), 1);ControlLeds2(i+cantLeds+par,1);
+				ControlLeds2(i-(centro-centro2)+cantLeds, 1);      ControlLeds(i,1);
+				ControlLeds2(i+par-(centro-centro2-1)+cantLeds, 1);ControlLeds(i+par,1);
 				par=par+2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
@@ -515,8 +512,10 @@ void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 			HAL_Delay(tiempo2*Refresh_ADC_Value());
 
 			for(uint8_t i=centro;i>=1;i--){
-				ControlLeds(i-(centro-centro2), 0);ControlLeds2(i+10,0);
-				ControlLeds(i+par-(centro-centro2-1), 0);ControlLeds2(i+10+par,0);
+				//ControlLeds(i-(centro-centro2), 0);ControlLeds2(i+cantLeds,0);
+				//ControlLeds(i+par-(centro-centro2-1), 0);ControlLeds2(i+cantLeds+par,0);
+				ControlLeds2(i-(centro-centro2)+cantLeds, 0);      ControlLeds(i,0);
+				ControlLeds2(i+par-(centro-centro2-1)+cantLeds, 0);ControlLeds(i+par,0);
 				par=par+2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
@@ -546,20 +545,20 @@ void CerrarApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
 
-		}else{//si es impar (aqui edite porq cantleds=15)
-			centro = (cantLeds/2)+1;//5
+		}else{//si es impar (ya esta listo para impar y cualquier cantidad de letras)
+			centro = (cantLeds/2)+1;//7
 			limite = cantLeds-1;limite2 = cantLeds2-1;
 			for(uint8_t i=1;i<=centro;i++){
-				ControlLeds(i, 1);ControlLeds2(i+10,1);
-				ControlLeds(i+limite2, 1);ControlLeds2(i+10+limite,1);
+				ControlLeds(i, 1);ControlLeds2(i+cantLeds,1);
+				ControlLeds(i+limite, 1);ControlLeds2(i+cantLeds+limite2,1);
 				limite=limite-2;limite2=limite2-2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
 			limite = cantLeds-1;limite2 = cantLeds2-1;
 			HAL_Delay(tiempo2*Refresh_ADC_Value());
 			for(uint8_t i=1;i<=centro;i++){
-				ControlLeds(i, 0);ControlLeds2(i+10,0);
-				ControlLeds(i+limite2, 0);ControlLeds2(i+10+limite,0);
+				ControlLeds(i, 0);ControlLeds2(i+cantLeds,0);
+				ControlLeds(i+limite, 0);ControlLeds2(i+cantLeds+limite2,0);
 				limite=limite-2;limite2=limite2-2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
@@ -679,7 +678,7 @@ void ArmarIzquierda2(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 			if(l>=cantLeds){
 				l=1;
 			}else{
-				ControlLeds2(l+10, 1);
+				ControlLeds2(l+cantLeds, 1);
 				l++;
 			}
 		}
@@ -691,11 +690,11 @@ void ArmarIzquierda2(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 void Blink(uint8_t veces, uint16_t tiempo){
 	for(uint8_t v=0;v<veces;v++){
 		for(uint8_t i=1;i<=cantLeds;i++){
-			ControlLeds(i, 1);ControlLeds2(i+10,1);
+			ControlLeds(i, 1);ControlLeds2(i+cantLeds,1);
 		}
 		HAL_Delay(tiempo*Refresh_ADC_Value());
 		for(uint8_t i=1;i<=cantLeds;i++){
-			ControlLeds(i, 0);ControlLeds2(i+10,0);
+			ControlLeds(i, 0);ControlLeds2(i+cantLeds,0);
 		}
 		HAL_Delay(tiempo*Refresh_ADC_Value()/5);
 	}
