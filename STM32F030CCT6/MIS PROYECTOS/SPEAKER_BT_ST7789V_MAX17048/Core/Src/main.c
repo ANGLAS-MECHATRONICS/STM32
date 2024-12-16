@@ -27,6 +27,8 @@
 #include "math.h"
 #include "bitmap.h"
 
+#include "Anglas_MAX17048.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,13 +55,9 @@ TIM_HandleTypeDef htim16;
 
 /* USER CODE BEGIN PV */
 
-uint8_t mem=0,suma=0,powerSupply=0;
-uint8_t estado;
-uint32_t contBTN1=0;
-
-uint16_t contInt=0;
-float contFloat=0.0;
+float soc,voltage;
 char buff[32];
+uint16_t freq_BLK = 5000;//5khz
 
 /* USER CODE END PV */
 
@@ -71,6 +69,7 @@ static void MX_SPI1_Init(void);
 static void MX_TIM16_Init(void);
 /* USER CODE BEGIN PFP */
 void control_BTN1(void);
+void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -110,55 +109,24 @@ int main(void)
   MX_SPI1_Init();
   MX_TIM16_Init();
   /* USER CODE BEGIN 2 */
+
+  PWM_set_Freq_DutyCycle(freq_BLK,0);//iniciar pantalla negra
   ST7789_Init();
   ST7789_rotation(2);
-
-  /*ST7789_FillScreen(ST7789_RED);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_BLUE);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_GREEN);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_CYAN);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_BLACK);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_MAGENTA);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_YELLOW);
-  HAL_Delay(500);
-  ST7789_FillScreen(ST7789_WHITE);
-  HAL_Delay(500);*/
-
-  //ST7789_FillScreen(RGB565(0, 10, 100));
-
-  //ST7789_DrawImage(0, 0, 240, 135, img3);HAL_Delay(1000);
-  //ST7789_DrawImage(0, 0, 240, 135, img2);HAL_Delay(1000);
-  //ST7789_DrawImage(0, 0, 240, 135, img1);HAL_Delay(1000);
-
+  PWM_set_Freq_DutyCycle(freq_BLK,100);
+  ST7789_DrawImage(0, 0, 240, 135, img3);HAL_Delay(1000);
+  ST7789_DrawImage(0, 0, 240, 135, img2);HAL_Delay(1000);
+  ST7789_DrawImage(0, 0, 240, 135, img1);HAL_Delay(1000);
+  ST7789_DrawImage(0, 0, 240, 135, img2);
+  //ST7789_FillScreen(ST7789_RED);
+  //ST7789_FillScreen(RGB565(0, 10, 100));//pinta toda la pantalla un color
   //ST7789_print(50, 20, RGB565(255, 255, 255) , RGB565(0, 10, 100) , 1, &Font_16x26, 1, "STM32 TFT" );
   //ST7789_print(40, 60, RGB565(255, 0, 0) , RGB565(0, 10, 100) , 1, &Font_11x18, 1, "Anglas Library" );
   //ST7789_print(10, 100, RGB565(0, 255, 0) , RGB565(0, 10, 100) , 1, &Font_7x9, 2, "ST7789 : 135x240" );
-  //HAL_Delay(1000);
 
-  //ST7789_SleepModeEnter();//ingresa al modo sleep, pantalla negra, supongo que aqui consume poco, aun no mido los mA
-  //HAL_Delay(1000);
-  //ST7789_SleepModeExit();//sale del modo sleep, se tiene que salir si se entra
-  //HAL_Delay(1000);
-
-
-  //ST7789_DisplayPower(1);//en 0 muestra pantalla negra y en 1 muestra lo que tenga que mostrar
-  //HAL_Delay(3000);
-
-  //ST7789_InversionMode(1);//en 0 invierte los colores en 1 mantiene todo normal (blanco lo vuelve negro, rojo a celeste y verde a fucsia)
-  //HAL_Delay(3000);
-
-  //ST7789_Clear();//limpia todo y lo vuelve pantalla negra
-  //HAL_Delay(3000);
-
-  //ST7789_FillScreen(RGB565(0, 10, 100));//pinta toda la pantalla un color
-
-  ST7789_DrawImage(0, 0, 240, 135, img2);
+  MAX17048_Init();
+  MAX17048_QuickStart();
+  MAX17048_SetAlertThreshold(1);
 
   /* USER CODE END 2 */
 
@@ -186,9 +154,20 @@ int main(void)
       sprintf(buff,"FLOAT: %4.2fV",contFloat);
       ST7789_print(40, 60, RGB565(255, 0, 0) , RGB565(0, 10, 100) , 1, &Font_11x18, 1, buff);*/
 
-	  ST7789_DrawImage(0, 0, 240, 135, img3);HAL_Delay(3000);
-	  ST7789_DrawImage(0, 0, 240, 135, img2);HAL_Delay(3000);
-	  ST7789_DrawImage(0, 0, 240, 135, img1);HAL_Delay(3000);
+	  //ST7789_DrawImage(0, 0, 240, 135, img3);HAL_Delay(3000);
+	  //ST7789_DrawImage(0, 0, 240, 135, img2);HAL_Delay(3000);
+	  //ST7789_DrawImage(0, 0, 240, 135, img1);HAL_Delay(3000);
+
+	  voltage = MAX17048_GetVoltage();
+	  sprintf(buff,"VOLTAGE: %1.2fV",voltage);
+	  ST7789_print(40, 20, RGB565(0, 255, 0) , RGB565(0, 0, 0) , 1, &Font_11x18, 1, buff);
+
+	  soc = MAX17048_GetSoc();
+	  sprintf(buff,"%2.2f%%",soc);
+	  ST7789_print(40, 60, RGB565(0, 255, 0) , RGB565(0, 0, 0) , 1, &Font_16x28, 1, buff);
+
+
+
 
 
     /* USER CODE END WHILE */
@@ -314,7 +293,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi1.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_4;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -350,7 +329,7 @@ static void MX_TIM16_Init(void)
 
   /* USER CODE END TIM16_Init 1 */
   htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 0;
+  htim16.Init.Prescaler = 48-1;
   htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim16.Init.Period = 65535;
   htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -472,6 +451,39 @@ void control_BTN1(void){
     }
 }
 */
+
+void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty){
+	/*
+	 * La frecuencia a la que opera el uC es de 48000000Hz
+	 *
+	 * El prescaler PSC-16bits divide a esta frecuencia
+	 * 48000000/48 = 1000000Hz = 1Mhz
+	 *
+	 * El CounterPeriod solo es un contador de 0 - 65535 y cuando lo establecemos en un valor digamos 10000
+	 * entonces va contar de 0  a 10000 y luego se desbordara es decir reiniciara y empezara de cero otra vez hasta 10000
+	 * Ahora el CounterPeriod sirve para cambiar el periodo y con esto la frecuencia T = 1 / freq
+	 * 		__HAL_TIM_GET_AUTORELOAD(&htim16): Esta función devuelve el valor actual del registro ARR (Auto-Reload Register)
+	 * 		del temporizador, que representa el Counter Period.
+	 * */
+	uint16_t valor_CCR;
+	uint32_t CounterPeriod;//en microsegundos
+	uint32_t freqOsc = HAL_RCC_GetHCLKFreq();//obtiene la frecuencia del OSC en Hz (48000000)
+	uint16_t prescaler = 48;//PSC-16bits
+
+	if(duty > 100) duty = 100;
+	CounterPeriod = freqOsc/(freq*prescaler);//aqui nos da el periodo en microsegundos
+	//y este periodo(CounterPeriod) necesita la funcion __HAL_TIM_SET_AUTORELOAD
+
+    HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);//inicia la generacion de la señal PWM
+    //modificamos el valor del CounterPeriod y con esto modificamos la frecuencia de salida
+	__HAL_TIM_SET_AUTORELOAD(&htim16,CounterPeriod);//Si quiero cambiar la frecuencia modifico: __HAL_TIM_SET_AUTORELOAD(&htim16, 1000000/frecuencia que quiero) 1000000porque es microsegundos
+	//CounterPeriod = __HAL_TIM_GET_AUTORELOAD(&htim16)
+	//visto con un analizador logico en un 50% de duty me da 49.5% y cuando le sumo 2 me da 50.05%
+	valor_CCR = (CounterPeriod + 2)* duty/100.0;//divido entre 100 porque quiero de 0 a 100%, cambiar el rango si se desea
+    __HAL_TIM_SET_COMPARE(&htim16, TIM_CHANNEL_1, valor_CCR);
+    //HAL_Delay(500);
+    //HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);//aqui detengo la generacion del PWM, pero para mi caso necesito que siempre ete activado
+}
 
 /* USER CODE END 4 */
 

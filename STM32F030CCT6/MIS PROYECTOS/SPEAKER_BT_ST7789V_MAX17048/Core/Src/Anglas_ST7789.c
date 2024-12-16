@@ -131,7 +131,7 @@ static void ST7789_ColumnSet(uint16_t ColumnStart, uint16_t ColumnEnd){
 void ST7789_Init(void){
 
 	// Retraso después del encendido (si la pantalla no siempre comienza al inicio, aumenta el tiempo de retraso)
-	HAL_Delay(300);
+	HAL_Delay(5);//estaba en 300ms
 
 	ST7789_Width = ST7789_WIDTH;
 	ST7789_Height = ST7789_HEIGHT;

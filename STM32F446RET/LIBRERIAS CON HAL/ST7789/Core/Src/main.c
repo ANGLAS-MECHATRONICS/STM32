@@ -135,15 +135,15 @@ int main(void)
 
 
   HAL_Delay(2000);
-  ST7789_SleepModeEnter();
+  ST7789_SleepModeEnter();//ingresa al modo sleep, pantalla negra, supongo que aqui consume poco, aun no mido los mA
   HAL_Delay(1000);
-  ST7789_SleepModeExit();
+  ST7789_SleepModeExit();//sale del modo sleep, se tiene que salir si se entra
   HAL_Delay(1000);
-  ST7789_DisplayPower(1);
+  ST7789_DisplayPower(1);//en 0 muestra pantalla negra y en 1 muestra lo que tenga que mostrar
   HAL_Delay(1000);
-  ST7789_InversionMode(1);
-  ST7789_Clear();
-  ST7789_FillScreen(RGB565(0, 10, 100));
+  ST7789_InversionMode(1);//en 0 invierte los colores en 1 mantiene todo normal (blanco lo vuelve negro, rojo a celeste y verde a fucsia)
+  ST7789_Clear();//limpia todo y lo vuelve pantalla negra
+  ST7789_FillScreen(RGB565(0, 10, 100));//pinta toda la pantalla un color
 
   /* USER CODE END 2 */
 

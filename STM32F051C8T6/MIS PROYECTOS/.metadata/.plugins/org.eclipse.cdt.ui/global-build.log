@@ -1,18 +1,4 @@
-14:17:57 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F051x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "PORTABLE DIGITAL SOURCE V1.3 DMA.elf" @"objects.list"   -mcpu=cortex-m0 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F051C8T6\MIS PROYECTOS\PORTABLE DIGITAL SOURCE V1.3 DMA\STM32F051C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PORTABLE DIGITAL SOURCE V1.3 DMA.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: PORTABLE DIGITAL SOURCE V1.3 DMA.elf
- 
-arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf 
-arm-none-eabi-objdump -h -S  PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf  > "PORTABLE DIGITAL SOURCE V1.3 DMA.list"
-   text	   data	    bss	    dec	    hex	filename
-  61008	    520	   3760	  65288	   ff08	PORTABLE DIGITAL SOURCE V1.3 DMA.elf
-Finished building: default.size.stdout
- 
-Finished building: PORTABLE DIGITAL SOURCE V1.3 DMA.list
- 
-14:25:42 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
+11:30:24 **** Incremental Build of configuration Debug for project PORTABLE DIGITAL SOURCE V1.3 DMA ****
 make -j4 all 
 arm-none-eabi-size   PORTABLE\ DIGITAL\ SOURCE\ V1.3\ DMA.elf 
    text	   data	    bss	    dec	    hex	filename
