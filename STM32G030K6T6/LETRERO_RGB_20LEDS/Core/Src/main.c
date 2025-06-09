@@ -60,10 +60,6 @@ static void MX_TIM1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-
-/////////////////////// AQUI FUNCIONES DE EFECTOS ////////////////////////////
-
-
 /* USER CODE END 0 */
 
 /**
@@ -98,7 +94,6 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   WS2811_Init();
-  HAL_Delay(2000);
 
   /* USER CODE END 2 */
 
@@ -109,52 +104,39 @@ int main(void)
 	  //for(uint8_t i=0; i<20; i++){rainbow_effect_right();HAL_Delay(100);}
 
 
-	  rainbow_effect_left();HAL_Delay(100);
+	  //rainbow_effect_left();HAL_Delay(100);
+	  //strip0_loop0_eff0();HAL_Delay(50);
+
+	  //fade_effect(3,BRILLO_MAX,BRILLO_MAX,BRILLO_MIN);
+	  /*fade_effect(1,ROJO);
+	  fade_effect(1,VERDE);
+	  fade_effect(1,AZUL);
+	  fade_effect(1,AMARILLO);
+	  fade_effect(1,CIAN);
+	  fade_effect(1,MAGENTA);
+	  fade_effect(1,BLANCO);*/
 
 
-	  /*for (int brillo = BRILLO_MIN; brillo >= BRILLO_MAX; brillo--) {
-		  Set_LED(0, OFF, OFF, brillo);
-		  Set_LED(1, OFF, OFF, brillo);
-		  Set_LED(2, OFF, OFF, brillo);
-		  Set_LED(3, OFF, OFF, brillo);
-		  Set_LED(4, OFF, OFF, brillo);
-		  Set_LED(5, OFF, OFF, brillo);
-		  WS2811_Send();
-		  HAL_Delay(5);
-	  }
-	  HAL_Delay(800);
+	  //blink_effect(2,2000,ROJO);
+	  //blink_effect(3,2000,VERDE);
+	  //blink_effect(4,2000,AZUL);
 
-
-	  for (int brillo = BRILLO_MAX; brillo <= BRILLO_MIN; brillo++) {
-		  Set_LED(0, OFF, OFF, brillo);
-		  Set_LED(1, OFF, OFF, brillo);
-		  Set_LED(2, OFF, OFF, brillo);
-		  Set_LED(3, OFF, OFF, brillo);
-		  Set_LED(4, OFF, OFF, brillo);
-		  Set_LED(5, OFF, OFF, brillo);
-		  WS2811_Send();
-		  HAL_Delay(5);
-	  }
-	  HAL_Delay(800);*/
-
-
-	  /*Set_LED(0, 128, 255, 255);
-	  Set_LED(1, 255, 128, 255);
-	  Set_LED(2, 255, 255, 128);
-	  Set_LED(3, 128, 128, 255);
-	  Set_LED(4, 255, 128, 128);
-	  Set_LED(5, 128, 128, 128);
-	  WS2811_Send();
+	  /*ControlLeds(5,1,ROJO);
 	  HAL_Delay(1000);
-
-	  Set_LED(0, 255, 255, 255);
-	  Set_LED(1, 255, 255, 255);
-	  Set_LED(2, 255, 255, 255);
-	  Set_LED(3, 255, 255, 255);
-	  Set_LED(4, 255, 255, 255);
-	  Set_LED(5, 255, 255, 255);
-	  WS2811_Send();
+	  ControlLeds(4,1,CIAN);
+	  HAL_Delay(1000);
+	  ControlLeds(5,1,VERDE);
 	  HAL_Delay(1000);*/
+
+	  //Barrido1(2,120,2500,MAGENTA);
+	  //ArmarIzquierda(2,100,2000,AMARILLO);
+	  //VolumenAbrir(2,100,2500,MAGENTA);
+	  Girar(4,100,VERDE);
+	  //AbrirApagar(1,150,2000,AZUL);
+	  //CerrarApagar(1,150,2000,ROJO);
+
+
+	  //for(uint8_t i=0; i<MAX_LED; i++) Set_LED(i, BRILLO_MAX, BRILLO_MAX, BRILLO_MAX);
 
     /* USER CODE END WHILE */
 
