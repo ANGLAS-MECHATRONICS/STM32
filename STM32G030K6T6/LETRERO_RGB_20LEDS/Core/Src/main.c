@@ -117,21 +117,16 @@ int main(void)
 	  fade_effect(1,BLANCO);*/
 
 
-	  //blink_effect(2,2000,ROJO);
-	  //blink_effect(3,2000,VERDE);
-	  //blink_effect(4,2000,AZUL);
+	  //Blink(2,2000,ROJO);
+	  //Blink(3,2000,VERDE);
+	  //Blink(4,2000,AZUL);
 
-	  /*ControlLeds(5,1,ROJO);
-	  HAL_Delay(1000);
-	  ControlLeds(4,1,CIAN);
-	  HAL_Delay(1000);
-	  ControlLeds(5,1,VERDE);
-	  HAL_Delay(1000);*/
 
 	  //Barrido1(2,120,2500,MAGENTA);
 	  //ArmarIzquierda(2,100,2000,AMARILLO);
 	  //VolumenAbrir(2,100,2500,MAGENTA);
-	  Girar(4,100,VERDE);
+	  //Girar(4,100,AZUL);
+	  VolumenCerrar(2,30,2500,MAGENTA);
 	  //AbrirApagar(1,150,2000,AZUL);
 	  //CerrarApagar(1,150,2000,ROJO);
 

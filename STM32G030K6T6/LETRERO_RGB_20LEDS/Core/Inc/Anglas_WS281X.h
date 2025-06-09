@@ -42,7 +42,7 @@ uint8_t strip0_loop0_eff0(void);
 
 
 void fade_effect(uint8_t tiempo, uint8_t r, uint8_t g, uint8_t b);//OK
-void blink_effect(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b);//OK
+void Blink(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b);//OK
 
 void ControlLeds(uint8_t led, uint8_t state, uint8_t r, uint8_t g, uint8_t b);//OK
 void Encender_1_Led_4(uint8_t num_led, uint8_t indice, uint8_t r, uint8_t g, uint8_t b);//OK
@@ -56,5 +56,8 @@ void Barrido1(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8
 void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b);
 void CerrarApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b);
 void Girar(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b);
+
+void Encender_1_Led_3(uint8_t num_led, uint8_t r, uint8_t g, uint8_t b);
+void VolumenCerrar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b);
 
 #endif /* INC_ANGLAS_WS281X_H_ */

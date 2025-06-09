@@ -334,7 +334,7 @@ void fade_effect(uint8_t tiempo, uint8_t r, uint8_t g, uint8_t b) {
     HAL_Delay(100);
 }
 
-void blink_effect(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b) {
+void Blink(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b) {
 
 	for(uint8_t v=0;v<veces;v++){
 		for(uint8_t i=0; i<MAX_LEDS; i++) Set_LED(i, r, g, b);
@@ -348,6 +348,46 @@ void blink_effect(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t 
 	}
 
 }
+
+void Encender_1_Led_3(uint8_t num_led, uint8_t r, uint8_t g, uint8_t b){
+	for(uint8_t i=1; i<=MAX_LEDS; i++){
+		if(i>=num_led){
+			ControlLeds(i,1,r,g,b);
+		}else{
+			ControlLeds(i,0,r,g,b);
+		}
+	}
+}
+
+void VolumenCerrar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
+	for(uint8_t v=0;v<veces;v++){
+		uint8_t l;
+		for(uint8_t i=MAX_LEDS;i>=1;i--){
+			l=i;
+			HAL_Delay(tiempo);
+			//HAL_Delay(tiempo*Refresh_ADC_Value());
+			for(uint8_t i=l;i<=MAX_LEDS;i++){
+				Encender_1_Led_3(i,r,g,b);
+				HAL_Delay(tiempo);
+				//HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+			for(uint8_t i=MAX_LEDS;i>=l;i--){
+				Encender_1_Led_3(i,r,g,b);
+				HAL_Delay(tiempo);
+				//HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+		}
+		HAL_Delay(tiempo2);
+		//HAL_Delay(tiempo2*Refresh_ADC_Value());
+	}
+}
+
+
+
+
+
+
+
 
 
 
