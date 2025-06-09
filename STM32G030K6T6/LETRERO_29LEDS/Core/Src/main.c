@@ -68,7 +68,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=18;//cambiar Encender aleatorio
+uint8_t cantLeds=17;//cambiar Encender aleatorio
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -660,58 +660,62 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
-	// 2 letras
 	//uint8_t secuencia1[2]={1,2};
 	//uint8_t secuencia2[2]={2,1};
 
+	//uint8_t secuencia1[3]={2,3,1};
+	//uint8_t secuencia2[3]={3,1,2};
 
-	// 5 letras
+	//uint8_t secuencia1[4]={2,4,1,3};
+	//uint8_t secuencia2[4]={1,3,2,4};
+
 	//uint8_t secuencia1[5]={2,4,1,3,5};
 	//uint8_t secuencia2[5]={5,1,4,2,3};
 
-	// 6 letras
 	//uint8_t secuencia1[6]={6,2,4,1,3,5};
 	//uint8_t secuencia2[6]={5,1,4,2,6,3};
 
-	// 7 letras
 	//uint8_t secuencia1[7]={6,2,7,4,1,3,5};
 	//uint8_t secuencia2[7]={5,1,4,2,6,3,7};
 
-	// 8 letras
 	//uint8_t secuencia1[8]={6,2,7,4,8,1,3,5};
 	//uint8_t secuencia2[8]={5,8,1,4,2,6,3,7};
 
-	// 9 letras
 	//uint8_t secuencia1[9]={6,2,7,4,9,8,1,3,5};
 	//uint8_t secuencia2[9]={5,8,1,4,2,6,9,3,7};
 
-
-	// 10 letras
 	//uint8_t secuencia1[10]={6,2,7,4,9,8,1,10,3,5};
 	//uint8_t secuencia2[10]={5,8,10,1,4,2,6,9,3,7};
 
+	//uint8_t secuencia1[11]={2,8,10,4,1,6,7,5,11,3,9};
+	//uint8_t secuencia2[11]={5,3,7,8,1,2,10,11,9,4,6};
 
-
-	// 12 letras
 	//uint8_t secuencia1[12]={2,8,10,4,1,6,7,12,5,11,3,9};
 	//uint8_t secuencia2[12]={5,12,3,7,8,1,2,10,11,9,4,6};
 
-	// 15 letras
+	//uint8_t secuencia1[13]={13,2,8,10,4,1,6,7,12,5,11,3,9};
+	//uint8_t secuencia2[13]={5,12,3,7,8,1,13,2,10,11,9,4,6};
+
+	//uint8_t secuencia1[14]={2,8,13,10,4,1,6,7,12,5,11,3,9,14};
+	//uint8_t secuencia2[14]={5,12,3,13,7,8,1,2,14,10,11,9,4,6};
+
 	//uint8_t secuencia1[15]={2,8,13,10,4,1,15,6,7,12,5,11,3,9,14};
 	//uint8_t secuencia2[15]={5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
 
-	// 16 letras
 	//uint8_t secuencia1[16]={2,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
 	//uint8_t secuencia2[16]={16,5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
 
-	// 18 letras
-	uint8_t secuencia1[18]={16,2,8,13,10,4,17,1,15,6,7,12,18,5,11,3,9,14};
-	uint8_t secuencia2[18]={17,5,12,3,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
+	uint8_t secuencia1[17]={2,17,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
+	uint8_t secuencia2[17]={16,5,12,3,13,7,8,1,17,2,14,10,11,9,4,6,15};
 
-	// 20 letras
+	//uint8_t secuencia1[18]={16,2,8,13,10,4,17,1,15,6,7,12,18,5,11,3,9,14};
+	//uint8_t secuencia2[18]={17,5,12,3,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
+
+	//uint8_t secuencia1[19]={16,2,8,13,10,4,17,1,19,15,6,7,12,18,5,11,3,9,14};
+	//uint8_t secuencia2[19]={17,5,12,3,19,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
+
 	//uint8_t secuencia1[20]={16,2,8,13,10,4,17,1,19,15,6,7,12,18,5,11,3,9,20,14};
 	//uint8_t secuencia2[20]={17,5,12,19,3,13,7,8,16,1,20,2,14,10,18,11,9,4,6,15};
-
 
 	for(uint8_t i=0;i<cantLeds;i++){
 		ControlLeds(secuencia1[i], 1);

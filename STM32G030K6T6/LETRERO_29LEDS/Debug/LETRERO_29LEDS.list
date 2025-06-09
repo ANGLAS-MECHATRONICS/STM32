@@ -39,13 +39,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_macro  000142e4  00000000  00000000  00029843  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000898d  00000000  00000000  0003db27  2**0
+ 18 .debug_line   0000898f  00000000  00000000  0003db27  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00080a48  00000000  00000000  000464b4  2**0
+ 19 .debug_str    00080a48  00000000  00000000  000464b6  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00001e08  00000000  00000000  000c6efc  2**2
+ 20 .debug_frame  00001e08  00000000  00000000  000c6f00  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000006a  00000000  00000000  000c8d04  2**0
+ 21 .debug_line_str 0000006a  00000000  00000000  000c8d08  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -7032,12 +7032,12 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  8003584:	1cbb      	adds	r3, r7, #2
  8003586:	1c0a      	adds	r2, r1, #0
  8003588:	801a      	strh	r2, [r3, #0]
-	// 16 letras
+	//uint8_t secuencia2[15]={5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
+
 	//uint8_t secuencia1[16]={2,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
 	//uint8_t secuencia2[16]={16,5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
 
-	// 18 letras
-	uint8_t secuencia1[18]={16,2,8,13,10,4,17,1,15,6,7,12,18,5,11,3,9,14};
+	uint8_t secuencia1[17]={2,17,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
  800358a:	2320      	movs	r3, #32
  800358c:	18fb      	adds	r3, r7, r3
  800358e:	4aa3      	ldr	r2, [pc, #652]	; (800381c <EncenderAleatorio+0x2b0>)
@@ -7045,9 +7045,9 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  8003592:	c313      	stmia	r3!, {r0, r1, r4}
  8003594:	6811      	ldr	r1, [r2, #0]
  8003596:	6019      	str	r1, [r3, #0]
- 8003598:	8892      	ldrh	r2, [r2, #4]
- 800359a:	809a      	strh	r2, [r3, #4]
-	uint8_t secuencia2[18]={17,5,12,3,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
+ 8003598:	7912      	ldrb	r2, [r2, #4]
+ 800359a:	711a      	strb	r2, [r3, #4]
+	uint8_t secuencia2[17]={16,5,12,3,13,7,8,1,17,2,14,10,11,9,4,6,15};
  800359c:	230c      	movs	r3, #12
  800359e:	18fb      	adds	r3, r7, r3
  80035a0:	4a9f      	ldr	r2, [pc, #636]	; (8003820 <EncenderAleatorio+0x2b4>)
@@ -7055,12 +7055,12 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
  80035a4:	c313      	stmia	r3!, {r0, r1, r4}
  80035a6:	6811      	ldr	r1, [r2, #0]
  80035a8:	6019      	str	r1, [r3, #0]
- 80035aa:	8892      	ldrh	r2, [r2, #4]
- 80035ac:	809a      	strh	r2, [r3, #4]
-	// 20 letras
+ 80035aa:	7912      	ldrb	r2, [r2, #4]
+ 80035ac:	711a      	strb	r2, [r3, #4]
+	//uint8_t secuencia2[19]={17,5,12,3,19,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
+
 	//uint8_t secuencia1[20]={16,2,8,13,10,4,17,1,19,15,6,7,12,18,5,11,3,9,20,14};
 	//uint8_t secuencia2[20]={17,5,12,19,3,13,7,8,16,1,20,2,14,10,18,11,9,4,6,15};
-
 
 	for(uint8_t i=0;i<cantLeds;i++){
  80035ae:	2337      	movs	r3, #55	; 0x37

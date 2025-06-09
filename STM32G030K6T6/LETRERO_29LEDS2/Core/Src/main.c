@@ -70,8 +70,8 @@ ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
 //falta corregir para cantLeds par y cantLeds2 impar o algo asi
-uint8_t cantLeds=11;
-uint8_t cantLeds2=6;
+uint8_t cantLeds=11;//creo que agregar o quitar en  ControlLeds
+uint8_t cantLeds2=8;//creo que agregar o quitar en  ControlLeds2
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -389,6 +389,8 @@ void ControlLeds2(uint8_t led, uint8_t state){
 		case 15: L15(state);break;
 		case 16: L16(state);break;
 		case 17: L17(state);break;
+		case 18: L18(state);break;
+		case 19: L19(state);break;
 	}
 }
 

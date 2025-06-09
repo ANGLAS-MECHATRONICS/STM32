@@ -17,5 +17,5 @@
 ../Core/Src/main.c:614:6:VolumenCerrar	32	static
 ../Core/Src/main.c:632:6:ArmarIzquierda	32	static
 ../Core/Src/main.c:661:6:EncenderAleatorio	72	static
-../Core/Src/main.c:746:6:Blink	32	static
-../Core/Src/main.c:764:6:Error_Handler	8	static,ignoring_inline_asm
+../Core/Src/main.c:750:6:Blink	32	static
+../Core/Src/main.c:768:6:Error_Handler	8	static,ignoring_inline_asm

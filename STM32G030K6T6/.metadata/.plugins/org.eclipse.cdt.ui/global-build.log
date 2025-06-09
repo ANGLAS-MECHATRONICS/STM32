@@ -1,35 +1,4 @@
-17:04:29 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
-make -j4 all 
-arm-none-eabi-size   LETRERO_29LEDS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23164	     24	   1680	  24868	   6124	LETRERO_29LEDS.elf
-Finished building: default.size.stdout
- 
-17:15:52 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
-make -j4 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G030xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "LETRERO_29LEDS.elf" @"objects.list"   -mcpu=cortex-m0plus -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G030K6T6\LETRERO_29LEDS\STM32G030K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LETRERO_29LEDS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: LETRERO_29LEDS.elf
- 
-arm-none-eabi-size   LETRERO_29LEDS.elf 
-arm-none-eabi-objdump -h -S  LETRERO_29LEDS.elf  > "LETRERO_29LEDS.list"
-arm-none-eabi-objcopy  -O ihex  LETRERO_29LEDS.elf  "LETRERO_29LEDS.hex"
-   text	   data	    bss	    dec	    hex	filename
-  23172	     24	   1680	  24876	   612c	LETRERO_29LEDS.elf
-Finished building: default.size.stdout
- 
-Finished building: LETRERO_29LEDS.list
- 
-Finished building: LETRERO_29LEDS.hex
- 
-17:17:26 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
-make -j4 all 
-arm-none-eabi-size   LETRERO_29LEDS.elf 
-   text	   data	    bss	    dec	    hex	filename
-  23172	     24	   1680	  24876	   612c	LETRERO_29LEDS.elf
-Finished building: default.size.stdout
- 
-17:22:00 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
+18:33:20 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
 make -j4 all 
 arm-none-eabi-size   LETRERO_29LEDS.elf 
    text	   data	    bss	    dec	    hex	filename

@@ -1,1 +1,4 @@
 Correr el script de python en pycharm para convertir las imagenes a color y mostrar en el ST7789
+
+- 1ro redimenzionar la imagen al tamaño que deseamos ya sea 240x135, 320x205, etc
+	https://www.iloveimg.com/es/redimensionar-imagen

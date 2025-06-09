@@ -110,23 +110,73 @@ int main(void)
   MX_TIM16_Init();
   /* USER CODE BEGIN 2 */
 
-  PWM_set_Freq_DutyCycle(freq_BLK,0);//iniciar pantalla negra
-  ST7789_Init();
-  ST7789_rotation(2);
-  PWM_set_Freq_DutyCycle(freq_BLK,100);
-  ST7789_DrawImage(0, 0, 240, 135, img3);HAL_Delay(1000);
-  ST7789_DrawImage(0, 0, 240, 135, img2);HAL_Delay(1000);
-  ST7789_DrawImage(0, 0, 240, 135, img1);HAL_Delay(1000);
-  ST7789_DrawImage(0, 0, 240, 135, img2);
-  //ST7789_FillScreen(ST7789_RED);
-  //ST7789_FillScreen(RGB565(0, 10, 100));//pinta toda la pantalla un color
-  //ST7789_print(50, 20, RGB565(255, 255, 255) , RGB565(0, 10, 100) , 1, &Font_16x26, 1, "STM32 TFT" );
-  //ST7789_print(40, 60, RGB565(255, 0, 0) , RGB565(0, 10, 100) , 1, &Font_11x18, 1, "Anglas Library" );
-  //ST7789_print(10, 100, RGB565(0, 255, 0) , RGB565(0, 10, 100) , 1, &Font_7x9, 2, "ST7789 : 135x240" );
+  /******************** PARA USAR LOS DOS SYS_WKUP **********************************/
 
-  MAX17048_Init();
-  MAX17048_QuickStart();
-  MAX17048_SetAlertThreshold(1);
+  // Verifica si el sistema reanudó desde Standby Mode
+  if (__HAL_PWR_GET_FLAG(PWR_FLAG_SB) != RESET) {
+      __HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB); // Limpia la bandera
+
+      //Esto hace cuando se presiona el pulsador del SYS_WKUP1
+      if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 1) {//FUNCION 1
+    	  //AQUI TODO EL CODIGO DE LA FUNCION 1
+    	  if (HAL_GPIO_ReadPin(DRAIN_LATCH_GPIO_Port, DRAIN_LATCH_Pin) == 0){
+    		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 1);//Encender parlante
+			  HAL_Delay(4000);//tiempo para apagar luego de encender o viceversa
+    	  }else{
+    		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 0);//Apagar parlante
+			  MAX17048_SetAlertThreshold(1);//al colocar pone a 0 el pin alert y esto hace que consuma unos mA menos
+			  HAL_Delay(4000);//tiempo para apagar luego de encender o viceversa
+
+    	  }
+
+
+
+      }
+
+      //Esto hace cuando se presiona el pulsador del SYS_WKUP2
+      if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1) {//FUNCION 2
+    	  //verifica si esta encendido lo mantiene asi y si esta apagado lo mantiene apagado
+    	  if (HAL_GPIO_ReadPin(DRAIN_LATCH_GPIO_Port, DRAIN_LATCH_Pin) == 0){
+    		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 0);
+    	  }else{
+    		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 1);
+    	  }
+
+    	  PWM_set_Freq_DutyCycle(freq_BLK,0);//iniciar pantalla negra
+    	  ST7789_Init();
+    	  ST7789_rotation(2);
+    	  PWM_set_Freq_DutyCycle(freq_BLK,100);
+    	  ST7789_DrawImage(0, 0, 240, 135, img2);
+
+    	  MAX17048_Init();
+    	  MAX17048_QuickStart();
+    	  MAX17048_SetAlertThreshold(1);
+    	  HAL_Delay(5);
+    	  voltage = MAX17048_GetVoltage();
+    	  sprintf(buff,"VOLTAGE: %1.2fV",voltage);
+    	  ST7789_print(40, 50, RGB565(0, 255, 0) , RGB565(0, 0, 0) , 1, &Font_11x18, 1, buff);
+
+    	  soc = MAX17048_GetSoc();
+    	  sprintf(buff,"%3i%%",(uint8_t)soc);
+    	  ST7789_print(140, 5, RGB565(0, 0, 255) , RGB565(255, 255, 255) , 1, &Font_16x28, 1, buff);
+    	  HAL_Delay(4000);
+    	  PWM_set_Freq_DutyCycle(freq_BLK,0);//iniciar pantalla negra
+    	  HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
+    	  ST7789_SleepModeEnter();
+      }
+
+      HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN1);// Desactiva el Wake-Up Pin1
+      HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN2);// Desactiva el Wake-Up Pin2
+  }
+
+    __HAL_PWR_CLEAR_FLAG(PWR_FLAG_WU);//AHORA RECIEN VAMOS A INGRESAR AL STANDBY MODE
+    HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN1);//habilitamos el Wake-Up Pin1
+    HAL_PWR_EnableWakeUpPin(PWR_WAKEUP_PIN2);//habilitamos el Wake-Up Pin2
+    HAL_PWR_EnterSTANDBYMode();//FINALMENTE INGRESAMOS AL STANDBY MODE
+
+  /********************************************/
+
+
 
   /* USER CODE END 2 */
 
@@ -134,39 +184,11 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  //if(HAL_GPIO_ReadPin(BTN1_GPIO_Port, BTN1_Pin) == 0 && mem == 0){mem = 1;}
-	  //if(HAL_GPIO_ReadPin(BTN1_GPIO_Port, BTN1_Pin) == 1 && mem == 1){suma++; mem = 0;}
-	  //if(suma==1){suma=2;HAL_GPIO_WritePin(EN_3V7_GPIO_Port, EN_3V7_Pin, RESET)  ;estado=1;}
-	  //if(suma==3){suma=0;HAL_GPIO_WritePin(EN_3V7_GPIO_Port, EN_3V7_Pin, SET);estado=0;}
-	  //HAL_Delay(2);
-
-	  //control_BTN1();
-
-	  //HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 1);
-	  //HAL_Delay(300);
-	  //HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 0);
-	  //HAL_Delay(300);
-
-      /*contInt++;
-      sprintf(buff,"INT: %dmA",contInt);
-      ST7789_print(50, 20, RGB565(255, 255, 255) , RGB565(0, 10, 100) , 1, &Font_16x26, 1, buff);
-      contFloat+=0.1;
-      sprintf(buff,"FLOAT: %4.2fV",contFloat);
-      ST7789_print(40, 60, RGB565(255, 0, 0) , RGB565(0, 10, 100) , 1, &Font_11x18, 1, buff);*/
-
-	  //ST7789_DrawImage(0, 0, 240, 135, img3);HAL_Delay(3000);
-	  //ST7789_DrawImage(0, 0, 240, 135, img2);HAL_Delay(3000);
-	  //ST7789_DrawImage(0, 0, 240, 135, img1);HAL_Delay(3000);
-
-	  voltage = MAX17048_GetVoltage();
-	  sprintf(buff,"VOLTAGE: %1.2fV",voltage);
-	  ST7789_print(40, 20, RGB565(0, 255, 0) , RGB565(0, 0, 0) , 1, &Font_11x18, 1, buff);
-
-	  soc = MAX17048_GetSoc();
-	  sprintf(buff,"%2.2f%%",soc);
-	  ST7789_print(40, 60, RGB565(0, 255, 0) , RGB565(0, 0, 0) , 1, &Font_16x28, 1, buff);
 
 
+	  //voltage = MAX17048_GetVoltage();
+	  //sprintf(buff,"VOLTAGE: %1.2fV",voltage);
+	  //ST7789_print(40, 20, RGB565(0, 255, 0) , RGB565(0, 0, 0) , 1, &Font_11x18, 1, buff);
 
 
 

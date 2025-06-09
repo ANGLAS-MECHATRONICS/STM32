@@ -21,15 +21,16 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#define L1(state)  HAL_GPIO_WritePin(LED1_GPIO_Port,  LED1_Pin,  state); HAL_GPIO_WritePin(LED10_GPIO_Port,LED10_Pin, state)
-#define L2(state)  HAL_GPIO_WritePin(LED2_GPIO_Port,  LED2_Pin,  state); HAL_GPIO_WritePin(LED11_GPIO_Port,LED11_Pin, state)
-#define L3(state)  HAL_GPIO_WritePin(LED3_GPIO_Port,  LED3_Pin,  state); HAL_GPIO_WritePin(LED12_GPIO_Port,LED12_Pin, state)
-#define L4(state)  HAL_GPIO_WritePin(LED4_GPIO_Port,  LED4_Pin,  state); HAL_GPIO_WritePin(LED13_GPIO_Port,LED13_Pin, state)
-#define L5(state)  HAL_GPIO_WritePin(LED5_GPIO_Port,  LED5_Pin,  state); HAL_GPIO_WritePin(LED14_GPIO_Port,LED14_Pin, state)
-#define L6(state)  HAL_GPIO_WritePin(LED6_GPIO_Port,  LED6_Pin,  state); HAL_GPIO_WritePin(LED15_GPIO_Port,LED15_Pin, state)
-#define L7(state)  HAL_GPIO_WritePin(LED7_GPIO_Port,  LED7_Pin,  state); HAL_GPIO_WritePin(LED16_GPIO_Port,LED16_Pin, state)
-#define L8(state)  HAL_GPIO_WritePin(LED8_GPIO_Port,  LED8_Pin,  state); HAL_GPIO_WritePin(LED17_GPIO_Port,LED17_Pin, state)
-#define L9(state)  HAL_GPIO_WritePin(LED9_GPIO_Port,  LED9_Pin,  state); HAL_GPIO_WritePin(LED18_GPIO_Port,LED18_Pin, state)
+#define L1(state)   HAL_GPIO_WritePin(LED1_GPIO_Port,  LED1_Pin,  state);  HAL_GPIO_WritePin(LED11_GPIO_Port,LED11_Pin, state)
+#define L2(state)   HAL_GPIO_WritePin(LED2_GPIO_Port,  LED2_Pin,  state);  HAL_GPIO_WritePin(LED12_GPIO_Port,LED12_Pin, state)
+#define L3(state)   HAL_GPIO_WritePin(LED3_GPIO_Port,  LED3_Pin,  state);  HAL_GPIO_WritePin(LED13_GPIO_Port,LED13_Pin, state)
+#define L4(state)   HAL_GPIO_WritePin(LED4_GPIO_Port,  LED4_Pin,  state);  HAL_GPIO_WritePin(LED14_GPIO_Port,LED14_Pin, state)
+#define L5(state)   HAL_GPIO_WritePin(LED5_GPIO_Port,  LED5_Pin,  state);  HAL_GPIO_WritePin(LED15_GPIO_Port,LED15_Pin, state)
+#define L6(state)   HAL_GPIO_WritePin(LED6_GPIO_Port,  LED6_Pin,  state);  HAL_GPIO_WritePin(LED16_GPIO_Port,LED16_Pin, state)
+#define L7(state)   HAL_GPIO_WritePin(LED7_GPIO_Port,  LED7_Pin,  state);  HAL_GPIO_WritePin(LED17_GPIO_Port,LED17_Pin, state)
+#define L8(state)   HAL_GPIO_WritePin(LED8_GPIO_Port,  LED8_Pin,  state);  HAL_GPIO_WritePin(LED18_GPIO_Port,LED18_Pin, state)
+#define L9(state)   HAL_GPIO_WritePin(LED9_GPIO_Port,  LED9_Pin,  state);  HAL_GPIO_WritePin(LED19_GPIO_Port,LED19_Pin, state)
+#define L10(state)  HAL_GPIO_WritePin(LED10_GPIO_Port, LED10_Pin,  state); HAL_GPIO_WritePin(LED20_GPIO_Port,LED20_Pin, state)
 
 //#define L8(state)  HAL_GPIO_WritePin(LED8_GPIO_Port,  LED8_Pin,  state)
 //#define L9(state)  HAL_GPIO_WritePin(LED9_GPIO_Port,  LED9_Pin,  state)
@@ -72,7 +73,7 @@ ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
 //Agregar o quitar la cantidad de leds en Private includes
-uint8_t cantLeds=9;//tambien cambiar EncenderAleatorio y ControlLeds agregar o quitar la cantidad de leds
+uint8_t cantLeds=10;//tambien cambiar EncenderAleatorio y ControlLeds agregar o quitar la cantidad de leds
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -378,7 +379,7 @@ void ControlLeds(uint8_t led, uint8_t state){
 		case 7:  L7(state); break;
 		case 8:  L8(state); break;
 		case 9:  L9(state); break;
-//		case 10: L10(state);break;
+		case 10: L10(state);break;
 //		case 11: L11(state);break;
 //		case 12: L12(state);break;
 //		case 13: L13(state);break;
@@ -610,18 +611,29 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
-	//9 letras
-	uint8_t secuencia1[9]={9,6,2,4,7,1,3,5,8};
-	uint8_t secuencia2[9]={7,5,1,8,4,2,6,3,9};
+	//5 letras
+	//uint8_t secuencia1[5]={4,3,5,1,2};
+	//uint8_t secuencia2[5]={2,5,1,3,4};
+
+	//6 letras
+	//uint8_t secuencia1[6]={6,2,4,1,3,5};
+	//uint8_t secuencia2[6]={5,1,4,2,6,3};
+
+	//7 letras
+	//uint8_t secuencia1[7]={6,2,4,7,1,3,5};
+	//uint8_t secuencia2[7]={7,5,1,4,2,6,3};
 
 	//8 letras
 	//uint8_t secuencia1[8]={6,2,4,7,1,3,5,8};
 	//uint8_t secuencia2[8]={7,5,1,8,4,2,6,3};
 
-	//5 letras
-	//uint8_t secuencia1[5]={4,3,5,1,2};
-	//uint8_t secuencia2[5]={2,5,1,3,4};
+	//9 letras
+	//uint8_t secuencia1[9]={9,6,2,4,7,1,3,5,8};
+	//uint8_t secuencia2[9]={7,5,1,8,4,2,6,3,9};
 
+	//10 letras
+	uint8_t secuencia1[10]={9,6,2,10,4,7,1,3,5,8};
+	uint8_t secuencia2[10]={7,10,5,1,8,4,2,6,3,9};
 
 	for(uint8_t i=0;i<cantLeds;i++){
 		ControlLeds(secuencia1[i], 1);

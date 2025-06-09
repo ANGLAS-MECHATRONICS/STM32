@@ -844,13 +844,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 
 void medirVoltage(void){
 	voltage = INA226_Vbus_DMA();
-    if(voltage <= 9.9) {
-    	OLED_Print_Text_DMA(2,80,3," ");
+	if(voltage <= 9.99999) {
     	sprintf(buff,"%1.1fV ",voltage);
     	OLED_Print_Text_DMA(2,0,3,buff);
+    	//cuado cambia de 9.9v a 10v se ve afectado estas variables y por momentos se borran
+		sprintf(buff,"%2.1fV",Vbat);
+		OLED_Print_Text_DMA(2,98,1,buff);
+		if(powerSupply==2) OLED_Print_Text_DMA(3,100,2,"ON ");
     }else{
     	sprintf(buff,"%2.1fV",voltage);
     	OLED_Print_Text_DMA(2,0,3,buff);
+    	//cuado cambia de 9.9v a 10v se ve afectado estas variables y por momentos se borran
+		sprintf(buff,"%2.1fV",Vbat);
+		OLED_Print_Text_DMA(2,98,1,buff);
+		if(powerSupply==2) OLED_Print_Text_DMA(3,100,2,"ON ");
     }
 }
 
@@ -1052,7 +1059,12 @@ void calculate_value_dac_12bits(void){
     //Calculo el valor "dac_12bits"(0-4095) a partir del set_Voltage_Encoder(0-30V) y Vdac(0-3.3V)
     Vdac = 3.1677 - set_Voltage_Encoder*0.09825;//coloque R1=560k pero para mejorar los calculos utilizo el valor de 570k y obtuve esta formula
     dac_12bits = Vdac * 4096.0/3.3;//teniendo el Voltaje de salida del dac, calculo "dac_12bits" osea un valor de 0-4095
-    dac_12bits = dac_12bits - (8.0E-06 * dac_12bits * dac_12bits + 0.002 * dac_12bits + 1.1844);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
+
+    //para visualizar el valor de 0-4095 de la salida
+    //float DDDAAACCC;DDDAAACCC = dac_12bits;sprintf(buff,"%4.0f",DDDAAACCC);OLED_Print_Text_DMA(6,0,1,buff);
+
+    //dac_12bits = dac_12bits - (8.0E-06 * dac_12bits * dac_12bits + 0.002 * dac_12bits + 1.1844);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
+    dac_12bits = (0.978* dac_12bits + 30.54);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
 }
 
 void control_SW(void){
