@@ -1,4 +1,4 @@
-17:26:03 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
+17:34:10 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
 make -j4 all 
 arm-none-eabi-size   LETRERO_29LEDS.elf 
    text	   data	    bss	    dec	    hex	filename
