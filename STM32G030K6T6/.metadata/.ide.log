@@ -698,3 +698,15 @@
 2025-06-09 09:54:09,791 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jun 09, 2025 9:54:09 AM org.apache.http.client.protocol.ResponseProcessCookies processCookies
 2025-06-09 09:54:09,796 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Cookie rejected [_cfuvid="sQ.7.EzrSz3QMzELqDwefm44_2vhWYPpbch1JfJ0Fg4-1749480849998-0.0.1.1-604800000", version:0, domain:cdn.webflow.com, path:/, expiry:null] Illegal 'domain' attribute "cdn.webflow.com". Domain of origin: "go.codetogether.com"
 2025-06-09 09:54:09,797 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-06-09 09:55:14,400 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jun 09, 2025 9:55:14 AM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+2025-06-09 09:55:14,405 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Cookie rejected [_cfuvid="ubW0h.uxWvKTLtM7fVhWeWP30r1achs2avj1cH_uE6s-1749480914608-0.0.1.1-604800000", version:0, domain:cdn.webflow.com, path:/, expiry:null] Illegal 'domain' attribute "cdn.webflow.com". Domain of origin: "go.codetogether.com"
+2025-06-09 09:55:14,406 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-06-09 09:56:19,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jun 09, 2025 9:56:19 AM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+2025-06-09 09:56:19,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Cookie rejected [_cfuvid="NM1xohJAE5Gg1C.YBjcz1gJXkw3iXPj7SZTRKjnvMKg-1749480979258-0.0.1.1-604800000", version:0, domain:cdn.webflow.com, path:/, expiry:null] Illegal 'domain' attribute "cdn.webflow.com". Domain of origin: "go.codetogether.com"
+2025-06-09 09:56:19,063 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-06-09 09:57:23,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jun 09, 2025 9:57:23 AM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+2025-06-09 09:57:23,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Cookie rejected [_cfuvid="yyr1jS.GT4R5PE938gY5qdEkLXK0BZWrnIhYttmZRr8-1749481043779-0.0.1.1-604800000", version:0, domain:cdn.webflow.com, path:/, expiry:null] Illegal 'domain' attribute "cdn.webflow.com". Domain of origin: "go.codetogether.com"
+2025-06-09 09:57:23,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-06-09 09:58:28,244 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Jun 09, 2025 9:58:28 AM org.apache.http.client.protocol.ResponseProcessCookies processCookies
+2025-06-09 09:58:28,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] WARNING: Cookie rejected [_cfuvid="y8iykWIzTWPqQ.GIfiuLBg.jVJbYvu8q4uc9wKOKk4k-1749481108453-0.0.1.1-604800000", version:0, domain:cdn.webflow.com, path:/, expiry:null] Illegal 'domain' attribute "cdn.webflow.com". Domain of origin: "go.codetogether.com"
+2025-06-09 09:58:28,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
