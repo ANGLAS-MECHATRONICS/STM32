@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="//выключаем spi"/>
+		<item value="spi-&gt;CR1 &amp;= ~SPI_CR1_SPE;"/>
+		<item value="SysTick"/>
+		<item value="LCD_DisplayAdd"/>
+		<item value="lcd-&gt;spi_data.dma_tx.dma"/>
+	</list>
+</section>

@@ -1,0 +1,90 @@
+/* Archivo: st7789.h - SIN CAMBIOS RELEVANTES NECESARIOS */
+// No es necesario modificar st7789.h porque HAL_SPI_Transmit usa punteros void
+// y el cambio de tamaño de dato no requiere ajustes en la declaración de funciones
+
+/* Archivo: st7789.c - MODIFICADO PARA USO DE 16 BITS POR TRANSFERENCIA */
+
+#include "st7789.h"
+
+#ifdef USE_DMA
+#include "string.h"
+#include "stdio.h"
+uint16_t DMA_MIN_SIZE = 16;
+#define HOR_LEN 10
+uint16_t disp_buf[ST7789_WIDTH * HOR_LEN];
+#endif
+
+static void ST7789_WriteCommand(uint8_t cmd)
+{
+    ST7789_Select();
+    ST7789_DC_Clr();
+    HAL_SPI_Transmit(&ST7789_SPI_PORT, &cmd, 1, HAL_MAX_DELAY);
+    ST7789_UnSelect();
+}
+
+// CAMBIO A TRANSFERENCIA DE 16 BITS
+static void ST7789_WriteData(uint16_t *buff, size_t size)
+{
+    ST7789_Select();
+    ST7789_DC_Set();
+
+    while (size > 0) {
+        uint16_t chunk_size = (size > 32767) ? 32767 : size;
+
+#ifdef USE_DMA
+        if (DMA_MIN_SIZE <= size) {
+            HAL_SPI_Transmit_DMA(&ST7789_SPI_PORT, (uint8_t *)buff, chunk_size * 2);
+            while (ST7789_SPI_PORT.hdmatx->State != HAL_DMA_STATE_READY) {}
+        } else {
+            HAL_SPI_Transmit(&ST7789_SPI_PORT, (uint8_t *)buff, chunk_size * 2, HAL_MAX_DELAY);
+        }
+#else
+        HAL_SPI_Transmit(&ST7789_SPI_PORT, (uint8_t *)buff, chunk_size * 2, HAL_MAX_DELAY);
+#endif
+        buff += chunk_size;
+        size -= chunk_size;
+    }
+
+    ST7789_UnSelect();
+}
+
+// Adaptar funciones que envían colores:
+void ST7789_DrawPixel(uint16_t x, uint16_t y, uint16_t color)
+{
+    if ((x >= ST7789_WIDTH) || (y >= ST7789_HEIGHT)) return;
+
+    ST7789_SetAddressWindow(x, y, x, y);
+    uint16_t c = (color >> 8) | (color << 8);
+    ST7789_WriteData(&c, 1);
+}
+
+void ST7789_Fill_Color(uint16_t color)
+{
+    uint16_t block_height;
+    uint16_t swapped = (color >> 8) | (color << 8);
+    ST7789_Select();
+
+#ifdef USE_DMA
+    for (uint16_t i = 0; i < ST7789_HEIGHT; i += HOR_LEN)
+    {
+        block_height = (i + HOR_LEN <= ST7789_HEIGHT) ? HOR_LEN : (ST7789_HEIGHT - i);
+        ST7789_SetAddressWindow(0, i, ST7789_WIDTH - 1, i + block_height - 1);
+
+        for (uint32_t k = 0; k < ST7789_WIDTH * block_height; k++) {
+            disp_buf[k] = swapped;
+        }
+        ST7789_WriteData(disp_buf, ST7789_WIDTH * block_height);
+    }
+#else
+    ST7789_SetAddressWindow(0, 0, ST7789_WIDTH - 1, ST7789_HEIGHT - 1);
+    for (uint32_t i = 0; i < ST7789_WIDTH * ST7789_HEIGHT; i++) {
+        ST7789_WriteData(&swapped, 1);
+    }
+#endif
+
+    ST7789_UnSelect();
+}
+
+// Las demás funciones deben convertir sus colores igual: (color >> 8) | (color << 8)
+// Y llamar a ST7789_WriteData con datos uint16_t
+// Ejemplo en Fill, DrawLine, DrawRectangle, etc.

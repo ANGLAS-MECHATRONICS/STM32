@@ -1,0 +1,160 @@
+19:42:22 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Display/display.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Display/display.d" -MT"Display/display.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Display/display.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17172	    156	   1572	  18900	   49d4	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.bin
+Finished building: ST7789_DMA_LL_F4.list
+ 
+ 
+ 
+19:43:33 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17176	    156	   1572	  18904	   49d8	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.bin
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.list
+ 
+ 
+ 
+19:43:53 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17168	    156	   1572	  18896	   49d0	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.list
+Finished building: ST7789_DMA_LL_F4.bin
+ 
+ 
+ 
+19:44:12 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17172	    156	   1572	  18900	   49d4	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.bin
+Finished building: ST7789_DMA_LL_F4.list
+ 
+ 
+ 
+19:44:31 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17172	    156	   1572	  18900	   49d4	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.bin
+Finished building: ST7789_DMA_LL_F4.list
+ 
+ 
+ 
+19:45:26 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  16880	    156	   1572	  18608	   48b0	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.bin
+ 
+ 
+Finished building: ST7789_DMA_LL_F4.list
+ 
+19:45:58 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  16880	    156	   1572	  18608	   48b0	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.bin
+ 
+ 
+Finished building: ST7789_DMA_LL_F4.list
+ 
+19:46:23 **** Incremental Build of configuration Debug for project ST7789_DMA_LL_F4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F446xx -DUSE_FULL_LL_DRIVER -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DHSE_VALUE=20000000 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F446RET/LIBRERIA SIN HAL/ST7789_DMA_LL_F4/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "ST7789_DMA_LL_F4.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\LIBRERIA SIN HAL\ST7789_DMA_LL_F4\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ST7789_DMA_LL_F4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ST7789_DMA_LL_F4.elf
+ 
+arm-none-eabi-size  ST7789_DMA_LL_F4.elf 
+arm-none-eabi-objdump -h -S ST7789_DMA_LL_F4.elf  > "ST7789_DMA_LL_F4.list"
+arm-none-eabi-objcopy  -O ihex ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.hex"
+   text	   data	    bss	    dec	    hex	filename
+  16876	    156	   1572	  18604	   48ac	ST7789_DMA_LL_F4.elf
+arm-none-eabi-objcopy  -O binary ST7789_DMA_LL_F4.elf  "ST7789_DMA_LL_F4.bin"
+Finished building: default.size.stdout
+ 
+Finished building: ST7789_DMA_LL_F4.hex
+Finished building: ST7789_DMA_LL_F4.bin
+ 
+Finished building: ST7789_DMA_LL_F4.list
+ 
+ 

@@ -68,7 +68,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=17;//cambiar Encender aleatorio
+uint8_t cantLeds=8;//cambiar Encender aleatorio
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -109,6 +109,7 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
 
@@ -149,8 +150,8 @@ int main(void)
 	  ArmarIzquierda(2,30,2000);Blink(2,2000);
 	  VolumenAbrir(2,30,2500);Blink(2,2000);
 	  //estos dos no quiere luis
-	  EncenderAleatorio(2,150,2000);Blink(2,2000);
-	  Girar(4,100);Blink(2,2000);
+	  //EncenderAleatorio(2,150,2000);Blink(2,2000);
+	  //Girar(4,100);Blink(2,2000);
 
 	  VolumenCerrar(2,30,2500);Blink(2,2000);
 
@@ -347,8 +348,8 @@ static void MX_ADC1_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -400,8 +401,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -678,8 +679,8 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 	//uint8_t secuencia1[7]={6,2,7,4,1,3,5};
 	//uint8_t secuencia2[7]={5,1,4,2,6,3,7};
 
-	//uint8_t secuencia1[8]={6,2,7,4,8,1,3,5};
-	//uint8_t secuencia2[8]={5,8,1,4,2,6,3,7};
+	uint8_t secuencia1[8]={6,2,7,4,8,1,3,5};
+	uint8_t secuencia2[8]={5,8,1,4,2,6,3,7};
 
 	//uint8_t secuencia1[9]={6,2,7,4,9,8,1,3,5};
 	//uint8_t secuencia2[9]={5,8,1,4,2,6,9,3,7};
@@ -705,8 +706,8 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 	//uint8_t secuencia1[16]={2,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
 	//uint8_t secuencia2[16]={16,5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};
 
-	uint8_t secuencia1[17]={2,17,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
-	uint8_t secuencia2[17]={16,5,12,3,13,7,8,1,17,2,14,10,11,9,4,6,15};
+	//uint8_t secuencia1[17]={2,17,8,13,10,4,1,15,6,7,16,12,5,11,3,9,14};
+	//uint8_t secuencia2[17]={16,5,12,3,13,7,8,1,17,2,14,10,11,9,4,6,15};
 
 	//uint8_t secuencia1[18]={16,2,8,13,10,4,17,1,15,6,7,12,18,5,11,3,9,14};
 	//uint8_t secuencia2[18]={17,5,12,3,13,7,8,16,1,2,14,10,18,11,9,4,6,15};
@@ -775,8 +776,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.

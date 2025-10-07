@@ -1,5 +1,5 @@
-../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2261:26:ADC_Disable	8
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2322:26:ADC_ConversionStop	7
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2261:26:ADC_Disable	8
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2193:26:ADC_Enable.constprop	9
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:765:13:HAL_ADC_MspInit	1
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:397:19:HAL_ADC_Init	14
@@ -22,7 +22,7 @@
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:1840:13:HAL_ADC_ErrorCallback	1
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2459:13:ADC_DMAError	1
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:1666:6:HAL_ADC_IRQHandler	16
-../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:1894:19:HAL_ADC_ConfigChannel	13
+../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:1894:19:HAL_ADC_ConfigChannel	15
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2027:19:HAL_ADC_AnalogWDGConfig	4
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2149:10:HAL_ADC_GetState	1
 ../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c:2163:10:HAL_ADC_GetError	1

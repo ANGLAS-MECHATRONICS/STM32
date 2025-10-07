@@ -1,0 +1,7 @@
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:133:13:LL_SPI_DeInit	4
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:201:13:LL_SPI_Init	4
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:279:6:LL_SPI_StructInit	1
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:383:13:LL_I2S_DeInit	1
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:398:13:LL_I2S_Init	5
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:505:6:LL_I2S_StructInit	1
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c:527:6:LL_I2S_ConfigPrescaler	1

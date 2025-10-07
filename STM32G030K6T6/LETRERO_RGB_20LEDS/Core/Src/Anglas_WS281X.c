@@ -8,6 +8,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "Anglas_WS281X.h"
+#include "stdlib.h"
+#include "math.h"
 /* Exported types ------------------------------------------------------------*/
 /* Exported constant ---------------------------------------------------------*/
 /* Exported macros -----------------------------------------------------------*/
@@ -65,9 +67,7 @@ void WS2811_Init(void){//inicia apagado todos los leds
   for(uint8_t i=0; i<MAX_LEDS; i++) Set_LED(i, 255, 255, 255);
   WS2811_Send();
   HAL_Delay(10);//bajar el tiempo si es necesario
-
 }
-
 
 void WS2812_Send(void){
 	uint32_t indx=0;
@@ -100,40 +100,6 @@ void WS2812_Init(void){//inicia apagado todos los leds
 }
 
 ///////////////////////////////// EFECTOS //////////////////////////////////////////////////
-// Strip ID: 0 - Effect: Rainbow - LEDS: 8
-// Steps: 13 - Delay: 54
-// Colors: 3 (255.0.0, 0.255.0, 0.0.255)
-// Options: rainbowlen=8, toLeft=true,
-//  if(millis() - strip_0.effStart < 54 * (strip_0.effStep)) return 0x00;
-
-/*uint8_t rainbow_effect_left(void) {
-  float factor1, factor2;
-  uint16_t ind;
-  for(uint16_t j=0;j<MAX_LED;j++) {
-    ind = effStep + j * 1.625;
-    switch((int)((ind % 13) / 4.333333333333333)) {
-      case 0: factor1 = 1.0 - ((float)(ind % 13 - 0 * 4.333333333333333) / 4.333333333333333);
-              factor2 = (float)((int)(ind - 0) % 13) / 4.333333333333333;
-              Set_LED(j, BRILLO_MAX * factor1 + BRILLO_MIN * factor2, BRILLO_MIN * factor1 + BRILLO_MAX * factor2, BRILLO_MIN * factor1 + BRILLO_MIN * factor2);
-              WS2811_Send();
-              break;
-      case 1: factor1 = 1.0 - ((float)(ind % 13 - 1 * 4.333333333333333) / 4.333333333333333);
-              factor2 = (float)((int)(ind - 4.333333333333333) % 13) / 4.333333333333333;
-              Set_LED(j, BRILLO_MIN * factor1 + BRILLO_MIN * factor2, BRILLO_MAX * factor1 + BRILLO_MIN * factor2, BRILLO_MIN * factor1 + BRILLO_MAX * factor2);
-              WS2811_Send();
-              break;
-      case 2: factor1 = 1.0 - ((float)(ind % 13 - 2 * 4.333333333333333) / 4.333333333333333);
-              factor2 = (float)((int)(ind - 8.666666666666666) % 13) / 4.333333333333333;
-              Set_LED(j, BRILLO_MIN * factor1 + BRILLO_MAX * factor2, BRILLO_MIN * factor1 + BRILLO_MIN * factor2, BRILLO_MAX * factor1 + BRILLO_MIN * factor2);
-              WS2811_Send();
-              break;
-    }
-  }
-  if(effStep >= 13) {effStep=0; return 0x03; }
-  else effStep++;
-  return 0x01;
-}*/
-
 #define FACTOR_ESCALA 1000   // Factor para manejar números enteros en lugar de floats
 #define MAX_MODULO 13000     // 13 * FACTOR_ESCALA (escalamos para la parte de ind % 13)
 #define DIV_FACTOR 4333      // 4.333333 * FACTOR_ESCALA
@@ -195,11 +161,6 @@ uint8_t rainbow_effect_left(void) {
 
 
 uint8_t rainbow_effect_right(void) {
-    // Strip ID: 0 - Effect: Rainbow - LEDS: 8
-    // Steps: 14 - Delay: 30
-    // Colors: 3 (255.0.0, 0.255.0, 0.0.255)
-    // Options: rainbowlen=8, toLeft=false,
-//  if(millis() - strip_0.effStart < 30 * (strip_0.effStep)) return 0x00;
   float factor1, factor2;
   uint16_t ind;
   for(uint16_t j=0;j<MAX_LEDS;j++) {
@@ -207,19 +168,16 @@ uint8_t rainbow_effect_right(void) {
     switch((int)((ind % 14) / 4.666666666666667)) {
       case 0: factor1 = 1.0 - ((float)(ind % 14 - 0 * 4.666666666666667) / 4.666666666666667);
               factor2 = (float)((int)(ind - 0) % 14) / 4.666666666666667;
-              //Set_LED(j, 255 * factor1 + 0 * factor2, 0 * factor1 + 255 * factor2, 0 * factor1 + 0 * factor2);
               Set_LED(j, 0 * factor1 + 255 * factor2, 255 * factor1 + 0 * factor2, 255 * factor1 + 255 * factor2);
               WS2811_Send();
               break;
       case 1: factor1 = 1.0 - ((float)(ind % 14 - 1 * 4.666666666666667) / 4.666666666666667);
               factor2 = (float)((int)(ind - 4.666666666666667) % 14) / 4.666666666666667;
-              //Set_LED(j, 0 * factor1 + 0 * factor2, 255 * factor1 + 0 * factor2, 0 * factor1 + 255 * factor2);
               Set_LED(j, 255 * factor1 + 255 * factor2, 0 * factor1 + 255 * factor2, 255 * factor1 + 0 * factor2);
               WS2811_Send();
               break;
       case 2: factor1 = 1.0 - ((float)(ind % 14 - 2 * 4.666666666666667) / 4.666666666666667);
               factor2 = (float)((int)(ind - 9.333333333333334) % 14) / 4.666666666666667;
-              //Set_LED(j, 0 * factor1 + 255 * factor2, 0 * factor1 + 0 * factor2, 255 * factor1 + 0 * factor2);
               Set_LED(j, 255 * factor1 + 0 * factor2, 255 * factor1 + 255 * factor2, 0 * factor1 + 255 * factor2);
               WS2811_Send();
               break;
@@ -231,54 +189,11 @@ uint8_t rainbow_effect_right(void) {
 }
 
 
-
-uint8_t strip0_loop0_eff0(void) {//funciona pero consume mucha flash
-    // Strip ID: 0 - Effect: Fade - LEDS: 6
-    // Steps: 83 - Delay: 12
-    // Colors: 2 (0.0.0, 255.255.255)
-    // Options: duration=996, every=1,
-  //if(millis() - strip_0.effStart < 12 * (strip_0.effStep)) return 0x00;
-  uint8_t r,g,b;
-  double e;
-  e = (effStep * 5) / (double)500;
-  r = ( e ) * 255 + 0 * ( 1.0 - e );
-  g = ( e ) * 255 + 255 * ( 1.0 - e );
-  b = ( e ) * 255 + 255 * ( 1.0 - e );
-  for(uint16_t j=0;j<6;j++) {
-    if((j % 1) == 0){
-    	Set_LED(j, r, g, b);
-    	WS2811_Send();
-    }else{
-    	Set_LED(j, 0, 0, 0);
-    	WS2811_Send();
-    }
-  }
-  if(effStep >= 200) {effStep=0; return 0x03; }
-  else effStep++;
-  return 0x01;
-}
-
 //for(uint8_t i=5;i>=0;i--); aqui cuando compara 0>=0 todo bien y luego decrementa a 255, 255>=0(TRUE) y nunca sale del for:5 4 3 2 1 0 255 254 253... 5 4 3 2 1 0 255 254.......
 //for(int8_t  i=5;i>=0;i--); aqui si hace todo bien y devuelve 5 4 3 2 1 0 (±128)
 //for(int16_t  i=5;i>=0;i--); necesitamos hasta 255 por eso int16_t (±32768 )
 
-/*void fade_effect(uint8_t tiempo){
-	for(int16_t brillo = BRILLO_MIN; brillo >= BRILLO_MAX; brillo--){//int porque tiene que compara 0
-		for(uint8_t i=0; i<MAX_LED; i++) Set_LED(i, brillo, BRILLO_OFF, BRILLO_OFF);
-		WS2811_Send();
-		HAL_Delay(tiempo);
-	}
-	HAL_Delay(300);
-
-	for(int16_t brillo = BRILLO_MAX; brillo <= BRILLO_MIN; brillo++) {
-	    for(uint8_t i=0; i<MAX_LED; i++) Set_LED(i, brillo, BRILLO_OFF, BRILLO_OFF);
-	    WS2811_Send();
-	    HAL_Delay(tiempo);
-	}
-	HAL_Delay(300);
-}*/
-
-void fade_effect(uint8_t tiempo, uint8_t r, uint8_t g, uint8_t b) {
+void Respirar(uint8_t tiempo, uint8_t r, uint8_t g, uint8_t b) {
 
     for(int16_t brillo = BRILLO_MIN; brillo >= BRILLO_MAX; brillo--) { // De mayor a menor brillo
         for(uint8_t i = 0; i < MAX_LEDS; i++) {
@@ -346,18 +261,9 @@ void Blink(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b) {
 		HAL_Delay(tiempo/5);
 		//HAL_Delay((tiempo*Refresh_ADC_Value())/5);
 	}
-
 }
 
-void Encender_1_Led_3(uint8_t num_led, uint8_t r, uint8_t g, uint8_t b){
-	for(uint8_t i=1; i<=MAX_LEDS; i++){
-		if(i>=num_led){
-			ControlLeds(i,1,r,g,b);
-		}else{
-			ControlLeds(i,0,r,g,b);
-		}
-	}
-}
+
 
 void VolumenCerrar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t v=0;v<veces;v++){
@@ -415,10 +321,19 @@ void ControlLeds(uint8_t led, uint8_t state, uint8_t r, uint8_t g, uint8_t b){
 		WS2811_Send();
 	}
 }
-
 void Encender_1_Led_2(uint8_t num_led, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t i=1; i<=MAX_LEDS; i++){
 		if(i<=num_led){
+			ControlLeds(i,1,r,g,b);
+		}else{
+			ControlLeds(i,0,r,g,b);
+		}
+	}
+}
+
+void Encender_1_Led_3(uint8_t num_led, uint8_t r, uint8_t g, uint8_t b){
+	for(uint8_t i=1; i<=MAX_LEDS; i++){
+		if(i>=num_led){
 			ControlLeds(i,1,r,g,b);
 		}else{
 			ControlLeds(i,0,r,g,b);
@@ -435,7 +350,6 @@ void Encender_1_Led_4(uint8_t num_led, uint8_t indice, uint8_t r, uint8_t g, uin
 		}
 	}
 }
-
 void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t v=0;v<veces;v++){
 
@@ -458,7 +372,7 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r,
 			if(l>=MAX_LEDS){
 				l=1;
 			}else{
-				ControlLeds(l, 1,r,g,b);
+				ControlLeds(l,1,r,g,b);
 				l++;
 			}
 		}
@@ -466,8 +380,6 @@ void ArmarIzquierda(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r,
 		//HAL_Delay(tiempo2*Refresh_ADC_Value());
 	}
 }
-
-
 void VolumenAbrir(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t v=0;v<veces;v++){
 		uint8_t l;
@@ -490,7 +402,6 @@ void VolumenAbrir(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, u
 		//HAL_Delay(tiempo2*Refresh_ADC_Value());
 	}
 }
-
 void Barrido1(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t v=0;v<veces;v++){
 		for(uint8_t i=1; i<=MAX_LEDS; i++){
@@ -508,6 +419,54 @@ void Barrido1(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8
 			//HAL_Delay(tiempo*Refresh_ADC_Value());
 		}
 	}
+}
+void BarridoDer(uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
+	for(uint8_t i=1; i<=MAX_LEDS; i++){
+		ControlLeds(i,1,r,g,b);
+		HAL_Delay(tiempo);
+		//HAL_Delay(tiempo*Refresh_ADC_Value());
+	}
+	HAL_Delay(tiempo2);
+	//HAL_Delay(tiempo2*Refresh_ADC_Value());
+}
+
+void BarridoIzq(uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
+	for(uint8_t i=MAX_LEDS; i>=1; i--){
+		ControlLeds(i,1,r,g,b);
+		HAL_Delay(tiempo);
+		//HAL_Delay(tiempo*Refresh_ADC_Value());
+	}
+	HAL_Delay(tiempo2);
+	//HAL_Delay(tiempo2*Refresh_ADC_Value());
+}
+
+void BarridoColoresDer(uint16_t tiempo, uint16_t tiempo2){
+	BarridoDer(tiempo,tiempo2,ROJO);
+	BarridoDer(tiempo,tiempo2,VERDE);
+	BarridoDer(tiempo,tiempo2,AZUL);
+	BarridoDer(tiempo,tiempo2,AMARILLO);
+	BarridoDer(tiempo,tiempo2,CIAN);
+	BarridoDer(tiempo,tiempo2,MAGENTA);
+	BarridoDer(tiempo,tiempo2,BLANCO);
+}
+
+void BarridoColoresDerIzq(uint16_t tiempo, uint16_t tiempo2){
+	BarridoDer(tiempo,tiempo2,ROJO);
+	BarridoIzq(tiempo,tiempo2,VERDE);
+	BarridoDer(tiempo,tiempo2,AZUL);
+	BarridoIzq(tiempo,tiempo2,AMARILLO);
+	BarridoDer(tiempo,tiempo2,CIAN);
+	BarridoIzq(tiempo,tiempo2,MAGENTA);
+	BarridoDer(tiempo,tiempo2,BLANCO);
+
+	BarridoIzq(tiempo,tiempo2,ROJO);
+	BarridoDer(tiempo,tiempo2,VERDE);
+	BarridoIzq(tiempo,tiempo2,AZUL);
+	BarridoDer(tiempo,tiempo2,AMARILLO);
+	BarridoIzq(tiempo,tiempo2,CIAN);
+	BarridoDer(tiempo,tiempo2,MAGENTA);
+	BarridoIzq(tiempo,tiempo2,BLANCO);
+
 }
 
 
@@ -561,7 +520,6 @@ void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, ui
 		}
 	}
 }
-
 void CerrarApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t v=0;v<veces;v++){
 		uint8_t limite,centro;
@@ -610,8 +568,6 @@ void CerrarApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2, uint8_t r, u
 		}
 	}
 }
-
-
 void Girar(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b){
 	for(uint8_t v=0;v<veces;v++){
 		AbrirApagar(1,tiempo,0,r,g,b);
@@ -619,4 +575,118 @@ void Girar(uint8_t veces, uint16_t tiempo, uint8_t r, uint8_t g, uint8_t b){
 		CerrarApagar(1,tiempo,0,r,g,b);
 		//CerrarApagar(1,tiempo*Refresh_ADC_Value(),0);
 	}
+}
+
+
+void applyGradient(void) {
+  static int offset = 0;
+  //se mueve con pendiente simetrica, como el movimiento de la marea sube y baja
+  //direction = -1 ->queda una fondo y encima avanza derecha l1 l2 l3 ....
+  //direction =  1 ->queda una fondo y encima avanza izq  ....l3 l2 l1
+  static int direction = 1;
+
+  float center = (MAX_LEDS - 1) / 2.0f;
+  int stepValue = 255 / ((int)center + 1); // Adaptado al rango
+
+  for (int i = 0; i < MAX_LEDS; i++) {
+    int shiftedIndex = (i + offset) % MAX_LEDS;
+    float distanceFromCenter = fabsf(shiftedIndex - center);
+    int brightness = stepValue * ((int)center + 1 - (int)distanceFromCenter);
+
+    if (brightness < 0) brightness = 0;
+    if (brightness > 255) brightness = 255;
+
+    //jugar con estos valores da efectos elegantes
+    //Set_LED(i, brightness,255 , 50);
+    Set_LED(i, 255 - brightness,brightness, 255);
+  }
+
+  WS2811_Send();
+
+  offset += direction;
+  if (offset >= MAX_LEDS || offset <= 0) {
+	//direction *= -1;//empieza IZQ->DER y luego DER->IZQ osea va y vuelve
+	direction *=  1;//solo 1 direccion
+  }
+}
+
+
+
+//eliminar
+void applyGradient2(void) {
+  static int offset = 0;
+  //se mueve con pendiente simetrica, como el movimiento de la marea sube y baja
+  //direction = -1 ->queda una fondo y encima avanza derecha l1 l2 l3 ....
+  //direction =  1 ->queda una fondo y encima avanza izq  ....l3 l2 l1
+  static int direction = -1;
+
+  float center = (MAX_LEDS - 1) / 2.0f;
+  int stepValue = 255 / ((int)center + 1); // Adaptado al rango
+
+  for (int i = 0; i < MAX_LEDS; i++) {
+    int shiftedIndex = (i + offset) % MAX_LEDS;
+    float distanceFromCenter = fabsf(shiftedIndex - center);
+    int brightness = stepValue * ((int)center + 1 - (int)distanceFromCenter);
+
+    if (brightness < 0) brightness = 0;
+    if (brightness > 255) brightness = 255;
+
+    //jugar con estos valores da efectos elegantes
+    Set_LED(i, 255-brightness,0 , 255-brightness);
+    //Set_LED(i, 255 - brightness,brightness, 255);
+  }
+
+  WS2811_Send();
+
+  offset += direction;
+  if (offset >= MAX_LEDS || offset <= 0) {
+	//direction *= -1;//empieza IZQ->DER y luego DER->IZQ osea va y vuelve
+	direction *=  1;//solo 1 direccion
+  }
+}
+
+void applyGradient3(int dir, uint8_t r, uint8_t g, uint8_t b) { //se mueve con pendiente simetrica, como el movimiento de la marea sube y baja
+  static int offset = 0;
+
+  //static int direction = -1;// ->queda una fondo y encima avanza derecha l1 l2 l3 ....
+  static int direction =  1;// ->queda una fondo y encima avanza izq  ....l3 l2 l1
+
+  float center = (MAX_LEDS - 1) / 2.0f;
+  int stepValue = 255 / ((int)center + 1); // Adaptado al rango
+
+  for (int i = 0; i < MAX_LEDS; i++) {
+    int shiftedIndex = (i + offset) % MAX_LEDS;
+    float distanceFromCenter = fabsf(shiftedIndex - center);
+    int brightness = stepValue * ((int)center + 1 - (int)distanceFromCenter);
+
+    if (brightness < 0) brightness = 0;
+    if (brightness > 255) brightness = 255;
+
+    if(r==BRILLO_MAX && g==BRILLO_MIN && b==BRILLO_MIN ){//ROJO
+    	Set_LED(i,BRILLO_MAX,brightness,brightness);
+    }else if(r==BRILLO_MIN && g==BRILLO_MAX && b==BRILLO_MIN ){//VERDE
+    	Set_LED(i,brightness,BRILLO_MAX,brightness);
+    }else if(r==BRILLO_MIN && g==BRILLO_MIN && b==BRILLO_MAX ){//AZUL
+    	Set_LED(i,brightness,brightness,BRILLO_MAX);
+    }else if(r==BRILLO_MAX && g==BRILLO_MIN && b==BRILLO_MAX ){//MAGENTA
+    	Set_LED(i,BRILLO_MAX,brightness,BRILLO_MAX);
+    }else if(r==BRILLO_MAX && g==BRILLO_MAX && b==BRILLO_MIN ){//AMARILLO
+    	Set_LED(i,BRILLO_MAX,BRILLO_MAX,brightness);
+    }else if(r==BRILLO_MIN && g==BRILLO_MAX && b==BRILLO_MAX ){//CIAN
+    	Set_LED(i,brightness,BRILLO_MAX,BRILLO_MAX);
+    }
+
+
+    //Set_LED(i,BRILLO_MAX,brightness , brightness);
+  }
+
+  WS2811_Send();
+
+
+  offset += direction;
+  if (offset >= MAX_LEDS || offset <= 0) {
+	//direction *= -1;//empieza IZQ->DER y luego DER->IZQ osea va y vuelve
+	//direction *=  1;//solo 1 direccion
+	direction *=dir;
+  }
 }

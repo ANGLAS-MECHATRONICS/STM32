@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="ST7789_DrawPixel_4px"/>
+		<item value="STRING"/>
+		<item value="ST7789_WriteData"/>
+		<item value="PRINT"/>
+		<item value="ST7789_Fill("/>
+		<item value="ST7789_Fill"/>
+		<item value="ST7789_WriteSmallData"/>
+		<item value="ST7789_DrawLine"/>
+		<item value="HAL_SPI_Transmit(&amp;ST7789_SPI_PORT, (uint8_t *)&amp;data, 1, HAL_MAX_DELAY);"/>
+		<item value="uint8_t data[] = {x_start &gt;&gt; 8, x_start &amp; 0xFF, x_end &gt;&gt; 8, x_end &amp; 0xFF};"/>
+		<item value="ST7789_WriteData((uint8_t *)data, sizeof(uint16_t) * w * h);"/>
+		<item value="ST7789_SetAddressWindow"/>
+		<item value="ST7789_WriteData(&amp;data, 1);"/>
+		<item value="ST7789_WriteData(data, sizeof(data));"/>
+		<item value="uint16_t data = color;"/>
+	</list>
+	<list key="replacehistory">
+		<item value="ST7789_WriteData((uint16_t *)data, w * h);"/>
+		<item value="ST7789_WriteData(&amp;data, 1);"/>
+		<item value="uint16_t data = color;"/>
+		<item value="ST7789_Print"/>
+	</list>
+</section>

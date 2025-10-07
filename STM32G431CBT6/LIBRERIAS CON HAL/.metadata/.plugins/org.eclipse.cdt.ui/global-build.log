@@ -1,0 +1,309 @@
+11:03:47 **** Clean-only build of configuration Debug for project ST7789_DMA_LL ****
+make -j4 clean 
+rm -rf ./Middlewares/Third_Party/FatFs/src/option/ccsbcs.cyclo ./Middlewares/Third_Party/FatFs/src/option/ccsbcs.d ./Middlewares/Third_Party/FatFs/src/option/ccsbcs.o ./Middlewares/Third_Party/FatFs/src/option/ccsbcs.su ./Middlewares/Third_Party/FatFs/src/option/syscall.cyclo ./Middlewares/Third_Party/FatFs/src/option/syscall.d ./Middlewares/Third_Party/FatFs/src/option/syscall.o ./Middlewares/Third_Party/FatFs/src/option/syscall.su
+rm -rf ./Middlewares/Third_Party/FatFs/src/diskio.cyclo ./Middlewares/Third_Party/FatFs/src/diskio.d ./Middlewares/Third_Party/FatFs/src/diskio.o ./Middlewares/Third_Party/FatFs/src/diskio.su ./Middlewares/Third_Party/FatFs/src/ff.cyclo ./Middlewares/Third_Party/FatFs/src/ff.d ./Middlewares/Third_Party/FatFs/src/ff.o ./Middlewares/Third_Party/FatFs/src/ff.su ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.cyclo ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.d ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.o ./Middlewares/Third_Party/FatFs/src/ff_gen_drv.su
+rm -rf ./FATFS/Target/user_diskio.cyclo ./FATFS/Target/user_diskio.d ./FATFS/Target/user_diskio.o ./FATFS/Target/user_diskio.su
+rm -rf ./FATFS/App/app_fatfs.cyclo ./FATFS/App/app_fatfs.d ./FATFS/App/app_fatfs.o ./FATFS/App/app_fatfs.su
+rm -rf ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.su ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.cyclo ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.d ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.o ./Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.su
+rm -rf ./Core/Startup/startup_stm32g431cbtx.d ./Core/Startup/startup_stm32g431cbtx.o
+rm -rf ./Core/Src/main.cyclo ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/stm32g4xx_hal_msp.cyclo ./Core/Src/stm32g4xx_hal_msp.d ./Core/Src/stm32g4xx_hal_msp.o ./Core/Src/stm32g4xx_hal_msp.su ./Core/Src/stm32g4xx_it.cyclo ./Core/Src/stm32g4xx_it.d ./Core/Src/stm32g4xx_it.o ./Core/Src/stm32g4xx_it.su ./Core/Src/syscalls.cyclo ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.cyclo ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32g4xx.cyclo ./Core/Src/system_stm32g4xx.d ./Core/Src/system_stm32g4xx.o ./Core/Src/system_stm32g4xx.su
+rm -rf ST7789_DMA_LL.elf ST7789_DMA_LL.list ST7789_DMA_LL.map default.size.stdout
+ 
+11:03:49 **** Incremental Build of configuration Debug for project ST7789_DMA_LL ****
+make -j4 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/option/ccsbcs.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/option/ccsbcs.d" -MT"Middlewares/Third_Party/FatFs/src/option/ccsbcs.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/option/ccsbcs.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/option/syscall.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/option/syscall.d" -MT"Middlewares/Third_Party/FatFs/src/option/syscall.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/option/syscall.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/diskio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/diskio.d" -MT"Middlewares/Third_Party/FatFs/src/diskio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/diskio.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/ff.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/ff.d" -MT"Middlewares/Third_Party/FatFs/src/ff.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/ff.o"
+arm-none-eabi-gcc "../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FatFs/src/ff_gen_drv.d" -MT"Middlewares/Third_Party/FatFs/src/ff_gen_drv.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FatFs/src/ff_gen_drv.o"
+arm-none-eabi-gcc "../FATFS/Target/user_diskio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"FATFS/Target/user_diskio.d" -MT"FATFS/Target/user_diskio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FATFS/Target/user_diskio.o"
+arm-none-eabi-gcc "../FATFS/App/app_fatfs.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"FATFS/App/app_fatfs.d" -MT"FATFS/App/app_fatfs.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "FATFS/App/app_fatfs.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2s.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_spi.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_tim.o"
+arm-none-eabi-gcc "../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.d" -MT"Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.o"
+arm-none-eabi-gcc "../Display/display.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Display/display.d" -MT"Display/display.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Display/display.o"
+arm-none-eabi-gcc "../Display/fonts.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Display/fonts.d" -MT"Display/fonts.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Display/fonts.o"
+arm-none-eabi-gcc "../Display/ili9341.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Display/ili9341.d" -MT"Display/ili9341.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Display/ili9341.o"
+../Display/display.c: In function 'Display_TC_Callback':
+../Display/display.c:52:62: error: 'DMA_TypeDef' has no member named 'HIFCR'; did you mean 'IFCR'?
+   52 |         volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
+      |                                                              ^~~~~
+      |                                                              IFCR
+../Display/display.c:52:80: error: 'DMA_TypeDef' has no member named 'LIFCR'; did you mean 'IFCR'?
+   52 |         volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
+      |                                                                                ^~~~~
+      |                                                                                IFCR
+../Display/display.c:72:25: error: unknown type name 'DMA_Stream_TypeDef'
+   72 |                         DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                         ^~~~~~~~~~~~~~~~~~
+../Display/display.c:72:56: error: 'DMA_Stream_TypeDef' undeclared (first use in this function)
+   72 |                         DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                                                        ^~~~~~~~~~~~~~~~~~
+../Display/display.c:72:56: note: each undeclared identifier is reported only once for each function it appears in
+../Display/display.c:72:76: error: expected expression before ')' token
+   72 |                         DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                                                                            ^
+../Display/display.c:74:31: error: request for member 'CR' in something not a structure or union
+   74 |                         dma_TX->CR &= ~DMA_SxCR_EN;
+      |                               ^~
+../Display/display.c:74:40: error: 'DMA_SxCR_EN' undeclared (first use in this function); did you mean 'DMA_CCR_EN'?
+   74 |                         dma_TX->CR &= ~DMA_SxCR_EN;
+      |                                        ^~~~~~~~~~~
+      |                                        DMA_CCR_EN
+../Display/display.c:75:38: error: request for member 'CR' in something not a structure or union
+   75 |                         while (dma_TX->CR & DMA_SxCR_EN) ; //ждем отключения потока
+      |                                      ^~
+../Display/display.c:78:47: error: request for member 'NDTR' in something not a structure or union
+   78 |                                         dma_TX->NDTR = 65535;
+      |                                               ^~
+../Display/display.c:82:47: error: request for member 'NDTR' in something not a structure or union
+   82 |                                         dma_TX->NDTR = lcd->size_mem;
+      |                                               ^~
+../Display/display.c:86:39: error: request for member 'CR' in something not a structure or union
+   86 |                                 dma_TX->CR |= (DMA_SxCR_EN);
+      |                                       ^~
+../Display/display.c: In function 'LCD_String_Interpretator':
+../Display/display.c:173:36: error: 'SPI_CR1_DFF' undeclared (first use in this function); did you mean 'SPI_CR1_BR'?
+  173 |                                    SPI_CR1_DFF);                //установим 8-битную передачу
+      |                                    ^~~~~~~~~~~
+      |                                    SPI_CR1_BR
+../Display/display.c: In function 'LCD_DisplayAdd':
+../Display/display.c:249:17: error: unknown type name 'DMA_Stream_TypeDef'
+  249 |                 DMA_Stream_TypeDef *dma_x = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)hdma->dma + STREAM_OFFSET_TAB[hdma->stream])));
+      |                 ^~~~~~~~~~~~~~~~~~
+../Display/display.c:249:47: error: 'DMA_Stream_TypeDef' undeclared (first use in this function)
+  249 |                 DMA_Stream_TypeDef *dma_x = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)hdma->dma + STREAM_OFFSET_TAB[hdma->stream])));
+      |                                               ^~~~~~~~~~~~~~~~~~
+../Display/display.c:249:67: error: expected expression before ')' token
+  249 |                 DMA_Stream_TypeDef *dma_x = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)hdma->dma + STREAM_OFFSET_TAB[hdma->stream])));
+      |                                                                   ^
+../Display/display.c:250:22: error: request for member 'CR' in something not a structure or union
+  250 |                 dma_x->CR &= ~DMA_SxCR_EN; //отключаем канал DMA
+      |                      ^~
+../Display/display.c:250:31: error: 'DMA_SxCR_EN' undeclared (first use in this function); did you mean 'DMA_CCR_EN'?
+  250 |                 dma_x->CR &= ~DMA_SxCR_EN; //отключаем канал DMA
+      |                               ^~~~~~~~~~~
+      |                               DMA_CCR_EN
+../Display/display.c:251:28: error: request for member 'CR' in something not a structure or union
+  251 |                 while(dma_x->CR & DMA_SxCR_EN) ; //ждем отключения канала
+      |                            ^~
+../Display/display.c:253:30: error: request for member 'CR' in something not a structure or union
+  253 |                         dma_x->CR &= ~(DMA_SxCR_MSIZE | DMA_SxCR_PSIZE);
+      |                              ^~
+../Display/display.c:253:40: error: 'DMA_SxCR_MSIZE' undeclared (first use in this function); did you mean 'DMA_CCR_MSIZE'?
+  253 |                         dma_x->CR &= ~(DMA_SxCR_MSIZE | DMA_SxCR_PSIZE);
+      |                                        ^~~~~~~~~~~~~~
+      |                                        DMA_CCR_MSIZE
+../Display/display.c:253:57: error: 'DMA_SxCR_PSIZE' undeclared (first use in this function); did you mean 'DMA_CCR_PSIZE'?
+  253 |                         dma_x->CR &= ~(DMA_SxCR_MSIZE | DMA_SxCR_PSIZE);
+      |                                                         ^~~~~~~~~~~~~~
+      |                                                         DMA_CCR_PSIZE
+../Display/display.c:254:30: error: request for member 'CR' in something not a structure or union
+  254 |                         dma_x->CR |= LL_DMA_MDATAALIGN_BYTE | LL_DMA_PDATAALIGN_BYTE;
+      |                              ^~
+../Display/display.c:257:30: error: request for member 'CR' in something not a structure or union
+  257 |                         dma_x->CR &= ~(DMA_SxCR_MSIZE | DMA_SxCR_PSIZE);
+      |                              ^~
+../Display/display.c:258:30: error: request for member 'CR' in something not a structure or union
+  258 |                         dma_x->CR |= LL_DMA_MDATAALIGN_HALFWORD | LL_DMA_PDATAALIGN_HALFWORD;
+      |                              ^~
+../Display/display.c:261:22: error: request for member 'CR' in something not a structure or union
+  261 |                 dma_x->CR &= ~(DMA_SxCR_DMEIE | DMA_SxCR_HTIE | DMA_SxCR_DBM | DMA_SxCR_TEIE);
+      |                      ^~
+../Display/display.c:261:32: error: 'DMA_SxCR_DMEIE' undeclared (first use in this function); did you mean 'DMA_CCR_TEIE'?
+  261 |                 dma_x->CR &= ~(DMA_SxCR_DMEIE | DMA_SxCR_HTIE | DMA_SxCR_DBM | DMA_SxCR_TEIE);
+      |                                ^~~~~~~~~~~~~~
+      |                                DMA_CCR_TEIE
+../Display/display.c:261:49: error: 'DMA_SxCR_HTIE' undeclared (first use in this function); did you mean 'DMA_CCR_HTIE'?
+  261 |                 dma_x->CR &= ~(DMA_SxCR_DMEIE | DMA_SxCR_HTIE | DMA_SxCR_DBM | DMA_SxCR_TEIE);
+      |                                                 ^~~~~~~~~~~~~
+      |                                                 DMA_CCR_HTIE
+../Display/display.c:261:65: error: 'DMA_SxCR_DBM' undeclared (first use in this function); did you mean 'DMA_CCR_DIR'?
+  261 |                 dma_x->CR &= ~(DMA_SxCR_DMEIE | DMA_SxCR_HTIE | DMA_SxCR_DBM | DMA_SxCR_TEIE);
+      |                                                                 ^~~~~~~~~~~~
+      |                                                                 DMA_CCR_DIR
+../Display/display.c:261:80: error: 'DMA_SxCR_TEIE' undeclared (first use in this function); did you mean 'DMA_CCR_TEIE'?
+  261 |                 dma_x->CR &= ~(DMA_SxCR_DMEIE | DMA_SxCR_HTIE | DMA_SxCR_DBM | DMA_SxCR_TEIE);
+      |                                                                                ^~~~~~~~~~~~~
+      |                                                                                DMA_CCR_TEIE
+../Display/display.c:262:22: error: request for member 'FCR' in something not a structure or union
+  262 |                 dma_x->FCR &= ~DMA_SxFCR_FEIE;
+      |                      ^~
+../Display/display.c:262:32: error: 'DMA_SxFCR_FEIE' undeclared (first use in this function); did you mean 'DMA_CCR_TEIE'?
+  262 |                 dma_x->FCR &= ~DMA_SxFCR_FEIE;
+      |                                ^~~~~~~~~~~~~~
+      |                                DMA_CCR_TEIE
+../Display/display.c:264:22: error: request for member 'CR' in something not a structure or union
+  264 |                 dma_x->CR |= DMA_SxCR_TCIE;
+      |                      ^~
+../Display/display.c:264:30: error: 'DMA_SxCR_TCIE' undeclared (first use in this function); did you mean 'DMA_CCR_TCIE'?
+  264 |                 dma_x->CR |= DMA_SxCR_TCIE;
+      |                              ^~~~~~~~~~~~~
+      |                              DMA_CCR_TCIE
+../Display/display.c:265:22: error: request for member 'CR' in something not a structure or union
+  265 |                 dma_x->CR &= ~DMA_SxCR_PINC; //инкремент адреса периферии отключен
+      |                      ^~
+../Display/display.c:265:31: error: 'DMA_SxCR_PINC' undeclared (first use in this function); did you mean 'DMA_CCR_PINC'?
+  265 |                 dma_x->CR &= ~DMA_SxCR_PINC; //инкремент адреса периферии отключен
+      |                               ^~~~~~~~~~~~~
+      |                               DMA_CCR_PINC
+../Display/display.c:266:22: error: request for member 'CR' in something not a structure or union
+  266 |                 dma_x->CR |= DMA_SxCR_MINC;  //инкремент адреса памяти включен
+      |                      ^~
+../Display/display.c:266:30: error: 'DMA_SxCR_MINC' undeclared (first use in this function); did you mean 'DMA_CCR_MINC'?
+  266 |                 dma_x->CR |= DMA_SxCR_MINC;  //инкремент адреса памяти включен
+      |                              ^~~~~~~~~~~~~
+      |                              DMA_CCR_MINC
+../Display/display.c: In function 'LCD_WriteData':
+../Display/display.c:491:36: error: 'SPI_CR1_DFF' undeclared (first use in this function); did you mean 'SPI_CR1_BR'?
+  491 |                                    SPI_CR1_DFF);                //8-битная передача
+      |                                    ^~~~~~~~~~~
+      |                                    SPI_CR1_BR
+../Display/display.c: In function 'LCD_WriteDataDMA':
+../Display/display.c:531:44: error: 'SPI_CR1_DFF' undeclared (first use in this function); did you mean 'SPI_CR1_BR'?
+  531 |                                            SPI_CR1_DFF);                //8-битная передача
+      |                                            ^~~~~~~~~~~
+      |                                            SPI_CR1_BR
+../Display/display.c:538:17: error: unknown type name 'DMA_Stream_TypeDef'
+  538 |                 DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                 ^~~~~~~~~~~~~~~~~~
+../Display/display.c:538:48: error: 'DMA_Stream_TypeDef' undeclared (first use in this function)
+arm-none-eabi-gcc "../Display/st7789.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Display/st7789.d" -MT"Display/st7789.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Display/st7789.o"
+  538 |                 DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                                                ^~~~~~~~~~~~~~~~~~
+../Display/display.c:538:68: error: expected expression before ')' token
+  538 |                 DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                                                                    ^
+../Display/display.c:540:70: error: 'DMA_TypeDef' has no member named 'HIFCR'; did you mean 'IFCR'?
+  540 |                 volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
+      |                                                                      ^~~~~
+      |                                                                      IFCR
+../Display/display.c:540:88: error: 'DMA_TypeDef' has no member named 'LIFCR'; did you mean 'IFCR'?
+  540 |                 volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
+      |                                                                                        ^~~~~
+      |                                                                                        IFCR
+../Display/display.c:546:23: error: request for member 'PAR' in something not a structure or union
+  546 |                 dma_TX->PAR = (uint32_t)(&spi->DR); //приемник периферия - адрес регистра DR spi
+      |                       ^~
+../Display/display.c:547:23: error: request for member 'M0AR' in something not a structure or union
+  547 |                 dma_TX->M0AR = (uint32_t)data; //источник память - адрес буфера исходящих данных
+      |                       ^~
+../Display/display.c:548:23: error: request for member 'CR' in something not a structure or union
+  548 |                 dma_TX->CR &= ~DMA_SxCR_PINC; //инкремент адреса периферии отключен
+      |                       ^~
+../Display/display.c:548:32: error: 'DMA_SxCR_PINC' undeclared (first use in this function); did you mean 'DMA_CCR_PINC'?
+  548 |                 dma_TX->CR &= ~DMA_SxCR_PINC; //инкремент адреса периферии отключен
+      |                                ^~~~~~~~~~~~~
+      |                                DMA_CCR_PINC
+../Display/display.c:549:23: error: request for member 'CR' in something not a structure or union
+  549 |                 dma_TX->CR |= DMA_SxCR_MINC;  //инкремент адреса памяти включен
+      |                       ^~
+../Display/display.c:549:31: error: 'DMA_SxCR_MINC' undeclared (first use in this function); did you mean 'DMA_CCR_MINC'?
+  549 |                 dma_TX->CR |= DMA_SxCR_MINC;  //инкремент адреса памяти включен
+      |                               ^~~~~~~~~~~~~
+      |                               DMA_CCR_MINC
+../Display/display.c:551:31: error: request for member 'NDTR' in something not a structure or union
+  551 |                         dma_TX->NDTR = (uint32_t)len; //размер передаваемых данных
+      |                               ^~
+../Display/display.c:555:31: error: request for member 'NDTR' in something not a structure or union
+  555 |                         dma_TX->NDTR = 65535;
+      |                               ^~
+../Display/display.c:558:23: error: request for member 'CR' in something not a structure or union
+  558 |                 dma_TX->CR |= (DMA_SxCR_EN); //включение канала передачи (старт DMA передачи)
+      |                       ^~
+../Display/display.c:558:32: error: 'DMA_SxCR_EN' undeclared (first use in this function); did you mean 'DMA_CCR_EN'?
+  558 |                 dma_TX->CR |= (DMA_SxCR_EN); //включение канала передачи (старт DMA передачи)
+      |                                ^~~~~~~~~~~
+      |                                DMA_CCR_EN
+../Display/display.c: In function 'LCD_FillWindow':
+../Display/display.c:581:36: error: 'SPI_CR1_DFF' undeclared (first use in this function); did you mean 'SPI_CR1_BR'?
+  581 |                                    SPI_CR1_DFF);                //8-битная передача
+      |                                    ^~~~~~~~~~~
+      |                                    SPI_CR1_BR
+../Display/display.c:593:17: error: unknown type name 'DMA_Stream_TypeDef'
+  593 |                 DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                 ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32g431cbtx.d" -MT"Core/Startup/startup_stm32g431cbtx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Startup/startup_stm32g431cbtx.o" "../Core/Startup/startup_stm32g431cbtx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Display/display.c:593:48: error: 'DMA_Stream_TypeDef' undeclared (first use in this function)
+  593 |                 DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                                                ^~~~~~~~~~~~~~~~~~
+../Display/display.c:593:68: error: expected expression before ')' token
+  593 |                 DMA_Stream_TypeDef *dma_TX = ((DMA_Stream_TypeDef *)((uint32_t)((uint32_t)dma_x + STREAM_OFFSET_TAB[stream])));
+      |                                                                    ^
+../Display/display.c:595:70: error: 'DMA_TypeDef' has no member named 'HIFCR'; did you mean 'IFCR'?
+  595 |                 volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
+      |                                                                      ^~~~~
+      |                                                                      IFCR
+../Display/display.c:595:88: error: 'DMA_TypeDef' has no member named 'LIFCR'; did you mean 'IFCR'?
+  595 |                 volatile uint32_t *ifcr_tx = (stream > 3) ? &(dma_x->HIFCR) : &(dma_x->LIFCR);
+      |                                                                                        ^~~~~
+      |                                                                                        IFCR
+../Display/display.c:601:23: error: request for member 'PAR' in something not a structure or union
+  601 |                 dma_TX->PAR = (uint32_t)(&spi->DR); //приемник периферия - адрес регистра DR spi
+      |                       ^~
+../Display/display.c:602:23: error: request for member 'M0AR' in something not a structure or union
+  602 |                 dma_TX->M0AR = (uint32_t)&lcd->fill_color; //источник память - адрес буфера исходящих данных
+      |                       ^~
+../Display/display.c:603:23: error: request for member 'CR' in something not a structure or union
+  603 |                 dma_TX->CR &= ~DMA_SxCR_PINC; //инкремент адреса периферии отключен
+      |                       ^~
+../Display/display.c:603:32: error: 'DMA_SxCR_PINC' undeclared (first use in this function); did you mean 'DMA_CCR_PINC'?
+  603 |                 dma_TX->CR &= ~DMA_SxCR_PINC; //инкремент адреса периферии отключен
+      |                                ^~~~~~~~~~~~~
+      |                                DMA_CCR_PINC
+../Display/display.c:604:23: error: request for member 'CR' in something not a structure or union
+  604 |                 dma_TX->CR &= ~DMA_SxCR_MINC; //инкремент адреса памяти отключен
+      |                       ^~
+../Display/display.c:604:32: error: 'DMA_SxCR_MINC' undeclared (first use in this function); did you mean 'DMA_CCR_MINC'?
+  604 |                 dma_TX->CR &= ~DMA_SxCR_MINC; //инкремент адреса памяти отключен
+      |                                ^~~~~~~~~~~~~
+      |                                DMA_CCR_MINC
+../Display/display.c:606:31: error: request for member 'NDTR' in something not a structure or union
+  606 |                         dma_TX->NDTR = (uint32_t)len; //размер передаваемых данных
+      |                               ^~
+../Display/display.c:610:31: error: request for member 'NDTR' in something not a structure or union
+  610 |                         dma_TX->NDTR = 65535;
+      |                               ^~
+../Display/display.c:613:23: error: request for member 'CR' in something not a structure or union
+  613 |                 dma_TX->CR |= (DMA_SxCR_EN); //включение канала передачи (старт DMA передачи)
+      |                       ^~
+../Display/display.c:613:32: error: 'DMA_SxCR_EN' undeclared (first use in this function); did you mean 'DMA_CCR_EN'?
+  613 |                 dma_TX->CR |= (DMA_SxCR_EN); //включение канала передачи (старт DMA передачи)
+      |                                ^~~~~~~~~~~
+      |                                DMA_CCR_EN
+../Display/display.c: In function 'LCD_ReadImage':
+../Display/display.c:981:35: error: 'SPI_CR1_DFF' undeclared (first use in this function); did you mean 'SPI_CR1_BR'?
+  981 |                                   SPI_CR1_DFF);           //Ширина кадра 8 бит
+      |                                   ^~~~~~~~~~~
+      |                                   SPI_CR1_BR
+../Display/display.c: In function 'LCD_WriteChar':
+../Display/display.c:1094:44: error: 'SPI_CR1_DFF' undeclared (first use in this function); did you mean 'SPI_CR1_BR'?
+ 1094 |                                            SPI_CR1_DFF);                //8-битная передача
+      |                                            ^~~~~~~~~~~
+      |                                            SPI_CR1_BR
+arm-none-eabi-gcc "../Core/Src/stm32g4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -DUSE_FULL_LL_DRIVER -c -I../FATFS/Target -I../FATFS/App -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FatFs/src -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -I"E:/GIOVANNY_TODO/SKETCHS/STM32/STM32G431CBT6/LIBRERIAS CON HAL/ST7789_DMA_LL/Display" -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32g4xx_hal_msp.d" -MT"Core/Src/stm32g4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32g4xx_hal_msp.o"
+make: *** [Display/subdir.mk:28: Display/display.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.

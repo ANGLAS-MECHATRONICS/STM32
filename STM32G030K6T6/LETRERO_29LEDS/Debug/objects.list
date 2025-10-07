@@ -19,8 +19,5 @@
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_pwr_ex.o"
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc.o"
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_rcc_ex.o"
-"./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim.o"
-"./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.o"
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_adc.o"
-"./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_dma.o"
 "./Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.o"

@@ -4,4 +4,4 @@
 ../Core/Src/Anglas_INA226.c:102:7:INA226_Current_DMA	4
 ../Core/Src/Anglas_INA226.c:146:7:INA226_Power_DMA	2
 ../Core/Src/Anglas_INA226.c:162:10:INA226_Mode_pinAlert_DMA	3
-../Core/Src/Anglas_INA226.c:202:10:INA226_Alert_Limit_DMA	9
+../Core/Src/Anglas_INA226.c:202:10:INA226_Alert_Limit_DMA	8

@@ -1,0 +1,14 @@
+16:56:00 **** Incremental Build of configuration Debug for project LETRERO_RGB_20LEDS_2025 ****
+make -j4 all 
+arm-none-eabi-size  LETRERO_RGB_20LEDS_2025.elf 
+   text	   data	    bss	    dec	    hex	filename
+  39256	     16	   2808	  42080	   a460	LETRERO_RGB_20LEDS_2025.elf
+Finished building: default.size.stdout
+ 
+16:56:20 **** Incremental Build of configuration Debug for project LETRERO_RGB_20LEDS_2025 ****
+make -j4 all 
+arm-none-eabi-size  LETRERO_RGB_20LEDS_2025.elf 
+   text	   data	    bss	    dec	    hex	filename
+  39256	     16	   2808	  42080	   a460	LETRERO_RGB_20LEDS_2025.elf
+Finished building: default.size.stdout
+ 

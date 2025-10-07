@@ -1,0 +1,4 @@
+../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h:451:22:LL_AHB2_GRP1_EnableClock	1
+../Core/Src/main.c:132:6:SystemClock_Config	7
+../Core/Src/main.c:78:5:main	10
+../Core/Src/main.c:683:6:Error_Handler	1

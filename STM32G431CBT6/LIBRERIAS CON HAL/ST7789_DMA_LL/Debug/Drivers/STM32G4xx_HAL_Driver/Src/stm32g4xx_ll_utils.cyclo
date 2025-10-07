@@ -1,0 +1,7 @@
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:170:6:LL_Init1msTick	1
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:186:6:LL_mDelay	4
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:257:6:LL_SetSystemCoreClock	1
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:271:13:LL_SetFlashLatency	13
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:638:20:UTILS_EnablePLLAndSwitchSystem	7
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:406:13:LL_PLL_ConfigSystemClock_HSI	9
+../Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_utils.c:488:13:LL_PLL_ConfigSystemClock_HSE	10

@@ -139,6 +139,7 @@ void control_SW2(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -181,15 +182,19 @@ int main(void)
   OLED_Init_DMA();
   OLED_Imagen_Small_DMA(2,0, AM_INTRO, 128, 64);
   OLED_Print_Text_DMA(1,0,1,"Designed by G. Anglas");
+  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
 
   while(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin));
+
   OLED_Clear_DMA();
+  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
   HAL_Delay(200);
   //////////////////// MODOS ///////////////////////////////////
   while(flagMode==0){
 
 	  if(!HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin)){
 		  HAL_Delay(180);
+		  PWM_set_Freq_DutyCycle(4000,50,100);
 		  flagModeSelect++;
 		  OLED_Clear_DMA();
 		  if(flagModeSelect>=4) flagModeSelect=1;
@@ -259,7 +264,6 @@ int main(void)
   OLED_Print_Text_DMA(6,25,2,"   0mA");
   OLED_Print_Text_DMA(7,96,1,"0.0W ");
 
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -324,6 +328,7 @@ int main(void)
       //Esto pienso que es porque al incio el INA226 lee una corriente de 2000 o 3000mA y esto hace activar el pinAlert
       //Osea el pinAlert se activa de alguna manera y para evitar eso hago esta linea
       //Habilitando las interrupciones luego de hacer todo el codigo 1 vez y funciono
+      //Verificar la linea 820 HAL_NVIC_EnableIRQ que este comentada, para que aqui recien se habilite la interrupcion
 	  if(flagInicio==0){
 		  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 		  powerSupply=0;
@@ -494,7 +499,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x20000209;
+  hi2c1.Init.Timing = 0x00700814;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -762,8 +767,8 @@ static void MX_DMA_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOF_CLK_ENABLE();
@@ -816,10 +821,10 @@ static void MX_GPIO_Init(void)
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
-  //HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
+    //HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);//aqui desactivo manual y no por el .ioc porq no funciona o se cuelga si lo hago por ahi
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -1064,7 +1069,7 @@ void calculate_value_dac_12bits(void){
     //float DDDAAACCC;DDDAAACCC = dac_12bits;sprintf(buff,"%4.0f",DDDAAACCC);OLED_Print_Text_DMA(6,0,1,buff);
 
     //dac_12bits = dac_12bits - (8.0E-06 * dac_12bits * dac_12bits + 0.002 * dac_12bits + 1.1844);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
-    dac_12bits = (0.978* dac_12bits + 30.54);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
+    dac_12bits = (1.002* dac_12bits - 45);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
 }
 
 void control_SW(void){
@@ -1196,8 +1201,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.

@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Set_Brightness"/>
+		<item key="selection" value="Init"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="effStep"/>
-			<item value="Set_Brightness"/>
-			<item value="HAL_TIM_PWM_PU"/>
-			<item value="ControlLeds"/>
-			<item value="cantLeds2"/>
-			<item value="tiempo"/>
-			<item value="1023"/>
-			<item value="vel"/>
+			<item value="init"/>
+			<item value="ENCENDER"/>
+			<item value="GIRAR"/>
+			<item value="Encender_1_Led_3"/>
+			<item value="encender"/>
+			<item value="semilla2"/>
+			<item value="cent"/>
+			<item value="BRILLO_MAX"/>
 		</list>
 		<list key="replacehistory">
+			<item value="centro2"/>
+			<item value="MAX_LEDS"/>
 			<item value="Refresh_ADC_Value()"/>
 			<item value="Interlude"/>
 		</list>

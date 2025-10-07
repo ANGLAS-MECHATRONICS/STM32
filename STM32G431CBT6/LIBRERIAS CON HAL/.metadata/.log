@@ -1,0 +1,314 @@
+!SESSION 2025-07-07 17:26:53.623 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-07 17:27:02.165
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-07 17:27:02.168
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-07 17:27:05.948
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-07 17:37:10.796
+!MESSAGE Indexed 'ST7789_DMA' (35 sources, 102 headers) in 7.91 sec: 9,582 declarations; 73,166 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0024%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-07 17:57:58.109
+!MESSAGE Indexed 'ST7789_DMA' (42 sources, 115 headers) in 4.32 sec: 11,063 declarations; 68,516 references; 0 unresolved inclusions; 1 syntax errors; 34 unresolved names (0.043%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-07 17:58:08.812
+!MESSAGE Indexed 'ST7789_DMA' (42 sources, 115 headers) in 4.48 sec: 11,063 declarations; 68,516 references; 0 unresolved inclusions; 1 syntax errors; 34 unresolved names (0.043%)
+
+!ENTRY org.eclipse.ui 4 0 2025-07-07 18:11:02.889
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.StringIndexOutOfBoundsException: Range [13024, 0) out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:55)
+	at java.base/jdk.internal.util.Preconditions$1.apply(Preconditions.java:52)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:213)
+	at java.base/jdk.internal.util.Preconditions$4.apply(Preconditions.java:210)
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:98)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckFromToIndex(Preconditions.java:112)
+	at java.base/jdk.internal.util.Preconditions.checkFromToIndex(Preconditions.java:349)
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4865)
+	at java.base/java.lang.String.substring(String.java:2834)
+	at java.base/java.lang.String.substring(String.java:2807)
+	at org.eclipse.cdt.internal.ui.buildconsole.BuildConsolePartitioner.updateUI(BuildConsolePartitioner.java:270)
+	at org.eclipse.swt.widgets.Display.runTimer(Display.java:4222)
+	at org.eclipse.swt.widgets.Display.messageProc(Display.java:3343)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-07 18:16:17.339
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Debug/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-07 18:16:17.341
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Debug/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-07 18:16:17.342
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Release/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-07 18:16:17.343
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Release/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY org.eclipse.ui 4 0 2025-07-07 18:40:08.749
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.swt.widgets.Shell.setVisible(boolean)" because the return value of "org.eclipse.ui.internal.findandreplace.overlay.FindReplaceOverlay.getShell()" is null
+	at org.eclipse.ui.internal.findandreplace.overlay.FindReplaceOverlay.updatePlacementAndVisibility(FindReplaceOverlay.java:844)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4099)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3715)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-07 19:04:11.652
+!MESSAGE Indexed 'ST7789_DMA' (37 sources, 104 headers) in 3.12 sec: 9,867 declarations; 74,974 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0024%)
+!SESSION 2025-07-07 20:05:37.557 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-07 20:05:48.761
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-07 20:05:48.765
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-07 20:06:01.290
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui 4 0 2025-07-07 20:23:21.223
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.core.runtime.OperationCanceledException
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:288)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:214)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:95)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:343)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:124)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2401)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2446)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2471)
+	at org.eclipse.cdt.debug.internal.core.breakpoints.CBreakpoint.run(CBreakpoint.java:171)
+	at org.eclipse.cdt.debug.internal.core.breakpoints.CBreakpoint.<init>(CBreakpoint.java:96)
+	at org.eclipse.cdt.debug.internal.core.breakpoints.AbstractLineBreakpoint.<init>(AbstractLineBreakpoint.java:50)
+	at org.eclipse.cdt.debug.internal.core.breakpoints.CLineBreakpoint.<init>(CLineBreakpoint.java:42)
+	at org.eclipse.cdt.debug.core.CDIDebugModel.createLineBreakpoint(CDIDebugModel.java:200)
+	at org.eclipse.cdt.debug.internal.ui.actions.breakpoints.ToggleBreakpointAdapter.createLineBreakpoint(ToggleBreakpointAdapter.java:57)
+	at org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter.updateLineBreakpoints(AbstractToggleBreakpointAdapter.java:356)
+	at org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter.updateBreakpoints(AbstractToggleBreakpointAdapter.java:311)
+	at org.eclipse.cdt.debug.ui.breakpoints.AbstractToggleBreakpointAdapter.toggleBreakpointsWithEvent(AbstractToggleBreakpointAdapter.java:117)
+	at org.eclipse.debug.ui.actions.ToggleBreakpointAction.doIt(ToggleBreakpointAction.java:105)
+	at org.eclipse.debug.ui.actions.ToggleBreakpointAction.runWithEvent(ToggleBreakpointAction.java:83)
+	at org.eclipse.debug.ui.actions.RulerToggleBreakpointActionDelegate.runWithEvent(RulerToggleBreakpointActionDelegate.java:116)
+	at org.eclipse.ui.internal.handlers.ActionDelegateHandlerProxy.execute(ActionDelegateHandlerProxy.java:278)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:488)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:485)
+	at org.eclipse.ui.actions.ContributedAction.runWithEvent(ContributedAction.java:176)
+	at org.eclipse.cdt.internal.ui.editor.CSelectMarkerRulerAction.triggerAction(CSelectMarkerRulerAction.java:122)
+	at org.eclipse.cdt.internal.ui.editor.CSelectMarkerRulerAction.annotationDefaultSelected(CSelectMarkerRulerAction.java:62)
+	at org.eclipse.jface.text.source.CompositeRuler.fireAnnotationDefaultSelected(CompositeRuler.java:798)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AnnotationExpandHover$VerticalRulerListener.annotationDefaultSelected(AnnotationExpandHover.java:102)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AnnotationExpansionControl$Item.defaultSelected(AnnotationExpansionControl.java:157)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AnnotationExpansionControl$MyMouseListener.mouseUp(AnnotationExpansionControl.java:283)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:237)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-07 20:41:46.682
+!MESSAGE Indexed 'ST7789_DMA' (26 sources, 91 headers) in 3.82 sec: 7,321 declarations; 49,919 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-07 20:42:59.575
+!MESSAGE Indexed 'ST7789_DMA' (26 sources, 91 headers) in 2.64 sec: 7,321 declarations; 49,919 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0035%)
+!SESSION 2025-07-07 20:49:39.703 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-07 20:49:47.158
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-07 20:49:47.160
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-07 20:49:57.518
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-08 08:26:27.024 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-08 08:26:42.267
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-08 08:26:42.269
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-08 08:26:55.491
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-08 11:49:18.066 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-08 11:49:26.411
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-08 11:49:26.413
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-08 11:49:37.097
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-08 11:57:35.696
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Debug/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-08 11:57:35.699
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Debug/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-08 11:57:35.700
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Release/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY com.st.stm32cube.ide.mcu.build 4 4 2025-07-08 11:57:35.701
+!MESSAGE Failed to check relative, returning possibly relative path: E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\ST7789_DMA\Release/"" literal was "${workspace_loc:/${ProjName}/Display}"
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2025-07-08 13:17:21.010
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@22763f39): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+!SESSION 2025-07-08 14:59:47.869 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-08 14:59:56.193
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-08 14:59:56.195
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-08 15:00:06.613
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-08 18:00:23.356 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-08 18:00:30.829
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-08 18:00:30.831
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-08 18:00:40.994
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-07-09 10:33:54.898 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-09 10:34:07.717
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-09 10:34:07.719
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-09 10:34:35.542
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-09 10:44:14.472
+!MESSAGE Indexed 'ST7789_DMA_LL' (35 sources, 102 headers) in 8.75 sec: 9,595 declarations; 73,287 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0024%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-07-09 11:03:09.631
+!MESSAGE Indexed 'ST7789_DMA_LL' (41 sources, 114 headers) in 6.31 sec: 11,118 declarations; 69,052 references; 0 unresolved inclusions; 1 syntax errors; 83 unresolved names (0.1%)
+!SESSION 2025-07-09 16:25:33.869 -----------------------------------------------
+eclipse.buildId=Version 1.19.0
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-07-09 16:26:24.990
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-07-09 16:26:25.001
+!MESSAGE Log4j2 initialized with config file E:\GIOVANNY_TODO\SKETCHS\STM32\STM32G431CBT6\LIBRERIAS CON HAL\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-07-09 16:26:56.344
+!MESSAGE Started RMI Server, listening on port 41337

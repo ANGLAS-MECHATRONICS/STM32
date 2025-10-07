@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="led2"/>
+		<item value="HAL_NVIC_EnableIRQ(EXT"/>
+		<item value="HAL_NVIC_EnableIRQ"/>
+		<item value="flagInicio"/>
+		<item value="show_Exceed_CurrentLimit"/>
+		<item value="PWM_set_Freq_DutyCycle"/>
+		<item value="ee_writeToRam"/>
+		<item value="ee_read"/>
+		<item value="EN_XL6019"/>
+		<item value="SW2_GPIO_Port"/>
+	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="medirVoltage"/>
 		<item key="casesensitive" value="false"/>

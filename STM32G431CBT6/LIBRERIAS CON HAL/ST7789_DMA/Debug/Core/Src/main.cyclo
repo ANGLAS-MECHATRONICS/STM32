@@ -1,0 +1,4 @@
+../Core/Src/main.c:152:6:SystemClock_Config	3
+../Core/Src/main.c:433:6:PWM_set_Freq_DutyCycle	1
+../Core/Src/main.c:80:5:main	7
+../Core/Src/main.c:473:6:Error_Handler	1

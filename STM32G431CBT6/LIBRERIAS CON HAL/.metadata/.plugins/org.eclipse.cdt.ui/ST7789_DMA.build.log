@@ -1,0 +1,10 @@
+16:29:57 **** Incremental Build of configuration Debug for project ST7789_DMA ****
+make -j4 all 
+arm-none-eabi-size  ST7789_DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31860	    484	   8636	  40980	   a014	ST7789_DMA.elf
+Finished building: default.size.stdout
+ 
+
+16:29:58 Build Finished. 0 errors, 0 warnings. (took 384ms)
+
