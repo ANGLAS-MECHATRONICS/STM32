@@ -1,7 +1,11 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ST7789_DMA_LL_F4 Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ST7789_SPI_DMA_LL Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BUTTON_IT_TIMER_LL Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FILEMANAGER_ST7789_BUTTON Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SDCARD_SPI_DMA_LL
 eclipse.preferences.version=1
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BUTTON_IT_TIMER_LL\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:BUTTON_IT_TIMER_LL\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SDCARD_SPI_LL\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SDCARD_SPI_LL\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ST7789_DMA_LL_F4\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ST7789_DMA_LL_F4\ Debug/activeLaunchTarget=null\:---

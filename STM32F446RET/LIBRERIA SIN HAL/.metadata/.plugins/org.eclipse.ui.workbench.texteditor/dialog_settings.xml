@@ -3,6 +3,14 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="GPIO_InitStruct.Speed"/>
+		<item value="rcc"/>
+		<item value="SYS"/>
+		<item value="DMA"/>
+		<item value="DMA2"/>
+		<item value="FS_LOCK"/>
+		<item value="SELECT"/>
+		<item value="GPIO_SD_CS"/>
 		<item value="//выключаем spi"/>
 		<item value="spi-&gt;CR1 &amp;= ~SPI_CR1_SPE;"/>
 		<item value="SysTick"/>
