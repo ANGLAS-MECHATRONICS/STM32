@@ -1,0 +1,17 @@
+1. RCC -> cristal externo -> 25mhz -> HSE
+2. SYS -> Serial Wire
+3. CONNECTIVITY -> SPI1 -> MODE: TRANSMIT ONLY MASTER (COLOCAR 2 PINES DE SPI PULL UP, SCK Y MOSI)
+							- Parameter Settings: Dejar todo por defecto solo cambiar el Data Size: 8bits, Prescaler: 4 (21.0Mbits/s)CPOL: High a 128 (
+							- DMA Settings: Add -> SPI1_TX   DMA2 Stream 5  Memory To Peripheral  Low
+											Modo NORMAL, no use FIFO, Data With: HALFWORD   HALFWORD
+											
+4. CONFIGURAR PINES: RES DC CS (VEL: HIGH Y SALIDA INCIAL HIGH) y TIM3 PARA BLK -> PWM Generation CH1 -> Prescaler: 1000-1 -> Counter Period: 210-1 -> pulse 16 values: 104 
+5. En el .ioc -> PROJECT MANAGER -> ADVANCED SETTINGS -> CAMBIAR HAL POR LL y generar el codigo
+
+6. Copiar la carpeta Display en el proyecto luego anticlick en "Display" y Add/remove include path... y OK 
+											luego anticlic en "Display" y New -> Source Folder -> Browse... -> Seleccionar "Display" -> Finish
+											
+7. en stm32f4xx_it.c agregar #include "display.h", extern uint32_t millis; millis++; Display_TC_Callback(DMA2, LL_DMA_STREAM_3);									
+
+
+													   

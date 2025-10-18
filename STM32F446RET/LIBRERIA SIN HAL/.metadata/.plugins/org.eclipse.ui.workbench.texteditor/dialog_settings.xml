@@ -3,18 +3,20 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
-		<item value="GPIO_InitStruct.Speed"/>
-		<item value="rcc"/>
-		<item value="SYS"/>
-		<item value="DMA"/>
-		<item value="DMA2"/>
-		<item value="FS_LOCK"/>
-		<item value="SELECT"/>
-		<item value="GPIO_SD_CS"/>
-		<item value="//выключаем spi"/>
-		<item value="spi-&gt;CR1 &amp;= ~SPI_CR1_SPE;"/>
-		<item value="SysTick"/>
+		<item value="MX_SPI2_Init"/>
+		<item value="PAGE_ORIENTATION_LANDSCAPE"/>
+		<item value="off"/>
+		<item value="x_off"/>
+		<item value="ooff"/>
+		<item value="LCD_STATIC_WORK_BUFFER_SIZE"/>
+		<item value="x_offs"/>
+		<item value="lcd_read"/>
+		<item value="lcd"/>
+		<item value="lcd_re"/>
 		<item value="LCD_DisplayAdd"/>
-		<item value="lcd-&gt;spi_data.dma_tx.dma"/>
+		<item value="offs"/>
+		<item value="display_work_buffer"/>
+		<item value="static"/>
+		<item value="GPIO_InitStruct.Speed"/>
 	</list>
 </section>

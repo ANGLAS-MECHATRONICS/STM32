@@ -1,0 +1,21 @@
+1. RCC -> cristal externo -> 25mhz -> HSE
+2. SYS -> Serial Wire
+3. CONNECTIVITY -> SPI2 -> MODE: FULL DUPLEX MASTER 
+							- Parameter Settings: Dejar todo por defecto solo cambiar el Prescaler(for Baud Rate) a 128 (328.125KBits/s)
+							- DMA Settings: Add -> SPI2_RX   DMA1 Stream 3  Peripheral To Memory  Low
+											Add -> SPI2_TX   DMA1 Stream 4  Memory To Peripheral  Low
+											Ambos modo NORMAL, no use FIFO, Data With: Byte   Byte
+4. MIDDLEWARE -> FATFS -> User-defined -> Set Defines: Dejar todo por defecto y solo cambiar dos cosas
+											- USE_LFN (Use Long Filename) : Enable with static wotking buffer on the BSS
+											- FS_LOCK (Number  of files opened simultaneously) : 0
+5. En el .ioc -> PROJECT MANAGER -> ADVANCED SETTINGS -> CAMBIAR HAL POR LL ENTONCES, EXCEPTO EN FATFS PORQ NO SE PUEDE JAJA y generar el codigo
+6. Copiar los archivos "user_diskio_spi.h" y "user_diskio_spi_noHAL.c" en la carpeta FATFS->Target
+
+7. hacer los cambios segun tutorial modificar "user_diskio.c" 
+8. COPIAR EL CODIGO DEPSUES DE BEGIN 2
+9. ULTIMA CONFIGURACION
+	- Project -> Propiertes -> donde dice Configuracion: Degub [Active] cambiar a ALL configurations
+	- Project -> Propiertes -> C/C++ Build -> Settings -> MCU/MPU Post build outputs -> Seleccionar los checks "Convert to binary file" y "Convert to Intel Hex File"
+													   -> MCU/MPU GCC Compiler -> Optimization -> cambiar a Optimization Level: Optimize for size (-Os)
+													   APLICAR Y CERRAR
+													   

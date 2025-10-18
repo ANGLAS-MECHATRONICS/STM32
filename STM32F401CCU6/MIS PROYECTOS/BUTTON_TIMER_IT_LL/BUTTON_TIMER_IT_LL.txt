@@ -1,0 +1,18 @@
+1. RCC -> cristal externo -> 25mhz -> HSE
+2. SYS -> Serial Wire
+3. TIMERS -> TIM10 -> 84M entre 1000-1 -> 84000 y esto entre 420-1 -> 200hz
+					Prescaler (PSC-16bit value): 1000-1
+					Counter Period: 420-1
+					NVIC->activar la interrupcion por TIM10
+					
+4. CONFIGURAR 4 BOTONES ENTRADA Y 1 SALIDA
+5. En el .ioc -> PROJECT MANAGER -> ADVANCED SETTINGS -> CAMBIAR HAL POR LL y generar el codigo
+6. Copiar la carpeta "Keyboard" en el proyecto luego anticlick en "Keyboard" y Add/remove include path... y OK 
+											luego anticlic en "Keyboard" y New -> Source Folder -> Browse... -> Seleccionar "Keyboard" -> Finish
+7. Copiar el codigo en el main.c
+8. en stm32f4xx_it.c agregar segun el tutorial
+	- #include "keyboard.h"
+	- KEYB_Input_Keys(); //вызов процедуры опроса кнопок
+									
+					
+																   
