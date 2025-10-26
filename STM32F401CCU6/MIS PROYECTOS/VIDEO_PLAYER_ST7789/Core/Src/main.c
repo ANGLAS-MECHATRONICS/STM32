@@ -226,7 +226,31 @@ int main(void)
 	LCD_Handler lcd1;
 	#endif
 
-	//For display on controller ST7789
+	//For display on controller ST7789 170x320
+	//ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 320x170 -r 23.98 -q 10 che.avi
+	LCD = LCD_DisplayAdd( LCD,
+	#ifndef LCD_DYNAMIC_MEM
+			  	  	  	  	&lcd1,
+	#endif
+			  	  	  	  	170,//170
+			   				320,//320
+							ST7789_CONTROLLER_WIDTH,
+							ST7789_CONTROLLER_HEIGHT,
+							//Задаем смещение по ширине и высоте для нестандартных или бракованных дисплеев:
+							-35,//-35
+							0,//0
+							PAGE_ORIENTATION_LANDSCAPE,// PAGE_ORIENTATION_LANDSCAPE
+							ST7789_Init,
+							ST7789_SetWindow,
+							ST7789_SleepIn,
+							ST7789_SleepOut,
+							&spi_dat,
+							LCD_DATA_16BIT_BUS,
+							bl_dat);
+
+	/*
+	//For display on controller ST7789 135x240
+	//ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 240x135 -r 23.98 -q 10 che.avi
 	LCD = LCD_DisplayAdd( LCD,
 	#ifndef LCD_DYNAMIC_MEM
 			  	  	  	  	&lcd1,
@@ -246,9 +270,10 @@ int main(void)
 							&spi_dat,
 							LCD_DATA_16BIT_BUS,
 							bl_dat);
+	*/
 
-	//For display on controller ILI9341
 	/*
+	//For display on controller ILI9341
 	LCD = LCD_DisplayAdd( LCD,
 	#ifndef LCD_DYNAMIC_MEM
 		  	  	  	  	  &lcd1,
@@ -271,6 +296,7 @@ int main(void)
 						  LCD_DATA_16BIT_BUS,
 						  bl_dat );
 	*/
+
 
 	LCD_Handler *lcd = LCD; //pointer to the first display in the list
 	LCD_Init(lcd);

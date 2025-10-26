@@ -88,6 +88,7 @@ void Rojos_Inverted(uint16_t time);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -130,8 +131,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-
 	  Fade_All_TwoColor(1);//25seg
 	  for(uint16_t i=5 ; i<=25 ; i+=1){Rotate_RGB(999, 8, i);}//13seg
 	  for(uint16_t i=25; i<=50 ; i+=1){Rotate_RGB(999, 2, i);}//6seg
@@ -142,6 +141,7 @@ int main(void)
 	  Rojos(3);
 	  for(uint16_t i=400; i<=1200; i+=400){Rotate_All(999, 1, i,250);}//20seg*/
 
+    /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
   }
@@ -308,15 +308,15 @@ static void MX_TIM14_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -487,8 +487,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.

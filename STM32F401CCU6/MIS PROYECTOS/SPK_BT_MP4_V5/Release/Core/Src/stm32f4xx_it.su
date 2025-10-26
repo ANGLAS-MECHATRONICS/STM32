@@ -1,0 +1,14 @@
+../Core/Src/stm32f4xx_it.c:110:6:NMI_Handler	0	static
+../Core/Src/stm32f4xx_it.c:125:6:HardFault_Handler	0	static
+../Core/Src/stm32f4xx_it.c:140:6:MemManage_Handler	0	static
+../Core/Src/stm32f4xx_it.c:155:6:BusFault_Handler	0	static
+../Core/Src/stm32f4xx_it.c:170:6:UsageFault_Handler	0	static
+../Core/Src/stm32f4xx_it.c:185:6:SVC_Handler	0	static
+../Core/Src/stm32f4xx_it.c:198:6:DebugMon_Handler	0	static
+../Core/Src/stm32f4xx_it.c:211:6:PendSV_Handler	0	static
+../Core/Src/stm32f4xx_it.c:224:6:SysTick_Handler	0	static
+../Core/Src/stm32f4xx_it.c:244:6:DMA1_Stream3_IRQHandler	0	static
+../Core/Src/stm32f4xx_it.c:257:6:DMA1_Stream4_IRQHandler	0	static
+../Core/Src/stm32f4xx_it.c:270:6:TIM1_UP_TIM10_IRQHandler	0	static
+../Core/Src/stm32f4xx_it.c:283:6:DMA2_Stream3_IRQHandler	0	static
+../Core/Src/stm32f4xx_it.c:309:6:DMA1_Stream5_IRQHandler	24	static,ignoring_inline_asm

@@ -72,6 +72,7 @@ uint16_t nroImagen;
 uint32_t contAutomaticOFF=0;
 uint8_t cantMaxImages=30;
 uint8_t flagMostrarDatosParlante=0;
+uint8_t flagMantenerEncendido=1;
 
 float soc, voltage_pwrbank, current_pwrbank, voltage_bat;
 
@@ -381,9 +382,133 @@ int main(void)
 			  HAL_Delay(4000);
 
     	  }else{//si hay 3.7V en la entrada IN_DRAIN_LATCH, entonces esta encendido el parlante, y con las lineas de abajo lo apago
-    		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 0);//Apagar parlante
-			  MAX17048_SetAlertThreshold(1);//al colocar pone a 0 el pin alert y esto hace que consuma unos mA menos
-			  HAL_Delay(2000);//tiempo para apagar luego de encender o viceversa
+
+    		  //HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 0);//Apagar parlante
+			  //MAX17048_SetAlertThreshold(1);//al colocar pone a 0 el pin alert y esto hace que consuma unos mA menos
+			  //HAL_Delay(2000);//tiempo para apagar luego de encender o viceversa
+
+
+
+
+
+			  ////////////////////////////////// DESDE AQUI ESTOY AGREGANDO CODIGO /////////////////
+        	  //Inicia SD CARD
+        	  FRESULT res = f_mount(&fs, "", 0);
+        	  if(res != FR_OK) {
+        	      snprintf(buff, sizeof(buff), "f_mount() failed, res = %d\r\n", res);
+        	      ST7789_Print(0, 150, RGB565(0, 130, 255) , WHITE , Font_16x26, buff);
+        	      return -2;
+        	  }
+
+        	  PWM_set_Freq_DutyCycle(freq_BLK,0);//iniciar pantalla negra
+
+        	  //verifica si esta encendido lo mantiene asi y si esta apagado lo mantiene apagado
+        	  if (HAL_GPIO_ReadPin(IN_DRAIN_LATCH_GPIO_Port, IN_DRAIN_LATCH_Pin) == 1){
+        		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 1);//mantiene encendido
+        	  }
+
+        	  PWM_set_Freq_DutyCycle(freq_BLK,0);//iniciar pantalla negra
+        	  ST7789_Init();
+        	  PWM_set_Freq_DutyCycle(freq_BLK,100);
+        	  MAX17048_Init();
+        	  MAX17048_QuickStart();
+        	  MAX17048_SetAlertThreshold(1);
+    		  INA226_Init(3.2768,25,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);
+    		  INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);
+    		  INA226_Alert_Limit(1500);
+
+
+    		  uint32_t startTime = HAL_GetTick(); // Tiempo inicial
+    		  //mientras no presiono SW3 o no pasan mas de 5000milisegundos
+    		  while(HAL_GPIO_ReadPin(SW3_GPIO_Port, SW3_Pin) == 1 && (HAL_GetTick() - startTime) < 15000 && flagMantenerEncendido == 1){
+
+    			  //if(flagMantenerEncendido == 1){//este flag es para salir del while(HAL_GPIO_ReadPin(GPIOA,
+
+					  if(flagMostrarDatosParlante == 0){
+						  soc = MAX17048_GetSoc();//leer una vez, aqui lee 2% o algo asi porq anteriormente hubo consumo de mA ya sea de powerbank o altavoces
+						  HAL_Delay(500);//esperar para que el voltaje no de 2% porq se activo anteriormente el powerbank
+
+						  soc = MAX17048_GetSoc();//aqui se estabilizar y lee bien luego de ese delay anterior
+						  sprintf(buff,"%3i%%",(uint8_t)soc);
+						  ST7789_Print(100, 10, GREEN, BLACK, Font_16x28, buff);
+
+						  voltage_bat = MAX17048_GetVoltage();
+						  //HAL_Delay(400);//esperar para que el voltaje no de 2% porq se activo anteriormente el powerbank
+
+						  voltage_bat = MAX17048_GetVoltage();
+						  sprintf(buff,"VOLTAGE: %1.2fV",voltage_bat);
+						  ST7789_Print(5, 60, BLUE, BLACK, Font_16x26, buff);
+
+
+						  voltage_pwrbank = INA226_Vbus();
+						  sprintf(buff,"%2.1fV",voltage_pwrbank);
+						  ST7789_Print(50, 100, WHITE, BLACK, Font_16x26, buff);
+
+						  current_pwrbank = INA226_Current();
+						  sprintf(buff,"%4.0fmA",current_pwrbank);
+						  ST7789_Print(140, 100, MAGENTA, BLACK, Font_16x26, buff);
+						  srand(voltage_bat*voltage_bat*voltage_pwrbank*voltage_pwrbank);//genero un num aleatoria con una semilla
+						  nroImagen = (rand() % cantMaxImages) + 1; // Genera número aleatorio entre 1 y cantMaxImages
+					  }
+
+					  if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == 1) {
+						  flagMostrarDatosParlante=1;
+						  startTime = HAL_GetTick();//actualizo el valor cada vez que cambio de imagen, sino se apaga
+						  nroImagen++;
+						  if(nroImagen >= cantMaxImages) nroImagen=1;
+						  displayNumberImage(nroImagen);
+					  }
+
+					  uint32_t startTime = HAL_GetTick(); // Tiempo inicial
+					  //si mantengo presionado el pulsador aumento el contador y cuando llega a 2000 entonces
+					  // pone flagMantenerEncendido=0  y mientras que no suelte no sale del bucle por eso agregue
+					  // esto en el while : && flagMantenerEncendido == 1 para que cuando llegue a 2000
+					  //salga del bucle y apague todo, sino cuando soltamos el pulsador recien apaga
+					  while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 1 && flagMantenerEncendido == 1){//mientras tengo presionado el pulsador SYS_WKUP1
+						  //startTime = HAL_GetTick();//actualizo el valor, ver si descomentar esta linea
+						  if (HAL_GetTick() - startTime >= 2000){
+							  flagMantenerEncendido = 0;
+							  //Apagar parlante
+							  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 0);//Apagar parlante
+							  PWM_set_Freq_DutyCycle(freq_BLK,0);//pantalla apagada
+							  MAX17048_SetAlertThreshold(1);//al colocar pone a 0 el pin alert y esto hace que consuma unos mA menos
+							  HAL_Delay(2000);
+						  }
+					  }//end while
+    			  //}//end if(flagMantenerEncendido == 1)
+        	  }//end while(HAL_GPIO_ReadPin(SW3_GPIO_Port, SW3_Pin) == 1 && (HAL_GetTick() - startTime) < 15000)
+
+    		  //si pasasn los 15segundos, solo apagar la pantalla y no el parlante
+    		  //pero creo que debemos agregar MAX17048_SetAlertThreshold(1); para reducir el consumo
+    		  //corroborar esto con una amperimetro midiendo la corriente
+
+    		  //apagar solo pantalla y dejar encendido el parlante
+        	  PWM_set_Freq_DutyCycle(freq_BLK,0);//pantalla apagada
+        	  HAL_TIM_PWM_Stop(&htim16, TIM_CHANNEL_1);
+        	  ST7789_SleepModeEnter();
+
+    		  /*
+    		  /////////////////////////desde aqui funciona ////////////////
+        	  //verifica si esta encendido lo mantiene asi
+        	  if (HAL_GPIO_ReadPin(IN_DRAIN_LATCH_GPIO_Port, IN_DRAIN_LATCH_Pin) == 1){
+        		  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 1);//mantiene encendido
+        	  }
+
+
+			  PWM_set_Freq_DutyCycle(freq_BLK,100);//encender pantalla para probar
+
+
+			  uint32_t startTime = HAL_GetTick(); // Tiempo inicial
+			  while(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == 1){//mientras tengo presionado el pulsador SYS_WKUP1
+				  if (HAL_GetTick() - startTime >= 2500){
+					  HAL_GPIO_WritePin(ON_OFF_3V7_GPIO_Port, ON_OFF_3V7_Pin, 0);//Apagar parlante
+					  MAX17048_SetAlertThreshold(1);//al colocar pone a 0 el pin alert y esto hace que consuma unos mA menos
+					  PWM_set_Freq_DutyCycle(freq_BLK,0);//apagar pantalla negra
+					  HAL_Delay(2000);
+				  }
+			  }//end while
+			  /////////////////////////end hasta aqui funciona //////////////////////////////
+			  */
     	  }
 
       }

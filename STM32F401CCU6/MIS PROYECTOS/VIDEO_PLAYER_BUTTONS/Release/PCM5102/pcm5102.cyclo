@@ -1,0 +1,7 @@
+../PCM5102/pcm5102.c:23:6:Init_DAC	4
+../PCM5102/pcm5102.c:104:6:Start_DAC	4
+../PCM5102/pcm5102.c:126:6:Update_DAC	4
+../PCM5102/pcm5102.c:141:6:Pause_DAC	1
+../PCM5102/pcm5102.c:146:6:Resume_DAC	1
+../PCM5102/pcm5102.c:151:6:Stop_DAC	4
+../PCM5102/pcm5102.c:163:9:Setup_DAC	13

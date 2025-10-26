@@ -1,0 +1,6 @@
+../Keyboard/keyboard.c:89:6:KEYB_Add_Button	32	static
+../Keyboard/keyboard.c:101:20:KEYB_Get_Button_Status	0	static
+../Keyboard/keyboard.c:118:6:KEYB_Set_Button_Status	8	static
+../Keyboard/keyboard.c:138:10:KEYB_Inkeys	16	static
+../Keyboard/keyboard.c:167:9:KEYB_kbhit	0	static
+../Keyboard/keyboard.c:178:6:KEYB_Input_Keys	8	static

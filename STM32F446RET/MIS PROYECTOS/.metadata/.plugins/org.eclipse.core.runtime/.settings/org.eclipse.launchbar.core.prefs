@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PORTABLE DIGITAL SOURCE Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PORTABLE DIGITAL SOURCE2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DAC Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SLEEP_MODE Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DAC Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PORTABLE DIGITAL SOURCE Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PORTABLE DIGITAL SOURCE2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SLEEP_MODE Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PWM_LASER_RED Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DAC\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:DAC\ Debug/activeLaunchTarget=null\:---
