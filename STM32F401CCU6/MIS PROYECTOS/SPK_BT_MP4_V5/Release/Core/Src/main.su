@@ -1,0 +1,4 @@
+../Core/Src/main.c:67:6:float_to_string	56	static
+../Core/Src/main.c:388:6:SystemClock_Config	8	static,ignoring_inline_asm
+../Core/Src/main.c:131:5:main	384	static,ignoring_inline_asm
+../Core/Src/main.c:848:6:Error_Handler	0	static,ignoring_inline_asm
