@@ -2409,3 +2409,51 @@ java.net.ConnectException: Connection refused: connect
 	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1054)
 	at org.eclipse.debug.internal.ui.DebugUIPlugin$1.run(DebugUIPlugin.java:1257)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.core 4 0 2025-11-15 10:35:34.751
+!MESSAGE An exception occurred during push on URI https://github.com/ANGLAS-MECHATRONICS/STM32.git: https://github.com/ANGLAS-MECHATRONICS/STM32.git: Error writing request body to server
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: Error writing request body to server
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:180)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:217)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/ANGLAS-MECHATRONICS/STM32.git: Error writing request body to server
+	at org.eclipse.jgit.transport.BasePackPushConnection.doPush(BasePackPushConnection.java:239)
+	at org.eclipse.jgit.transport.TransportHttp$SmartHttpPushConnection.doPush(TransportHttp.java:1357)
+	at org.eclipse.jgit.transport.BasePackPushConnection.push(BasePackPushConnection.java:170)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:172)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1367)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:170)
+	... 4 more
+Caused by: java.io.IOException: Error writing request body to server
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$StreamingOutputStream.checkError(HttpURLConnection.java:3825)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$StreamingOutputStream.write(HttpURLConnection.java:3803)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implWrite(BufferedOutputStream.java:222)
+	at java.base/java.io.BufferedOutputStream.write(BufferedOutputStream.java:200)
+	at org.eclipse.jgit.util.TemporaryBuffer.write(TemporaryBuffer.java:161)
+	at org.eclipse.jgit.util.io.TimeoutOutputStream.write(TimeoutOutputStream.java:125)
+	at org.eclipse.jgit.transport.BasePackPushConnection$CheckingSideBandOutputStream.write(BasePackPushConnection.java:470)
+	at org.eclipse.jgit.internal.storage.pack.PackOutputStream.write(PackOutputStream.java:132)
+	at java.base/java.util.zip.DeflaterOutputStream.deflate(DeflaterOutputStream.java:261)
+	at java.base/java.util.zip.DeflaterOutputStream.write(DeflaterOutputStream.java:210)
+	at org.eclipse.jgit.util.TemporaryBuffer.writeTo(TemporaryBuffer.java:296)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeDeltaObjectDeflate(PackWriter.java:1819)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeObjectImpl(PackWriter.java:1766)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeBase(PackWriter.java:1776)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeDeltaObjectDeflate(PackWriter.java:1796)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeObjectImpl(PackWriter.java:1766)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeObject(PackWriter.java:1711)
+	at org.eclipse.jgit.internal.storage.pack.PackOutputStream.writeObject(PackOutputStream.java:171)
+	at org.eclipse.jgit.internal.storage.file.WindowCursor.writeObjects(WindowCursor.java:229)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeObjects(PackWriter.java:1699)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writeObjects(PackWriter.java:1687)
+	at org.eclipse.jgit.internal.storage.pack.PackWriter.writePack(PackWriter.java:1246)
+	at org.eclipse.jgit.transport.BasePackPushConnection.writePack(BasePackPushConnection.java:362)
+	at org.eclipse.jgit.transport.BasePackPushConnection.doPush(BasePackPushConnection.java:219)
+	... 9 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-11-15 10:35:34.754
+!MESSAGE Can't connect to any repository: https://github.com/ANGLAS-MECHATRONICS/STM32.git (https://github.com/ANGLAS-MECHATRONICS/STM32.git: Error writing request body to server)
