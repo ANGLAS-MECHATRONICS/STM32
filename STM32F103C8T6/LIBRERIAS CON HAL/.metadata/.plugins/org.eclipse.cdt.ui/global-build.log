@@ -1,7 +1,7 @@
-10:33:53 **** Incremental Build of configuration Debug for project POTENCIOMETRO_DIGITAL ****
+11:30:17 **** Incremental Build of configuration Debug for project POTENCIOMETRO_DIGITAL ****
 make -j4 all 
 arm-none-eabi-size  POTENCIOMETRO_DIGITAL.elf 
    text	   data	    bss	    dec	    hex	filename
-  43808	    488	   3184	  47480	   b978	POTENCIOMETRO_DIGITAL.elf
+  43824	    488	   3184	  47496	   b988	POTENCIOMETRO_DIGITAL.elf
 Finished building: default.size.stdout
  
