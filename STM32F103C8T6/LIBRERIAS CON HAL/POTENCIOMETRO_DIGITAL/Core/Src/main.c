@@ -122,9 +122,8 @@ int main(void)
   while (1)
   {
 	  dacOut = encoder;
-	  OLED_UpdateIfChanged(0,10,2,"DAC : %4u",dacOut,&last_dacOut);
+	  OLED_UpdateIfChanged(0,10,2,"DAC : %4i",dacOut,&last_dacOut);
 	  MCP4725_Out(dacOut);
-	  //HAL_DAC_SetValue(&hdac, DAC_CHANNEL_1, DAC_ALIGN_12B_R, dacOut);
 
 	  voltage = dacOut * 3.25/4096.0;
 	  OLED_UpdateIfChanged(3,7,3,"%1.3fV",voltage,&last_voltage);
@@ -292,7 +291,7 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pins : SW_Pin DT_Pin CLK_Pin */
   GPIO_InitStruct.Pin = SW_Pin|DT_Pin|CLK_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
