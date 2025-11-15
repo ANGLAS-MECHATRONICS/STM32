@@ -43,7 +43,7 @@
 I2C_HandleTypeDef hi2c1;
 
 /* USER CODE BEGIN PV */
-uint16_t dac;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -90,10 +90,11 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-  MCP4725_Out(1024);
-  HAL_Delay(3000);
-  MCP4725_Out(MCP4725_Read_EEPROM());
-
+  MCP4725_Out_Save_EEPROM(2048);//salda de 1.6V y guardo en eeprom
+  HAL_Delay(2500);
+  MCP4725_Out(1024);//salida de 0.8V y no guardo
+  HAL_Delay(2500);
+  MCP4725_Out(MCP4725_Read_EEPROM());//salida leyendo la eeprom es decir 1.6V
   /* USER CODE END 2 */
 
   /* Infinite loop */
