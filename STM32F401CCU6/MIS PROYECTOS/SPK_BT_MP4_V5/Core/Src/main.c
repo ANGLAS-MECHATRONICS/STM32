@@ -13,11 +13,11 @@
 #include "avi.h"	 		//AVI player
 #include "filemanager.h"	//file manager
 #include "keyboard.h"		//module for working with buttons
-#include "encoder.h"		//encoder driver
 
 #include "stdio.h" //para sprintf
 #include "stdlib.h"
 #include "Anglas_INA226.h"
+#include "Anglas_MAX17048.h"
 
 /* USER CODE END Includes */
 
@@ -30,10 +30,6 @@ volatile uint32_t millis = 0;
 //Variables for the FatFs library
 char Path[4];
 FATFS FatFS;
-
-//Encoder handler
-ENCODER_Handler encoder1;
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -47,6 +43,8 @@ ENCODER_Handler encoder1;
 
 /* Private variables ---------------------------------------------------------*/
 I2C_HandleTypeDef hi2c3;
+
+UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
 float power, current,shunt,voltage;
@@ -63,48 +61,9 @@ static void MX_SPI1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM10_Init(void);
 static void MX_I2C3_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
-void float_to_string(float num, char *str, int precision) {//uso esto porq sprintf no funciona para float y no se porq
-    int int_part = (int) num; // Parte entera
-    float frac_part = num - int_part; // Parte fraccionaria
 
-    // Convertir la parte entera
-    int n = 0;
-    if (int_part == 0) {
-        str[n++] = '0';  // Manejar el caso de 0
-    } else {
-        if (int_part < 0) {  // Si el número es negativo
-            str[n++] = '-';
-            int_part = -int_part;
-        }
-
-        // Convertir cada dígito entero a caracteres
-        int digits[10];
-        int i = 0;
-        while (int_part > 0) {
-            digits[i++] = int_part % 10;
-            int_part /= 10;
-        }
-
-        // Escribir los dígitos de forma inversa
-        for (int j = i - 1; j >= 0; j--) {
-            str[n++] = digits[j] + '0';
-        }
-    }
-
-    // Agregar el punto decimal
-    str[n++] = '.';
-
-    // Convertir la parte fraccionaria
-    for (int i = 0; i < precision; i++) {
-        frac_part *= 10;
-        int frac_digit = (int) frac_part;
-        str[n++] = frac_digit + '0';
-        frac_part -= frac_digit;  // Eliminar la parte entera de la fracción
-    }
-
-    str[n] = '\0'; // Terminar la cadena
-}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -171,15 +130,18 @@ int main(void)
   MX_TIM3_Init();
   MX_TIM10_Init();
   MX_I2C3_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  //CAMBIAR SHUNT 25
-  INA226_Init(3.2768,100,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);
+  MAX17048_Init();
+  MAX17048_QuickStart();
+  MAX17048_SetAlertThreshold(1);
+  INA226_Init(3.2768,100,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);//CAMBIAR SHUNT 25
   INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);
   INA226_Alert_Limit(1500);
 
   /* ---------------------------- PULSADORES ------------------------------- */
-  KEYB_Add_Button(KEY_LEFT_GPIO_Port, KEY_LEFT_Pin, KEYB_LEFT, KEYB_BUTTON_ACTIVE);
+  //KEYB_Add_Button(KEY_LEFT_GPIO_Port, KEY_LEFT_Pin, KEYB_LEFT, KEYB_BUTTON_ACTIVE);
   KEYB_Add_Button(KEY_RIGHT_GPIO_Port, KEY_RIGHT_Pin, KEYB_RIGHT, KEYB_BUTTON_ACTIVE);
   KEYB_Add_Button(KEY_UP_GPIO_Port, KEY_UP_Pin, KEYB_UP, KEYB_BUTTON_ACTIVE);
   KEYB_Add_Button(KEY_DOWN_GPIO_Port, KEY_DOWN_Pin, KEYB_DOWN, KEYB_BUTTON_ACTIVE);
@@ -229,9 +191,9 @@ int main(void)
 							ST7789_CONTROLLER_WIDTH,
 							ST7789_CONTROLLER_HEIGHT,
 							//Задаем смещение по ширине и высоте для нестандартных или бракованных дисплеев:
-							-35,//-35
+							35,//-35
 							0,//0
-							PAGE_ORIENTATION_LANDSCAPE,// PAGE_ORIENTATION_LANDSCAPE
+							PAGE_ORIENTATION_LANDSCAPE_MIRROR,// PAGE_ORIENTATION_LANDSCAPE
 							ST7789_Init,
 							ST7789_SetWindow,
 							ST7789_SleepIn,
@@ -325,7 +287,7 @@ int main(void)
 	  	  	  	  	  	  	  	  	  	  	  	  	   - window width;
 	  	  	  	  	  	  	  	  	  	  	  	  	   - window height. */
 	fm->SetColor(fm, &color_scheme_pl);				 /* Color scheme (index) */
-	fm->SetFont(fm, &Font_8x13);					 /* Font (pointer) */
+	fm->SetFont(fm, &Font_12x20);					 /* Font (pointer) */
 	fm->SetKeys(fm, KEYB_UP, KEYB_DOWN, KEYB_RIGHT); /* Control buttons:
 	   	   	   	   	   	   	   	   	   	   	   	   	    - button bit number up;
 	   	   	   	   	   	   	   	   	   	   	   	   	    - button bit number down;
@@ -345,7 +307,13 @@ int main(void)
 	current = INA226_Current();
 	sprintf(buff,"I:%4.0fmA",current);
 	LCD_WriteString(lcd, 0, 25, buff, &Font_15x25, COLOR_GREEN, COLOR_RED, LCD_SYMBOL_PRINT_FAST);
-	LL_mDelay(2000);
+
+	//LL_mDelay(1000);
+	//uint32_t keys=0;
+	//keys = KEYB_Inkeys();
+	//while (keys & (1 << KEYB_RIGHT));
+
+	while(!KEYB_kbhit());
 
   /* USER CODE END 2 */
 
@@ -746,6 +714,39 @@ static void MX_TIM10_Init(void)
 }
 
 /**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
+/**
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void)
@@ -796,6 +797,9 @@ static void MX_GPIO_Init(void)
   LL_GPIO_SetOutputPin(SD_CS_GPIO_Port, SD_CS_Pin);
 
   /**/
+  LL_GPIO_ResetOutputPin(GPIOB, ON_OFF_3V7_1_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin);
+
+  /**/
   GPIO_InitStruct.Pin = LED_INDCTR_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
@@ -820,6 +824,20 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(LCD_CS_GPIO_Port, &GPIO_InitStruct);
 
   /**/
+  GPIO_InitStruct.Pin = ON_OFF_3V7_1_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /**/
+  GPIO_InitStruct.Pin = IN_DRAIN_LATCH1_Pin;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(IN_DRAIN_LATCH1_GPIO_Port, &GPIO_InitStruct);
+
+  /**/
   GPIO_InitStruct.Pin = SD_CS_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
@@ -828,7 +846,7 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(SD_CS_GPIO_Port, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = KEY_LEFT_Pin|KEY_RIGHT_Pin|KEY_UP_Pin|KEY_DOWN_Pin;
+  GPIO_InitStruct.Pin = KEY_RIGHT_Pin|KEY_DOWN_Pin|KEY_UP_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
   LL_GPIO_Init(GPIOB, &GPIO_InitStruct);

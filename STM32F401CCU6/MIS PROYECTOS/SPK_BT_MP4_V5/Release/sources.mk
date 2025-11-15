@@ -29,12 +29,12 @@ Core/Src \
 Core/Startup \
 Display \
 Drivers/STM32F4xx_HAL_Driver/Src \
-Encoder \
 FATFS \
 FileManager \
 INA226 \
 JPEG \
 Keyboard \
+MAX17048 \
 MP3Helix/src \
 MicroGL2D \
 MyString \

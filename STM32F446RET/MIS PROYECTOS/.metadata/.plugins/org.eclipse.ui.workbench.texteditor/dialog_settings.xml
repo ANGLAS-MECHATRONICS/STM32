@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="datos"/>
+		<item value="while (!oled_tx_done);"/>
+		<item value="while (HAL_I2C_GetState(&amp;hi2c1) != HAL_I2C_STATE_READY) {}"/>
+		<item value="HAL_TIM_PeriodElapsedCallback"/>
+		<item value="tiempo_us"/>
+	</list>
+	<list key="replacehistory">
+		<item value="oled_dma_buffer"/>
+		<item value="//"/>
+		<item value="//while (HAL_I2C_GetState(&amp;hi2c1) != HAL_I2C_STATE_READY) {}"/>
+	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="CS"/>
 		<item key="casesensitive" value="false"/>

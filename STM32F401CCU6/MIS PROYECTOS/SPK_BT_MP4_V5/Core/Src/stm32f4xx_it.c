@@ -28,45 +28,11 @@
 #include "player.h"
 #include "pcm5102.h"
 #include "keyboard.h"
-#include "encoder.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-
 extern uint32_t millis; //system time counter, ms
-extern ENCODER_Handler encoder1; //encoder handler
-
-//Processing encoder events with button press emulation for the Keyboard module
-static void EncoderEventToKeyboard(uint8_t event)
-{
-	uint32_t keys = 0;
-	if (event == ENCODER_EV_FWD) {
-		keys = 1 << KEYB_DOWN;
-	}
-	else if (event == ENCODER_EV_BCK) {
-		keys = 1 << KEYB_UP;
-	}
-	else if (event == ENCODER_EV_BTN_CLICK) {
-		keys = 1 << KEYB_RIGHT;
-	}
-	else if (event == ENCODER_EV_BTN_HOLD) {
-		keys = 1 << KEYB_LEFT;
-	}
-	else if (event == ENCODER_EV_FWD_BTN) {
-		keys = 1 << KEYB_F1;
-	}
-	else if (event == ENCODER_EV_BCK_BTN) {
-		keys = 1 << KEYB_F2;
-	}
-	/*
-	if (keys && (KEYB_count_key < KEYB_SIZE_BUFFER))
-	{
-		KEYB_key_buff[KEYB_count_key] = keys;
-		KEYB_count_key++;
-	}
-	*/
-}
 
 /* USER CODE END TD */
 

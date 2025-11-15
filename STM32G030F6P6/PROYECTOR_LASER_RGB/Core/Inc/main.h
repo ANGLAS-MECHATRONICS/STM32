@@ -59,6 +59,22 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LASER_RED_Pin GPIO_PIN_7
+#define LASER_RED_GPIO_Port GPIOB
+#define LASER_BLUE_Pin GPIO_PIN_14
+#define LASER_BLUE_GPIO_Port GPIOC
+#define ON_OFF_3V7_2_Pin GPIO_PIN_1
+#define ON_OFF_3V7_2_GPIO_Port GPIOA
+#define IN_DRAIN_LATCH2_Pin GPIO_PIN_2
+#define IN_DRAIN_LATCH2_GPIO_Port GPIOA
+#define LASER_GREEN_Pin GPIO_PIN_4
+#define LASER_GREEN_GPIO_Port GPIOA
+#define A4988_SLEEP_Pin GPIO_PIN_5
+#define A4988_SLEEP_GPIO_Port GPIOA
+#define A4988_DIR_Pin GPIO_PIN_12
+#define A4988_DIR_GPIO_Port GPIOA
+#define A4988_EN_Pin GPIO_PIN_3
+#define A4988_EN_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

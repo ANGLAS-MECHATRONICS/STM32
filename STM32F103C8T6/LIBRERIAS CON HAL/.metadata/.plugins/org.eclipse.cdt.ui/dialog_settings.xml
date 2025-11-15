@@ -16,4 +16,22 @@
 		<item key="DIALOG_HEIGHT" value="438"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
+	<section name="NewHeaderFileCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="700"/>
+		<item key="DIALOG_Y_ORIGIN" value="239"/>
+		<item key="DIALOG_WIDTH" value="537"/>
+		<item key="DIALOG_HEIGHT" value="434"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="NewSourceFileCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="700"/>
+		<item key="DIALOG_Y_ORIGIN" value="239"/>
+		<item key="DIALOG_WIDTH" value="537"/>
+		<item key="DIALOG_HEIGHT" value="434"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="askReindex" value="true"/>
+		<item key="askReindex.detail" value="0"/>
+	</section>
 </section>

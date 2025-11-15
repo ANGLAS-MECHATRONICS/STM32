@@ -1,4 +1,4 @@
-../Core/Src/Anglas_INA226.c:20:6:INA226_Init	48	static
+../Core/Src/Anglas_INA226.c:20:6:INA226_Init	56	static
 ../Core/Src/Anglas_INA226.c:62:7:INA226_Vshunt	32	static
 ../Core/Src/Anglas_INA226.c:81:7:INA226_Vbus	32	static
 ../Core/Src/Anglas_INA226.c:96:7:INA226_Current	40	static

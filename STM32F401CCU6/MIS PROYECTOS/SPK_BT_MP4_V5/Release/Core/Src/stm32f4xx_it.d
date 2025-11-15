@@ -26,6 +26,7 @@ Core/Src/stm32f4xx_it.o: ../Core/Src/stm32f4xx_it.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h \
@@ -43,8 +44,7 @@ Core/Src/stm32f4xx_it.o: ../Core/Src/stm32f4xx_it.c ../Core/Inc/main.h \
  E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Display/display_config.h \
  E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/AVI/player.h \
  E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/PCM5102/pcm5102.h \
- E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Keyboard/keyboard.h \
- E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Encoder/encoder.h
+ E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Keyboard/keyboard.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -73,6 +73,7 @@ Core/Src/stm32f4xx_it.o: ../Core/Src/stm32f4xx_it.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h:
@@ -91,4 +92,3 @@ E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Displa
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/AVI/player.h:
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/PCM5102/pcm5102.h:
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Keyboard/keyboard.h:
-E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Encoder/encoder.h:

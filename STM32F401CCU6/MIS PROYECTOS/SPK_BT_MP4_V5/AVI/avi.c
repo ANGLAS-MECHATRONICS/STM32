@@ -28,7 +28,6 @@
 #include "keyboard.h"
 #include <stdlib.h>
 #include <string.h>
-#include "encoder.h"
 
 extern uint32_t millis;				//"System time" counter.
 
@@ -287,15 +286,19 @@ void PlayAVI(char *dir, char *fname, LCD_Handler *lcd, uint16_t x, uint16_t y, u
 			if (AVI_osd == osd2 && millis - osd_time1 >= 5000) { //Hide the OSD menu "Volume" if there is no activity
 				AVI_osd = 0;							 		 //user for 5 or more seconds.
 			}
+
+			uint8_t flagVideo=0;//para entrar o salid de video con misma tecla
 			if (KEYB_kbhit()) { 				//Checking for an event from the encoder.
 				keys = KEYB_Inkeys(); 			//We read the keys of the “buttons”-events of the encoder.
 				if (AVI_osd != osd1) {	//OSD "Options" is hidden.
-					if (keys & (1 << KEYB_RIGHT)) { //Short press the button -> show osd.
+					if ( (keys & (1 << KEYB_RIGHT)) && !flagVideo) { //Short press the button -> show osd.
 						AVI_osd = osd1;
 						osd_time = millis; //Initializing the user's "inactivity" time.
+						flagVideo=1;
 					}
-					else if (!AVI_osd && (keys & (1 << KEYB_LEFT))) break; //Hold the button -> exit the player to the file manager.
-					else if (keys & (1 << KEYB_DOWN)) { //Increase volume.
+					if ( (keys & (1 << KEYB_RIGHT)) && flagVideo) break;//comentar esto para las funciones de color grayscale
+					//else if (!AVI_osd && (keys & (1 << KEYB_LEFT))) break; //Hold the button -> exit the player to the file manager.
+					else if (keys & (1 << KEYB_UP)) { //Increase volume.
 						if (AVI_volume < 16) {
 							AVI_volume++;
 							uint32_t col_bar = (AVI_volume > 3 && AVI_volume < 10) ? COLOR_YELLOW : ((AVI_volume >= 10) ? COLOR_GREEN : COLOR_RED);
@@ -308,7 +311,7 @@ void PlayAVI(char *dir, char *fname, LCD_Handler *lcd, uint16_t x, uint16_t y, u
 						AVI_osd = osd2;
 						osd_time1 = millis; //Initializing the user's "inactivity" time.
 					}
-					else if (keys & (1 << KEYB_UP)) { //Decrease volume.
+					else if (keys & (1 << KEYB_DOWN)) { //Decrease volume.
 						if (AVI_volume) {
 							AVI_volume--;
 							if (!AVI_volume) {

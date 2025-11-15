@@ -50,12 +50,12 @@ void Init_DAC(void)
 	  PB5   ------> I2S3_SD (AF06)
 	  PA15	------> I2S3_WS (AF06)
 
-	  MAX98357A
-	  LRC  -> LCK -> A15
-	  BCLK -> BCK -> B3
-	  DIN  -> DIN -> B5
-	  GAIN -> GND
-	  VCC  -> +3.3V
+	  MAX98357A    PCM5102A    STM32
+	  LRC       -> LCK      -> A15
+	  BCLK      -> BCK      -> B3
+	  DIN       -> DIN      -> B5
+	  GAIN      -> GND
+	  VCC       -> +3.3V
 	*/
 	//conclusions PB3 и PB5
 	GPIO_InitStruct.Pin = LL_GPIO_PIN_3|LL_GPIO_PIN_5;

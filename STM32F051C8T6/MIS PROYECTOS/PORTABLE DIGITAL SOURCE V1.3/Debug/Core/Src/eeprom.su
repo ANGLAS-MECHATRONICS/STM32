@@ -1,8 +1,7 @@
-../Core/Src/eeprom.c:264:6:ee_write.part.0	96	static
-../Core/Src/eeprom.c:203:6:ee_format	40	static
+../Core/Src/eeprom.c:203:6:ee_format	24	static
 ../Core/Src/eeprom.c:245:6:ee_read	12	static
 ../Core/Src/eeprom.c:194:6:ee_init	8	static
-../Core/Src/eeprom.c:264:6:ee_write	16	static
+../Core/Src/eeprom.c:264:6:ee_write	96	static
 ../Core/Src/eeprom.c:313:6:ee_writeToRam	16	static
 ../Core/Src/eeprom.c:327:7:ee_commit	8	static
 ../Core/Src/eeprom.c:338:11:ee_maxVirtualAddress	0	static

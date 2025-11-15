@@ -236,8 +236,7 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim16);//icono de bateria
   HAL_TIM_Base_Start_IT(&htim17);//todos los datos del oled
 
-  HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
-  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
+  //HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
 
   OLED_Clear_DMA();
 
@@ -877,64 +876,82 @@ void medirCorriente(void){
 }
 
 void medirPotencia(void){
-	power = INA226_Power_DMA();
+	/*power = INA226_Power_DMA();
     if(power>=0){
 	    sprintf(buff,"%2.1fW ",power);
 	    OLED_Print_Text_DMA(7,96,1,buff);
     }else{
 	    OLED_Print_Text_DMA(7,96,1,"0.0W ");
-    }
+    }*/
 }
+
 
 void Control_Estabilizar(void){
 
-    HAL_DAC_Start(&hdac1, DAC_CHANNEL_1);
+	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
 
-    if(set_Voltage_Encoder > voltage){
-    	difference = set_Voltage_Encoder - voltage;
-    	if(difference>=0.001 && difference<=rango){
-    		ENCO=ENCO-step;
-    	}else if(difference>rango && difference<=rango*2){
-    		ENCO=ENCO-step;
-    	}else if(difference>rango*2 && difference<=rango*3){
-    		ENCO=ENCO-step;
-    	}else if(difference>rango*3 && difference<=rango*4){
-    		ENCO=ENCO-step;
-    	}else if(difference>rango*4 && difference<=rango*5){
-    		ENCO=ENCO-step;
-    	}else if(difference>rango*5 && difference<=rango*6){
-    		ENCO=ENCO-step*2;
-    	}else if(difference>rango*6 && difference<=rango*7){
-    		ENCO=ENCO-step*3;
-    	}else if(difference>rango*7 && difference<=rango*8){
-    		ENCO=ENCO-step*4;
-    	}
-    	PWM = dac_12bits+ENCO;
-    	dacDMA[0]=PWM;
-    }
 
-    if(set_Voltage_Encoder < voltage){
-    	difference = voltage - set_Voltage_Encoder;
-    	if(difference>=0.001 && difference<=rango){
-    		ENCO=ENCO+step;
-    	}else if(difference>rango && difference<=rango*2){
-    		ENCO=ENCO+step;
-    	}else if(difference>rango*2 && difference<=rango*3){
-    		ENCO=ENCO+step;
-    	}else if(difference>rango*3 && difference<=rango*4){
-    		ENCO=ENCO+step;
-    	}else if(difference>rango*4 && difference<=rango*5){
-    		ENCO=ENCO+step;
-    	}else if(difference>rango*5 && difference<=rango*6){
-    		ENCO=ENCO+step*2;
-    	}else if(difference>rango*6 && difference<=rango*7){
-    		ENCO=ENCO+step*3;
-    	}else if(difference>rango*7 && difference<=rango*8){
-    		ENCO=ENCO+step*4;
-    	}
-    	PWM = dac_12bits+ENCO;
-    	dacDMA[0]=PWM;
-    }
+	if(set_Voltage_Encoder > voltage){
+		difference = set_Voltage_Encoder - voltage;
+
+		if(set_Voltage_Encoder >= 0.5){
+			if(difference>=0.001 && difference<=rango){
+				ENCO=ENCO-step;
+			}else if(difference>rango && difference<=rango*2){
+				ENCO=ENCO-step;
+			}else if(difference>rango*2 && difference<=rango*3){
+				ENCO=ENCO-step;
+			}else if(difference>rango*3 && difference<=rango*4){
+				ENCO=ENCO-step;
+			}else if(difference>rango*4 && difference<=rango*5){
+				ENCO=ENCO-step;
+			}else if(difference>rango*5 && difference<=rango*6){
+				ENCO=ENCO-step*2;
+			}else if(difference>rango*6 && difference<=rango*7){
+				ENCO=ENCO-step*3;
+			}else if(difference>rango*7 && difference<=rango*8){
+				ENCO=ENCO-step*4;
+			}
+			PWM = dac_12bits+ENCO;
+			dacDMA[0]=PWM;
+		}else{
+	    	//Cuando la diferencia era menor a 0.5V, es decir cuando seteamos el voltaje a 0.4V entonces el "sprintf(buff,"%4.0f",PWM)"
+	    	//empezaba a disminuir y eso era porq "difference<=rango*8" -> difference <= 0.4 e ingresaba a ENCO=ENCO-step*4;
+
+			if(difference>=0.001 && difference<=rango){
+				ENCO=ENCO-step;
+			}
+			PWM = dac_12bits+ENCO;
+			dacDMA[0]=PWM;
+		}
+	}
+
+
+
+	if(set_Voltage_Encoder < voltage){
+		difference = voltage - set_Voltage_Encoder;
+		if(difference>=0.001 && difference<=rango){
+			ENCO=ENCO+step;
+		}else if(difference>rango && difference<=rango*2){
+			ENCO=ENCO+step;
+		}else if(difference>rango*2 && difference<=rango*3){
+			ENCO=ENCO+step;
+		}else if(difference>rango*3 && difference<=rango*4){
+			ENCO=ENCO+step;
+		}else if(difference>rango*4 && difference<=rango*5){
+			ENCO=ENCO+step;
+		}else if(difference>rango*5 && difference<=rango*6){
+			ENCO=ENCO+step*2;
+		}else if(difference>rango*6 && difference<=rango*7){
+			ENCO=ENCO+step*3;
+		}else if(difference>rango*7 && difference<=rango*8){
+			ENCO=ENCO+step*4;
+		}
+		PWM = dac_12bits+ENCO;
+		dacDMA[0]=PWM;
+	}
+
+
 }
 
 void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo){

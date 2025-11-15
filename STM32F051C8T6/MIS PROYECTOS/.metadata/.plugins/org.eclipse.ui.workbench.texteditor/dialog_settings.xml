@@ -3,16 +3,21 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="set_Voltage_Encoder"/>
+		<item value="5.5"/>
+		<item value="PWM ="/>
+		<item value="calculate_value_dac_12bits"/>
+		<item value="PWM"/>
+		<item value="HAL_DAC_Start"/>
+		<item value="dacDMA"/>
+		<item value="OLED_Print_Text_DMA(6"/>
+		<item value="Control_Estabilizar"/>
+		<item value="voltage"/>
+		<item value="Voltaje"/>
+		<item value="Voltaje:"/>
+		<item value="Current"/>
 		<item value="led2"/>
 		<item value="HAL_NVIC_EnableIRQ(EXT"/>
-		<item value="HAL_NVIC_EnableIRQ"/>
-		<item value="flagInicio"/>
-		<item value="show_Exceed_CurrentLimit"/>
-		<item value="PWM_set_Freq_DutyCycle"/>
-		<item value="ee_writeToRam"/>
-		<item value="ee_read"/>
-		<item value="EN_XL6019"/>
-		<item value="SW2_GPIO_Port"/>
 	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="medirVoltage"/>

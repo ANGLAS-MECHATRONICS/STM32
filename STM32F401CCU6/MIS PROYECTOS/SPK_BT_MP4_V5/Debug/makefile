@@ -13,12 +13,12 @@ RM := rm -rf
 -include MyString/subdir.mk
 -include MicroGL2D/subdir.mk
 -include MP3Helix/src/subdir.mk
+-include MAX17048/subdir.mk
 -include Keyboard/subdir.mk
 -include JPEG/subdir.mk
 -include INA226/subdir.mk
 -include FileManager/subdir.mk
 -include FATFS/subdir.mk
--include Encoder/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Display/subdir.mk
 -include Core/Startup/subdir.mk

@@ -3,6 +3,6 @@
 ../Core/Src/main.c:590:6:medirVoltage	8	static
 ../Core/Src/main.c:597:6:medirCorriente	8	static
 ../Core/Src/main.c:607:6:medirPotencia	8	static
-../Core/Src/main.c:618:6:Control_Estabilizar	32	static
-../Core/Src/main.c:116:5:main	80	static,ignoring_inline_asm
+../Core/Src/main.c:618:6:Control_Estabilizar	40	static
+../Core/Src/main.c:116:5:main	88	static,ignoring_inline_asm
 ../Core/Src/main.c:677:6:Error_Handler	0	static,ignoring_inline_asm

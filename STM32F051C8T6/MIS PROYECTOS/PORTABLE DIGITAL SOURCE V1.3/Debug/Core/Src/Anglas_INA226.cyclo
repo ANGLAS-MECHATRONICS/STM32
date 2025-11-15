@@ -1,0 +1,7 @@
+../Core/Src/Anglas_INA226.c:20:6:INA226_Init	1
+../Core/Src/Anglas_INA226.c:62:7:INA226_Vshunt	2
+../Core/Src/Anglas_INA226.c:81:7:INA226_Vbus	1
+../Core/Src/Anglas_INA226.c:96:7:INA226_Current	2
+../Core/Src/Anglas_INA226.c:135:7:INA226_Power	1
+../Core/Src/Anglas_INA226.c:149:10:INA226_Mode_pinAlert	1
+../Core/Src/Anglas_INA226.c:187:10:INA226_Alert_Limit	6

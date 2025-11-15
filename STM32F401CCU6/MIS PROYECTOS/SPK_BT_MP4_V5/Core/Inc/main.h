@@ -80,6 +80,12 @@ void Error_Handler(void);
 #define LCD_BLK_GPIO_Port GPIOA
 #define LCD_SDA_Pin LL_GPIO_PIN_7
 #define LCD_SDA_GPIO_Port GPIOA
+#define ON_OFF_3V7_1_Pin LL_GPIO_PIN_0
+#define ON_OFF_3V7_1_GPIO_Port GPIOB
+#define IN_DRAIN_LATCH1_Pin LL_GPIO_PIN_1
+#define IN_DRAIN_LATCH1_GPIO_Port GPIOB
+#define IN_TS3A5018_Pin LL_GPIO_PIN_10
+#define IN_TS3A5018_GPIO_Port GPIOB
 #define SD_CS_Pin LL_GPIO_PIN_12
 #define SD_CS_GPIO_Port GPIOB
 #define SD_CLK_Pin LL_GPIO_PIN_13
@@ -88,14 +94,14 @@ void Error_Handler(void);
 #define SD_MISO_GPIO_Port GPIOB
 #define SD_MOSI_Pin LL_GPIO_PIN_15
 #define SD_MOSI_GPIO_Port GPIOB
-#define KEY_LEFT_Pin LL_GPIO_PIN_6
-#define KEY_LEFT_GPIO_Port GPIOB
+#define EN_TS3A5018_Pin LL_GPIO_PIN_6
+#define EN_TS3A5018_GPIO_Port GPIOB
 #define KEY_RIGHT_Pin LL_GPIO_PIN_7
 #define KEY_RIGHT_GPIO_Port GPIOB
-#define KEY_UP_Pin LL_GPIO_PIN_8
-#define KEY_UP_GPIO_Port GPIOB
-#define KEY_DOWN_Pin LL_GPIO_PIN_9
+#define KEY_DOWN_Pin LL_GPIO_PIN_8
 #define KEY_DOWN_GPIO_Port GPIOB
+#define KEY_UP_Pin LL_GPIO_PIN_9
+#define KEY_UP_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

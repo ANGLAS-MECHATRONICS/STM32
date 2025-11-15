@@ -26,6 +26,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
+ ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h \
@@ -48,8 +49,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/AVI/avi.h \
  E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/FileManager/filemanager.h \
  E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Keyboard/keyboard.h \
- E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Encoder/encoder.h \
- E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/INA226/Anglas_INA226.h
+ E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/INA226/Anglas_INA226.h \
+ E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/MAX17048/Anglas_MAX17048.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -78,6 +79,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h:
@@ -100,5 +102,5 @@ E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/FATFS/
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/AVI/avi.h:
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/FileManager/filemanager.h:
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Keyboard/keyboard.h:
-E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/Encoder/encoder.h:
 E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/INA226/Anglas_INA226.h:
+E:/GIOVANNY_TODO/SKETCHS/STM32/STM32F401CCU6/MIS\ PROYECTOS/SPK_BT_MP4_V5/MAX17048/Anglas_MAX17048.h:
