@@ -68,7 +68,7 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-uint8_t cantLeds=9;//cambiar Encender aleatorio
+uint8_t cantLeds=14;//cambiar Encender aleatorio
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -682,8 +682,8 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 	//uint8_t secuencia1[8]={6,2,7,4,8,1,3,5};
 	//uint8_t secuencia2[8]={5,8,1,4,2,6,3,7};
 
-	uint8_t secuencia1[9]={6,2,7,4,9,8,1,3,5};
-	uint8_t secuencia2[9]={5,8,1,4,2,6,9,3,7};
+	//uint8_t secuencia1[9]={6,2,7,4,9,8,1,3,5};
+	//uint8_t secuencia2[9]={5,8,1,4,2,6,9,3,7};
 
 	//uint8_t secuencia1[10]={6,2,7,4,9,8,1,10,3,5};
 	//uint8_t secuencia2[10]={5,8,10,1,4,2,6,9,3,7};
@@ -697,8 +697,8 @@ void EncenderAleatorio(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 	//uint8_t secuencia1[13]={13,2,8,10,4,1,6,7,12,5,11,3,9};
 	//uint8_t secuencia2[13]={5,12,3,7,8,1,13,2,10,11,9,4,6};
 
-	//uint8_t secuencia1[14]={2,8,13,10,4,1,6,7,12,5,11,3,9,14};
-	//uint8_t secuencia2[14]={5,12,3,13,7,8,1,2,14,10,11,9,4,6};
+	uint8_t secuencia1[14]={2,8,13,10,4,1,6,7,12,5,11,3,9,14};
+	uint8_t secuencia2[14]={5,12,3,13,7,8,1,2,14,10,11,9,4,6};
 
 	//uint8_t secuencia1[15]={2,8,13,10,4,1,15,6,7,12,5,11,3,9,14};
 	//uint8_t secuencia2[15]={5,12,3,13,7,8,1,2,14,10,11,9,4,6,15};

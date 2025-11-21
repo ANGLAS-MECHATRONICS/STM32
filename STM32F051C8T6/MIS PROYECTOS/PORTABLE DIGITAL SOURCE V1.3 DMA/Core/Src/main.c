@@ -119,6 +119,7 @@ void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo);
 void medirCargaBateria(void);
 uint16_t cut_CurrenteLimit_ON(void);
 uint16_t cut_CurrenteLimit_ON_Set(float limitCurrentSet);
+uint16_t cut_CurrenteLimit_OFF_Set(void);
 void show_Exceed_CurrentLimit(void);
 void update_Data_on_Display(void);
 void medirVoltageBattery(void);
@@ -276,7 +277,7 @@ int main(void)
       switch(activate_Protec_Current){
       	case 0: _cut_CurrenteLimit_ON = cut_CurrenteLimit_ON();//proteccion ENABLE:corte automatico por limite de corriente fija establecida
       		break;
-      	case 1: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_ON_Set(3000);//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
+      	case 1: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_OFF_Set();//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
       		break;
       	case 2: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_ON_Set(3000);//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
 
@@ -293,6 +294,7 @@ int main(void)
 
       //Mido el volaje de salida del XL6019 constantemente
       voltage = INA226_Vbus_DMA();
+      current = INA226_Current_DMA();
 
       calculate_value_dac_12bits();
       Control_Estabilizar();
@@ -327,7 +329,7 @@ int main(void)
       //Esto pienso que es porque al incio el INA226 lee una corriente de 2000 o 3000mA y esto hace activar el pinAlert
       //Osea el pinAlert se activa de alguna manera y para evitar eso hago esta linea
       //Habilitando las interrupciones luego de hacer todo el codigo 1 vez y funciono
-      //Verificar la linea 820 HAL_NVIC_EnableIRQ que este comentada, para que aqui recien se habilite la interrupcion
+      //Verificar la linea 823 HAL_NVIC_EnableIRQ que este comentada, para que aqui recien se habilite la interrupcion
 	  if(flagInicio==0){
 		  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 		  powerSupply=0;
@@ -820,7 +822,7 @@ static void MX_GPIO_Init(void)
 
   /* EXTI interrupt init*/
   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 0, 0);
-    //HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);//aqui desactivo manual y no por el .ioc porq no funciona o se cuelga si lo hago por ahi
+  //HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
   /* USER CODE END MX_GPIO_Init_2 */
@@ -876,13 +878,13 @@ void medirCorriente(void){
 }
 
 void medirPotencia(void){
-	/*power = INA226_Power_DMA();
+	power = INA226_Power_DMA();
     if(power>=0){
 	    sprintf(buff,"%2.1fW ",power);
 	    OLED_Print_Text_DMA(7,96,1,buff);
     }else{
 	    OLED_Print_Text_DMA(7,96,1,"0.0W ");
-    }*/
+    }
 }
 
 
@@ -1000,6 +1002,12 @@ uint16_t cut_CurrenteLimit_ON_Set(float limitCurrentSet){
 	return limitCurrentSet;
 }
 
+uint16_t cut_CurrenteLimit_OFF_Set(void){
+	static uint16_t limitCurrentSet = 3000;
+	OLED_Print_Text_DMA(1,0,1,"Current: ----mA");
+	return limitCurrentSet;
+}
+
 void show_Exceed_CurrentLimit(void){
 	powerSupply=0;
 	HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
@@ -1095,6 +1103,23 @@ void control_SW(void){
     if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 1 && mem == 1){suma++; mem = 0;}
     if(suma==1){suma=2;paso_Encoder = 0.1;OLED_Print_Text_DMA(5,104,1,"0.1");}
     if(suma==3){suma=0;paso_Encoder = 1.0;OLED_Print_Text_DMA(5,104,1,"1.0");}
+
+    // Mantener presionado el SW por 2 segundos para encender o apagar el XL6019
+    if (HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 0) {
+        uint32_t startTime = HAL_GetTick();  //Guardar el tiempo en que se presionó el botón
+        // Esperar mientras el botón está presionado
+        while (HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 0) {
+            if (HAL_GetTick() - startTime >= 1200) {  // Si han pasado 1.2 segundos
+            	//para no modificar paso_Encoder agrego estas condiciones
+            	if(suma==2) suma=0;
+            	else if(suma==0) suma=2;
+
+                //HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+                NVIC_SystemReset();  // 🔥 resetea el micro
+                break;  // Salir del bucle
+            }
+        }
+    }
 }
 
 void control_SW1(void){
