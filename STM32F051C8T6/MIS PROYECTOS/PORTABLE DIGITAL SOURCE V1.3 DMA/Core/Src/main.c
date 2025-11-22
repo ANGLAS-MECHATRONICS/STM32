@@ -65,8 +65,6 @@ DMA_HandleTypeDef hdma_i2c1_tx;
 TIM_HandleTypeDef htim6;
 TIM_HandleTypeDef htim14;
 TIM_HandleTypeDef htim15;
-TIM_HandleTypeDef htim16;
-TIM_HandleTypeDef htim17;
 
 /* USER CODE BEGIN PV */
 char buff[16];
@@ -75,7 +73,7 @@ float dac_12bits;
 float power,current,voltage;
 float Vbat,Vdac,set_Voltage_Encoder,difference;
 static float limitCurrent;
-float adcVbat=0,PWM,ENCO=0;
+float PWM,ENCO=0;
 float rango=0.05,step=0.3;
 
 uint8_t sumaSW1=0,contSW1=0,contSW2=0,powerSupply=0,muestrasADC=50;
@@ -84,17 +82,15 @@ uint8_t suma=0,suma1=0,suma2=0;
 uint8_t flagSW1=0,flagBattery=0,flag_Exceed_CurrentLimit=0;
 uint8_t activate_Protec_Current=0;
 
-uint16_t timerShowIconBattery=0,timerShowAllData=0;
 uint32_t dacDMA[1];
-
-static float _cut_CurrenteLimit_ON;
-static float _cut_CurrenteLimit_ON_Set;
 
 extern float valor_Encoder;
 extern float paso_Encoder;
 
 uint8_t flagInicio=0;
 uint8_t flagMode=0, flagModeSelect=1;
+
+float adcVbat, adcNTC, TEMPERATURA;
 
 /* USER CODE END PV */
 
@@ -108,8 +104,6 @@ static void MX_ADC_Init(void);
 static void MX_TIM15_Init(void);
 static void MX_TIM14_Init(void);
 static void MX_TIM6_Init(void);
-static void MX_TIM16_Init(void);
-static void MX_TIM17_Init(void);
 /* USER CODE BEGIN PFP */
 void medirVoltage(void);
 void medirCorriente(void);
@@ -118,15 +112,18 @@ void Control_Estabilizar(void);
 void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo);
 void medirCargaBateria(void);
 uint16_t cut_CurrenteLimit_ON(void);
-uint16_t cut_CurrenteLimit_ON_Set(float limitCurrentSet);
-uint16_t cut_CurrenteLimit_OFF_Set(void);
+uint16_t cut_CurrenteLimit_ON_Set(void);
 void show_Exceed_CurrentLimit(void);
 void update_Data_on_Display(void);
+uint16_t Read_ADC(uint32_t channel);
+void leerPromedioADC(void);
 void medirVoltageBattery(void);
+void medirTemperatura(void);
 void calculate_value_dac_12bits(void);
-void control_SW(void);
+void control_ButtonEncoder(void);
 void control_SW1(void);
 void control_SW2(void);
+void delay_us(uint32_t time);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -170,8 +167,6 @@ int main(void)
   MX_TIM15_Init();
   MX_TIM14_Init();
   MX_TIM6_Init();
-  MX_TIM16_Init();
-  MX_TIM17_Init();
   /* USER CODE BEGIN 2 */
 
   //Subir estas dos lineas solo la 1ra vez, luego dejarlas comentadas
@@ -202,16 +197,14 @@ int main(void)
 	  }
 
 	  switch(flagModeSelect){
-	  	case 1: //OLED_Print_Text_DMA(0,34,2,"ENABLE");
-	  			OLED_Print_Text_DMA(0,0,2,"MODE 1: ENABLE");
+	  	case 1: OLED_Print_Text_DMA(0,0,2,"MODE 1: ENABLE");
 				OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
 				OLED_Print_Text_DMA(4,18,2,"PROTECTION");
 				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
 				OLED_Imagen_Small_DMA(6, 113, Icon_Check, 13, 16);
 				activate_Protec_Current = 0;
 	  		break;
-	  	case 2: //OLED_Print_Text_DMA(0,32,2,"DISABLE");
-	  			OLED_Print_Text_DMA(0,0,2,"MODE 2:DISABLE");
+	  	case 2: OLED_Print_Text_DMA(0,0,2,"MODE 2:DISABLE");
 				OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
 				OLED_Print_Text_DMA(4,18,2,"PROTECTION");
 				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
@@ -219,9 +212,7 @@ int main(void)
 				activate_Protec_Current = 1;
 	  		break;
 	  	case 3: OLED_Print_Text_DMA(0,0,2,"MODE 3:CHARGER");
-				//OLED_Print_Text_DMA(2,5,2, "CURRENT LIMIT");
 				OLED_Print_Text_DMA(2,19,2, "FIXED 5.5V");
-				//OLED_Print_Text_DMA(4,18,2,"PROTECTION");
 				OLED_Print_Text_DMA(4,37,2,"OUTPUT");
 				OLED_Imagen_Small_Invert_DMA(6, 0, Icon_Arrow, 13, 16);
 				OLED_Imagen_Small_DMA(6, 113, Icon_Check, 13, 16);
@@ -230,14 +221,13 @@ int main(void)
 	  }
 
 	  if(!HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin)) flagMode=1;
-  }///////////////////////////////////////////////////////////////////
+  }//end while(flagMode==0)
+  ///////////////////////////////////////////////////////////////////
 
   HAL_TIM_Base_Start_IT(&htim14);//encoder
   HAL_TIM_Base_Start_IT(&htim6);//dac_dma
-  HAL_TIM_Base_Start_IT(&htim16);//icono de bateria
-  HAL_TIM_Base_Start_IT(&htim17);//todos los datos del oled
-
-  //HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
+  HAL_ADC_Start(&hadc);
+  HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
 
   OLED_Clear_DMA();
 
@@ -251,9 +241,9 @@ int main(void)
   	case 1: HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
 	  	  	flagInicio=1;//bandera para no entrar a la condicion donde habilita las interrupciones
   		break;
-  	case 2: HAL_NVIC_DisableIRQ(EXTI4_15_IRQn);
-	  		flagInicio=1;//bandera para no entrar a la condicion donde habilita las interrupciones
-	  		HAL_TIM_Base_Stop_IT(&htim14);//STOP ENCODER
+  	case 2: INA226_Mode_pinAlert_DMA(SHUNT_VOLTAGE_OVER);
+  			HAL_TIM_Base_Stop_IT(&htim14);//STOP ENCODER
+	  		flagInicio=0;//bandera para habilitar las interrupciones
 	  		set_Voltage_Encoder = 5.5;
   		break;
   }
@@ -264,6 +254,8 @@ int main(void)
   OLED_Print_Text_DMA(6,25,2,"   0mA");
   OLED_Print_Text_DMA(7,96,1,"0.0W ");
 
+  uint32_t startTime1=0; // Tiempo inicial timerShowAllData
+  uint32_t startTime2=0; // Tiempo inicial timerShowIconBattery
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -271,26 +263,18 @@ int main(void)
   while (1){
 
 	  update_Data_on_Display();
-	  control_SW();
+	  control_ButtonEncoder();
 
       //Modos de proteccion de sobrecorriente
       switch(activate_Protec_Current){
-      	case 0: _cut_CurrenteLimit_ON = cut_CurrenteLimit_ON();//proteccion ENABLE:corte automatico por limite de corriente fija establecida
-      		break;
-      	case 1: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_OFF_Set();//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
-      		break;
-      	case 2: _cut_CurrenteLimit_ON_Set = cut_CurrenteLimit_ON_Set(3000);//proteccion DISABLE: corte automatico por limite de corriente SETEABLE: 3000mA a todos los voltajes
-
-      	break;
+      	case 0: cut_CurrenteLimit_ON();break;//proteccion ENABLE
+      	case 1: OLED_Print_Text_DMA(1,0,1,"Current: ----mA");break;//proteccion DISABLE
+      	case 2: cut_CurrenteLimit_ON_Set();break;//proteccion ENABLE 5.5V 3000mA
       }
 
       control_SW2();
+      if(activate_Protec_Current<2) control_SW1();//no mostrar el menu de V y mA en MODO 3
 
-      if(activate_Protec_Current<2){
-    	  control_SW1();
-      }else{
-
-      }
 
       //Mido el volaje de salida del XL6019 constantemente
       voltage = INA226_Vbus_DMA();
@@ -298,17 +282,22 @@ int main(void)
 
       calculate_value_dac_12bits();
       Control_Estabilizar();
-      medirVoltageBattery();
 
-      ///////////////////////////// MOSTRAR EN EL DISPLAY CADA CIERTO TIEMPO //////////////////////////////////////////
-      if(timerShowAllData>=7){//cada x * 100ms
+      leerPromedioADC();
+      medirVoltageBattery();
+      //if(Vbat <= 11.9 || Vbat >= 12.4) PWM_set_Freq_DutyCycle(4000,50,100);
+      medirTemperatura();
+      //if(TEMPERATURA <= 20.0 || TEMPERATURA >= 25) PWM_set_Freq_DutyCycle(1000,50,100);
+
+      if (HAL_GetTick() - startTime1 >= 700){//cada 700ms mostrar en el display
     	  medirVoltage();
 		  medirCorriente();
 		  medirPotencia();
-		  timerShowAllData=0;
+		  startTime1 = HAL_GetTick();
       }
 
-      if(timerShowIconBattery>=1){//cada x * 1s
+      if (HAL_GetTick() - startTime2 >= 1000){//cada 1000ms mostrar en el display
+
     	  if(HAL_GPIO_ReadPin(stateCharger_GPIO_Port, stateCharger_Pin)==0){
     		  medirCargaBateria();
     	  }else{
@@ -318,10 +307,13 @@ int main(void)
     		  else 			  OLED_Imagen_Small_DMA(0, 96, chargerBattery2, 32, 16);
     	  }
 
-          sprintf(buff,"%2.1fV",Vbat);
-          OLED_Print_Text_DMA(2,98,1,buff);
+    	    sprintf(buff,"%2.1fV",Vbat);//sprintf(buff,"%4.0f",adcVbat);
+    	    OLED_Print_Text_DMA(2,98,1,buff);
 
-    	  timerShowIconBattery=0;
+    		sprintf(buff,"%3.0f|C",TEMPERATURA);//sprintf(buff,"%4.0f",adcNTC);
+    		OLED_Print_Text_DMA(6,96,1,buff);
+
+    	  startTime2 = HAL_GetTick();
       }
 
       //Activo las interrupciones despues de hacer todo el codigo 1 vez
@@ -329,7 +321,7 @@ int main(void)
       //Esto pienso que es porque al incio el INA226 lee una corriente de 2000 o 3000mA y esto hace activar el pinAlert
       //Osea el pinAlert se activa de alguna manera y para evitar eso hago esta linea
       //Habilitando las interrupciones luego de hacer todo el codigo 1 vez y funciono
-      //Verificar la linea 823 HAL_NVIC_EnableIRQ que este comentada, para que aqui recien se habilite la interrupcion
+      //Verificar la linea 761 HAL_NVIC_EnableIRQ que este comentada, para que aqui recien se habilite la interrupcion
 	  if(flagInicio==0){
 		  HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);
 		  powerSupply=0;
@@ -412,13 +404,13 @@ static void MX_ADC_Init(void)
   */
   hadc.Instance = ADC1;
   hadc.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV1;
-  hadc.Init.Resolution = ADC_RESOLUTION_8B;
+  hadc.Init.Resolution = ADC_RESOLUTION_12B;
   hadc.Init.DataAlign = ADC_DATAALIGN_RIGHT;
   hadc.Init.ScanConvMode = ADC_SCAN_DIRECTION_FORWARD;
   hadc.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc.Init.LowPowerAutoWait = DISABLE;
   hadc.Init.LowPowerAutoPowerOff = DISABLE;
-  hadc.Init.ContinuousConvMode = ENABLE;
+  hadc.Init.ContinuousConvMode = DISABLE;
   hadc.Init.DiscontinuousConvMode = DISABLE;
   hadc.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
@@ -433,7 +425,15 @@ static void MX_ADC_Init(void)
   */
   sConfig.Channel = ADC_CHANNEL_0;
   sConfig.Rank = ADC_RANK_CHANNEL_NUMBER;
-  sConfig.SamplingTime = ADC_SAMPLETIME_71CYCLES_5;
+  sConfig.SamplingTime = ADC_SAMPLETIME_239CYCLES_5;
+  if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Configure for the selected ADC regular channel to be converted.
+  */
+  sConfig.Channel = ADC_CHANNEL_3;
   if (HAL_ADC_ConfigChannel(&hadc, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -681,70 +681,6 @@ static void MX_TIM15_Init(void)
 }
 
 /**
-  * @brief TIM16 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM16_Init(void)
-{
-
-  /* USER CODE BEGIN TIM16_Init 0 */
-
-  /* USER CODE END TIM16_Init 0 */
-
-  /* USER CODE BEGIN TIM16_Init 1 */
-
-  /* USER CODE END TIM16_Init 1 */
-  htim16.Instance = TIM16;
-  htim16.Init.Prescaler = 48000-1;
-  htim16.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim16.Init.Period = 1000-1;
-  htim16.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim16.Init.RepetitionCounter = 0;
-  htim16.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim16) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM16_Init 2 */
-
-  /* USER CODE END TIM16_Init 2 */
-
-}
-
-/**
-  * @brief TIM17 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM17_Init(void)
-{
-
-  /* USER CODE BEGIN TIM17_Init 0 */
-
-  /* USER CODE END TIM17_Init 0 */
-
-  /* USER CODE BEGIN TIM17_Init 1 */
-
-  /* USER CODE END TIM17_Init 1 */
-  htim17.Instance = TIM17;
-  htim17.Init.Prescaler = 48000-1;
-  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim17.Init.Period = 100-1;
-  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim17.Init.RepetitionCounter = 0;
-  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM17_Init 2 */
-
-  /* USER CODE END TIM17_Init 2 */
-
-}
-
-/**
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void)
@@ -838,14 +774,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	if (htim->Instance == TIM14) {//Leemos el encoder cada 5ms
 		set_Voltage_Encoder = Encoder_Run();
 	}
-
-	if (htim->Instance == TIM16) {//Mostramos el icono de bateria en el oled cada 1000ms
-		timerShowIconBattery++;
-	}
-
-	if (htim->Instance == TIM17) {//Mostramos el todos los datos en el oled cada 100ms
-		timerShowAllData++;
-	}
 }
 
 void medirVoltage(void){
@@ -861,7 +789,7 @@ void medirVoltage(void){
     	sprintf(buff,"%2.1fV",voltage);
     	OLED_Print_Text_DMA(2,0,3,buff);
     	//cuado cambia de 9.9v a 10v se ve afectado estas variables y por momentos se borran
-		sprintf(buff,"%2.1fV",Vbat);
+    	sprintf(buff,"%2.1fV",Vbat);
 		OLED_Print_Text_DMA(2,98,1,buff);
 		if(powerSupply==2) OLED_Print_Text_DMA(3,100,2,"ON ");
     }
@@ -887,11 +815,7 @@ void medirPotencia(void){
     }
 }
 
-
 void Control_Estabilizar(void){
-
-	HAL_DAC_Start_DMA(&hdac1, DAC_CHANNEL_1, (uint32_t *)dacDMA, 1, DAC_ALIGN_12B_R);
-
 
 	if(set_Voltage_Encoder > voltage){
 		difference = set_Voltage_Encoder - voltage;
@@ -994,18 +918,12 @@ uint16_t cut_CurrenteLimit_ON(void){
 	return INA226_Alert_Limit_DMA(limitCurrent);
 }
 
-uint16_t cut_CurrenteLimit_ON_Set(float limitCurrentSet){
-	//INA226_Alert_Limit_DMA(limitCurrentSet);
-	sprintf(buff,"Current: %4.0fmA",limitCurrentSet);
+uint16_t cut_CurrenteLimit_ON_Set(void){
+	limitCurrent = 3000;
+	INA226_Alert_Limit_DMA(limitCurrent);
+	sprintf(buff,"Current: %4.0fmA",limitCurrent);
 	OLED_Print_Text_DMA(1,0,1,buff);
-	//return INA226_Alert_Limit_DMA(limitCurrentSet);
-	return limitCurrentSet;
-}
-
-uint16_t cut_CurrenteLimit_OFF_Set(void){
-	static uint16_t limitCurrentSet = 3000;
-	OLED_Print_Text_DMA(1,0,1,"Current: ----mA");
-	return limitCurrentSet;
+	return INA226_Alert_Limit_DMA(limitCurrent);
 }
 
 void show_Exceed_CurrentLimit(void){
@@ -1020,15 +938,11 @@ void show_Exceed_CurrentLimit(void){
 
 	OLED_Print_Text_DMA(0,0,1,"EXCEEDS CURRENT LIMIT");
 	OLED_Print_Text_DMA(1,0,1,"   AT A VOLTAGE OF   ");
-
-    //Modo proteccion de sobrecorriente
-    if(!activate_Protec_Current){//corte automatico por limite de corriente fija establecida
-    	sprintf(buff,"%4.0fmA",limitCurrent);
-    	OLED_Print_Text_DMA(4,0,3,buff);
-    }else{//corte automatico por limite de corriente 2500mA a todos los voltajes
-    	sprintf(buff,"%4.0fmA",_cut_CurrenteLimit_ON_Set);
-    	OLED_Print_Text_DMA(4,0,3,buff);
-    }
+	//MODO 1
+	//MODO 2,nunca ingresara a show_Exceed_CurrentLimit, porque la interrupcion esta disable
+	//MODO 3, corte por 5.5V 3000mA
+	sprintf(buff,"%4.0fmA",limitCurrent);
+	OLED_Print_Text_DMA(4,0,3,buff);
 
 	for(uint8_t i=0; i<3; i++){
 		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
@@ -1054,20 +968,68 @@ void update_Data_on_Display(void){//actualizo 0.1, OFF, que no son tan relevante
 	if(powerSupply==0) OLED_Print_Text_DMA(3,100,2,"OFF");
 
     //Ver el PID
-    sprintf(buff,"%4.0f",PWM);
-    OLED_Print_Text_DMA(6,96,1,buff);
+    //sprintf(buff,"%4.0f",PWM);
+    //OLED_Print_Text_DMA(6,96,1,buff);
 
     //Muestro el voltaje seteado(voltaje de salida deseado)
     sprintf(buff,"Voltage: %2.1fV ",set_Voltage_Encoder);
     OLED_Print_Text_DMA(0,0,1,buff);
 }
 
+uint16_t Read_ADC(uint32_t channel){
+    ADC_ChannelConfTypeDef sConfig = {0};
+    sConfig.Channel = channel;
+    sConfig.Rank = ADC_RANK_CHANNEL_NUMBER;
+    sConfig.SamplingTime = ADC_SAMPLETIME_239CYCLES_5;
+    HAL_ADC_ConfigChannel(&hadc, &sConfig);
+
+    HAL_ADC_Start(&hadc);
+    HAL_ADC_PollForConversion(&hadc, 10);
+    return HAL_ADC_GetValue(&hadc);
+}
+
+#define N_SAMPLES 250
+void leerPromedioADC(void){
+
+	static uint16_t adc0_samples[N_SAMPLES];
+	static uint16_t adc3_samples[N_SAMPLES];
+
+    for(int i=0; i<N_SAMPLES; i++){
+    	//leer si o si juntos sino no funciona
+        adc0_samples[i] = Read_ADC(ADC_CHANNEL_0);
+        adc3_samples[i] = Read_ADC(ADC_CHANNEL_3);
+        delay_us(20);//muy importante este delay
+    }
+
+    float sum0=0, sum3=0;
+    for(int i=0;i<N_SAMPLES;i++){
+        sum0 += adc0_samples[i];
+        sum3 += adc3_samples[i];
+    }
+
+    adcVbat = sum0 / N_SAMPLES;
+    adcNTC  = sum3 / N_SAMPLES;
+}
+
 void medirVoltageBattery(void){
-	HAL_ADC_Start(&hadc);
-	adcVbat=0;
-    for(uint8_t i=0; i<muestrasADC; i++) adcVbat += HAL_ADC_GetValue(&hadc);//Leo 20 muestrasADC del adc para tener una lectura mas precisa
-    adcVbat /= muestrasADC;
-    Vbat = adcVbat*0.05768;//(3.3/2^8)*4.3 ------ divisor resistivo V*10k/(10K+33K) -> V = 4.3
+	Vbat = adcVbat*0.003587;//(3.3/2^16)*4.3 ------ divisor resistivo V*10k/(10K+33K) -> V = 4.3
+    //sprintf(buff,"%2.1fV",Vbat);
+    //OLED_Print_Text_DMA(2,98,1,buff);
+}
+
+void medirTemperatura(void){
+	//Estoy usando un NTC de 30Kohmios y R1 debe ser el doble o un poco mas
+    const float R1 = 46650;// resistencia fija del divisor de tension a GND
+    static float logR2, R2;
+    //coeficientes de S-H en pagina: http://www.thinksrs.com/downloads/programs/Therm%20Calc/NTCCalibrator/NTCcalculator.html
+    const float c1 = 2.095678276e-03, c2 = 0.6001278570e-04, c3 = 5.838641344e-07;
+
+    R2 = R1 * ((4096.0 /adcNTC) - 1.0);	// conversion de tension a resistencia
+    logR2 = logf(R2);
+    TEMPERATURA = ((1.0 / (c1 + c2*logR2 + c3*logR2*logR2*logR2))-273.15);// ecuacion S-H, +6 para calibrar
+
+	//sprintf(buff,"%3.0f|C",TEMPERATURA);
+	//OLED_Print_Text_DMA(6,96,1,buff);
 }
 
 void calculate_value_dac_12bits(void){
@@ -1097,7 +1059,7 @@ void calculate_value_dac_12bits(void){
     dac_12bits = (1.002* dac_12bits - 45);//corrigo el valor del dac_12bits para acercarse lo mas posible al voltaje seteado(set_Voltage_Encoder)
 }
 
-void control_SW(void){
+void control_ButtonEncoder(void){
 	//Control del pulsador del ENCODER (SW)
     if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 0 && mem == 0){mem = 1;}
     if(HAL_GPIO_ReadPin(SW_GPIO_Port, SW_Pin) == 1 && mem == 1){suma++; mem = 0;}
@@ -1133,7 +1095,7 @@ void control_SW1(void){
     if(HAL_GPIO_ReadPin(SW1_GPIO_Port, SW1_Pin) == 0 && mem1 == 1 && powerSupply==0){
   	  contSW1++;
 
-  	  if(contSW1>25){//2.5seg aprox presionado
+  	  if(contSW1>15){//25=2.5seg aprox presionado
   		  HAL_TIM_Base_Stop_IT(&htim14);//desactivo la lectura del encoder
   		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
   		  OLED_Clear_DMA();
@@ -1227,6 +1189,13 @@ void control_SW2(void){
     }
 }
 
+
+void delay_us(uint32_t time){//esta funcion funciona mejor cambie uint16_t  a uint32_t y funciono mejor
+	uint32_t delay = time *(HAL_RCC_GetHCLKFreq() / 1000000);
+	for(int  i = 0; i < delay; i+=14){
+		__ASM("NOP");
+	}
+}
 /* USER CODE END 4 */
 
 /**

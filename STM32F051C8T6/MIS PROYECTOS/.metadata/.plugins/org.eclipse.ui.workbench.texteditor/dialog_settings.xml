@@ -3,21 +3,21 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
-		<item value="current_LSB"/>
 		<item value="HAL_NVIC_EnableIRQ"/>
+		<item value="sprintf(buff,&quot;%2.1fV&quot;,Vbat);"/>
+		<item value="leerPromedioADC"/>
+		<item value="medirVoltageBattery"/>
+		<item value="adc0_samples"/>
+		<item value="OLED_Print_Text_DMA(2,98,1"/>
+		<item value="medirTemperatura"/>
+		<item value="adcVbat"/>
+		<item value="value0"/>
+		<item value="Read_ADC"/>
+		<item value=".Instance = ADC1;"/>
+		<item value=" OLED_Print_Text_DMA(2,98"/>
+		<item value="OLED_Print_Text_DMA(2,98"/>
 		<item value="HAL_DAC_Start_DMA"/>
-		<item value="dac"/>
-		<item value="ee_writeToRam"/>
-		<item value="timerShowIconBattery"/>
-		<item value="ee_read"/>
-		<item value="sumaSW1"/>
-		<item value="mem"/>
-		<item value="memButton"/>
-		<item value="mem2"/>
-		<item value="flagMode"/>
-		<item value="control_SW"/>
-		<item value="paso_Encoder"/>
-		<item value="set_Voltage_Encoder"/>
+		<item value="medirCargaBateria"/>
 	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="medirVoltage"/>

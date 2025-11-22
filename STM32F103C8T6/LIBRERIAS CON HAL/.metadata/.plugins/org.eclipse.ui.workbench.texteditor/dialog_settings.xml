@@ -3,6 +3,7 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="FONT_1"/>
 		<item value="MCP4725_Out"/>
 		<item value="OLED_Print_Text_DMA(5,104,"/>
 	</list>
