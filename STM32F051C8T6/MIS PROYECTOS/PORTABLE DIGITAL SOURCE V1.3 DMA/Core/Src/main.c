@@ -691,7 +691,7 @@ static void MX_DMA_Init(void)
 
   /* DMA interrupt init */
   /* DMA1_Channel2_3_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 3, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
 
 }
@@ -1157,15 +1157,16 @@ void control_SW2(void){
     //Salida de voltaje de XL6019 ON
     if(powerSupply==1){
   	  powerSupply=2;
-  	  OLED_Print_Text_DMA(3,100,2,"ON ");
-  	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
   	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
-  	  HAL_Delay(6);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
+  	  HAL_Delay(7);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
 
       if(flag_Exceed_CurrentLimit==1){
     	  show_Exceed_CurrentLimit();
       }else{
+    	  OLED_Print_Text_DMA(3,100,2,"ON ");
+    	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
     	  PWM_set_Freq_DutyCycle(4000,50,100);
+
     	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
     	  ee_commit();
       }

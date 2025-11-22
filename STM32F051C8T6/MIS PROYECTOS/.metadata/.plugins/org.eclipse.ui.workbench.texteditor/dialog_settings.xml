@@ -3,21 +3,21 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="TIM6"/>
+		<item value="control_ButtonEncoder"/>
+		<item value="HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);"/>
 		<item value="HAL_NVIC_EnableIRQ"/>
-		<item value="sprintf(buff,&quot;%2.1fV&quot;,Vbat);"/>
-		<item value="leerPromedioADC"/>
-		<item value="medirVoltageBattery"/>
-		<item value="adc0_samples"/>
-		<item value="OLED_Print_Text_DMA(2,98,1"/>
-		<item value="medirTemperatura"/>
-		<item value="adcVbat"/>
-		<item value="value0"/>
-		<item value="Read_ADC"/>
-		<item value=".Instance = ADC1;"/>
-		<item value=" OLED_Print_Text_DMA(2,98"/>
-		<item value="OLED_Print_Text_DMA(2,98"/>
-		<item value="HAL_DAC_Start_DMA"/>
-		<item value="medirCargaBateria"/>
+		<item value="timerShowIconBattery"/>
+		<item value="INA226_Alert"/>
+		<item value="INA226_Mode_pinAlert_DMA"/>
+		<item value="control_SW("/>
+		<item value="control_SW"/>
+		<item value="_cut_CurrenteLimit_ON_Set"/>
+		<item value="_cut_CurrenteLimit_ON"/>
+		<item value="cut_CurrenteLimit_OFF_Set"/>
+		<item value="activate_Protec_Current"/>
+		<item value="limitCurrent"/>
+		<item value="cut_CurrenteLimit_ON_Set"/>
 	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="medirVoltage"/>

@@ -10681,7 +10681,7 @@ void control_SW2(void){
  800500a:	b2db      	uxtb	r3, r3
   	  if(contSW2>15){// 1.5seg aprox
  800500c:	2b0f      	cmp	r3, #15
- 800500e:	d854      	bhi.n	80050ba <control_SW2+0xca>
+ 800500e:	d84a      	bhi.n	80050a6 <control_SW2+0xb6>
   	  contSW2++;
  8005010:	7013      	strb	r3, [r2, #0]
     if(HAL_GPIO_ReadPin(SW2_GPIO_Port, SW2_Pin) == 1 && contSW2>0){contSW2=0;}
@@ -10701,129 +10701,130 @@ void control_SW2(void){
     if(powerSupply==1){
  800502e:	7825      	ldrb	r5, [r4, #0]
  8005030:	2d01      	cmp	r5, #1
- 8005032:	d11b      	bne.n	800506c <control_SW2+0x7c>
-  	  powerSupply=2;
- 8005034:	2202      	movs	r2, #2
-  	  OLED_Print_Text_DMA(3,100,2,"ON ");
- 8005036:	4b31      	ldr	r3, [pc, #196]	@ (80050fc <control_SW2+0x10c>)
- 8005038:	2164      	movs	r1, #100	@ 0x64
- 800503a:	2003      	movs	r0, #3
-  	  powerSupply=2;
- 800503c:	7022      	strb	r2, [r4, #0]
-  	  OLED_Print_Text_DMA(3,100,2,"ON ");
- 800503e:	f7fe fe73 	bl	8003d28 <OLED_Print_Text_DMA>
-  	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
- 8005042:	002a      	movs	r2, r5
- 8005044:	2180      	movs	r1, #128	@ 0x80
- 8005046:	482e      	ldr	r0, [pc, #184]	@ (8005100 <control_SW2+0x110>)
- 8005048:	f001 fcca 	bl	80069e0 <HAL_GPIO_WritePin>
+ 8005032:	d111      	bne.n	8005058 <control_SW2+0x68>
   	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
- 800504c:	2180      	movs	r1, #128	@ 0x80
- 800504e:	2090      	movs	r0, #144	@ 0x90
- 8005050:	002a      	movs	r2, r5
- 8005052:	0049      	lsls	r1, r1, #1
- 8005054:	05c0      	lsls	r0, r0, #23
- 8005056:	f001 fcc3 	bl	80069e0 <HAL_GPIO_WritePin>
-  	  HAL_Delay(6);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
- 800505a:	2006      	movs	r0, #6
- 800505c:	f000 fee4 	bl	8005e28 <HAL_Delay>
+ 8005034:	2180      	movs	r1, #128	@ 0x80
+ 8005036:	2090      	movs	r0, #144	@ 0x90
+  	  powerSupply=2;
+ 8005038:	2602      	movs	r6, #2
+  	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
+ 800503a:	002a      	movs	r2, r5
+ 800503c:	0049      	lsls	r1, r1, #1
+ 800503e:	05c0      	lsls	r0, r0, #23
+  	  powerSupply=2;
+ 8005040:	7026      	strb	r6, [r4, #0]
+  	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, SET);
+ 8005042:	f001 fccd 	bl	80069e0 <HAL_GPIO_WritePin>
+  	  HAL_Delay(7);//tiempo minimo que necesita para detectar la sobrecorriente al habilitar el XL6019
+ 8005046:	2007      	movs	r0, #7
+ 8005048:	f000 feee 	bl	8005e28 <HAL_Delay>
       if(flag_Exceed_CurrentLimit==1){
- 8005060:	4b28      	ldr	r3, [pc, #160]	@ (8005104 <control_SW2+0x114>)
- 8005062:	781b      	ldrb	r3, [r3, #0]
- 8005064:	2b01      	cmp	r3, #1
- 8005066:	d12d      	bne.n	80050c4 <control_SW2+0xd4>
+ 800504c:	4b2b      	ldr	r3, [pc, #172]	@ (80050fc <control_SW2+0x10c>)
+ 800504e:	781b      	ldrb	r3, [r3, #0]
+ 8005050:	2b01      	cmp	r3, #1
+ 8005052:	d12d      	bne.n	80050b0 <control_SW2+0xc0>
     	  show_Exceed_CurrentLimit();
- 8005068:	f7ff fc86 	bl	8004978 <show_Exceed_CurrentLimit>
+ 8005054:	f7ff fc90 	bl	8004978 <show_Exceed_CurrentLimit>
     if(powerSupply==3 && flag_Exceed_CurrentLimit==1){
- 800506c:	7823      	ldrb	r3, [r4, #0]
- 800506e:	2b03      	cmp	r3, #3
- 8005070:	d13e      	bne.n	80050f0 <control_SW2+0x100>
- 8005072:	4d24      	ldr	r5, [pc, #144]	@ (8005104 <control_SW2+0x114>)
- 8005074:	782b      	ldrb	r3, [r5, #0]
- 8005076:	2b01      	cmp	r3, #1
- 8005078:	d032      	beq.n	80050e0 <control_SW2+0xf0>
+ 8005058:	7823      	ldrb	r3, [r4, #0]
+ 800505a:	2b03      	cmp	r3, #3
+ 800505c:	d149      	bne.n	80050f2 <control_SW2+0x102>
+ 800505e:	4d27      	ldr	r5, [pc, #156]	@ (80050fc <control_SW2+0x10c>)
+ 8005060:	782b      	ldrb	r3, [r5, #0]
+ 8005062:	2b01      	cmp	r3, #1
+ 8005064:	d03d      	beq.n	80050e2 <control_SW2+0xf2>
     if(powerSupply==3 && flag_Exceed_CurrentLimit==0){
- 800507a:	2b00      	cmp	r3, #0
- 800507c:	d138      	bne.n	80050f0 <control_SW2+0x100>
+ 8005066:	2b00      	cmp	r3, #0
+ 8005068:	d143      	bne.n	80050f2 <control_SW2+0x102>
   	  powerSupply=0;
- 800507e:	2500      	movs	r5, #0
+ 800506a:	2500      	movs	r5, #0
   	  OLED_Print_Text_DMA(3,100,2,"OFF");
- 8005080:	4b21      	ldr	r3, [pc, #132]	@ (8005108 <control_SW2+0x118>)
- 8005082:	2202      	movs	r2, #2
- 8005084:	2164      	movs	r1, #100	@ 0x64
- 8005086:	2003      	movs	r0, #3
+ 800506c:	4b24      	ldr	r3, [pc, #144]	@ (8005100 <control_SW2+0x110>)
+ 800506e:	2202      	movs	r2, #2
+ 8005070:	2164      	movs	r1, #100	@ 0x64
+ 8005072:	2003      	movs	r0, #3
   	  powerSupply=0;
- 8005088:	7025      	strb	r5, [r4, #0]
+ 8005074:	7025      	strb	r5, [r4, #0]
   	  OLED_Print_Text_DMA(3,100,2,"OFF");
- 800508a:	f7fe fe4d 	bl	8003d28 <OLED_Print_Text_DMA>
+ 8005076:	f7fe fe57 	bl	8003d28 <OLED_Print_Text_DMA>
   	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, RESET);
- 800508e:	002a      	movs	r2, r5
- 8005090:	2180      	movs	r1, #128	@ 0x80
- 8005092:	481b      	ldr	r0, [pc, #108]	@ (8005100 <control_SW2+0x110>)
- 8005094:	f001 fca4 	bl	80069e0 <HAL_GPIO_WritePin>
+ 800507a:	002a      	movs	r2, r5
+ 800507c:	2180      	movs	r1, #128	@ 0x80
+ 800507e:	4821      	ldr	r0, [pc, #132]	@ (8005104 <control_SW2+0x114>)
+ 8005080:	f001 fcae 	bl	80069e0 <HAL_GPIO_WritePin>
   	  HAL_GPIO_WritePin(EN_XL6019_GPIO_Port, EN_XL6019_Pin, RESET);
- 8005098:	2180      	movs	r1, #128	@ 0x80
- 800509a:	2090      	movs	r0, #144	@ 0x90
- 800509c:	002a      	movs	r2, r5
- 800509e:	0049      	lsls	r1, r1, #1
- 80050a0:	05c0      	lsls	r0, r0, #23
- 80050a2:	f001 fc9d 	bl	80069e0 <HAL_GPIO_WritePin>
+ 8005084:	2180      	movs	r1, #128	@ 0x80
+ 8005086:	2090      	movs	r0, #144	@ 0x90
+ 8005088:	002a      	movs	r2, r5
+ 800508a:	0049      	lsls	r1, r1, #1
+ 800508c:	05c0      	lsls	r0, r0, #23
+ 800508e:	f001 fca7 	bl	80069e0 <HAL_GPIO_WritePin>
   	  PWM_set_Freq_DutyCycle(1000,50,100);
- 80050a6:	20fa      	movs	r0, #250	@ 0xfa
- 80050a8:	2264      	movs	r2, #100	@ 0x64
- 80050aa:	2132      	movs	r1, #50	@ 0x32
- 80050ac:	0080      	lsls	r0, r0, #2
- 80050ae:	f7ff fb07 	bl	80046c0 <PWM_set_Freq_DutyCycle>
+ 8005092:	20fa      	movs	r0, #250	@ 0xfa
+ 8005094:	2264      	movs	r2, #100	@ 0x64
+ 8005096:	2132      	movs	r1, #50	@ 0x32
+ 8005098:	0080      	lsls	r0, r0, #2
+ 800509a:	f7ff fb11 	bl	80046c0 <PWM_set_Freq_DutyCycle>
   	  ENCO=0;//ver si eliminar esta linea
- 80050b2:	2200      	movs	r2, #0
- 80050b4:	4b15      	ldr	r3, [pc, #84]	@ (800510c <control_SW2+0x11c>)
- 80050b6:	601a      	str	r2, [r3, #0]
+ 800509e:	2200      	movs	r2, #0
+ 80050a0:	4b19      	ldr	r3, [pc, #100]	@ (8005108 <control_SW2+0x118>)
+ 80050a2:	601a      	str	r2, [r3, #0]
 }
- 80050b8:	e01a      	b.n	80050f0 <control_SW2+0x100>
+ 80050a4:	e025      	b.n	80050f2 <control_SW2+0x102>
   		  powerSupply++;
- 80050ba:	7823      	ldrb	r3, [r4, #0]
+ 80050a6:	7823      	ldrb	r3, [r4, #0]
   		  contSW2=0;
- 80050bc:	7010      	strb	r0, [r2, #0]
+ 80050a8:	7010      	strb	r0, [r2, #0]
   		  powerSupply++;
- 80050be:	3301      	adds	r3, #1
- 80050c0:	7023      	strb	r3, [r4, #0]
- 80050c2:	e7a6      	b.n	8005012 <control_SW2+0x22>
+ 80050aa:	3301      	adds	r3, #1
+ 80050ac:	7023      	strb	r3, [r4, #0]
+ 80050ae:	e7b0      	b.n	8005012 <control_SW2+0x22>
+    	  OLED_Print_Text_DMA(3,100,2,"ON ");
+ 80050b0:	4b16      	ldr	r3, [pc, #88]	@ (800510c <control_SW2+0x11c>)
+ 80050b2:	0032      	movs	r2, r6
+ 80050b4:	2164      	movs	r1, #100	@ 0x64
+ 80050b6:	2003      	movs	r0, #3
+ 80050b8:	f7fe fe36 	bl	8003d28 <OLED_Print_Text_DMA>
+    	  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);
+ 80050bc:	002a      	movs	r2, r5
+ 80050be:	2180      	movs	r1, #128	@ 0x80
+ 80050c0:	4810      	ldr	r0, [pc, #64]	@ (8005104 <control_SW2+0x114>)
+ 80050c2:	f001 fc8d 	bl	80069e0 <HAL_GPIO_WritePin>
     	  PWM_set_Freq_DutyCycle(4000,50,100);
- 80050c4:	20fa      	movs	r0, #250	@ 0xfa
- 80050c6:	2264      	movs	r2, #100	@ 0x64
- 80050c8:	2132      	movs	r1, #50	@ 0x32
- 80050ca:	0100      	lsls	r0, r0, #4
- 80050cc:	f7ff faf8 	bl	80046c0 <PWM_set_Freq_DutyCycle>
+ 80050c6:	20fa      	movs	r0, #250	@ 0xfa
+ 80050c8:	2264      	movs	r2, #100	@ 0x64
+ 80050ca:	2132      	movs	r1, #50	@ 0x32
+ 80050cc:	0100      	lsls	r0, r0, #4
+ 80050ce:	f7ff faf7 	bl	80046c0 <PWM_set_Freq_DutyCycle>
     	  ee_writeToRam(0, sizeof(float), (uint8_t*)&valor_Encoder);//escribo en al eeprom
- 80050d0:	2104      	movs	r1, #4
- 80050d2:	4a0f      	ldr	r2, [pc, #60]	@ (8005110 <control_SW2+0x120>)
- 80050d4:	2000      	movs	r0, #0
- 80050d6:	f7fe ffed 	bl	80040b4 <ee_writeToRam>
+ 80050d2:	2104      	movs	r1, #4
+ 80050d4:	4a0e      	ldr	r2, [pc, #56]	@ (8005110 <control_SW2+0x120>)
+ 80050d6:	2000      	movs	r0, #0
+ 80050d8:	f7fe ffec 	bl	80040b4 <ee_writeToRam>
     	  ee_commit();
- 80050da:	f7ff f801 	bl	80040e0 <ee_commit>
- 80050de:	e7c5      	b.n	800506c <control_SW2+0x7c>
+ 80050dc:	f7ff f800 	bl	80040e0 <ee_commit>
+ 80050e0:	e7ba      	b.n	8005058 <control_SW2+0x68>
   	  powerSupply=0;
- 80050e0:	2600      	movs	r6, #0
- 80050e2:	7026      	strb	r6, [r4, #0]
+ 80050e2:	2600      	movs	r6, #0
+ 80050e4:	7026      	strb	r6, [r4, #0]
   	  show_Exceed_CurrentLimit();
- 80050e4:	f7ff fc48 	bl	8004978 <show_Exceed_CurrentLimit>
+ 80050e6:	f7ff fc47 	bl	8004978 <show_Exceed_CurrentLimit>
     if(powerSupply==3 && flag_Exceed_CurrentLimit==0){
- 80050e8:	7823      	ldrb	r3, [r4, #0]
+ 80050ea:	7823      	ldrb	r3, [r4, #0]
   	  flag_Exceed_CurrentLimit=0;
- 80050ea:	702e      	strb	r6, [r5, #0]
+ 80050ec:	702e      	strb	r6, [r5, #0]
     if(powerSupply==3 && flag_Exceed_CurrentLimit==0){
- 80050ec:	2b03      	cmp	r3, #3
- 80050ee:	d0c6      	beq.n	800507e <control_SW2+0x8e>
+ 80050ee:	2b03      	cmp	r3, #3
+ 80050f0:	d0bb      	beq.n	800506a <control_SW2+0x7a>
 }
- 80050f0:	bd70      	pop	{r4, r5, r6, pc}
- 80050f2:	46c0      	nop			@ (mov r8, r8)
+ 80050f2:	bd70      	pop	{r4, r5, r6, pc}
  80050f4:	20000a28 	.word	0x20000a28
  80050f8:	20000a29 	.word	0x20000a29
- 80050fc:	0800ecdf 	.word	0x0800ecdf
- 8005100:	48001400 	.word	0x48001400
- 8005104:	20000a21 	.word	0x20000a21
- 8005108:	0800ed3b 	.word	0x0800ed3b
- 800510c:	20000a2c 	.word	0x20000a2c
+ 80050fc:	20000a21 	.word	0x20000a21
+ 8005100:	0800ed3b 	.word	0x0800ed3b
+ 8005104:	48001400 	.word	0x48001400
+ 8005108:	20000a2c 	.word	0x20000a2c
+ 800510c:	0800ecdf 	.word	0x0800ecdf
  8005110:	20000004 	.word	0x20000004
 
 08005114 <delay_us>:
@@ -11110,22 +11111,22 @@ void leerPromedioADC(void){
  80052a6:	f000 ffd7 	bl	8006258 <HAL_NVIC_SetPriority>
   __HAL_RCC_DMA1_CLK_ENABLE();
  80052aa:	696b      	ldr	r3, [r5, #20]
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
- 80052ac:	0021      	movs	r1, r4
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 3, 0);
+ 80052ac:	2103      	movs	r1, #3
   __HAL_RCC_DMA1_CLK_ENABLE();
  80052ae:	4333      	orrs	r3, r6
  80052b0:	616b      	str	r3, [r5, #20]
  80052b2:	696b      	ldr	r3, [r5, #20]
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 3, 0);
  80052b4:	0022      	movs	r2, r4
   __HAL_RCC_DMA1_CLK_ENABLE();
  80052b6:	4033      	ands	r3, r6
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 3, 0);
  80052b8:	200a      	movs	r0, #10
   __HAL_RCC_DMA1_CLK_ENABLE();
  80052ba:	9307      	str	r3, [sp, #28]
  80052bc:	9b07      	ldr	r3, [sp, #28]
-  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 3, 0);
  80052be:	f000 ffcb 	bl	8006258 <HAL_NVIC_SetPriority>
   HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
  80052c2:	200a      	movs	r0, #10
@@ -12316,16 +12317,16 @@ void HAL_DAC_MspInit(DAC_HandleTypeDef* hdac)
     __HAL_LINKDMA(hdac,DMA_Handle1,hdma_dac1_ch1);
 
     /* DAC interrupt Init */
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
- 8005a76:	2200      	movs	r2, #0
- 8005a78:	2011      	movs	r0, #17
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
+ 8005a76:	2011      	movs	r0, #17
     __HAL_LINKDMA(hdac,DMA_Handle1,hdma_dac1_ch1);
- 8005a7a:	60ac      	str	r4, [r5, #8]
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
- 8005a7c:	0011      	movs	r1, r2
+ 8005a78:	60ac      	str	r4, [r5, #8]
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
+ 8005a7a:	2200      	movs	r2, #0
+ 8005a7c:	2103      	movs	r1, #3
     __HAL_LINKDMA(hdac,DMA_Handle1,hdma_dac1_ch1);
  8005a7e:	6265      	str	r5, [r4, #36]	@ 0x24
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
  8005a80:	f000 fbea 	bl	8006258 <HAL_NVIC_SetPriority>
     HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
  8005a84:	2011      	movs	r0, #17
@@ -12467,14 +12468,14 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
     __HAL_LINKDMA(hi2c,hdmatx,hdma_i2c1_tx);
 
     /* I2C1 interrupt Init */
-    HAL_NVIC_SetPriority(I2C1_IRQn, 0, 0);
- 8005b20:	2200      	movs	r2, #0
- 8005b22:	2017      	movs	r0, #23
- 8005b24:	0011      	movs	r1, r2
+    HAL_NVIC_SetPriority(I2C1_IRQn, 3, 0);
+ 8005b20:	2017      	movs	r0, #23
+ 8005b22:	2200      	movs	r2, #0
+ 8005b24:	2103      	movs	r1, #3
     __HAL_LINKDMA(hi2c,hdmatx,hdma_i2c1_tx);
  8005b26:	63ac      	str	r4, [r5, #56]	@ 0x38
  8005b28:	6265      	str	r5, [r4, #36]	@ 0x24
-    HAL_NVIC_SetPriority(I2C1_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(I2C1_IRQn, 3, 0);
  8005b2a:	f000 fb95 	bl	8006258 <HAL_NVIC_SetPriority>
     HAL_NVIC_EnableIRQ(I2C1_IRQn);
  8005b2e:	2017      	movs	r0, #23
@@ -12515,23 +12516,23 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
  8005b56:	2110      	movs	r1, #16
  8005b58:	4b1a      	ldr	r3, [pc, #104]	@ (8005bc4 <HAL_TIM_Base_MspInit+0x78>)
     /* TIM6 interrupt Init */
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
  8005b5a:	2011      	movs	r0, #17
     __HAL_RCC_TIM6_CLK_ENABLE();
  8005b5c:	69da      	ldr	r2, [r3, #28]
  8005b5e:	430a      	orrs	r2, r1
  8005b60:	61da      	str	r2, [r3, #28]
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
- 8005b62:	2200      	movs	r2, #0
+ 8005b62:	69db      	ldr	r3, [r3, #28]
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
+ 8005b64:	2200      	movs	r2, #0
     __HAL_RCC_TIM6_CLK_ENABLE();
- 8005b64:	69db      	ldr	r3, [r3, #28]
  8005b66:	400b      	ands	r3, r1
  8005b68:	9301      	str	r3, [sp, #4]
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
- 8005b6a:	0011      	movs	r1, r2
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
+ 8005b6a:	390d      	subs	r1, #13
     __HAL_RCC_TIM6_CLK_ENABLE();
  8005b6c:	9b01      	ldr	r3, [sp, #4]
-    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM6_DAC_IRQn, 3, 0);
  8005b6e:	f000 fb73 	bl	8006258 <HAL_NVIC_SetPriority>
     HAL_NVIC_EnableIRQ(TIM6_DAC_IRQn);
  8005b72:	2011      	movs	r0, #17
@@ -12539,7 +12540,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     /* Peripheral clock enable */
     __HAL_RCC_TIM14_CLK_ENABLE();
     /* TIM14 interrupt Init */
-    HAL_NVIC_SetPriority(TIM14_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
     HAL_NVIC_EnableIRQ(TIM14_IRQn);
  8005b74:	f000 fb9a 	bl	80062ac <HAL_NVIC_EnableIRQ>
     /* USER CODE BEGIN TIM15_MspInit 1 */
@@ -12559,22 +12560,22 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
  8005b84:	4b0f      	ldr	r3, [pc, #60]	@ (8005bc4 <HAL_TIM_Base_MspInit+0x78>)
  8005b86:	0049      	lsls	r1, r1, #1
  8005b88:	69da      	ldr	r2, [r3, #28]
-    HAL_NVIC_SetPriority(TIM14_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
  8005b8a:	2013      	movs	r0, #19
     __HAL_RCC_TIM14_CLK_ENABLE();
  8005b8c:	430a      	orrs	r2, r1
  8005b8e:	61da      	str	r2, [r3, #28]
-    HAL_NVIC_SetPriority(TIM14_IRQn, 0, 0);
- 8005b90:	2200      	movs	r2, #0
+ 8005b90:	69db      	ldr	r3, [r3, #28]
+    HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
+ 8005b92:	2200      	movs	r2, #0
     __HAL_RCC_TIM14_CLK_ENABLE();
- 8005b92:	69db      	ldr	r3, [r3, #28]
  8005b94:	400b      	ands	r3, r1
  8005b96:	9302      	str	r3, [sp, #8]
-    HAL_NVIC_SetPriority(TIM14_IRQn, 0, 0);
- 8005b98:	0011      	movs	r1, r2
+    HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
+ 8005b98:	39fd      	subs	r1, #253	@ 0xfd
     __HAL_RCC_TIM14_CLK_ENABLE();
  8005b9a:	9b02      	ldr	r3, [sp, #8]
-    HAL_NVIC_SetPriority(TIM14_IRQn, 0, 0);
+    HAL_NVIC_SetPriority(TIM14_IRQn, 3, 0);
  8005b9c:	f000 fb5c 	bl	8006258 <HAL_NVIC_SetPriority>
     HAL_NVIC_EnableIRQ(TIM14_IRQn);
  8005ba0:	2013      	movs	r0, #19

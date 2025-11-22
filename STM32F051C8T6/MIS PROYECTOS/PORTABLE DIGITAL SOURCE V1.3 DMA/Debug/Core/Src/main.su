@@ -18,7 +18,7 @@
 ../Core/Src/main.c:1062:6:control_ButtonEncoder	24	static,ignoring_inline_asm
 ../Core/Src/main.c:1087:6:control_SW1	32	static
 ../Core/Src/main.c:1144:6:control_SW2	16	static
-../Core/Src/main.c:1193:6:delay_us	8	static,ignoring_inline_asm
+../Core/Src/main.c:1194:6:delay_us	8	static,ignoring_inline_asm
 ../Core/Src/main.c:992:6:leerPromedioADC	32	static
 ../Core/Src/main.c:138:5:main	152	static,ignoring_inline_asm
-../Core/Src/main.c:1205:6:Error_Handler	0	static,ignoring_inline_asm
+../Core/Src/main.c:1206:6:Error_Handler	0	static,ignoring_inline_asm
