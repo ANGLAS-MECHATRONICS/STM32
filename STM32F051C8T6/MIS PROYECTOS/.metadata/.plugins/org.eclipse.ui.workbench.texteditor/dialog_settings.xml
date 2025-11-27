@@ -3,21 +3,21 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="show"/>
+		<item value="if(powerSupply==2"/>
+		<item value="show_Exceed_CurrentLimit"/>
+		<item value="HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);"/>
+		<item value="powerSupply==2"/>
+		<item value="SHOW"/>
+		<item value="if(powerSupply==2 &amp;&amp; flag_Exceed_CurrentLimit==0)"/>
+		<item value="powerSupply"/>
+		<item value="flag_Exceed_CurrentLimit"/>
+		<item value="HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, SET);"/>
+		<item value="EXC"/>
 		<item value="TIM6"/>
 		<item value="control_ButtonEncoder"/>
-		<item value="HAL_NVIC_EnableIRQ(EXTI4_15_IRQn);"/>
 		<item value="HAL_NVIC_EnableIRQ"/>
 		<item value="timerShowIconBattery"/>
-		<item value="INA226_Alert"/>
-		<item value="INA226_Mode_pinAlert_DMA"/>
-		<item value="control_SW("/>
-		<item value="control_SW"/>
-		<item value="_cut_CurrenteLimit_ON_Set"/>
-		<item value="_cut_CurrenteLimit_ON"/>
-		<item value="cut_CurrenteLimit_OFF_Set"/>
-		<item value="activate_Protec_Current"/>
-		<item value="limitCurrent"/>
-		<item value="cut_CurrenteLimit_ON_Set"/>
 	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="medirVoltage"/>
