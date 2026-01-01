@@ -108,7 +108,8 @@ static void I2S3_Init(void)
 	I2S_InitStruct.MCLKOutput = LL_I2S_MCLK_OUTPUT_DISABLE;
 	I2S_InitStruct.DataFormat = LL_I2S_DATAFORMAT_16B;
 	I2S_InitStruct.ClockPolarity = LL_I2S_POLARITY_LOW;
-	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_44K;
+	//I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_32K;
+	I2S_InitStruct.AudioFreq = 28220U;
 	LL_I2S_Init(SPI3, &I2S_InitStruct);
 }
 

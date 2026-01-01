@@ -40,8 +40,6 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-TIM_HandleTypeDef htim1;
-TIM_HandleTypeDef htim3;
 
 /* USER CODE BEGIN PV */
 
@@ -50,8 +48,6 @@ TIM_HandleTypeDef htim3;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_TIM3_Init(void);
-static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -90,16 +86,65 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_TIM3_Init();
-  MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+  HAL_GPIO_WritePin(ON_OFF_3V7_2_GPIO_Port, ON_OFF_3V7_2_Pin, 1);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  uint16_t tiempo_ms=1;
+  uint32_t startTime = HAL_GetTick();// Tiempo inicial
+
   while (1)
   {
+
+
+	  //encender los laseres con el pulsador para pruebas inciales
+	  if(HAL_GPIO_ReadPin(BUTTON_GPIO_Port, BUTTON_Pin)==1){
+		  HAL_GPIO_WritePin(LASER_BLUE_GPIO_Port , LASER_BLUE_Pin , 1);
+		  HAL_GPIO_WritePin(LASER_GREEN_GPIO_Port, LASER_GREEN_Pin, 1);
+		  HAL_GPIO_WritePin(LASER_RED_GPIO_Port  , LASER_RED_Pin  , 1);
+	  }else{
+		  HAL_GPIO_WritePin(LASER_BLUE_GPIO_Port , LASER_BLUE_Pin , 0);
+		  HAL_GPIO_WritePin(LASER_GREEN_GPIO_Port, LASER_GREEN_Pin, 0);
+		  HAL_GPIO_WritePin(LASER_RED_GPIO_Port  , LASER_RED_Pin  , 0);
+	  }
+
+
+	  if (HAL_GetTick() - startTime >= 80){//
+		  startTime += 80;//mas preciso que "startTime = HAL_GetTick();"
+
+		  HAL_GPIO_WritePin(A4988_EN_GPIO_Port, A4988_EN_Pin, 0);//habilito el motor
+		  HAL_GPIO_WritePin(A4988_DIR_GPIO_Port, A4988_DIR_Pin, 1);//sentido horario
+		  for(int i = 0; i < 2; i++){
+			  HAL_GPIO_WritePin(A4988_STEP_GPIO_Port, A4988_STEP_Pin, 1);HAL_Delay(tiempo_ms);
+			  HAL_GPIO_WritePin(A4988_STEP_GPIO_Port, A4988_STEP_Pin, 0);HAL_Delay(tiempo_ms);
+		  }
+		  HAL_GPIO_WritePin(A4988_EN_GPIO_Port, A4988_EN_Pin, 1);//deshabilito el motor
+	  }
+
+
+
+
+
+
+
+
+	  /*
+	  for(uint8_t i=0; i < 10; i++){
+		  HAL_GPIO_WritePin(LASER_BLUE_GPIO_Port, LASER_BLUE_Pin, SET);HAL_Delay(500);
+		  HAL_GPIO_WritePin(LASER_BLUE_GPIO_Port, LASER_BLUE_Pin, RESET);HAL_Delay(500);
+
+		  HAL_GPIO_WritePin(LASER_GREEN_GPIO_Port, LASER_GREEN_Pin, SET);HAL_Delay(500);
+		  HAL_GPIO_WritePin(LASER_GREEN_GPIO_Port, LASER_GREEN_Pin, RESET);HAL_Delay(500);
+
+		  HAL_GPIO_WritePin(LASER_RED_GPIO_Port, LASER_RED_Pin, SET);HAL_Delay(500);
+		  HAL_GPIO_WritePin(LASER_RED_GPIO_Port, LASER_RED_Pin, RESET);HAL_Delay(500);
+	  }
+	  */
+
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -148,144 +193,6 @@ void SystemClock_Config(void)
 }
 
 /**
-  * @brief TIM1 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM1_Init(void)
-{
-
-  /* USER CODE BEGIN TIM1_Init 0 */
-
-  /* USER CODE END TIM1_Init 0 */
-
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-  TIM_OC_InitTypeDef sConfigOC = {0};
-  TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
-
-  /* USER CODE BEGIN TIM1_Init 1 */
-
-  /* USER CODE END TIM1_Init 1 */
-  htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 0;
-  htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
-  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim1.Init.RepetitionCounter = 0;
-  htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 0;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  sConfigOC.OCIdleState = TIM_OCIDLESTATE_RESET;
-  sConfigOC.OCNIdleState = TIM_OCNIDLESTATE_RESET;
-  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
-  sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
-  sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 0;
-  sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
-  sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
-  sBreakDeadTimeConfig.BreakFilter = 0;
-  sBreakDeadTimeConfig.BreakAFMode = TIM_BREAK_AFMODE_INPUT;
-  sBreakDeadTimeConfig.Break2State = TIM_BREAK2_DISABLE;
-  sBreakDeadTimeConfig.Break2Polarity = TIM_BREAK2POLARITY_HIGH;
-  sBreakDeadTimeConfig.Break2Filter = 0;
-  sBreakDeadTimeConfig.Break2AFMode = TIM_BREAK_AFMODE_INPUT;
-  sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
-  if (HAL_TIMEx_ConfigBreakDeadTime(&htim1, &sBreakDeadTimeConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM1_Init 2 */
-
-  /* USER CODE END TIM1_Init 2 */
-  HAL_TIM_MspPostInit(&htim1);
-
-}
-
-/**
-  * @brief TIM3 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_TIM3_Init(void)
-{
-
-  /* USER CODE BEGIN TIM3_Init 0 */
-
-  /* USER CODE END TIM3_Init 0 */
-
-  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
-  TIM_MasterConfigTypeDef sMasterConfig = {0};
-  TIM_OC_InitTypeDef sConfigOC = {0};
-
-  /* USER CODE BEGIN TIM3_Init 1 */
-
-  /* USER CODE END TIM3_Init 1 */
-  htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 0;
-  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim3.Init.Period = 65535;
-  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
-  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
-  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_Init(&htim3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
-  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
-  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 0;
-  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
-  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
-  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN TIM3_Init 2 */
-
-  /* USER CODE END TIM3_Init 2 */
-  HAL_TIM_MspPostInit(&htim3);
-
-}
-
-/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -303,16 +210,19 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, LASER_RED_Pin|A4988_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, LASER_GREEN_Pin|A4988_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LASER_BLUE_GPIO_Port, LASER_BLUE_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, ON_OFF_3V7_2_Pin|LASER_GREEN_Pin|A4988_SLEEP_Pin|A4988_DIR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, ON_OFF_3V7_2_Pin|LASER_RED_Pin|A4988_STEP_Pin|A4988_DIR_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : LASER_RED_Pin A4988_EN_Pin */
-  GPIO_InitStruct.Pin = LASER_RED_Pin|A4988_EN_Pin;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(A4988_SLEEP_GPIO_Port, A4988_SLEEP_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pins : LASER_GREEN_Pin A4988_EN_Pin */
+  GPIO_InitStruct.Pin = LASER_GREEN_Pin|A4988_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -325,18 +235,20 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LASER_BLUE_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : ON_OFF_3V7_2_Pin LASER_GREEN_Pin A4988_SLEEP_Pin A4988_DIR_Pin */
-  GPIO_InitStruct.Pin = ON_OFF_3V7_2_Pin|LASER_GREEN_Pin|A4988_SLEEP_Pin|A4988_DIR_Pin;
+  /*Configure GPIO pins : BUTTON_Pin IN_DRAIN_LATCH2_Pin */
+  GPIO_InitStruct.Pin = BUTTON_Pin|IN_DRAIN_LATCH2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ON_OFF_3V7_2_Pin LASER_RED_Pin A4988_SLEEP_Pin A4988_STEP_Pin
+                           A4988_DIR_Pin */
+  GPIO_InitStruct.Pin = ON_OFF_3V7_2_Pin|LASER_RED_Pin|A4988_SLEEP_Pin|A4988_STEP_Pin
+                          |A4988_DIR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pin : IN_DRAIN_LATCH2_Pin */
-  GPIO_InitStruct.Pin = IN_DRAIN_LATCH2_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(IN_DRAIN_LATCH2_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

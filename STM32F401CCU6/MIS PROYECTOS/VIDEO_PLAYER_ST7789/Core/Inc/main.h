@@ -89,8 +89,6 @@ void Error_Handler(void);
 #define LCD_BLK_GPIO_Port GPIOA
 #define LCD_SDA_Pin LL_GPIO_PIN_7
 #define LCD_SDA_GPIO_Port GPIOA
-#define T_CS_Pin LL_GPIO_PIN_1
-#define T_CS_GPIO_Port GPIOB
 #define ENCODER_C_Pin LL_GPIO_PIN_10
 #define ENCODER_C_GPIO_Port GPIOB
 #define ENCODER_C_EXTI_IRQn EXTI15_10_IRQn

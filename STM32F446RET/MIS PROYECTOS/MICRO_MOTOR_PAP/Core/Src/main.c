@@ -99,40 +99,62 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint8_t N_VUELTAS=30;
+  //uint8_t N_VUELTAS=1;
   uint32_t tiempo_ms=1;
-  uint32_t tiempo_us=750;
+  //uint32_t tiempo_us=750;
 
   while (1)
   {
+	  //esto es para girar 1 vulenta en 10 pequeños pasos
+	  HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, RESET);//habilito el motor
+	  HAL_GPIO_WritePin(DIR_GPIO_Port, DIR_Pin, SET);//sentido horario
+
+	  //for(int i = 0; i < STEP_MOTOR * SIXT_STEP * 0.2; i++){
+	  for(int i = 0; i < 2; i++){
+		  HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, SET);
+		  HAL_Delay(tiempo_ms);
+		  //delay_us(tiempo_us);
+		  HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, RESET);
+		  HAL_Delay(tiempo_ms);
+		  //delay_us(tiempo_us);
+	  }
+
+	  HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, SET);//deshabilito el motor
+	  HAL_Delay(1000);
+
+	  /*
 	  //El motor necesita 20 pasos para una vuelta en full step, en 1/16=320pasos, 1/8 = 160
 	  HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, RESET);//habilito el motor
 	  HAL_GPIO_WritePin(DIR_GPIO_Port, DIR_Pin, SET);//sentido horario
-	  for(int i = 0; i < STEP_MOTOR * FULL_STEP * N_VUELTAS; i++){
+	  for(int i = 0; i < STEP_MOTOR * SIXT_STEP * N_VUELTAS; i++){
 		  HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, SET);
-		  //HAL_Delay(tiempo_ms);
-		  delay_us(tiempo_us);
+		  HAL_Delay(tiempo_ms);
+		  //delay_us(tiempo_us);
 		  HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, RESET);
-		  //HAL_Delay(tiempo_ms);
-		  delay_us(tiempo_us);
+		  HAL_Delay(tiempo_ms);
+		  //delay_us(tiempo_us);
 	  }
 	  HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, SET);//deshabilito el motor
 	  HAL_Delay(2000);
+
+
+
 
 
 
 	  HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, RESET);//habilito el motor
 	  HAL_GPIO_WritePin(DIR_GPIO_Port, DIR_Pin, RESET);//sentido antihorario
-	  for(int i = 0; i < STEP_MOTOR * FULL_STEP * N_VUELTAS; i++){
+	  for(int i = 0; i < STEP_MOTOR * SIXT_STEP * N_VUELTAS; i++){
 		  HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, SET);
-		  //HAL_Delay(tiempo_ms);
-		  delay_us(tiempo_us);
+		  HAL_Delay(tiempo_ms);
+		  //delay_us(tiempo_us);
 		  HAL_GPIO_WritePin(STEP_GPIO_Port, STEP_Pin, RESET);
-		  //HAL_Delay(tiempo_ms);
-		  delay_us(tiempo_us);
+		  HAL_Delay(tiempo_ms);
+		  //delay_us(tiempo_us);
 	  }
 	  HAL_GPIO_WritePin(EN_GPIO_Port, EN_Pin, SET);//deshabilito el motor
 	  HAL_Delay(2000);
+	  */
 
 
 

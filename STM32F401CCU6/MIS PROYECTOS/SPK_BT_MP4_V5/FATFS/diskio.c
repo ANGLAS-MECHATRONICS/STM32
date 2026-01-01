@@ -55,9 +55,9 @@ DRESULT disk_read (
 	UINT count		/* Number of sectors to read */
 )
 {
-	LED_INDCTR_GPIO_Port->BSRR = (uint32_t)LED_INDCTR_Pin << 16U;
+	//LED_INDCTR_GPIO_Port->BSRR = (uint32_t)LED_INDCTR_Pin << 16U;
 	DRESULT res = USER_SPI_read(pdrv, buff, sector, count);
-	LED_INDCTR_GPIO_Port->BSRR = LED_INDCTR_Pin;
+	//LED_INDCTR_GPIO_Port->BSRR = LED_INDCTR_Pin;
 	return res;
 }
 

@@ -219,11 +219,11 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./AVI/jpeg_data.o
  .debug_macro   0x00000000      0x5f3 ./AVI/jpeg_data.o
  .debug_macro   0x00000000      0x149 ./AVI/jpeg_data.o
- .debug_macro   0x00000000       0xe8 ./AVI/jpeg_data.o
+ .debug_macro   0x00000000       0xdc ./AVI/jpeg_data.o
  .debug_macro   0x00000000       0x1c ./AVI/jpeg_data.o
  .debug_macro   0x00000000       0x88 ./AVI/jpeg_data.o
  .debug_line    0x00000000      0x79c ./AVI/jpeg_data.o
- .debug_str     0x00000000    0x5c8c2 ./AVI/jpeg_data.o
+ .debug_str     0x00000000    0x5c896 ./AVI/jpeg_data.o
  .comment       0x00000000       0x44 ./AVI/jpeg_data.o
  .ARM.attributes
                 0x00000000       0x30 ./AVI/jpeg_data.o
@@ -307,7 +307,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./AVI/mp3_callback.o
  .debug_macro   0x00000000      0x5f3 ./AVI/mp3_callback.o
  .debug_macro   0x00000000      0x149 ./AVI/mp3_callback.o
- .debug_macro   0x00000000       0xe8 ./AVI/mp3_callback.o
+ .debug_macro   0x00000000       0xdc ./AVI/mp3_callback.o
  .debug_macro   0x00000000       0x2e ./AVI/mp3_callback.o
  .debug_macro   0x00000000       0x61 ./AVI/mp3_callback.o
  .debug_macro   0x00000000       0x2a ./AVI/mp3_callback.o
@@ -404,7 +404,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./AVI/player.o
  .debug_macro   0x00000000      0x5f3 ./AVI/player.o
  .debug_macro   0x00000000      0x149 ./AVI/player.o
- .debug_macro   0x00000000       0xe8 ./AVI/player.o
+ .debug_macro   0x00000000       0xdc ./AVI/player.o
  .debug_macro   0x00000000       0x61 ./AVI/player.o
  .debug_macro   0x00000000       0x2a ./AVI/player.o
  .debug_macro   0x00000000       0x43 ./AVI/player.o
@@ -506,7 +506,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./AVI/riff_read_header.o
  .debug_macro   0x00000000      0x5f3 ./AVI/riff_read_header.o
  .debug_macro   0x00000000      0x149 ./AVI/riff_read_header.o
- .debug_macro   0x00000000       0xe8 ./AVI/riff_read_header.o
+ .debug_macro   0x00000000       0xdc ./AVI/riff_read_header.o
  .debug_macro   0x00000000      0x40a ./AVI/riff_read_header.o
  .debug_macro   0x00000000       0x2a ./AVI/riff_read_header.o
  .debug_macro   0x00000000       0x61 ./AVI/riff_read_header.o
@@ -589,7 +589,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./AVI/textures.o
  .debug_macro   0x00000000      0x5f3 ./AVI/textures.o
  .debug_macro   0x00000000      0x149 ./AVI/textures.o
- .debug_macro   0x00000000       0xe8 ./AVI/textures.o
+ .debug_macro   0x00000000       0xdc ./AVI/textures.o
  .debug_macro   0x00000000       0x1c ./AVI/textures.o
  .text          0x00000000        0x0 ./Core/Src/asm.o
  .data          0x00000000        0x0 ./Core/Src/asm.o
@@ -667,7 +667,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Core/Src/main.o
  .debug_macro   0x00000000      0x5f3 ./Core/Src/main.o
  .debug_macro   0x00000000      0x149 ./Core/Src/main.o
- .debug_macro   0x00000000       0xe8 ./Core/Src/main.o
+ .debug_macro   0x00000000       0xdc ./Core/Src/main.o
  .debug_macro   0x00000000       0x1c ./Core/Src/main.o
  .debug_macro   0x00000000       0x88 ./Core/Src/main.o
  .debug_macro   0x00000000      0x111 ./Core/Src/main.o
@@ -737,7 +737,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Core/Src/stm32f4xx_it.o
  .debug_macro   0x00000000      0x5f3 ./Core/Src/stm32f4xx_it.o
  .debug_macro   0x00000000      0x149 ./Core/Src/stm32f4xx_it.o
- .debug_macro   0x00000000       0xe8 ./Core/Src/stm32f4xx_it.o
+ .debug_macro   0x00000000       0xdc ./Core/Src/stm32f4xx_it.o
  .debug_macro   0x00000000       0x1c ./Core/Src/stm32f4xx_it.o
  .debug_macro   0x00000000       0x88 ./Core/Src/stm32f4xx_it.o
  .debug_macro   0x00000000       0x3a ./Core/Src/stm32f4xx_it.o
@@ -1085,7 +1085,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Display/display.o
  .debug_macro   0x00000000      0x5f3 ./Display/display.o
  .debug_macro   0x00000000      0x149 ./Display/display.o
- .debug_macro   0x00000000       0xe8 ./Display/display.o
+ .debug_macro   0x00000000       0xdc ./Display/display.o
  .debug_macro   0x00000000       0x1c ./Display/display.o
  .debug_macro   0x00000000       0x88 ./Display/display.o
  .debug_macro   0x00000000       0x61 ./Display/display.o
@@ -1178,12 +1178,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Display/display_offsets.o
  .debug_macro   0x00000000      0x5f3 ./Display/display_offsets.o
  .debug_macro   0x00000000      0x149 ./Display/display_offsets.o
- .debug_macro   0x00000000       0xe8 ./Display/display_offsets.o
+ .debug_macro   0x00000000       0xdc ./Display/display_offsets.o
  .debug_macro   0x00000000       0x1c ./Display/display_offsets.o
  .debug_macro   0x00000000       0x88 ./Display/display_offsets.o
  .debug_macro   0x00000000      0x190 ./Display/display_offsets.o
  .debug_line    0x00000000      0x71e ./Display/display_offsets.o
- .debug_str     0x00000000    0x5cc44 ./Display/display_offsets.o
+ .debug_str     0x00000000    0x5cc18 ./Display/display_offsets.o
  .comment       0x00000000       0x44 ./Display/display_offsets.o
  .debug_frame   0x00000000       0x20 ./Display/display_offsets.o
  .ARM.attributes
@@ -1221,12 +1221,8 @@ Discarded input sections
  .bss           0x00000000        0x0 ./Display/fonts.o
  .data.Font_15x25
                 0x00000000        0xc ./Display/fonts.o
- .data.Font_12x20
-                0x00000000        0xc ./Display/fonts.o
  .rodata.Font15x25
                 0x00000000     0x2bc0 ./Display/fonts.o
- .rodata.Font12x20
-                0x00000000     0x2300 ./Display/fonts.o
  .debug_macro   0x00000000      0xb3e ./Display/fonts.o
  .debug_macro   0x00000000       0x2e ./Display/fonts.o
  .debug_macro   0x00000000       0x28 ./Display/fonts.o
@@ -1254,7 +1250,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Display/fonts.o
  .debug_macro   0x00000000      0x5f3 ./Display/fonts.o
  .debug_macro   0x00000000      0x149 ./Display/fonts.o
- .debug_macro   0x00000000       0xe8 ./Display/fonts.o
+ .debug_macro   0x00000000       0xdc ./Display/fonts.o
  .group         0x00000000        0xc ./Display/ili9341.o
  .group         0x00000000        0xc ./Display/ili9341.o
  .group         0x00000000        0xc ./Display/ili9341.o
@@ -1343,12 +1339,12 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Display/ili9341.o
  .debug_macro   0x00000000      0x5f3 ./Display/ili9341.o
  .debug_macro   0x00000000      0x149 ./Display/ili9341.o
- .debug_macro   0x00000000       0xe8 ./Display/ili9341.o
+ .debug_macro   0x00000000       0xdc ./Display/ili9341.o
  .debug_macro   0x00000000      0x232 ./Display/ili9341.o
  .debug_macro   0x00000000       0x1c ./Display/ili9341.o
  .debug_macro   0x00000000       0x88 ./Display/ili9341.o
  .debug_line    0x00000000      0x7b8 ./Display/ili9341.o
- .debug_str     0x00000000    0x5d39c ./Display/ili9341.o
+ .debug_str     0x00000000    0x5d370 ./Display/ili9341.o
  .comment       0x00000000       0x44 ./Display/ili9341.o
  .debug_frame   0x00000000       0x58 ./Display/ili9341.o
  .ARM.attributes
@@ -1414,7 +1410,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Display/st7789.o
  .debug_macro   0x00000000      0x5f3 ./Display/st7789.o
  .debug_macro   0x00000000      0x149 ./Display/st7789.o
- .debug_macro   0x00000000       0xe8 ./Display/st7789.o
+ .debug_macro   0x00000000       0xdc ./Display/st7789.o
  .debug_macro   0x00000000       0x1c ./Display/st7789.o
  .debug_macro   0x00000000       0x88 ./Display/st7789.o
  .group         0x00000000        0xc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_dma.o
@@ -1857,7 +1853,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Encoder/encoder.o
  .debug_macro   0x00000000      0x5f3 ./Encoder/encoder.o
  .debug_macro   0x00000000      0x149 ./Encoder/encoder.o
- .debug_macro   0x00000000       0xe8 ./Encoder/encoder.o
+ .debug_macro   0x00000000       0xdc ./Encoder/encoder.o
  .debug_macro   0x00000000       0x61 ./Encoder/encoder.o
  .debug_macro   0x00000000       0x2a ./Encoder/encoder.o
  .debug_macro   0x00000000       0x43 ./Encoder/encoder.o
@@ -1940,7 +1936,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./FATFS/diskio.o
  .debug_macro   0x00000000      0x5f3 ./FATFS/diskio.o
  .debug_macro   0x00000000      0x149 ./FATFS/diskio.o
- .debug_macro   0x00000000       0xe8 ./FATFS/diskio.o
+ .debug_macro   0x00000000       0xdc ./FATFS/diskio.o
  .group         0x00000000        0xc ./FATFS/ff.o
  .group         0x00000000        0xc ./FATFS/ff.o
  .group         0x00000000        0xc ./FATFS/ff.o
@@ -2086,7 +2082,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./FATFS/user_diskio_spi.o
  .debug_macro   0x00000000      0x5f3 ./FATFS/user_diskio_spi.o
  .debug_macro   0x00000000      0x149 ./FATFS/user_diskio_spi.o
- .debug_macro   0x00000000       0xe8 ./FATFS/user_diskio_spi.o
+ .debug_macro   0x00000000       0xdc ./FATFS/user_diskio_spi.o
  .group         0x00000000        0xc ./FileManager/filemanager.o
  .group         0x00000000        0xc ./FileManager/filemanager.o
  .group         0x00000000        0xc ./FileManager/filemanager.o
@@ -2176,7 +2172,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./FileManager/filemanager.o
  .debug_macro   0x00000000      0x5f3 ./FileManager/filemanager.o
  .debug_macro   0x00000000      0x149 ./FileManager/filemanager.o
- .debug_macro   0x00000000       0xe8 ./FileManager/filemanager.o
+ .debug_macro   0x00000000       0xdc ./FileManager/filemanager.o
  .debug_macro   0x00000000       0x3a ./FileManager/filemanager.o
  .debug_macro   0x00000000       0x1c ./FileManager/filemanager.o
  .debug_macro   0x00000000       0x88 ./FileManager/filemanager.o
@@ -2258,7 +2254,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./FileManager/icons.o
  .debug_macro   0x00000000      0x5f3 ./FileManager/icons.o
  .debug_macro   0x00000000      0x149 ./FileManager/icons.o
- .debug_macro   0x00000000       0xe8 ./FileManager/icons.o
+ .debug_macro   0x00000000       0xdc ./FileManager/icons.o
  .group         0x00000000        0xc ./JPEG/jpeg_chan.o
  .group         0x00000000        0xc ./JPEG/jpeg_chan.o
  .group         0x00000000        0xc ./JPEG/jpeg_chan.o
@@ -2343,7 +2339,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./JPEG/jpeg_chan.o
  .debug_macro   0x00000000      0x5f3 ./JPEG/jpeg_chan.o
  .debug_macro   0x00000000      0x149 ./JPEG/jpeg_chan.o
- .debug_macro   0x00000000       0xe8 ./JPEG/jpeg_chan.o
+ .debug_macro   0x00000000       0xdc ./JPEG/jpeg_chan.o
  .debug_macro   0x00000000       0x1c ./JPEG/jpeg_chan.o
  .debug_macro   0x00000000       0x88 ./JPEG/jpeg_chan.o
  .debug_macro   0x00000000       0x61 ./JPEG/jpeg_chan.o
@@ -2501,7 +2497,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./Keyboard/keyboard.o
  .debug_macro   0x00000000      0x5f3 ./Keyboard/keyboard.o
  .debug_macro   0x00000000      0x149 ./Keyboard/keyboard.o
- .debug_macro   0x00000000       0xe8 ./Keyboard/keyboard.o
+ .debug_macro   0x00000000       0xdc ./Keyboard/keyboard.o
  .debug_macro   0x00000000       0x2a ./Keyboard/keyboard.o
  .debug_macro   0x00000000       0x61 ./Keyboard/keyboard.o
  .debug_macro   0x00000000       0x43 ./Keyboard/keyboard.o
@@ -2777,7 +2773,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./MP3Helix/src/mp3dec.o
  .debug_macro   0x00000000      0x5f3 ./MP3Helix/src/mp3dec.o
  .debug_macro   0x00000000      0x149 ./MP3Helix/src/mp3dec.o
- .debug_macro   0x00000000       0xe8 ./MP3Helix/src/mp3dec.o
+ .debug_macro   0x00000000       0xdc ./MP3Helix/src/mp3dec.o
  .debug_macro   0x00000000       0x1c ./MP3Helix/src/mp3dec.o
  .debug_macro   0x00000000       0x88 ./MP3Helix/src/mp3dec.o
  .group         0x00000000        0xc ./MP3Helix/src/mp3tabs.o
@@ -2936,7 +2932,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./MicroGL2D/microgl2d.o
  .debug_macro   0x00000000      0x5f3 ./MicroGL2D/microgl2d.o
  .debug_macro   0x00000000      0x149 ./MicroGL2D/microgl2d.o
- .debug_macro   0x00000000       0xe8 ./MicroGL2D/microgl2d.o
+ .debug_macro   0x00000000       0xdc ./MicroGL2D/microgl2d.o
  .debug_macro   0x00000000       0x1c ./MicroGL2D/microgl2d.o
  .debug_macro   0x00000000       0x2a ./MicroGL2D/microgl2d.o
  .debug_macro   0x00000000       0x61 ./MicroGL2D/microgl2d.o
@@ -3040,7 +3036,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./MyString/mystring.o
  .debug_macro   0x00000000      0x5f3 ./MyString/mystring.o
  .debug_macro   0x00000000      0x149 ./MyString/mystring.o
- .debug_macro   0x00000000       0xe8 ./MyString/mystring.o
+ .debug_macro   0x00000000       0xdc ./MyString/mystring.o
  .debug_macro   0x00000000       0x61 ./MyString/mystring.o
  .debug_macro   0x00000000       0x2a ./MyString/mystring.o
  .debug_macro   0x00000000       0x43 ./MyString/mystring.o
@@ -3125,7 +3121,7 @@ Discarded input sections
  .debug_macro   0x00000000      0x241 ./PCM5102/pcm5102.o
  .debug_macro   0x00000000      0x5f3 ./PCM5102/pcm5102.o
  .debug_macro   0x00000000      0x149 ./PCM5102/pcm5102.o
- .debug_macro   0x00000000       0xe8 ./PCM5102/pcm5102.o
+ .debug_macro   0x00000000       0xdc ./PCM5102/pcm5102.o
  .text          0x00000000        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-calloc.o)
  .data          0x00000000        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-calloc.o)
  .bss           0x00000000        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-calloc.o)
@@ -4079,7 +4075,7 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
 .iplt           0x08012734        0x0
  .iplt          0x08012734        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08012734     0x66cc
+.rodata         0x08012734     0x89cc
                 0x08012734                        . = ALIGN (0x4)
  *(.rodata)
  .rodata        0x08012734       0x66 ./AVI/avi.o
@@ -4109,226 +4105,228 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
                 0x08013944       0x13 ./Core/Src/main.o
  .rodata.STREAM_OFFSET_TAB
                 0x08013944        0x8 ./Display/display.o
+ .rodata.Font12x20
+                0x0801394c     0x2300 ./Display/fonts.o
  .rodata.Font8x13
-                0x0801394c      0xb60 ./Display/fonts.o
+                0x08015c4c      0xb60 ./Display/fonts.o
  .rodata.CSWTCH.2
-                0x080144ac        0x3 ./Display/st7789.o
- *fill*         0x080144af        0x1 
+                0x080167ac        0x3 ./Display/st7789.o
+ *fill*         0x080167af        0x1 
  .rodata.ENCODER_inc_tbl
-                0x080144b0       0x10 ./Encoder/encoder.o
+                0x080167b0       0x10 ./Encoder/encoder.o
  .rodata.check_fs.str1.4
-                0x080144c0        0x9 ./FATFS/ff.o
+                0x080167c0        0x9 ./FATFS/ff.o
  .rodata.follow_path.str1.4
-                0x080144c0       0x13 ./FATFS/ff.o
- .rodata.ExCvt  0x080144c0       0x80 ./FATFS/ff.o
+                0x080167c0       0x13 ./FATFS/ff.o
+ .rodata.ExCvt  0x080167c0       0x80 ./FATFS/ff.o
  .rodata.LfnOfs
-                0x08014540        0xd ./FATFS/ff.o
- *fill*         0x0801454d        0x3 
+                0x08016840        0xd ./FATFS/ff.o
+ *fill*         0x0801684d        0x3 
  .rodata.cvt2.0
-                0x08014550       0xbc ./FATFS/ffunicode.o
+                0x08016850       0xbc ./FATFS/ffunicode.o
  .rodata.cvt1.1
-                0x0801460c      0x1f2 ./FATFS/ffunicode.o
- *fill*         0x080147fe        0x2 
- .rodata.uc866  0x08014800      0x100 ./FATFS/ffunicode.o
+                0x0801690c      0x1f2 ./FATFS/ffunicode.o
+ *fill*         0x08016afe        0x2 
+ .rodata.uc866  0x08016b00      0x100 ./FATFS/ffunicode.o
  .rodata.FileManagerShow.str1.4
-                0x08014900        0xa ./FileManager/filemanager.o
+                0x08016c00        0xa ./FileManager/filemanager.o
  .rodata.FileManagerNew.str1.4
-                0x08014900        0x1 ./FileManager/filemanager.o
+                0x08016c00        0x1 ./FileManager/filemanager.o
  .rodata.FM_video_types
-                0x08014900       0x78 ./FileManager/filemanager.o
-                0x08014900                FM_video_types
+                0x08016c00       0x78 ./FileManager/filemanager.o
+                0x08016c00                FM_video_types
  .rodata.FM_data_types
-                0x08014978       0xba ./FileManager/filemanager.o
-                0x08014978                FM_data_types
- *fill*         0x08014a32        0x2 
+                0x08016c78       0xba ./FileManager/filemanager.o
+                0x08016c78                FM_data_types
+ *fill*         0x08016d32        0x2 
  .rodata.FM_picture_types
-                0x08014a34       0xac ./FileManager/filemanager.o
-                0x08014a34                FM_picture_types
+                0x08016d34       0xac ./FileManager/filemanager.o
+                0x08016d34                FM_picture_types
  .rodata.FM_audio_types
-                0x08014ae0       0xa2 ./FileManager/filemanager.o
-                0x08014ae0                FM_audio_types
- *fill*         0x08014b82        0x2 
+                0x08016de0       0xa2 ./FileManager/filemanager.o
+                0x08016de0                FM_audio_types
+ *fill*         0x08016e82        0x2 
  .rodata.Icon_Audio
-                0x08014b84        0x8 ./FileManager/icons.o
-                0x08014b84                Icon_Audio
+                0x08016e84        0x8 ./FileManager/icons.o
+                0x08016e84                Icon_Audio
  .rodata.Icon_Other
-                0x08014b8c        0x8 ./FileManager/icons.o
-                0x08014b8c                Icon_Other
+                0x08016e8c        0x8 ./FileManager/icons.o
+                0x08016e8c                Icon_Other
  .rodata.Icon_Text
-                0x08014b94        0x8 ./FileManager/icons.o
-                0x08014b94                Icon_Text
+                0x08016e94        0x8 ./FileManager/icons.o
+                0x08016e94                Icon_Text
  .rodata.Icon_Picture
-                0x08014b9c        0x8 ./FileManager/icons.o
-                0x08014b9c                Icon_Picture
+                0x08016e9c        0x8 ./FileManager/icons.o
+                0x08016e9c                Icon_Picture
  .rodata.Icon_Video
-                0x08014ba4        0x8 ./FileManager/icons.o
-                0x08014ba4                Icon_Video
+                0x08016ea4        0x8 ./FileManager/icons.o
+                0x08016ea4                Icon_Video
  .rodata.Icon_Catalog
-                0x08014bac        0x8 ./FileManager/icons.o
-                0x08014bac                Icon_Catalog
+                0x08016eac        0x8 ./FileManager/icons.o
+                0x08016eac                Icon_Catalog
  .rodata.Icon_Prev
-                0x08014bb4        0x8 ./FileManager/icons.o
-                0x08014bb4                Icon_Prev
+                0x08016eb4        0x8 ./FileManager/icons.o
+                0x08016eb4                Icon_Prev
  .rodata.image_data_audio
-                0x08014bbc      0x1e0 ./FileManager/icons.o
-                0x08014bbc                image_data_audio
+                0x08016ebc      0x1e0 ./FileManager/icons.o
+                0x08016ebc                image_data_audio
  .rodata.image_data_other
-                0x08014d9c      0x1e0 ./FileManager/icons.o
-                0x08014d9c                image_data_other
+                0x0801709c      0x1e0 ./FileManager/icons.o
+                0x0801709c                image_data_other
  .rodata.image_data_text
-                0x08014f7c      0x1e0 ./FileManager/icons.o
-                0x08014f7c                image_data_text
+                0x0801727c      0x1e0 ./FileManager/icons.o
+                0x0801727c                image_data_text
  .rodata.image_data_video
-                0x0801515c      0x1e0 ./FileManager/icons.o
-                0x0801515c                image_data_video
+                0x0801745c      0x1e0 ./FileManager/icons.o
+                0x0801745c                image_data_video
  .rodata.image_data_picture
-                0x0801533c      0x1e0 ./FileManager/icons.o
-                0x0801533c                image_data_picture
+                0x0801763c      0x1e0 ./FileManager/icons.o
+                0x0801763c                image_data_picture
  .rodata.image_data_catalog
-                0x0801551c      0x1e0 ./FileManager/icons.o
-                0x0801551c                image_data_catalog
+                0x0801781c      0x1e0 ./FileManager/icons.o
+                0x0801781c                image_data_catalog
  .rodata.image_data_prev
-                0x080156fc      0x1e0 ./FileManager/icons.o
-                0x080156fc                image_data_prev
- .rodata.Ipsf   0x080158dc       0x80 ./JPEG/tjpgd.o
- .rodata.Zig    0x0801595c       0x40 ./JPEG/tjpgd.o
+                0x080179fc      0x1e0 ./FileManager/icons.o
+                0x080179fc                image_data_prev
+ .rodata.Ipsf   0x08017bdc       0x80 ./JPEG/tjpgd.o
+ .rodata.Zig    0x08017c5c       0x40 ./JPEG/tjpgd.o
  .rodata.dcttab
-                0x0801599c       0xc0 ./MP3Helix/src/dct32.o
+                0x08017c9c       0xc0 ./MP3Helix/src/dct32.o
  .rodata.pow2frac
-                0x08015a5c       0x20 ./MP3Helix/src/dqchan.o
+                0x08017d5c       0x20 ./MP3Helix/src/dqchan.o
  .rodata.pow2exp
-                0x08015a7c       0x20 ./MP3Helix/src/dqchan.o
- .rodata.pow43  0x08015a9c       0xc0 ./MP3Helix/src/dqchan.o
+                0x08017d7c       0x20 ./MP3Helix/src/dqchan.o
+ .rodata.pow43  0x08017d9c       0xc0 ./MP3Helix/src/dqchan.o
  .rodata.pow43_14
-                0x08015b5c      0x100 ./MP3Helix/src/dqchan.o
- .rodata.pow14  0x08015c5c       0x10 ./MP3Helix/src/dqchan.o
+                0x08017e5c      0x100 ./MP3Helix/src/dqchan.o
+ .rodata.pow14  0x08017f5c       0x10 ./MP3Helix/src/dqchan.o
  .rodata.preTab
-                0x08015c6c       0x16 ./MP3Helix/src/dqchan.o
- *fill*         0x08015c82        0x2 
+                0x08017f6c       0x16 ./MP3Helix/src/dqchan.o
+ *fill*         0x08017f82        0x2 
  .rodata.xmp3_quadTabMaxBits
-                0x08015c84        0x8 ./MP3Helix/src/hufftabs.o
-                0x08015c84                xmp3_quadTabMaxBits
+                0x08017f84        0x8 ./MP3Helix/src/hufftabs.o
+                0x08017f84                xmp3_quadTabMaxBits
  .rodata.xmp3_quadTabOffset
-                0x08015c8c        0x8 ./MP3Helix/src/hufftabs.o
-                0x08015c8c                xmp3_quadTabOffset
+                0x08017f8c        0x8 ./MP3Helix/src/hufftabs.o
+                0x08017f8c                xmp3_quadTabOffset
  .rodata.xmp3_quadTable
-                0x08015c94       0x50 ./MP3Helix/src/hufftabs.o
-                0x08015c94                xmp3_quadTable
+                0x08017f94       0x50 ./MP3Helix/src/hufftabs.o
+                0x08017f94                xmp3_quadTable
  .rodata.xmp3_huffTabLookup
-                0x08015ce4      0x100 ./MP3Helix/src/hufftabs.o
-                0x08015ce4                xmp3_huffTabLookup
+                0x08017fe4      0x100 ./MP3Helix/src/hufftabs.o
+                0x08017fe4                xmp3_huffTabLookup
  .rodata.xmp3_huffTabOffset
-                0x08015de4       0x80 ./MP3Helix/src/hufftabs.o
-                0x08015de4                xmp3_huffTabOffset
+                0x080180e4       0x80 ./MP3Helix/src/hufftabs.o
+                0x080180e4                xmp3_huffTabOffset
  .rodata.xmp3_huffTable
-                0x08015e64     0x2124 ./MP3Helix/src/hufftabs.o
-                0x08015e64                xmp3_huffTable
+                0x08018164     0x2124 ./MP3Helix/src/hufftabs.o
+                0x08018164                xmp3_huffTable
  .rodata.fastWin36
-                0x08017f88       0x48 ./MP3Helix/src/imdct.o
- .rodata.c18    0x08017fd0       0x24 ./MP3Helix/src/imdct.o
+                0x0801a288       0x48 ./MP3Helix/src/imdct.o
+ .rodata.c18    0x0801a2d0       0x24 ./MP3Helix/src/imdct.o
  .rodata.xmp3_sfBandTable
-                0x08017ff4      0x29a ./MP3Helix/src/mp3tabs.o
-                0x08017ff4                xmp3_sfBandTable
- *fill*         0x0801828e        0x2 
+                0x0801a2f4      0x29a ./MP3Helix/src/mp3tabs.o
+                0x0801a2f4                xmp3_sfBandTable
+ *fill*         0x0801a58e        0x2 
  .rodata.xmp3_slotTab
-                0x08018290      0x10e ./MP3Helix/src/mp3tabs.o
-                0x08018290                xmp3_slotTab
- *fill*         0x0801839e        0x2 
+                0x0801a590      0x10e ./MP3Helix/src/mp3tabs.o
+                0x0801a590                xmp3_slotTab
+ *fill*         0x0801a69e        0x2 
  .rodata.xmp3_sideBytesTab
-                0x080183a0        0xc ./MP3Helix/src/mp3tabs.o
-                0x080183a0                xmp3_sideBytesTab
+                0x0801a6a0        0xc ./MP3Helix/src/mp3tabs.o
+                0x0801a6a0                xmp3_sideBytesTab
  .rodata.xmp3_samplesPerFrameTab
-                0x080183ac       0x12 ./MP3Helix/src/mp3tabs.o
-                0x080183ac                xmp3_samplesPerFrameTab
- *fill*         0x080183be        0x2 
+                0x0801a6ac       0x12 ./MP3Helix/src/mp3tabs.o
+                0x0801a6ac                xmp3_samplesPerFrameTab
+ *fill*         0x0801a6be        0x2 
  .rodata.xmp3_bitrateTab
-                0x080183c0      0x10e ./MP3Helix/src/mp3tabs.o
-                0x080183c0                xmp3_bitrateTab
- *fill*         0x080184ce        0x2 
+                0x0801a6c0      0x10e ./MP3Helix/src/mp3tabs.o
+                0x0801a6c0                xmp3_bitrateTab
+ *fill*         0x0801a7ce        0x2 
  .rodata.xmp3_samplerateTab
-                0x080184d0       0x24 ./MP3Helix/src/mp3tabs.o
-                0x080184d0                xmp3_samplerateTab
+                0x0801a7d0       0x24 ./MP3Helix/src/mp3tabs.o
+                0x0801a7d0                xmp3_samplerateTab
  .rodata.SFLenTab
-                0x080184f4       0x20 ./MP3Helix/src/scalfact.o
+                0x0801a7f4       0x20 ./MP3Helix/src/scalfact.o
  .rodata.xmp3_polyCoef
-                0x08018514      0x420 ./MP3Helix/src/trigtabs.o
-                0x08018514                xmp3_polyCoef
+                0x0801a814      0x420 ./MP3Helix/src/trigtabs.o
+                0x0801a814                xmp3_polyCoef
  .rodata.xmp3_csa
-                0x08018934       0x40 ./MP3Helix/src/trigtabs.o
-                0x08018934                xmp3_csa
+                0x0801ac34       0x40 ./MP3Helix/src/trigtabs.o
+                0x0801ac34                xmp3_csa
  .rodata.xmp3_ISFIIP
-                0x08018974       0x10 ./MP3Helix/src/trigtabs.o
-                0x08018974                xmp3_ISFIIP
+                0x0801ac74       0x10 ./MP3Helix/src/trigtabs.o
+                0x0801ac74                xmp3_ISFIIP
  .rodata.xmp3_ISFMpeg2
-                0x08018984      0x100 ./MP3Helix/src/trigtabs.o
-                0x08018984                xmp3_ISFMpeg2
+                0x0801ac84      0x100 ./MP3Helix/src/trigtabs.o
+                0x0801ac84                xmp3_ISFMpeg2
  .rodata.xmp3_ISFMpeg1
-                0x08018a84       0x38 ./MP3Helix/src/trigtabs.o
-                0x08018a84                xmp3_ISFMpeg1
+                0x0801ad84       0x38 ./MP3Helix/src/trigtabs.o
+                0x0801ad84                xmp3_ISFMpeg1
  .rodata.xmp3_imdctWin
-                0x08018abc      0x240 ./MP3Helix/src/trigtabs.o
-                0x08018abc                xmp3_imdctWin
+                0x0801adbc      0x240 ./MP3Helix/src/trigtabs.o
+                0x0801adbc                xmp3_imdctWin
  .rodata.CSWTCH.33
-                0x08018cfc       0x14 ./MicroGL2D/microgl2d.o
+                0x0801affc       0x14 ./MicroGL2D/microgl2d.o
  .rodata.CSWTCH.32
-                0x08018d10        0x5 ./MicroGL2D/microgl2d.o
- *fill*         0x08018d15        0x3 
+                0x0801b010        0x5 ./MicroGL2D/microgl2d.o
+ *fill*         0x0801b015        0x3 
  .rodata.sin_tbl_int
-                0x08018d18       0xb6 ./MicroGL2D/microgl2d.o
-                0x08018d18                sin_tbl_int
- *fill*         0x08018dce        0x2 
+                0x0801b018       0xb6 ./MicroGL2D/microgl2d.o
+                0x0801b018                sin_tbl_int
+ *fill*         0x0801b0ce        0x2 
  .rodata.STREAM_OFFSET_TAB
-                0x08018dd0        0x8 ./PCM5102/pcm5102.o
+                0x0801b0d0        0x8 ./PCM5102/pcm5102.o
  .rodata.__utoa.str1.1
-                0x08018dd8       0x25 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-utoa.o)
-                0x08018e00                        . = ALIGN (0x4)
- *fill*         0x08018dfd        0x3 
+                0x0801b0d8       0x25 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-utoa.o)
+                0x0801b100                        . = ALIGN (0x4)
+ *fill*         0x0801b0fd        0x3 
 
-.ARM.extab      0x08018e00        0x0
-                0x08018e00                        . = ALIGN (0x4)
+.ARM.extab      0x0801b100        0x0
+                0x0801b100                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08018e00                        . = ALIGN (0x4)
+                0x0801b100                        . = ALIGN (0x4)
 
-.ARM            0x08018e00        0x8
-                0x08018e00                        . = ALIGN (0x4)
-                0x08018e00                        __exidx_start = .
+.ARM            0x0801b100        0x8
+                0x0801b100                        . = ALIGN (0x4)
+                0x0801b100                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08018e00        0x8 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strlen.o)
- .ARM.exidx     0x08018e08        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0801b100        0x8 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-strlen.o)
+ .ARM.exidx     0x0801b108        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x08018e08                        __exidx_end = .
-                0x08018e08                        . = ALIGN (0x4)
+                0x0801b108                        __exidx_end = .
+                0x0801b108                        . = ALIGN (0x4)
 
-.rel.dyn        0x08018e08        0x0
- .rel.iplt      0x08018e08        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x0801b108        0x0
+ .rel.iplt      0x0801b108        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x08018e08        0x0
-                0x08018e08                        . = ALIGN (0x4)
-                0x08018e08                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0801b108        0x0
+                0x0801b108                        . = ALIGN (0x4)
+                0x0801b108                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08018e08                        PROVIDE (__preinit_array_end = .)
-                0x08018e08                        . = ALIGN (0x4)
+                0x0801b108                        PROVIDE (__preinit_array_end = .)
+                0x0801b108                        . = ALIGN (0x4)
 
-.init_array     0x08018e08        0x4
-                0x08018e08                        . = ALIGN (0x4)
-                0x08018e08                        PROVIDE (__init_array_start = .)
+.init_array     0x0801b108        0x4
+                0x0801b108                        . = ALIGN (0x4)
+                0x0801b108                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08018e08        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08018e0c                        PROVIDE (__init_array_end = .)
-                0x08018e0c                        . = ALIGN (0x4)
+ .init_array    0x0801b108        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x0801b10c                        PROVIDE (__init_array_end = .)
+                0x0801b10c                        . = ALIGN (0x4)
 
-.fini_array     0x08018e0c        0x4
-                0x08018e0c                        . = ALIGN (0x4)
+.fini_array     0x0801b10c        0x4
+                0x0801b10c                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08018e0c        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x0801b10c        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08018e10                        . = ALIGN (0x4)
-                0x08018e10                        _sidata = LOADADDR (.data)
+                0x0801b110                        . = ALIGN (0x4)
+                0x0801b110                        _sidata = LOADADDR (.data)
 
-.data           0x20000000       0xf8 load address 0x08018e10
+.data           0x20000000      0x104 load address 0x0801b110
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4343,114 +4341,118 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
  .data.SystemCoreClock
                 0x20000004        0x4 ./Core/Src/system_stm32f4xx.o
                 0x20000004                SystemCoreClock
- .data.Font_8x13
+ .data.Font_12x20
                 0x20000008        0xc ./Display/fonts.o
-                0x20000008                Font_8x13
+                0x20000008                Font_12x20
+ .data.Font_8x13
+                0x20000014        0xc ./Display/fonts.o
+                0x20000014                Font_8x13
  .data.st7789_sleepout_str
-                0x20000014        0x6 ./Display/st7789.o
-                0x20000014                st7789_sleepout_str
- *fill*         0x2000001a        0x2 
+                0x20000020        0x6 ./Display/st7789.o
+                0x20000020                st7789_sleepout_str
+ *fill*         0x20000026        0x2 
  .data.st7789_sleepin_str
-                0x2000001c        0x6 ./Display/st7789.o
-                0x2000001c                st7789_sleepin_str
- *fill*         0x20000022        0x2 
+                0x20000028        0x6 ./Display/st7789.o
+                0x20000028                st7789_sleepin_str
+ *fill*         0x2000002e        0x2 
  .data.st7789_setwin_str
-                0x20000024       0x12 ./Display/st7789.o
-                0x20000024                st7789_setwin_str
- *fill*         0x20000036        0x2 
+                0x20000030       0x12 ./Display/st7789.o
+                0x20000030                st7789_setwin_str
+ *fill*         0x20000042        0x2 
  .data.st7789_init_str
-                0x20000038       0x6d ./Display/st7789.o
-                0x20000038                st7789_init_str
- .data.Stat     0x200000a5        0x1 ./FATFS/user_diskio_spi.o
- *fill*         0x200000a6        0x2 
+                0x20000044       0x6d ./Display/st7789.o
+                0x20000044                st7789_init_str
+ .data.Stat     0x200000b1        0x1 ./FATFS/user_diskio_spi.o
+ *fill*         0x200000b2        0x2 
  .data._impure_ptr
-                0x200000a8        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-impure.o)
-                0x200000a8                _impure_ptr
+                0x200000b4        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-impure.o)
+                0x200000b4                _impure_ptr
  .data._impure_data
-                0x200000ac       0x4c F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-impure.o)
-                0x200000ac                _impure_data
+                0x200000b8       0x4c F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-impure.o)
+                0x200000b8                _impure_data
  *(.RamFunc)
  *(.RamFunc*)
-                0x200000f8                        . = ALIGN (0x4)
-                0x200000f8                        _edata = .
+                0x20000104                        . = ALIGN (0x4)
+                0x20000104                        _edata = .
 
-.igot.plt       0x200000f8        0x0 load address 0x08018f08
- .igot.plt      0x200000f8        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x200000f8                        . = ALIGN (0x4)
+.igot.plt       0x20000104        0x0 load address 0x0801b214
+ .igot.plt      0x20000104        0x0 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x20000104                        . = ALIGN (0x4)
 
-.bss            0x200000f8     0x3518 load address 0x08018f08
-                0x200000f8                        _sbss = .
-                0x200000f8                        __bss_start__ = _sbss
+.bss            0x20000104     0x3518 load address 0x0801b214
+                0x20000104                        _sbss = .
+                0x20000104                        __bss_start__ = _sbss
  *(.bss)
- .bss           0x200000f8       0x1c F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x20000104       0x1c F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
- .bss.AVI_osd   0x20000114        0x4 ./AVI/avi.o
-                0x20000114                AVI_osd
- .bss.player1   0x20000118        0x4 ./AVI/player.o
-                0x20000118                player1
- .bss.encoder1  0x2000011c       0x2c ./Core/Src/main.o
-                0x2000011c                encoder1
- .bss.FatFS     0x20000148      0x22c ./Core/Src/main.o
-                0x20000148                FatFS
- .bss.Path      0x20000374        0x4 ./Core/Src/main.o
-                0x20000374                Path
- .bss.millis    0x20000378        0x4 ./Core/Src/main.o
-                0x20000378                millis
+ .bss.AVI_osd   0x20000120        0x4 ./AVI/avi.o
+                0x20000120                AVI_osd
+ .bss.player1   0x20000124        0x4 ./AVI/player.o
+                0x20000124                player1
+ .bss.encoder1  0x20000128       0x2c ./Core/Src/main.o
+                0x20000128                encoder1
+ .bss.FatFS     0x20000154      0x22c ./Core/Src/main.o
+                0x20000154                FatFS
+ .bss.Path      0x20000380        0x4 ./Core/Src/main.o
+                0x20000380                Path
+ .bss.millis    0x20000384        0x4 ./Core/Src/main.o
+                0x20000384                millis
  .bss.__sbrk_heap_end
-                0x2000037c        0x4 ./Core/Src/sysmem.o
- .bss.LCD       0x20000380        0x4 ./Display/display.o
-                0x20000380                LCD
- .bss.LfnBuf    0x20000384      0x200 ./FATFS/ff.o
- .bss.Fsid      0x20000584        0x2 ./FATFS/ff.o
- *fill*         0x20000586        0x2 
- .bss.FatFs     0x20000588        0x4 ./FATFS/ff.o
- .bss.CardType  0x2000058c        0x1 ./FATFS/user_diskio_spi.o
- *fill*         0x2000058d        0x3 
+                0x20000388        0x4 ./Core/Src/sysmem.o
+ .bss.LCD       0x2000038c        0x4 ./Display/display.o
+                0x2000038c                LCD
+ .bss.LfnBuf    0x20000390      0x200 ./FATFS/ff.o
+ .bss.Fsid      0x20000590        0x2 ./FATFS/ff.o
+ *fill*         0x20000592        0x2 
+ .bss.FatFs     0x20000594        0x4 ./FATFS/ff.o
+ .bss.CardType  0x20000598        0x1 ./FATFS/user_diskio_spi.o
+ *fill*         0x20000599        0x3 
  .bss.work_buffer
-                0x20000590     0x2ee0 ./JPEG/jpeg_chan.o
-                0x20000590                work_buffer
+                0x2000059c     0x2ee0 ./JPEG/jpeg_chan.o
+                0x2000059c                work_buffer
  .bss.OSD_cycle_counter
-                0x20003470        0x4 ./JPEG/jpeg_chan.o
-                0x20003470                OSD_cycle_counter
+                0x2000347c        0x4 ./JPEG/jpeg_chan.o
+                0x2000347c                OSD_cycle_counter
  .bss.KEYB_all_button
-                0x20003474        0x1 ./Keyboard/keyboard.o
-                0x20003474                KEYB_all_button
+                0x20003480        0x1 ./Keyboard/keyboard.o
+                0x20003480                KEYB_all_button
  .bss.KEYB_count_key
-                0x20003475        0x1 ./Keyboard/keyboard.o
-                0x20003475                KEYB_count_key
- *fill*         0x20003476        0x2 
+                0x20003481        0x1 ./Keyboard/keyboard.o
+                0x20003481                KEYB_count_key
+ *fill*         0x20003482        0x2 
  .bss.KEYB_key_buff
-                0x20003478       0x50 ./Keyboard/keyboard.o
-                0x20003478                KEYB_key_buff
+                0x20003484       0x50 ./Keyboard/keyboard.o
+                0x20003484                KEYB_key_buff
  .bss.__malloc_sbrk_start
-                0x200034c8        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
-                0x200034c8                __malloc_sbrk_start
+                0x200034d4        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
+                0x200034d4                __malloc_sbrk_start
  .bss.__malloc_free_list
-                0x200034cc        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
-                0x200034cc                __malloc_free_list
- .bss.__sf      0x200034d0      0x138 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
-                0x200034d0                __sf
- .bss.errno     0x20003608        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reent.o)
-                0x20003608                errno
+                0x200034d8        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-mallocr.o)
+                0x200034d8                __malloc_free_list
+ .bss.__sf      0x200034dc      0x138 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-findfp.o)
+                0x200034dc                __sf
+ .bss.errno     0x20003614        0x4 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reent.o)
+                0x20003614                errno
  .bss.__lock___malloc_recursive_mutex
-                0x2000360c        0x1 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lock.o)
-                0x2000360c                __lock___malloc_recursive_mutex
+                0x20003618        0x1 F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-lock.o)
+                0x20003618                __lock___malloc_recursive_mutex
  *(COMMON)
-                0x20003610                        . = ALIGN (0x4)
- *fill*         0x2000360d        0x3 
-                0x20003610                        _ebss = .
-                0x20003610                        __bss_end__ = _ebss
+                0x2000361c                        . = ALIGN (0x4)
+ *fill*         0x20003619        0x3 
+                0x2000361c                        _ebss = .
+                0x2000361c                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20003610      0x600 load address 0x08018f08
-                0x20003610                        . = ALIGN (0x8)
+                0x2000361c      0x604 load address 0x0801b214
+                0x20003620                        . = ALIGN (0x8)
+ *fill*         0x2000361c        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x20003610                        PROVIDE (_end = .)
-                0x20003810                        . = (. + _Min_Heap_Size)
- *fill*         0x20003610      0x200 
-                0x20003c10                        . = (. + _Min_Stack_Size)
- *fill*         0x20003810      0x400 
-                0x20003c10                        . = ALIGN (0x8)
+                0x20003620                        PROVIDE (_end = .)
+                0x20003820                        . = (. + _Min_Heap_Size)
+ *fill*         0x20003620      0x200 
+                0x20003c20                        . = (. + _Min_Stack_Size)
+ *fill*         0x20003820      0x400 
+                0x20003c20                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -4620,107 +4622,107 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
 LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x30ea5
+.debug_info     0x00000000    0x30e9e
  .debug_info    0x00000000     0x4258 ./AVI/avi.o
  .debug_info    0x00004258      0xfbe ./AVI/mp3_callback.o
  .debug_info    0x00005216      0x8e3 ./AVI/player.o
  .debug_info    0x00005af9      0xc40 ./AVI/riff_read_header.o
  .debug_info    0x00006739      0x262 ./AVI/textures.o
  .debug_info    0x0000699b       0x46 ./Core/Src/asm.o
- .debug_info    0x000069e1     0x4949 ./Core/Src/main.o
- .debug_info    0x0000b32a      0xd0b ./Core/Src/stm32f4xx_it.o
- .debug_info    0x0000c035      0x186 ./Core/Src/sysmem.o
- .debug_info    0x0000c1bb      0x550 ./Core/Src/system_stm32f4xx.o
- .debug_info    0x0000c70b       0x30 ./Core/Startup/startup_stm32f401ccux.o
- .debug_info    0x0000c73b     0x3fee ./Display/display.o
- .debug_info    0x00010729       0x6b ./Display/display_asm.o
- .debug_info    0x00010794      0x254 ./Display/fonts.o
- .debug_info    0x000109e8      0x2f8 ./Display/st7789.o
- .debug_info    0x00010ce0      0x481 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
- .debug_info    0x00011161      0xd07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_info    0x00011e68      0xce0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_info    0x00012b48      0xb46 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_info    0x0001368e     0x14b7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
- .debug_info    0x00014b45      0xcbc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_info    0x00015801      0x4d7 ./Encoder/encoder.o
- .debug_info    0x00015cd8      0x48d ./FATFS/diskio.o
- .debug_info    0x00016165     0x2fad ./FATFS/ff.o
- .debug_info    0x00019112      0x29e ./FATFS/ffunicode.o
- .debug_info    0x000193b0     0x17e1 ./FATFS/user_diskio_spi.o
- .debug_info    0x0001ab91     0x26eb ./FileManager/filemanager.o
- .debug_info    0x0001d27c      0x2ab ./FileManager/icons.o
- .debug_info    0x0001d527     0x1bbc ./JPEG/jpeg_chan.o
- .debug_info    0x0001f0e3     0x1ce1 ./JPEG/tjpgd.o
- .debug_info    0x00020dc4      0x23e ./Keyboard/keyboard.o
- .debug_info    0x00021002       0x25 ./MP3Helix/src/asmpoly_thumb2.o
- .debug_info    0x00021027     0x1206 ./MP3Helix/src/bitstream.o
- .debug_info    0x0002222d      0xa29 ./MP3Helix/src/buffers.o
- .debug_info    0x00022c56      0xcf6 ./MP3Helix/src/dct32.o
- .debug_info    0x0002394c      0xaf0 ./MP3Helix/src/dequant.o
- .debug_info    0x0002443c      0xa04 ./MP3Helix/src/dqchan.o
- .debug_info    0x00024e40      0xbd1 ./MP3Helix/src/huffman.o
- .debug_info    0x00025a11      0x1f2 ./MP3Helix/src/hufftabs.o
- .debug_info    0x00025c03     0x39d9 ./MP3Helix/src/imdct.o
- .debug_info    0x000295dc     0x1025 ./MP3Helix/src/mp3dec.o
- .debug_info    0x0002a601      0x1e4 ./MP3Helix/src/mp3tabs.o
- .debug_info    0x0002a7e5      0xc84 ./MP3Helix/src/scalfact.o
- .debug_info    0x0002b469      0xe7b ./MP3Helix/src/stproc.o
- .debug_info    0x0002c2e4      0x482 ./MP3Helix/src/subband.o
- .debug_info    0x0002c766      0x1da ./MP3Helix/src/trigtabs.o
- .debug_info    0x0002c940     0x24d6 ./MicroGL2D/microgl2d.o
- .debug_info    0x0002ee16      0x89b ./MyString/mystring.o
- .debug_info    0x0002f6b1     0x17f4 ./PCM5102/pcm5102.o
+ .debug_info    0x000069e1     0x4942 ./Core/Src/main.o
+ .debug_info    0x0000b323      0xd0b ./Core/Src/stm32f4xx_it.o
+ .debug_info    0x0000c02e      0x186 ./Core/Src/sysmem.o
+ .debug_info    0x0000c1b4      0x550 ./Core/Src/system_stm32f4xx.o
+ .debug_info    0x0000c704       0x30 ./Core/Startup/startup_stm32f401ccux.o
+ .debug_info    0x0000c734     0x3fee ./Display/display.o
+ .debug_info    0x00010722       0x6b ./Display/display_asm.o
+ .debug_info    0x0001078d      0x254 ./Display/fonts.o
+ .debug_info    0x000109e1      0x2f8 ./Display/st7789.o
+ .debug_info    0x00010cd9      0x481 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
+ .debug_info    0x0001115a      0xd07 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_info    0x00011e61      0xce0 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_info    0x00012b41      0xb46 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_info    0x00013687     0x14b7 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
+ .debug_info    0x00014b3e      0xcbc ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_info    0x000157fa      0x4d7 ./Encoder/encoder.o
+ .debug_info    0x00015cd1      0x48d ./FATFS/diskio.o
+ .debug_info    0x0001615e     0x2fad ./FATFS/ff.o
+ .debug_info    0x0001910b      0x29e ./FATFS/ffunicode.o
+ .debug_info    0x000193a9     0x17e1 ./FATFS/user_diskio_spi.o
+ .debug_info    0x0001ab8a     0x26eb ./FileManager/filemanager.o
+ .debug_info    0x0001d275      0x2ab ./FileManager/icons.o
+ .debug_info    0x0001d520     0x1bbc ./JPEG/jpeg_chan.o
+ .debug_info    0x0001f0dc     0x1ce1 ./JPEG/tjpgd.o
+ .debug_info    0x00020dbd      0x23e ./Keyboard/keyboard.o
+ .debug_info    0x00020ffb       0x25 ./MP3Helix/src/asmpoly_thumb2.o
+ .debug_info    0x00021020     0x1206 ./MP3Helix/src/bitstream.o
+ .debug_info    0x00022226      0xa29 ./MP3Helix/src/buffers.o
+ .debug_info    0x00022c4f      0xcf6 ./MP3Helix/src/dct32.o
+ .debug_info    0x00023945      0xaf0 ./MP3Helix/src/dequant.o
+ .debug_info    0x00024435      0xa04 ./MP3Helix/src/dqchan.o
+ .debug_info    0x00024e39      0xbd1 ./MP3Helix/src/huffman.o
+ .debug_info    0x00025a0a      0x1f2 ./MP3Helix/src/hufftabs.o
+ .debug_info    0x00025bfc     0x39d9 ./MP3Helix/src/imdct.o
+ .debug_info    0x000295d5     0x1025 ./MP3Helix/src/mp3dec.o
+ .debug_info    0x0002a5fa      0x1e4 ./MP3Helix/src/mp3tabs.o
+ .debug_info    0x0002a7de      0xc84 ./MP3Helix/src/scalfact.o
+ .debug_info    0x0002b462      0xe7b ./MP3Helix/src/stproc.o
+ .debug_info    0x0002c2dd      0x482 ./MP3Helix/src/subband.o
+ .debug_info    0x0002c75f      0x1da ./MP3Helix/src/trigtabs.o
+ .debug_info    0x0002c939     0x24d6 ./MicroGL2D/microgl2d.o
+ .debug_info    0x0002ee0f      0x89b ./MyString/mystring.o
+ .debug_info    0x0002f6aa     0x17f4 ./PCM5102/pcm5102.o
 
-.debug_abbrev   0x00000000     0x74ae
+.debug_abbrev   0x00000000     0x74b0
  .debug_abbrev  0x00000000      0x4cd ./AVI/avi.o
  .debug_abbrev  0x000004cd      0x2f6 ./AVI/mp3_callback.o
  .debug_abbrev  0x000007c3      0x269 ./AVI/player.o
  .debug_abbrev  0x00000a2c      0x209 ./AVI/riff_read_header.o
  .debug_abbrev  0x00000c35       0xf1 ./AVI/textures.o
  .debug_abbrev  0x00000d26       0x24 ./Core/Src/asm.o
- .debug_abbrev  0x00000d4a      0x4e9 ./Core/Src/main.o
- .debug_abbrev  0x00001233      0x3bd ./Core/Src/stm32f4xx_it.o
- .debug_abbrev  0x000015f0       0xdc ./Core/Src/sysmem.o
- .debug_abbrev  0x000016cc      0x120 ./Core/Src/system_stm32f4xx.o
- .debug_abbrev  0x000017ec       0x24 ./Core/Startup/startup_stm32f401ccux.o
- .debug_abbrev  0x00001810      0x55f ./Display/display.o
- .debug_abbrev  0x00001d6f       0x24 ./Display/display_asm.o
- .debug_abbrev  0x00001d93       0xde ./Display/fonts.o
- .debug_abbrev  0x00001e71      0x160 ./Display/st7789.o
- .debug_abbrev  0x00001fd1      0x1b9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
- .debug_abbrev  0x0000218a      0x2a2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_abbrev  0x0000242c      0x330 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_abbrev  0x0000275c      0x31f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_abbrev  0x00002a7b      0x2d8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
- .debug_abbrev  0x00002d53      0x305 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_abbrev  0x00003058      0x217 ./Encoder/encoder.o
- .debug_abbrev  0x0000326f      0x192 ./FATFS/diskio.o
- .debug_abbrev  0x00003401      0x382 ./FATFS/ff.o
- .debug_abbrev  0x00003783       0xf9 ./FATFS/ffunicode.o
- .debug_abbrev  0x0000387c      0x435 ./FATFS/user_diskio_spi.o
- .debug_abbrev  0x00003cb1      0x591 ./FileManager/filemanager.o
- .debug_abbrev  0x00004242       0xc7 ./FileManager/icons.o
- .debug_abbrev  0x00004309      0x3e5 ./JPEG/jpeg_chan.o
- .debug_abbrev  0x000046ee      0x33e ./JPEG/tjpgd.o
- .debug_abbrev  0x00004a2c      0x12c ./Keyboard/keyboard.o
- .debug_abbrev  0x00004b58       0x14 ./MP3Helix/src/asmpoly_thumb2.o
- .debug_abbrev  0x00004b6c      0x321 ./MP3Helix/src/bitstream.o
- .debug_abbrev  0x00004e8d      0x1f0 ./MP3Helix/src/buffers.o
- .debug_abbrev  0x0000507d      0x18d ./MP3Helix/src/dct32.o
- .debug_abbrev  0x0000520a      0x259 ./MP3Helix/src/dequant.o
- .debug_abbrev  0x00005463      0x288 ./MP3Helix/src/dqchan.o
- .debug_abbrev  0x000056eb      0x2be ./MP3Helix/src/huffman.o
- .debug_abbrev  0x000059a9       0xd6 ./MP3Helix/src/hufftabs.o
- .debug_abbrev  0x00005a7f      0x420 ./MP3Helix/src/imdct.o
- .debug_abbrev  0x00005e9f      0x3e6 ./MP3Helix/src/mp3dec.o
- .debug_abbrev  0x00006285       0x98 ./MP3Helix/src/mp3tabs.o
- .debug_abbrev  0x0000631d      0x272 ./MP3Helix/src/scalfact.o
- .debug_abbrev  0x0000658f      0x27b ./MP3Helix/src/stproc.o
- .debug_abbrev  0x0000680a      0x166 ./MP3Helix/src/subband.o
- .debug_abbrev  0x00006970       0x92 ./MP3Helix/src/trigtabs.o
- .debug_abbrev  0x00006a02      0x4dd ./MicroGL2D/microgl2d.o
- .debug_abbrev  0x00006edf      0x2bc ./MyString/mystring.o
- .debug_abbrev  0x0000719b      0x313 ./PCM5102/pcm5102.o
+ .debug_abbrev  0x00000d4a      0x4eb ./Core/Src/main.o
+ .debug_abbrev  0x00001235      0x3bd ./Core/Src/stm32f4xx_it.o
+ .debug_abbrev  0x000015f2       0xdc ./Core/Src/sysmem.o
+ .debug_abbrev  0x000016ce      0x120 ./Core/Src/system_stm32f4xx.o
+ .debug_abbrev  0x000017ee       0x24 ./Core/Startup/startup_stm32f401ccux.o
+ .debug_abbrev  0x00001812      0x55f ./Display/display.o
+ .debug_abbrev  0x00001d71       0x24 ./Display/display_asm.o
+ .debug_abbrev  0x00001d95       0xde ./Display/fonts.o
+ .debug_abbrev  0x00001e73      0x160 ./Display/st7789.o
+ .debug_abbrev  0x00001fd3      0x1b9 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
+ .debug_abbrev  0x0000218c      0x2a2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_abbrev  0x0000242e      0x330 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_abbrev  0x0000275e      0x31f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_abbrev  0x00002a7d      0x2d8 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
+ .debug_abbrev  0x00002d55      0x305 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_abbrev  0x0000305a      0x217 ./Encoder/encoder.o
+ .debug_abbrev  0x00003271      0x192 ./FATFS/diskio.o
+ .debug_abbrev  0x00003403      0x382 ./FATFS/ff.o
+ .debug_abbrev  0x00003785       0xf9 ./FATFS/ffunicode.o
+ .debug_abbrev  0x0000387e      0x435 ./FATFS/user_diskio_spi.o
+ .debug_abbrev  0x00003cb3      0x591 ./FileManager/filemanager.o
+ .debug_abbrev  0x00004244       0xc7 ./FileManager/icons.o
+ .debug_abbrev  0x0000430b      0x3e5 ./JPEG/jpeg_chan.o
+ .debug_abbrev  0x000046f0      0x33e ./JPEG/tjpgd.o
+ .debug_abbrev  0x00004a2e      0x12c ./Keyboard/keyboard.o
+ .debug_abbrev  0x00004b5a       0x14 ./MP3Helix/src/asmpoly_thumb2.o
+ .debug_abbrev  0x00004b6e      0x321 ./MP3Helix/src/bitstream.o
+ .debug_abbrev  0x00004e8f      0x1f0 ./MP3Helix/src/buffers.o
+ .debug_abbrev  0x0000507f      0x18d ./MP3Helix/src/dct32.o
+ .debug_abbrev  0x0000520c      0x259 ./MP3Helix/src/dequant.o
+ .debug_abbrev  0x00005465      0x288 ./MP3Helix/src/dqchan.o
+ .debug_abbrev  0x000056ed      0x2be ./MP3Helix/src/huffman.o
+ .debug_abbrev  0x000059ab       0xd6 ./MP3Helix/src/hufftabs.o
+ .debug_abbrev  0x00005a81      0x420 ./MP3Helix/src/imdct.o
+ .debug_abbrev  0x00005ea1      0x3e6 ./MP3Helix/src/mp3dec.o
+ .debug_abbrev  0x00006287       0x98 ./MP3Helix/src/mp3tabs.o
+ .debug_abbrev  0x0000631f      0x272 ./MP3Helix/src/scalfact.o
+ .debug_abbrev  0x00006591      0x27b ./MP3Helix/src/stproc.o
+ .debug_abbrev  0x0000680c      0x166 ./MP3Helix/src/subband.o
+ .debug_abbrev  0x00006972       0x92 ./MP3Helix/src/trigtabs.o
+ .debug_abbrev  0x00006a04      0x4dd ./MicroGL2D/microgl2d.o
+ .debug_abbrev  0x00006ee1      0x2bc ./MyString/mystring.o
+ .debug_abbrev  0x0000719d      0x313 ./PCM5102/pcm5102.o
 
 .debug_loclists
                 0x00000000    0x2b2e3
@@ -4990,7 +4992,7 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
  .debug_rnglists
                 0x000045fd       0x9d ./PCM5102/pcm5102.o
 
-.debug_macro    0x00000000    0x16d49
+.debug_macro    0x00000000    0x16d3d
  .debug_macro   0x00000000      0x308 ./AVI/avi.o
  .debug_macro   0x00000308      0xb3e ./AVI/avi.o
  .debug_macro   0x00000e46       0x2e ./AVI/avi.o
@@ -5019,209 +5021,209 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
  .debug_macro   0x0000ee14      0x241 ./AVI/avi.o
  .debug_macro   0x0000f055      0x5f3 ./AVI/avi.o
  .debug_macro   0x0000f648      0x149 ./AVI/avi.o
- .debug_macro   0x0000f791       0xe8 ./AVI/avi.o
- .debug_macro   0x0000f879       0x1c ./AVI/avi.o
- .debug_macro   0x0000f895       0x88 ./AVI/avi.o
- .debug_macro   0x0000f91d      0x111 ./AVI/avi.o
- .debug_macro   0x0000fa2e       0xe8 ./AVI/avi.o
- .debug_macro   0x0000fb16      0x40a ./AVI/avi.o
- .debug_macro   0x0000ff20       0x10 ./AVI/avi.o
- .debug_macro   0x0000ff30       0x2e ./AVI/avi.o
- .debug_macro   0x0000ff5e       0x22 ./AVI/avi.o
- .debug_macro   0x0000ff80       0x1c ./AVI/avi.o
- .debug_macro   0x0000ff9c       0x3a ./AVI/avi.o
- .debug_macro   0x0000ffd6       0x2a ./AVI/avi.o
- .debug_macro   0x00010000       0x61 ./AVI/avi.o
- .debug_macro   0x00010061       0x43 ./AVI/avi.o
- .debug_macro   0x000100a4       0x34 ./AVI/avi.o
- .debug_macro   0x000100d8       0x16 ./AVI/avi.o
- .debug_macro   0x000100ee      0x11c ./AVI/avi.o
- .debug_macro   0x0001020a       0x9b ./AVI/avi.o
- .debug_macro   0x000102a5      0x370 ./AVI/avi.o
- .debug_macro   0x00010615       0x16 ./AVI/avi.o
- .debug_macro   0x0001062b       0x4a ./AVI/avi.o
- .debug_macro   0x00010675       0x34 ./AVI/avi.o
- .debug_macro   0x000106a9       0x10 ./AVI/avi.o
- .debug_macro   0x000106b9       0x58 ./AVI/avi.o
- .debug_macro   0x00010711       0x8e ./AVI/avi.o
- .debug_macro   0x0001079f       0x1c ./AVI/avi.o
- .debug_macro   0x000107bb      0x185 ./AVI/avi.o
- .debug_macro   0x00010940       0x16 ./AVI/avi.o
- .debug_macro   0x00010956       0x29 ./AVI/avi.o
- .debug_macro   0x0001097f       0x16 ./AVI/avi.o
- .debug_macro   0x00010995       0x3c ./AVI/avi.o
- .debug_macro   0x000109d1       0x20 ./AVI/avi.o
- .debug_macro   0x000109f1       0x6a ./AVI/avi.o
- .debug_macro   0x00010a5b      0x25d ./AVI/mp3_callback.o
- .debug_macro   0x00010cb8       0xe2 ./AVI/mp3_callback.o
- .debug_macro   0x00010d9a      0x410 ./AVI/mp3_callback.o
- .debug_macro   0x000111aa      0x190 ./AVI/mp3_callback.o
- .debug_macro   0x0001133a       0x10 ./AVI/mp3_callback.o
- .debug_macro   0x0001134a      0x261 ./AVI/player.o
- .debug_macro   0x000115ab      0x24e ./AVI/riff_read_header.o
- .debug_macro   0x000117f9      0x15f ./AVI/textures.o
- .debug_macro   0x00011958      0x1c1 ./Core/Src/main.o
- .debug_macro   0x00011b19      0x112 ./Core/Src/main.o
- .debug_macro   0x00011c2b      0x238 ./Core/Src/main.o
- .debug_macro   0x00011e63      0x198 ./Core/Src/stm32f4xx_it.o
- .debug_macro   0x00011ffb      0x112 ./Core/Src/sysmem.o
- .debug_macro   0x0001210d      0x23c ./Core/Src/sysmem.o
- .debug_macro   0x00012349       0xce ./Core/Src/system_stm32f4xx.o
- .debug_macro   0x00012417      0x27d ./Display/display.o
- .debug_macro   0x00012694      0x150 ./Display/fonts.o
- .debug_macro   0x000127e4      0x177 ./Display/st7789.o
- .debug_macro   0x0001295b      0x10c ./Display/st7789.o
- .debug_macro   0x00012a67       0xf5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
- .debug_macro   0x00012b5c       0xe2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
- .debug_macro   0x00012c3e      0x110 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_macro   0x00012d4e      0x143 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_macro   0x00012e91       0xf5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_macro   0x00012f86      0x782 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_macro   0x00013708      0x17d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_macro   0x00013885      0x23b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_macro   0x00013ac0      0x159 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
- .debug_macro   0x00013c19      0x5ed ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
- .debug_macro   0x00014206      0x190 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_macro   0x00014396       0x5b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_macro   0x000143f1      0x228 ./Encoder/encoder.o
- .debug_macro   0x00014619       0x64 ./Encoder/encoder.o
- .debug_macro   0x0001467d      0x189 ./FATFS/diskio.o
- .debug_macro   0x00014806       0x94 ./FATFS/diskio.o
- .debug_macro   0x0001489a      0x5c9 ./FATFS/ff.o
- .debug_macro   0x00014e63       0x8d ./FATFS/ffunicode.o
- .debug_macro   0x00014ef0      0x261 ./FATFS/user_diskio_spi.o
- .debug_macro   0x00015151       0x8e ./FATFS/user_diskio_spi.o
- .debug_macro   0x000151df      0x2c0 ./FileManager/filemanager.o
- .debug_macro   0x0001549f      0x150 ./FileManager/icons.o
- .debug_macro   0x000155ef      0x298 ./JPEG/jpeg_chan.o
- .debug_macro   0x00015887       0x28 ./JPEG/jpeg_chan.o
- .debug_macro   0x000158af      0x190 ./JPEG/tjpgd.o
- .debug_macro   0x00015a3f      0x226 ./Keyboard/keyboard.o
- .debug_macro   0x00015c65       0x34 ./Keyboard/keyboard.o
- .debug_macro   0x00015c99       0x4b ./MP3Helix/src/bitstream.o
- .debug_macro   0x00015ce4       0x88 ./MP3Helix/src/bitstream.o
- .debug_macro   0x00015d6c       0x22 ./MP3Helix/src/bitstream.o
- .debug_macro   0x00015d8e       0xfa ./MP3Helix/src/bitstream.o
- .debug_macro   0x00015e88      0x170 ./MP3Helix/src/buffers.o
- .debug_macro   0x00015ff8      0x10b ./MP3Helix/src/dct32.o
- .debug_macro   0x00016103       0x4b ./MP3Helix/src/dequant.o
- .debug_macro   0x0001614e       0x51 ./MP3Helix/src/dqchan.o
- .debug_macro   0x0001619f       0x83 ./MP3Helix/src/huffman.o
- .debug_macro   0x00016222       0xaa ./MP3Helix/src/hufftabs.o
- .debug_macro   0x000162cc       0x4b ./MP3Helix/src/imdct.o
- .debug_macro   0x00016317      0x260 ./MP3Helix/src/mp3dec.o
- .debug_macro   0x00016577       0x32 ./MP3Helix/src/mp3tabs.o
- .debug_macro   0x000165a9       0x41 ./MP3Helix/src/scalfact.o
- .debug_macro   0x000165ea       0x4b ./MP3Helix/src/stproc.o
- .debug_macro   0x00016635       0x4b ./MP3Helix/src/subband.o
- .debug_macro   0x00016680       0x41 ./MP3Helix/src/trigtabs.o
- .debug_macro   0x000166c1      0x280 ./MicroGL2D/microgl2d.o
- .debug_macro   0x00016941      0x260 ./MyString/mystring.o
- .debug_macro   0x00016ba1       0x58 ./MyString/mystring.o
- .debug_macro   0x00016bf9      0x150 ./PCM5102/pcm5102.o
+ .debug_macro   0x0000f791       0xdc ./AVI/avi.o
+ .debug_macro   0x0000f86d       0x1c ./AVI/avi.o
+ .debug_macro   0x0000f889       0x88 ./AVI/avi.o
+ .debug_macro   0x0000f911      0x111 ./AVI/avi.o
+ .debug_macro   0x0000fa22       0xe8 ./AVI/avi.o
+ .debug_macro   0x0000fb0a      0x40a ./AVI/avi.o
+ .debug_macro   0x0000ff14       0x10 ./AVI/avi.o
+ .debug_macro   0x0000ff24       0x2e ./AVI/avi.o
+ .debug_macro   0x0000ff52       0x22 ./AVI/avi.o
+ .debug_macro   0x0000ff74       0x1c ./AVI/avi.o
+ .debug_macro   0x0000ff90       0x3a ./AVI/avi.o
+ .debug_macro   0x0000ffca       0x2a ./AVI/avi.o
+ .debug_macro   0x0000fff4       0x61 ./AVI/avi.o
+ .debug_macro   0x00010055       0x43 ./AVI/avi.o
+ .debug_macro   0x00010098       0x34 ./AVI/avi.o
+ .debug_macro   0x000100cc       0x16 ./AVI/avi.o
+ .debug_macro   0x000100e2      0x11c ./AVI/avi.o
+ .debug_macro   0x000101fe       0x9b ./AVI/avi.o
+ .debug_macro   0x00010299      0x370 ./AVI/avi.o
+ .debug_macro   0x00010609       0x16 ./AVI/avi.o
+ .debug_macro   0x0001061f       0x4a ./AVI/avi.o
+ .debug_macro   0x00010669       0x34 ./AVI/avi.o
+ .debug_macro   0x0001069d       0x10 ./AVI/avi.o
+ .debug_macro   0x000106ad       0x58 ./AVI/avi.o
+ .debug_macro   0x00010705       0x8e ./AVI/avi.o
+ .debug_macro   0x00010793       0x1c ./AVI/avi.o
+ .debug_macro   0x000107af      0x185 ./AVI/avi.o
+ .debug_macro   0x00010934       0x16 ./AVI/avi.o
+ .debug_macro   0x0001094a       0x29 ./AVI/avi.o
+ .debug_macro   0x00010973       0x16 ./AVI/avi.o
+ .debug_macro   0x00010989       0x3c ./AVI/avi.o
+ .debug_macro   0x000109c5       0x20 ./AVI/avi.o
+ .debug_macro   0x000109e5       0x6a ./AVI/avi.o
+ .debug_macro   0x00010a4f      0x25d ./AVI/mp3_callback.o
+ .debug_macro   0x00010cac       0xe2 ./AVI/mp3_callback.o
+ .debug_macro   0x00010d8e      0x410 ./AVI/mp3_callback.o
+ .debug_macro   0x0001119e      0x190 ./AVI/mp3_callback.o
+ .debug_macro   0x0001132e       0x10 ./AVI/mp3_callback.o
+ .debug_macro   0x0001133e      0x261 ./AVI/player.o
+ .debug_macro   0x0001159f      0x24e ./AVI/riff_read_header.o
+ .debug_macro   0x000117ed      0x15f ./AVI/textures.o
+ .debug_macro   0x0001194c      0x1c1 ./Core/Src/main.o
+ .debug_macro   0x00011b0d      0x112 ./Core/Src/main.o
+ .debug_macro   0x00011c1f      0x238 ./Core/Src/main.o
+ .debug_macro   0x00011e57      0x198 ./Core/Src/stm32f4xx_it.o
+ .debug_macro   0x00011fef      0x112 ./Core/Src/sysmem.o
+ .debug_macro   0x00012101      0x23c ./Core/Src/sysmem.o
+ .debug_macro   0x0001233d       0xce ./Core/Src/system_stm32f4xx.o
+ .debug_macro   0x0001240b      0x27d ./Display/display.o
+ .debug_macro   0x00012688      0x150 ./Display/fonts.o
+ .debug_macro   0x000127d8      0x177 ./Display/st7789.o
+ .debug_macro   0x0001294f      0x10c ./Display/st7789.o
+ .debug_macro   0x00012a5b       0xf5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
+ .debug_macro   0x00012b50       0xe2 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
+ .debug_macro   0x00012c32      0x110 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_macro   0x00012d42      0x143 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_macro   0x00012e85       0xf5 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_macro   0x00012f7a      0x782 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_macro   0x000136fc      0x17d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_macro   0x00013879      0x23b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_macro   0x00013ab4      0x159 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
+ .debug_macro   0x00013c0d      0x5ed ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
+ .debug_macro   0x000141fa      0x190 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_macro   0x0001438a       0x5b ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_macro   0x000143e5      0x228 ./Encoder/encoder.o
+ .debug_macro   0x0001460d       0x64 ./Encoder/encoder.o
+ .debug_macro   0x00014671      0x189 ./FATFS/diskio.o
+ .debug_macro   0x000147fa       0x94 ./FATFS/diskio.o
+ .debug_macro   0x0001488e      0x5c9 ./FATFS/ff.o
+ .debug_macro   0x00014e57       0x8d ./FATFS/ffunicode.o
+ .debug_macro   0x00014ee4      0x261 ./FATFS/user_diskio_spi.o
+ .debug_macro   0x00015145       0x8e ./FATFS/user_diskio_spi.o
+ .debug_macro   0x000151d3      0x2c0 ./FileManager/filemanager.o
+ .debug_macro   0x00015493      0x150 ./FileManager/icons.o
+ .debug_macro   0x000155e3      0x298 ./JPEG/jpeg_chan.o
+ .debug_macro   0x0001587b       0x28 ./JPEG/jpeg_chan.o
+ .debug_macro   0x000158a3      0x190 ./JPEG/tjpgd.o
+ .debug_macro   0x00015a33      0x226 ./Keyboard/keyboard.o
+ .debug_macro   0x00015c59       0x34 ./Keyboard/keyboard.o
+ .debug_macro   0x00015c8d       0x4b ./MP3Helix/src/bitstream.o
+ .debug_macro   0x00015cd8       0x88 ./MP3Helix/src/bitstream.o
+ .debug_macro   0x00015d60       0x22 ./MP3Helix/src/bitstream.o
+ .debug_macro   0x00015d82       0xfa ./MP3Helix/src/bitstream.o
+ .debug_macro   0x00015e7c      0x170 ./MP3Helix/src/buffers.o
+ .debug_macro   0x00015fec      0x10b ./MP3Helix/src/dct32.o
+ .debug_macro   0x000160f7       0x4b ./MP3Helix/src/dequant.o
+ .debug_macro   0x00016142       0x51 ./MP3Helix/src/dqchan.o
+ .debug_macro   0x00016193       0x83 ./MP3Helix/src/huffman.o
+ .debug_macro   0x00016216       0xaa ./MP3Helix/src/hufftabs.o
+ .debug_macro   0x000162c0       0x4b ./MP3Helix/src/imdct.o
+ .debug_macro   0x0001630b      0x260 ./MP3Helix/src/mp3dec.o
+ .debug_macro   0x0001656b       0x32 ./MP3Helix/src/mp3tabs.o
+ .debug_macro   0x0001659d       0x41 ./MP3Helix/src/scalfact.o
+ .debug_macro   0x000165de       0x4b ./MP3Helix/src/stproc.o
+ .debug_macro   0x00016629       0x4b ./MP3Helix/src/subband.o
+ .debug_macro   0x00016674       0x41 ./MP3Helix/src/trigtabs.o
+ .debug_macro   0x000166b5      0x280 ./MicroGL2D/microgl2d.o
+ .debug_macro   0x00016935      0x260 ./MyString/mystring.o
+ .debug_macro   0x00016b95       0x58 ./MyString/mystring.o
+ .debug_macro   0x00016bed      0x150 ./PCM5102/pcm5102.o
 
-.debug_line     0x00000000    0x35030
+.debug_line     0x00000000    0x35028
  .debug_line    0x00000000     0x1bb8 ./AVI/avi.o
  .debug_line    0x00001bb8      0xe5e ./AVI/mp3_callback.o
  .debug_line    0x00002a16      0xd2f ./AVI/player.o
  .debug_line    0x00003745      0xbb7 ./AVI/riff_read_header.o
  .debug_line    0x000042fc      0x77f ./AVI/textures.o
  .debug_line    0x00004a7b       0x73 ./Core/Src/asm.o
- .debug_line    0x00004aee     0x1ef4 ./Core/Src/main.o
- .debug_line    0x000069e2      0xce8 ./Core/Src/stm32f4xx_it.o
- .debug_line    0x000076ca      0x77c ./Core/Src/sysmem.o
- .debug_line    0x00007e46      0x646 ./Core/Src/system_stm32f4xx.o
- .debug_line    0x0000848c       0x7a ./Core/Startup/startup_stm32f401ccux.o
- .debug_line    0x00008506     0x3408 ./Display/display.o
- .debug_line    0x0000b90e      0x1b1 ./Display/display_asm.o
- .debug_line    0x0000babf      0x6d7 ./Display/fonts.o
- .debug_line    0x0000c196      0x7b8 ./Display/st7789.o
- .debug_line    0x0000c94e      0x830 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
- .debug_line    0x0000d17e      0xbca ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_line    0x0000dd48     0x1046 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_line    0x0000ed8e      0xb57 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_line    0x0000f8e5      0xf2d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
- .debug_line    0x00010812      0xd6f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_line    0x00011581      0xbcc ./Encoder/encoder.o
- .debug_line    0x0001214d      0x763 ./FATFS/diskio.o
- .debug_line    0x000128b0     0x3aa2 ./FATFS/ff.o
- .debug_line    0x00016352      0x6dc ./FATFS/ffunicode.o
- .debug_line    0x00016a2e     0x1e66 ./FATFS/user_diskio_spi.o
- .debug_line    0x00018894     0x1dc5 ./FileManager/filemanager.o
- .debug_line    0x0001a659      0x6c5 ./FileManager/icons.o
- .debug_line    0x0001ad1e      0xe75 ./JPEG/jpeg_chan.o
- .debug_line    0x0001bb93     0x2d33 ./JPEG/tjpgd.o
- .debug_line    0x0001e8c6      0x9c3 ./Keyboard/keyboard.o
- .debug_line    0x0001f289       0xf5 ./MP3Helix/src/asmpoly_thumb2.o
- .debug_line    0x0001f37e     0x22df ./MP3Helix/src/bitstream.o
- .debug_line    0x0002165d      0x960 ./MP3Helix/src/buffers.o
- .debug_line    0x00021fbd     0x18e3 ./MP3Helix/src/dct32.o
- .debug_line    0x000238a0      0x4ab ./MP3Helix/src/dequant.o
- .debug_line    0x00023d4b      0x9d3 ./MP3Helix/src/dqchan.o
- .debug_line    0x0002471e      0xd45 ./MP3Helix/src/huffman.o
- .debug_line    0x00025463       0xcf ./MP3Helix/src/hufftabs.o
- .debug_line    0x00025532     0x83c3 ./MP3Helix/src/imdct.o
- .debug_line    0x0002d8f5     0x126a ./MP3Helix/src/mp3dec.o
- .debug_line    0x0002eb5f       0xc3 ./MP3Helix/src/mp3tabs.o
- .debug_line    0x0002ec22      0xb42 ./MP3Helix/src/scalfact.o
- .debug_line    0x0002f764      0xda2 ./MP3Helix/src/stproc.o
- .debug_line    0x00030506      0x1ee ./MP3Helix/src/subband.o
- .debug_line    0x000306f4       0xcf ./MP3Helix/src/trigtabs.o
- .debug_line    0x000307c3     0x2bd5 ./MicroGL2D/microgl2d.o
- .debug_line    0x00033398      0xe1d ./MyString/mystring.o
- .debug_line    0x000341b5      0xe7b ./PCM5102/pcm5102.o
+ .debug_line    0x00004aee     0x1eec ./Core/Src/main.o
+ .debug_line    0x000069da      0xce8 ./Core/Src/stm32f4xx_it.o
+ .debug_line    0x000076c2      0x77c ./Core/Src/sysmem.o
+ .debug_line    0x00007e3e      0x646 ./Core/Src/system_stm32f4xx.o
+ .debug_line    0x00008484       0x7a ./Core/Startup/startup_stm32f401ccux.o
+ .debug_line    0x000084fe     0x3408 ./Display/display.o
+ .debug_line    0x0000b906      0x1b1 ./Display/display_asm.o
+ .debug_line    0x0000bab7      0x6d7 ./Display/fonts.o
+ .debug_line    0x0000c18e      0x7b8 ./Display/st7789.o
+ .debug_line    0x0000c946      0x830 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
+ .debug_line    0x0000d176      0xbca ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_line    0x0000dd40     0x1046 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_line    0x0000ed86      0xb57 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_line    0x0000f8dd      0xf2d ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
+ .debug_line    0x0001080a      0xd6f ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_line    0x00011579      0xbcc ./Encoder/encoder.o
+ .debug_line    0x00012145      0x763 ./FATFS/diskio.o
+ .debug_line    0x000128a8     0x3aa2 ./FATFS/ff.o
+ .debug_line    0x0001634a      0x6dc ./FATFS/ffunicode.o
+ .debug_line    0x00016a26     0x1e66 ./FATFS/user_diskio_spi.o
+ .debug_line    0x0001888c     0x1dc5 ./FileManager/filemanager.o
+ .debug_line    0x0001a651      0x6c5 ./FileManager/icons.o
+ .debug_line    0x0001ad16      0xe75 ./JPEG/jpeg_chan.o
+ .debug_line    0x0001bb8b     0x2d33 ./JPEG/tjpgd.o
+ .debug_line    0x0001e8be      0x9c3 ./Keyboard/keyboard.o
+ .debug_line    0x0001f281       0xf5 ./MP3Helix/src/asmpoly_thumb2.o
+ .debug_line    0x0001f376     0x22df ./MP3Helix/src/bitstream.o
+ .debug_line    0x00021655      0x960 ./MP3Helix/src/buffers.o
+ .debug_line    0x00021fb5     0x18e3 ./MP3Helix/src/dct32.o
+ .debug_line    0x00023898      0x4ab ./MP3Helix/src/dequant.o
+ .debug_line    0x00023d43      0x9d3 ./MP3Helix/src/dqchan.o
+ .debug_line    0x00024716      0xd45 ./MP3Helix/src/huffman.o
+ .debug_line    0x0002545b       0xcf ./MP3Helix/src/hufftabs.o
+ .debug_line    0x0002552a     0x83c3 ./MP3Helix/src/imdct.o
+ .debug_line    0x0002d8ed     0x126a ./MP3Helix/src/mp3dec.o
+ .debug_line    0x0002eb57       0xc3 ./MP3Helix/src/mp3tabs.o
+ .debug_line    0x0002ec1a      0xb42 ./MP3Helix/src/scalfact.o
+ .debug_line    0x0002f75c      0xda2 ./MP3Helix/src/stproc.o
+ .debug_line    0x000304fe      0x1ee ./MP3Helix/src/subband.o
+ .debug_line    0x000306ec       0xcf ./MP3Helix/src/trigtabs.o
+ .debug_line    0x000307bb     0x2bd5 ./MicroGL2D/microgl2d.o
+ .debug_line    0x00033390      0xe1d ./MyString/mystring.o
+ .debug_line    0x000341ad      0xe7b ./PCM5102/pcm5102.o
 
-.debug_str      0x00000000    0x711eb
- .debug_str     0x00000000    0x711eb ./AVI/avi.o
-                              0x638c7 (size before relaxing)
- .debug_str     0x000711eb    0x61e46 ./AVI/mp3_callback.o
- .debug_str     0x000711eb    0x600d7 ./AVI/player.o
- .debug_str     0x000711eb    0x61c83 ./AVI/riff_read_header.o
- .debug_str     0x000711eb    0x5c78a ./AVI/textures.o
- .debug_str     0x000711eb       0x9d ./Core/Src/asm.o
- .debug_str     0x000711eb    0x5f7dc ./Core/Src/main.o
- .debug_str     0x000711eb    0x5d10d ./Core/Src/stm32f4xx_it.o
- .debug_str     0x000711eb     0x7900 ./Core/Src/sysmem.o
- .debug_str     0x000711eb    0x4fbb1 ./Core/Src/system_stm32f4xx.o
- .debug_str     0x000711eb       0x99 ./Core/Startup/startup_stm32f401ccux.o
- .debug_str     0x000711eb    0x6093a ./Display/display.o
- .debug_str     0x000711eb       0xe0 ./Display/display_asm.o
- .debug_str     0x000711eb    0x5c69b ./Display/fonts.o
- .debug_str     0x000711eb    0x5cd5f ./Display/st7789.o
- .debug_str     0x000711eb    0x50245 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
- .debug_str     0x000711eb    0x51090 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
- .debug_str     0x000711eb    0x5407c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
- .debug_str     0x000711eb    0x55e92 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
- .debug_str     0x000711eb    0x5479a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
- .debug_str     0x000711eb    0x56583 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
- .debug_str     0x000711eb    0x5fe7b ./Encoder/encoder.o
- .debug_str     0x000711eb    0x5ce0e ./FATFS/diskio.o
- .debug_str     0x000711eb     0x83cc ./FATFS/ff.o
- .debug_str     0x000711eb     0x44e4 ./FATFS/ffunicode.o
- .debug_str     0x000711eb    0x5d26b ./FATFS/user_diskio_spi.o
- .debug_str     0x000711eb    0x6137b ./FileManager/filemanager.o
- .debug_str     0x000711eb    0x5c71e ./FileManager/icons.o
- .debug_str     0x000711eb    0x6142d ./JPEG/jpeg_chan.o
- .debug_str     0x000711eb     0x7962 ./JPEG/tjpgd.o
- .debug_str     0x000711eb    0x5fce8 ./Keyboard/keyboard.o
- .debug_str     0x000711eb       0x84 ./MP3Helix/src/asmpoly_thumb2.o
- .debug_str     0x000711eb     0x3d1e ./MP3Helix/src/bitstream.o
- .debug_str     0x000711eb     0x7798 ./MP3Helix/src/buffers.o
- .debug_str     0x000711eb     0x3c96 ./MP3Helix/src/dct32.o
- .debug_str     0x000711eb     0x3d23 ./MP3Helix/src/dequant.o
- .debug_str     0x000711eb     0x3c03 ./MP3Helix/src/dqchan.o
- .debug_str     0x000711eb     0x4017 ./MP3Helix/src/huffman.o
- .debug_str     0x000711eb     0x3bdd ./MP3Helix/src/hufftabs.o
- .debug_str     0x000711eb     0x3dcf ./MP3Helix/src/imdct.o
- .debug_str     0x000711eb    0x60664 ./MP3Helix/src/mp3dec.o
- .debug_str     0x000711eb     0x3452 ./MP3Helix/src/mp3tabs.o
- .debug_str     0x000711eb     0x3d2f ./MP3Helix/src/scalfact.o
- .debug_str     0x000711eb     0x3b25 ./MP3Helix/src/stproc.o
- .debug_str     0x000711eb     0x3ae1 ./MP3Helix/src/subband.o
- .debug_str     0x000711eb     0x3932 ./MP3Helix/src/trigtabs.o
- .debug_str     0x000711eb    0x606dc ./MicroGL2D/microgl2d.o
- .debug_str     0x000711eb    0x5fee8 ./MyString/mystring.o
- .debug_str     0x000711eb    0x5d077 ./PCM5102/pcm5102.o
+.debug_str      0x00000000    0x711bf
+ .debug_str     0x00000000    0x711bf ./AVI/avi.o
+                              0x6389b (size before relaxing)
+ .debug_str     0x000711bf    0x61e1a ./AVI/mp3_callback.o
+ .debug_str     0x000711bf    0x600ab ./AVI/player.o
+ .debug_str     0x000711bf    0x61c57 ./AVI/riff_read_header.o
+ .debug_str     0x000711bf    0x5c75e ./AVI/textures.o
+ .debug_str     0x000711bf       0x9d ./Core/Src/asm.o
+ .debug_str     0x000711bf    0x5f7b1 ./Core/Src/main.o
+ .debug_str     0x000711bf    0x5d0e1 ./Core/Src/stm32f4xx_it.o
+ .debug_str     0x000711bf     0x7900 ./Core/Src/sysmem.o
+ .debug_str     0x000711bf    0x4fbb1 ./Core/Src/system_stm32f4xx.o
+ .debug_str     0x000711bf       0x99 ./Core/Startup/startup_stm32f401ccux.o
+ .debug_str     0x000711bf    0x6090e ./Display/display.o
+ .debug_str     0x000711bf       0xe0 ./Display/display_asm.o
+ .debug_str     0x000711bf    0x5c66f ./Display/fonts.o
+ .debug_str     0x000711bf    0x5cd33 ./Display/st7789.o
+ .debug_str     0x000711bf    0x50245 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_exti.o
+ .debug_str     0x000711bf    0x51090 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_gpio.o
+ .debug_str     0x000711bf    0x5407c ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_rcc.o
+ .debug_str     0x000711bf    0x55e92 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_spi.o
+ .debug_str     0x000711bf    0x5479a ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_tim.o
+ .debug_str     0x000711bf    0x56583 ./Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_utils.o
+ .debug_str     0x000711bf    0x5fe4f ./Encoder/encoder.o
+ .debug_str     0x000711bf    0x5cde2 ./FATFS/diskio.o
+ .debug_str     0x000711bf     0x83cc ./FATFS/ff.o
+ .debug_str     0x000711bf     0x44e4 ./FATFS/ffunicode.o
+ .debug_str     0x000711bf    0x5d23f ./FATFS/user_diskio_spi.o
+ .debug_str     0x000711bf    0x6134f ./FileManager/filemanager.o
+ .debug_str     0x000711bf    0x5c6f2 ./FileManager/icons.o
+ .debug_str     0x000711bf    0x61401 ./JPEG/jpeg_chan.o
+ .debug_str     0x000711bf     0x7962 ./JPEG/tjpgd.o
+ .debug_str     0x000711bf    0x5fcbc ./Keyboard/keyboard.o
+ .debug_str     0x000711bf       0x84 ./MP3Helix/src/asmpoly_thumb2.o
+ .debug_str     0x000711bf     0x3d1e ./MP3Helix/src/bitstream.o
+ .debug_str     0x000711bf     0x7798 ./MP3Helix/src/buffers.o
+ .debug_str     0x000711bf     0x3c96 ./MP3Helix/src/dct32.o
+ .debug_str     0x000711bf     0x3d23 ./MP3Helix/src/dequant.o
+ .debug_str     0x000711bf     0x3c03 ./MP3Helix/src/dqchan.o
+ .debug_str     0x000711bf     0x4017 ./MP3Helix/src/huffman.o
+ .debug_str     0x000711bf     0x3bdd ./MP3Helix/src/hufftabs.o
+ .debug_str     0x000711bf     0x3dcf ./MP3Helix/src/imdct.o
+ .debug_str     0x000711bf    0x60638 ./MP3Helix/src/mp3dec.o
+ .debug_str     0x000711bf     0x3452 ./MP3Helix/src/mp3tabs.o
+ .debug_str     0x000711bf     0x3d2f ./MP3Helix/src/scalfact.o
+ .debug_str     0x000711bf     0x3b25 ./MP3Helix/src/stproc.o
+ .debug_str     0x000711bf     0x3ae1 ./MP3Helix/src/subband.o
+ .debug_str     0x000711bf     0x3932 ./MP3Helix/src/trigtabs.o
+ .debug_str     0x000711bf    0x606b0 ./MicroGL2D/microgl2d.o
+ .debug_str     0x000711bf    0x5febc ./MyString/mystring.o
+ .debug_str     0x000711bf    0x5d04b ./PCM5102/pcm5102.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 ./AVI/avi.o

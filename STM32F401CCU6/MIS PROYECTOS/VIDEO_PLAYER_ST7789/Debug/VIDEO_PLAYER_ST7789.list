@@ -7,47 +7,47 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   1 .text         0001259c  08000198  08000198  00001198  2**3
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       000066cc  08012734  08012734  00013734  2**2
+  2 .rodata       000089cc  08012734  08012734  00013734  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  3 .ARM.extab    00000000  08018e00  08018e00  0001a0f8  2**0
+  3 .ARM.extab    00000000  0801b100  0801b100  0001d104  2**0
                   CONTENTS
-  4 .ARM          00000008  08018e00  08018e00  00019e00  2**2
+  4 .ARM          00000008  0801b100  0801b100  0001c100  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08018e08  08018e08  0001a0f8  2**0
+  5 .preinit_array 00000000  0801b108  0801b108  0001d104  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08018e08  08018e08  00019e08  2**2
+  6 .init_array   00000004  0801b108  0801b108  0001c108  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  08018e0c  08018e0c  00019e0c  2**2
+  7 .fini_array   00000004  0801b10c  0801b10c  0001c10c  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         000000f8  20000000  08018e10  0001a000  2**2
+  8 .data         00000104  20000000  0801b110  0001d000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          00003518  200000f8  08018f08  0001a0f8  2**2
+  9 .bss          00003518  20000104  0801b214  0001d104  2**2
                   ALLOC
- 10 ._user_heap_stack 00000600  20003610  08018f08  0001a610  2**0
+ 10 ._user_heap_stack 00000604  2000361c  0801b214  0001d61c  2**0
                   ALLOC
- 11 .ARM.attributes 00000030  00000000  00000000  0001a0f8  2**0
+ 11 .ARM.attributes 00000030  00000000  00000000  0001d104  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00030ea5  00000000  00000000  0001a128  2**0
+ 12 .debug_info   00030e9e  00000000  00000000  0001d134  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 000074ae  00000000  00000000  0004afcd  2**0
+ 13 .debug_abbrev 000074b0  00000000  00000000  0004dfd2  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_loclists 0002b2e3  00000000  00000000  0005247b  2**0
+ 14 .debug_loclists 0002b2e3  00000000  00000000  00055482  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000c90  00000000  00000000  0007d760  2**3
+ 15 .debug_aranges 00000c90  00000000  00000000  00080768  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 0000469a  00000000  00000000  0007e3f0  2**0
+ 16 .debug_rnglists 0000469a  00000000  00000000  000813f8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00016d49  00000000  00000000  00082a8a  2**0
+ 17 .debug_macro  00016d3d  00000000  00000000  00085a92  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00035030  00000000  00000000  000997d3  2**0
+ 18 .debug_line   00035028  00000000  00000000  0009c7cf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    000711eb  00000000  00000000  000ce803  2**0
+ 19 .debug_str    000711bf  00000000  00000000  000d17f7  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .comment      00000043  00000000  00000000  0013f9ee  2**0
+ 20 .comment      00000043  00000000  00000000  001429b6  2**0
                   CONTENTS, READONLY
- 21 .debug_frame  00002440  00000000  00000000  0013fa34  2**2
+ 21 .debug_frame  00002440  00000000  00000000  001429fc  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line_str 000000c3  00000000  00000000  00141e74  2**0
+ 22 .debug_line_str 000000c3  00000000  00000000  00144e3c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -64,7 +64,7 @@ Disassembly of section .text:
  80001aa:	2301      	movs	r3, #1
  80001ac:	7023      	strb	r3, [r4, #0]
  80001ae:	bd10      	pop	{r4, pc}
- 80001b0:	200000f8 	.word	0x200000f8
+ 80001b0:	20000104 	.word	0x20000104
  80001b4:	00000000 	.word	0x00000000
  80001b8:	0801271c 	.word	0x0801271c
 
@@ -77,7 +77,7 @@ Disassembly of section .text:
  80001c6:	f3af 8000 	nop.w
  80001ca:	bd08      	pop	{r3, pc}
  80001cc:	00000000 	.word	0x00000000
- 80001d0:	200000fc 	.word	0x200000fc
+ 80001d0:	20000108 	.word	0x20000108
  80001d4:	0801271c 	.word	0x0801271c
 
 080001d8 <xmp3_PolyphaseStereo>:
@@ -1741,20 +1741,20 @@ void PlayAVI(char *dir, char *fname, LCD_Handler *lcd, uint16_t x, uint16_t y, u
  800119e:	ab16      	add	r3, sp, #88	@ 0x58
  80011a0:	e02c      	b.n	80011fc <PlayAVI+0x484>
  80011a2:	bf00      	nop
- 80011a4:	20000118 	.word	0x20000118
+ 80011a4:	20000124 	.word	0x20000124
  80011a8:	080019f9 	.word	0x080019f9
  80011ac:	08001b6d 	.word	0x08001b6d
  80011b0:	08001b1d 	.word	0x08001b1d
  80011b4:	08001b4d 	.word	0x08001b4d
  80011b8:	40003c00 	.word	0x40003c00
- 80011bc:	20000114 	.word	0x20000114
+ 80011bc:	20000120 	.word	0x20000120
  80011c0:	20000001 	.word	0x20000001
  80011c4:	00a9a9a9 	.word	0x00a9a9a9
  80011c8:	080128c0 	.word	0x080128c0
  80011cc:	080128b0 	.word	0x080128b0
  80011d0:	080128a4 	.word	0x080128a4
  80011d4:	00ffff00 	.word	0x00ffff00
- 80011d8:	20000008 	.word	0x20000008
+ 80011d8:	20000014 	.word	0x20000014
  80011dc:	20000004 	.word	0x20000004
  80011e0:	05f5e0ff 	.word	0x05f5e0ff
  80011e4:	08012934 	.word	0x08012934
@@ -2131,16 +2131,16 @@ __STATIC_INLINE void __NVIC_ClearPendingIRQ(IRQn_Type IRQn)
  80014b4:	e77b      	b.n	80013ae <PlayAVI+0x636>
  80014b6:	bf00      	nop
  80014b8:	20000000 	.word	0x20000000
- 80014bc:	20000378 	.word	0x20000378
- 80014c0:	20000118 	.word	0x20000118
+ 80014bc:	20000384 	.word	0x20000384
+ 80014c0:	20000124 	.word	0x20000124
  80014c4:	40026000 	.word	0x40026000
  80014c8:	40003c00 	.word	0x40003c00
  80014cc:	46464952 	.word	0x46464952
- 80014d0:	20000114 	.word	0x20000114
+ 80014d0:	20000120 	.word	0x20000120
  80014d4:	e000e100 	.word	0xe000e100
  80014d8:	20000004 	.word	0x20000004
  80014dc:	10624dd3 	.word	0x10624dd3
- 80014e0:	20003470 	.word	0x20003470
+ 80014e0:	2000347c 	.word	0x2000347c
     NVIC->ICER[(((uint32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)IRQn) & 0x1FUL));
  80014e4:	f44f 3380 	mov.w	r3, #65536	@ 0x10000
  80014e8:	f8ca 3080 	str.w	r3, [sl, #128]	@ 0x80
@@ -2550,8 +2550,8 @@ __STATIC_INLINE void LL_RCC_PLL_ConfigDomain_SYS(uint32_t Source, uint32_t PLLM,
  80017c6:	f00f fd73 	bl	80112b0 <MGL_ObjectSetVisible>
  80017ca:	e727      	b.n	800161c <PlayAVI+0x8a4>
  80017cc:	58495641 	.word	0x58495641
- 80017d0:	20000378 	.word	0x20000378
- 80017d4:	20000114 	.word	0x20000114
+ 80017d0:	20000384 	.word	0x20000384
+ 80017d4:	20000120 	.word	0x20000120
  80017d8:	431bde83 	.word	0x431bde83
  80017dc:	00ffff00 	.word	0x00ffff00
  80017e0:	20000000 	.word	0x20000000
@@ -3894,7 +3894,7 @@ __STATIC_INLINE void LL_APB2_GRP1_EnableClock(uint32_t Periphs)
  8002074:	f884 3023 	strb.w	r3, [r4, #35]	@ 0x23
   SystemClock_Config();
  8002078:	f7ff ff50 	bl	8001f1c <SystemClock_Config>
-	SysTick_Config(SystemCoreClock/1000);
+  SysTick_Config(SystemCoreClock/1000);
  800207c:	4ba7      	ldr	r3, [pc, #668]	@ (800231c <main+0x32c>)
  800207e:	4aa8      	ldr	r2, [pc, #672]	@ (8002320 <main+0x330>)
  8002080:	681b      	ldr	r3, [r3, #0]
@@ -3983,9 +3983,9 @@ __STATIC_INLINE void LL_GPIO_SetOutputPin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
  8002102:	9a1d      	ldr	r2, [sp, #116]	@ 0x74
  8002104:	f44f 5300 	mov.w	r3, #8192	@ 0x2000
  8002108:	221c      	movs	r2, #28
- 800210a:	f241 0902 	movw	r9, #4098	@ 0x1002
+ 800210a:	f44f 5980 	mov.w	r9, #4096	@ 0x1000
   /**/
-  LL_GPIO_SetOutputPin(GPIOB, T_CS_Pin|SD_CS_Pin);
+  LL_GPIO_SetOutputPin(SD_CS_GPIO_Port, SD_CS_Pin);
 
   /**/
   GPIO_InitStruct.Pin = LED_INDCTR_Pin;
@@ -4047,23 +4047,23 @@ __STATIC_INLINE void LL_GPIO_SetOutputPin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
  8002144:	e9cd 4736 	strd	r4, r7, [sp, #216]	@ 0xd8
   LL_GPIO_Init(LCD_CS_GPIO_Port, &GPIO_InitStruct);
  8002148:	f001 fd46 	bl	8003bd8 <LL_GPIO_Init>
-  GPIO_InitStruct.Pin = T_CS_Pin|SD_CS_Pin;
+  GPIO_InitStruct.Pin = SD_CS_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
-  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  LL_GPIO_Init(SD_CS_GPIO_Port, &GPIO_InitStruct);
  800214c:	a935      	add	r1, sp, #212	@ 0xd4
  800214e:	4640      	mov	r0, r8
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
  8002150:	9538      	str	r5, [sp, #224]	@ 0xe0
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
  8002152:	e9cd 4736 	strd	r4, r7, [sp, #216]	@ 0xd8
-  GPIO_InitStruct.Pin = T_CS_Pin|SD_CS_Pin;
+  GPIO_InitStruct.Pin = SD_CS_Pin;
  8002156:	f8cd 90d4 	str.w	r9, [sp, #212]	@ 0xd4
   GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
  800215a:	9439      	str	r4, [sp, #228]	@ 0xe4
-  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  LL_GPIO_Init(SD_CS_GPIO_Port, &GPIO_InitStruct);
  800215c:	f001 fd3c 	bl	8003bd8 <LL_GPIO_Init>
   MODIFY_REG(SYSCFG->EXTICR[Line & 0xFF], (Line >> 16), Port << POSITION_VAL((Line >> 16)));
  8002160:	4a72      	ldr	r2, [pc, #456]	@ (800232c <main+0x33c>)
@@ -4944,7 +4944,7 @@ __STATIC_INLINE void LL_TIM_DisableMasterSlaveMode(TIM_TypeDef *TIMx)
  80027a2:	942f      	str	r4, [sp, #188]	@ 0xbc
   LL_GPIO_Init(LCD_BLK_GPIO_Port, &GPIO_InitStruct);
  80027a4:	f001 fa18 	bl	8003bd8 <LL_GPIO_Init>
-    Init_DAC();
+  Init_DAC();
  80027a8:	f00f fb64 	bl	8011e74 <Init_DAC>
 	if (!(CoreDebug->DEMCR & CoreDebug_DEMCR_TRCENA_Msk))	{
  80027ac:	4a73      	ldr	r2, [pc, #460]	@ (800297c <main+0x98c>)
@@ -5068,7 +5068,7 @@ __STATIC_INLINE void LL_TIM_DisableMasterSlaveMode(TIM_TypeDef *TIMx)
  80028b0:	a92b      	add	r1, sp, #172	@ 0xac
  80028b2:	4620      	mov	r0, r4
  80028b4:	4798      	blx	r3
-	fm->SetFont(fm, &Font_8x13);					 /* Font (pointer) */
+	fm->SetFont(fm, &Font_12x20);					 /* Font (pointer) */
  80028b6:	493b      	ldr	r1, [pc, #236]	@ (80029a4 <main+0x9b4>)
  80028b8:	6c63      	ldr	r3, [r4, #68]	@ 0x44
  80028ba:	4620      	mov	r0, r4
@@ -5177,14 +5177,14 @@ __STATIC_INLINE void LL_TIM_DisableMasterSlaveMode(TIM_TypeDef *TIMx)
  8002988:	08003b19 	.word	0x08003b19
  800298c:	08003ad1 	.word	0x08003ad1
  8002990:	08003ab1 	.word	0x08003ab1
- 8002994:	20000380 	.word	0x20000380
+ 8002994:	2000038c 	.word	0x2000038c
  8002998:	00319bb1 	.word	0x00319bb1
- 800299c:	20000374 	.word	0x20000374
- 80029a0:	20000148 	.word	0x20000148
+ 800299c:	20000380 	.word	0x20000380
+ 80029a0:	20000154 	.word	0x20000154
  80029a4:	20000008 	.word	0x20000008
- 80029a8:	20003474 	.word	0x20003474
+ 80029a8:	20003480 	.word	0x20003480
  80029ac:	40020400 	.word	0x40020400
- 80029b0:	2000011c 	.word	0x2000011c
+ 80029b0:	20000128 	.word	0x20000128
  80029b4:	080127c4 	.word	0x080127c4
  80029b8:	080128e8 	.word	0x080128e8
 
@@ -5285,7 +5285,7 @@ void SysTick_Handler(void)
 }
  80029e4:	4770      	bx	lr
  80029e6:	bf00      	nop
- 80029e8:	20000378 	.word	0x20000378
+ 80029e8:	20000384 	.word	0x20000384
 
 080029ec <EXTI0_IRQHandler>:
   * @note   Please check each device line mapping for EXTI Line availability
@@ -5393,9 +5393,9 @@ __STATIC_INLINE void LL_EXTI_ClearFlag_0_31(uint32_t ExtiLine)
  8002ab4:	e7ed      	b.n	8002a92 <EXTI0_IRQHandler+0xa6>
  8002ab6:	bf00      	nop
  8002ab8:	40013c00 	.word	0x40013c00
- 8002abc:	2000011c 	.word	0x2000011c
- 8002ac0:	20003475 	.word	0x20003475
- 8002ac4:	20003478 	.word	0x20003478
+ 8002abc:	20000128 	.word	0x20000128
+ 8002ac0:	20003481 	.word	0x20003481
+ 8002ac4:	20003484 	.word	0x20003484
 
 08002ac8 <EXTI1_IRQHandler>:
   return (READ_BIT(EXTI->PR, ExtiLine) == (ExtiLine));
@@ -5468,9 +5468,9 @@ void EXTI1_IRQHandler(void)
  8002b30:	e7eb      	b.n	8002b0a <EXTI1_IRQHandler+0x42>
  8002b32:	bf00      	nop
  8002b34:	40013c00 	.word	0x40013c00
- 8002b38:	2000011c 	.word	0x2000011c
- 8002b3c:	20003475 	.word	0x20003475
- 8002b40:	20003478 	.word	0x20003478
+ 8002b38:	20000128 	.word	0x20000128
+ 8002b3c:	20003481 	.word	0x20003481
+ 8002b40:	20003484 	.word	0x20003484
 
 08002b44 <DMA1_Stream3_IRQHandler>:
 
@@ -5563,9 +5563,9 @@ void EXTI15_10_IRQHandler(void)
  8002bb8:	e7eb      	b.n	8002b92 <EXTI15_10_IRQHandler+0x46>
  8002bba:	bf00      	nop
  8002bbc:	40013c00 	.word	0x40013c00
- 8002bc0:	2000011c 	.word	0x2000011c
- 8002bc4:	20003475 	.word	0x20003475
- 8002bc8:	20003478 	.word	0x20003478
+ 8002bc0:	20000128 	.word	0x20000128
+ 8002bc4:	20003481 	.word	0x20003481
+ 8002bc8:	20003484 	.word	0x20003484
 
 08002bcc <DMA2_Stream3_IRQHandler>:
 void DMA2_Stream3_IRQHandler(void)
@@ -5689,7 +5689,7 @@ void DMA1_Stream5_IRQHandler(void)
  8002c88:	e7d5      	b.n	8002c36 <DMA1_Stream5_IRQHandler+0x5e>
  8002c8a:	bf00      	nop
  8002c8c:	40026000 	.word	0x40026000
- 8002c90:	20000118 	.word	0x20000118
+ 8002c90:	20000124 	.word	0x20000124
  8002c94:	40003c00 	.word	0x40003c00
 
 08002c98 <_sbrk>:
@@ -5748,10 +5748,10 @@ void DMA1_Stream5_IRQHandler(void)
 }
  8002cc8:	4618      	mov	r0, r3
  8002cca:	bd10      	pop	{r4, pc}
- 8002ccc:	2000037c 	.word	0x2000037c
+ 8002ccc:	20000388 	.word	0x20000388
  8002cd0:	20010000 	.word	0x20010000
  8002cd4:	00000400 	.word	0x00000400
- 8002cd8:	20003610 	.word	0x20003610
+ 8002cd8:	20003620 	.word	0x20003620
 
 08002cdc <SystemInit>:
   */
@@ -5856,13 +5856,13 @@ LoopFillZerobss:
   ldr r0, =_sdata
  8002d2c:	20000000 	.word	0x20000000
   ldr r1, =_edata
- 8002d30:	200000f8 	.word	0x200000f8
+ 8002d30:	20000104 	.word	0x20000104
   ldr r2, =_sidata
- 8002d34:	08018e10 	.word	0x08018e10
+ 8002d34:	0801b110 	.word	0x0801b110
   ldr r2, =_sbss
- 8002d38:	200000f8 	.word	0x200000f8
+ 8002d38:	20000104 	.word	0x20000104
   ldr r4, =_ebss
- 8002d3c:	20003610 	.word	0x20003610
+ 8002d3c:	2000361c 	.word	0x2000361c
 
 08002d40 <ADC_IRQHandler>:
  * @retval None       
@@ -8093,7 +8093,7 @@ Display_TC_Callback:
 08003aa8 <.DMA_ShiftTbl>:
  8003aa8:	16100600 	.word	0x16100600
 		ldr		r3, =LCD				//determine the location address of the display list variable
- 8003aac:	20000380 	.word	0x20000380
+ 8003aac:	2000038c 	.word	0x2000038c
 
 08003ab0 <ST7789_Init>:
 }
@@ -8122,8 +8122,8 @@ uint8_t* ST7789_Init(uint8_t orientation)
 }
  8003ac4:	4770      	bx	lr
  8003ac6:	bf00      	nop
- 8003ac8:	080144ac 	.word	0x080144ac
- 8003acc:	20000038 	.word	0x20000038
+ 8003ac8:	080167ac 	.word	0x080167ac
+ 8003acc:	20000044 	.word	0x20000044
 
 08003ad0 <ST7789_SetWindow>:
 
@@ -8160,7 +8160,7 @@ uint8_t* ST7789_SetWindow(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1)
 }
  8003b0e:	f85d fb04 	ldr.w	pc, [sp], #4
  8003b12:	bf00      	nop
- 8003b14:	20000024 	.word	0x20000024
+ 8003b14:	20000030 	.word	0x20000030
 
 08003b18 <ST7789_SleepIn>:
 
@@ -8170,7 +8170,7 @@ uint8_t* ST7789_SleepIn(void)
 }
  8003b18:	4800      	ldr	r0, [pc, #0]	@ (8003b1c <ST7789_SleepIn+0x4>)
  8003b1a:	4770      	bx	lr
- 8003b1c:	2000001c 	.word	0x2000001c
+ 8003b1c:	20000028 	.word	0x20000028
 
 08003b20 <ST7789_SleepOut>:
 
@@ -8180,7 +8180,7 @@ uint8_t* ST7789_SleepOut(void)
 }
  8003b20:	4800      	ldr	r0, [pc, #0]	@ (8003b24 <ST7789_SleepOut+0x4>)
  8003b22:	4770      	bx	lr
- 8003b24:	20000014 	.word	0x20000014
+ 8003b24:	20000020 	.word	0x20000020
 
 08003b28 <LL_EXTI_Init>:
   assert_param(IS_LL_EXTI_LINE_0_31(EXTI_InitStruct->Line_0_31));
@@ -9605,8 +9605,8 @@ uint8_t EncoderUpdate(ENCODER_Handler *enc, uint8_t ch_irq)
  800427e:	d09c      	beq.n	80041ba <EncoderUpdate+0x6e>
  8004280:	e7a7      	b.n	80041d2 <EncoderUpdate+0x86>
  8004282:	bf00      	nop
- 8004284:	20000378 	.word	0x20000378
- 8004288:	080144b0 	.word	0x080144b0
+ 8004284:	20000384 	.word	0x20000384
+ 8004288:	080167b0 	.word	0x080167b0
 
 0800428c <EncoderSetInversion>:
   * In inverse operating mode, encoder events are swapped: ENCODER_EV_FWD with ENCODER_EV_BCK,
@@ -10603,10 +10603,10 @@ static FRESULT mount_volume (	/* FR_OK(0): successful, !=0: an error occurred */
  80047a2:	009b      	lsls	r3, r3, #2
  80047a4:	2003      	movs	r0, #3
  80047a6:	e796      	b.n	80046d6 <mount_volume.isra.0+0xf6>
- 80047a8:	20000588 	.word	0x20000588
+ 80047a8:	20000594 	.word	0x20000594
  80047ac:	0ffffff5 	.word	0x0ffffff5
- 80047b0:	20000584 	.word	0x20000584
- 80047b4:	20000384 	.word	0x20000384
+ 80047b0:	20000590 	.word	0x20000590
+ 80047b4:	20000390 	.word	0x20000390
 
 080047b8 <get_fat.isra.0>:
 	if (clst < 2 || clst >= fs->n_fatent) {	/* Check if in valid range */
@@ -11387,7 +11387,7 @@ static FRESULT dir_sdi (	/* FR_OK(0):succeeded, !=0:error */
  8004d08:	e018      	b.n	8004d3c <follow_path+0x324>
  8004d0a:	bf00      	nop
  8004d0c:	08012908 	.word	0x08012908
- 8004d10:	08014540 	.word	0x08014540
+ 8004d10:	08016840 	.word	0x08016840
 			if (i >= FF_MAX_LFN + 1 || ff_wtoupper(uc) != ff_wtoupper(lfnbuf[i++])) {	/* Compare it */
  8004d14:	2dff      	cmp	r5, #255	@ 0xff
  8004d16:	4640      	mov	r0, r8
@@ -11748,8 +11748,8 @@ static FRESULT dir_sdi (	/* FR_OK(0):succeeded, !=0:error */
  8005016:	469b      	mov	fp, r3
  8005018:	e72a      	b.n	8004e70 <follow_path+0x458>
  800501a:	bf00      	nop
- 800501c:	0801454d 	.word	0x0801454d
- 8005020:	080144c0 	.word	0x080144c0
+ 800501c:	0801684d 	.word	0x0801684d
+ 8005020:	080167c0 	.word	0x080167c0
  8005024:	08012914 	.word	0x08012914
 	if (wc < ' ') {				/* Stopped at end of the path? */
  8005028:	464b      	mov	r3, r9
@@ -11858,7 +11858,7 @@ FRESULT f_mount (
 }
  800509e:	b003      	add	sp, #12
  80050a0:	f85d fb04 	ldr.w	pc, [sp], #4
- 80050a4:	20000588 	.word	0x20000588
+ 80050a4:	20000594 	.word	0x20000594
 
 080050a8 <f_open>:
 FRESULT f_open (
@@ -13347,7 +13347,7 @@ FRESULT f_readdir (
  80059d6:	3380      	adds	r3, #128	@ 0x80
  80059d8:	b298      	uxth	r0, r3
  80059da:	4770      	bx	lr
- 80059dc:	08014800 	.word	0x08014800
+ 80059dc:	08016b00 	.word	0x08016b00
 
 080059e0 <ff_oem2uni>:
 {
@@ -13383,7 +13383,7 @@ FRESULT f_readdir (
  80059fc:	f833 0010 	ldrh.w	r0, [r3, r0, lsl #1]
  8005a00:	4770      	bx	lr
  8005a02:	bf00      	nop
- 8005a04:	08014800 	.word	0x08014800
+ 8005a04:	08016b00 	.word	0x08016b00
 
 08005a08 <ff_wtoupper>:
 
@@ -13497,8 +13497,8 @@ FRESULT f_readdir (
  8005aa0:	f833 4010 	ldrh.w	r4, [r3, r0, lsl #1]
  8005aa4:	e7d0      	b.n	8005a48 <ff_wtoupper+0x40>
  8005aa6:	bf00      	nop
- 8005aa8:	08014550 	.word	0x08014550
- 8005aac:	0801460c 	.word	0x0801460c
+ 8005aa8:	08016850 	.word	0x08016850
+ 8005aac:	0801690c 	.word	0x0801690c
 
 08005ab0 <SPI_DMA_TransmitReceive>:
 } SPI_TransferType;
@@ -14168,8 +14168,8 @@ DSTATUS USER_SPI_initialize(BYTE drv)
  8005e46:	e7b7      	b.n	8005db8 <USER_SPI_initialize+0x128>
  8005e48:	40020400 	.word	0x40020400
  8005e4c:	40003800 	.word	0x40003800
- 8005e50:	2000058c 	.word	0x2000058c
- 8005e54:	200000a5 	.word	0x200000a5
+ 8005e50:	20000598 	.word	0x20000598
+ 8005e54:	200000b1 	.word	0x200000b1
 
 08005e58 <USER_SPI_status>:
 
@@ -14181,7 +14181,7 @@ DSTATUS USER_SPI_status(BYTE drv)
 }
  8005e5c:	4770      	bx	lr
  8005e5e:	bf00      	nop
- 8005e60:	200000a5 	.word	0x200000a5
+ 8005e60:	200000b1 	.word	0x200000b1
 
 08005e64 <USER_SPI_read>:
 	rcvr_spi();
@@ -14353,8 +14353,8 @@ DRESULT USER_SPI_read(BYTE drv, BYTE *buff, LBA_t sector, UINT count)
 }
  8005f4e:	4640      	mov	r0, r8
  8005f50:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 8005f54:	200000a5 	.word	0x200000a5
- 8005f58:	2000058c 	.word	0x2000058c
+ 8005f54:	200000b1 	.word	0x200000b1
+ 8005f58:	20000598 	.word	0x20000598
  8005f5c:	40003800 	.word	0x40003800
  8005f60:	40020400 	.word	0x40020400
 
@@ -14885,7 +14885,7 @@ __STATIC_FORCEINLINE void __disable_irq(void)
  800627e:	f107 0578 	add.w	r5, r7, #120	@ 0x78
  8006282:	e00b      	b.n	800629c <FileManagerShow+0x2e4>
  8006284:	0801291c 	.word	0x0801291c
- 8006288:	08014bb4 	.word	0x08014bb4
+ 8006288:	08016eb4 	.word	0x08016eb4
 		if ((fn[i] >= 128) && (fn[i] <= 175)) fn[i] += 64;  //A...Я,а..п
  800628c:	f805 cc01 	strb.w	ip, [r5, #-1]
 	for(int i = 0; i < strlen(fn); i++)	{
@@ -15545,8 +15545,8 @@ __STATIC_FORCEINLINE void __disable_irq(void)
  80067a2:	bf00      	nop
  80067a4:	080128bc 	.word	0x080128bc
  80067a8:	0801291c 	.word	0x0801291c
- 80067ac:	08014bac 	.word	0x08014bac
- 80067b0:	08014b8c 	.word	0x08014b8c
+ 80067ac:	08016eac 	.word	0x08016eac
+ 80067b0:	08016e8c 	.word	0x08016e8c
  80067b4:	f8da 1030 	ldr.w	r1, [sl, #48]	@ 0x30
        		fm->pos_y--;
  80067b8:	1e4a      	subs	r2, r1, #1
@@ -15868,14 +15868,14 @@ __STATIC_FORCEINLINE void __disable_irq(void)
        			return;
  8006a00:	f7ff bb3a 	b.w	8006078 <FileManagerShow+0xc0>
  8006a04:	08012920 	.word	0x08012920
- 8006a08:	08014ae0 	.word	0x08014ae0
- 8006a0c:	08014b84 	.word	0x08014b84
- 8006a10:	08014a34 	.word	0x08014a34
- 8006a14:	08014b9c 	.word	0x08014b9c
- 8006a18:	08014978 	.word	0x08014978
- 8006a1c:	08014b94 	.word	0x08014b94
- 8006a20:	08014900 	.word	0x08014900
- 8006a24:	08014ba4 	.word	0x08014ba4
+ 8006a08:	08016de0 	.word	0x08016de0
+ 8006a0c:	08016e84 	.word	0x08016e84
+ 8006a10:	08016d34 	.word	0x08016d34
+ 8006a14:	08016e9c 	.word	0x08016e9c
+ 8006a18:	08016c78 	.word	0x08016c78
+ 8006a1c:	08016e94 	.word	0x08016e94
+ 8006a20:	08016c00 	.word	0x08016c00
+ 8006a24:	08016ea4 	.word	0x08016ea4
 
 08006a28 <FileManagerNew>:
 
@@ -16300,8 +16300,8 @@ static inline int tjd_output (JDEC* jd, void* bitmap, JRECT* rect)
  8006ca0:	2000      	movs	r0, #0
  8006ca2:	b004      	add	sp, #16
  8006ca4:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
- 8006ca8:	20000114 	.word	0x20000114
- 8006cac:	20003470 	.word	0x20003470
+ 8006ca8:	20000120 	.word	0x20000120
+ 8006cac:	2000347c 	.word	0x2000347c
  8006cb0:	e0001000 	.word	0xe0001000
 
 08006cb4 <tjd_input_memory>:
@@ -16534,9 +16534,9 @@ uint8_t LCD_Load_JPG_chan (LCD_Handler *lcd, uint16_t x, uint16_t y, uint16_t w,
 		for (scale = 0; scale < 3; scale++) {
  8006e00:	2001      	movs	r0, #1
  8006e02:	e7e3      	b.n	8006dcc <LCD_Load_JPG_chan+0x78>
- 8006e04:	20003470 	.word	0x20003470
+ 8006e04:	2000347c 	.word	0x2000347c
  8006e08:	08006cb5 	.word	0x08006cb5
- 8006e0c:	20000590 	.word	0x20000590
+ 8006e0c:	2000059c 	.word	0x2000059c
  8006e10:	08006c1d 	.word	0x08006c1d
  8006e14:	08006ce5 	.word	0x08006ce5
 
@@ -16824,8 +16824,8 @@ uint8_t LCD_Load_JPG_chan (LCD_Handler *lcd, uint16_t x, uint16_t y, uint16_t w,
  8007006:	e1a5      	b.n	8007354 <jd_prepare+0x53c>
  8007008:	20000001 	.word	0x20000001
  800700c:	0200eeee 	.word	0x0200eeee
- 8007010:	0801595c 	.word	0x0801595c
- 8007014:	080158dc 	.word	0x080158dc
+ 8007010:	08017c5c 	.word	0x08017c5c
+ 8007014:	08017bdc 	.word	0x08017bdc
 			if (len > JD_SZBUF) return JDR_MEM2;
  8007018:	f5b9 6f80 	cmp.w	r9, #1024	@ 0x400
  800701c:	f63f af3b 	bhi.w	8006e96 <jd_prepare+0x7e>
@@ -18647,7 +18647,7 @@ JRESULT jd_decomp (
  8007e90:	f8cd 900c 	str.w	r9, [sp, #12]
  8007e94:	e005      	b.n	8007ea2 <jd_decomp+0x846>
  8007e96:	bf00      	nop
- 8007e98:	0801595c 	.word	0x0801595c
+ 8007e98:	08017c5c 	.word	0x08017c5c
 				hd++;
  8007e9c:	3301      	adds	r3, #1
 			} while (--nc);
@@ -19886,9 +19886,9 @@ uint32_t KEYB_Inkeys(void)
 }
  8008820:	4620      	mov	r0, r4
  8008822:	bd70      	pop	{r4, r5, r6, pc}
- 8008824:	20003475 	.word	0x20003475
- 8008828:	20003474 	.word	0x20003474
- 800882c:	20003478 	.word	0x20003478
+ 8008824:	20003481 	.word	0x20003481
+ 8008828:	20003480 	.word	0x20003480
+ 800882c:	20003484 	.word	0x20003484
 
 08008830 <KEYB_kbhit>:
 //The function returns 1 if any button is pressed. Otherwise it returns 0.
@@ -19911,8 +19911,8 @@ uint8_t KEYB_kbhit(void)
 }
  8008840:	4770      	bx	lr
  8008842:	bf00      	nop
- 8008844:	20003475 	.word	0x20003475
- 8008848:	20003474 	.word	0x20003474
+ 8008844:	20003481 	.word	0x20003481
+ 8008848:	20003480 	.word	0x20003480
 
 0800884c <xmp3_SetBitstreamPointer>:
  **************************************************************************************/
@@ -20383,12 +20383,12 @@ int CheckPadBit(MP3DecInfo *mp3DecInfo)
 }
  8008b24:	4770      	bx	lr
  8008b26:	bf00      	nop
- 8008b28:	080184d0 	.word	0x080184d0
- 8008b2c:	080183ac 	.word	0x080183ac
- 8008b30:	080183c0 	.word	0x080183c0
- 8008b34:	08017ff4 	.word	0x08017ff4
- 8008b38:	08018290 	.word	0x08018290
- 8008b3c:	080183a0 	.word	0x080183a0
+ 8008b28:	0801a7d0 	.word	0x0801a7d0
+ 8008b2c:	0801a6ac 	.word	0x0801a6ac
+ 8008b30:	0801a6c0 	.word	0x0801a6c0
+ 8008b34:	0801a2f4 	.word	0x0801a2f4
+ 8008b38:	0801a590 	.word	0x0801a590
+ 8008b3c:	0801a6a0 	.word	0x0801a6a0
 
 08008b40 <xmp3_UnpackSideInfo>:
  *
@@ -23371,7 +23371,7 @@ void FDCT32(int *buf, int *dest, int offset, int oddBlock, int gb)
  8009ff4:	5f4cf6eb 	.word	0x5f4cf6eb
  8009ff8:	519e4e04 	.word	0x519e4e04
  8009ffc:	5a82799a 	.word	0x5a82799a
- 800a000:	0801599c 	.word	0x0801599c
+ 800a000:	08017c9c 	.word	0x08017c9c
 	s = buf[23] + tmp;			d[0] = d[8] = s;	d += 64;
 	s = buf[15];				d[0] = d[8] = s;	d += 64;
 	s = tmp;					d[0] = d[8] = s;
@@ -24759,9 +24759,9 @@ static int DequantBlock(int *inbuf, int *outbuf, int num, int scale)
  800ac2a:	2502      	movs	r5, #2
  800ac2c:	9600      	str	r6, [sp, #0]
  800ac2e:	e7ae      	b.n	800ab8e <DequantBlock+0x21a>
- 800ac30:	08015b5c 	.word	0x08015b5c
- 800ac34:	08015c5c 	.word	0x08015c5c
- 800ac38:	08015a9c 	.word	0x08015a9c
+ 800ac30:	08017e5c 	.word	0x08017e5c
+ 800ac34:	08017f5c 	.word	0x08017f5c
+ 800ac38:	08017d9c 	.word	0x08017d9c
  800ac3c:	5a827999 	.word	0x5a827999
  800ac40:	d333f6a4 	.word	0xd333f6a4
  800ac44:	29a0bda9 	.word	0x29a0bda9
@@ -24772,8 +24772,8 @@ static int DequantBlock(int *inbuf, int *outbuf, int num, int scale)
  800ac58:	5957aa1b 	.word	0x5957aa1b
  800ac5c:	236c498d 	.word	0x236c498d
  800ac60:	27c2cef0 	.word	0x27c2cef0
- 800ac64:	08015a5c 	.word	0x08015a5c
- 800ac68:	08015a7c 	.word	0x08015a7c
+ 800ac64:	08017d5c 	.word	0x08017d5c
+ 800ac68:	08017d7c 	.word	0x08017d7c
  800ac6c:	46e9408b 	.word	0x46e9408b
 
 0800ac70 <xmp3_DequantChannel>:
@@ -25236,7 +25236,7 @@ int DequantChannel(int *sampleBuf, int *workBuf, int *nonZeroBound, FrameHeader 
  800af2e:	f04f 30ff 	mov.w	r0, #4294967295
 	return CLZ(gbMask) - 1;
  800af32:	e7b6      	b.n	800aea2 <xmp3_DequantChannel+0x232>
- 800af34:	08015c6c 	.word	0x08015c6c
+ 800af34:	08017f6c 	.word	0x08017f6c
 
 0800af38 <xmp3_DecodeHuffman>:
  *                byte located at buf + offset)
@@ -25752,12 +25752,12 @@ int DecodeHuffman(MP3DecInfo *mp3DecInfo, unsigned char *buf, int *bitOffset, in
  800b2e8:	f103 0010 	add.w	r0, r3, #16
  800b2ec:	46ab      	mov	fp, r5
  800b2ee:	e018      	b.n	800b322 <xmp3_DecodeHuffman+0x3ea>
- 800b2f0:	08015ce4 	.word	0x08015ce4
- 800b2f4:	08015de4 	.word	0x08015de4
- 800b2f8:	08015e64 	.word	0x08015e64
- 800b2fc:	08015c8c 	.word	0x08015c8c
- 800b300:	08015c84 	.word	0x08015c84
- 800b304:	08015c94 	.word	0x08015c94
+ 800b2f0:	08017fe4 	.word	0x08017fe4
+ 800b2f4:	080180e4 	.word	0x080180e4
+ 800b2f8:	08018164 	.word	0x08018164
+ 800b2fc:	08017f8c 	.word	0x08017f8c
+ 800b300:	08017f84 	.word	0x08017f84
+ 800b304:	08017f94 	.word	0x08017f94
 			i += 4;
  800b308:	3704      	adds	r7, #4
 		while (i < (nVals - 3) && cachedBits >= 10 ) {
@@ -26292,7 +26292,7 @@ int DecodeHuffman(MP3DecInfo *mp3DecInfo, unsigned char *buf, int *bitOffset, in
  800b782:	2700      	movs	r7, #0
  800b784:	e5ff      	b.n	800b386 <xmp3_DecodeHuffman+0x44e>
  800b786:	bf00      	nop
- 800b788:	08015e64 	.word	0x08015e64
+ 800b788:	08018164 	.word	0x08018164
 
 0800b78c <WinPrevious.part.0>:
 	xp = xPrev;
@@ -26399,7 +26399,7 @@ static void WinPrevious(int *xPrev, int *xPrevWin, int btPrev)
 }
  800b866:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
  800b86a:	bf00      	nop
- 800b86c:	08018abc 	.word	0x08018abc
+ 800b86c:	0801adbc 	.word	0x0801adbc
 
 0800b870 <FreqInvertRescale>:
  *              rescaled (as necessary) previous samples
@@ -27070,7 +27070,7 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
  800bd7c:	e004      	b.n	800bd88 <xmp3_IMDCT+0x36c>
  800bd7e:	bf00      	nop
  800bd80:	38e38e39 	.word	0x38e38e39
- 800bd84:	08018934 	.word	0x08018934
+ 800bd84:	0801ac34 	.word	0x0801ac34
 		prevWinIdx = bc->prevType;
  800bd88:	9a13      	ldr	r2, [sp, #76]	@ 0x4c
  800bd8a:	9820      	ldr	r0, [sp, #128]	@ 0x80
@@ -27609,8 +27609,8 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
  800c124:	620dbe8b 	.word	0x620dbe8b
  800c128:	163a1a7e 	.word	0x163a1a7e
  800c12c:	7e0e2e32 	.word	0x7e0e2e32
- 800c130:	08017f90 	.word	0x08017f90
- 800c134:	08017ff0 	.word	0x08017ff0
+ 800c130:	0801a290 	.word	0x0801a290
+ 800c134:	0801a2f0 	.word	0x0801a2f0
 			acc1 = ((*xCurr--) >> es) - acc1;
  800c138:	9c1a      	ldr	r4, [sp, #104]	@ 0x68
 			xPrev[i] >>= es;
@@ -28003,8 +28003,8 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
  800c3fc:	f7ff f9c6 	bl	800b78c <WinPrevious.part.0>
  800c400:	e7a3      	b.n	800c34a <xmp3_IMDCT+0x92e>
  800c402:	bf00      	nop
- 800c404:	08018abc 	.word	0x08018abc
- 800c408:	08017ff0 	.word	0x08017ff0
+ 800c404:	0801adbc 	.word	0x0801adbc
+ 800c408:	0801a2f0 	.word	0x0801a2f0
  800c40c:	9a19      	ldr	r2, [sp, #100]	@ 0x64
  800c40e:	9912      	ldr	r1, [sp, #72]	@ 0x48
  800c410:	9f24      	ldr	r7, [sp, #144]	@ 0x90
@@ -28433,7 +28433,7 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
 	__asm__ volatile (
  800c760:	4602      	mov	r2, r0
  800c762:	e009      	b.n	800c778 <xmp3_IMDCT+0xd5c>
- 800c764:	08018abc 	.word	0x08018abc
+ 800c764:	0801adbc 	.word	0x0801adbc
  800c768:	6ed9eba1 	.word	0x6ed9eba1
  800c76c:	7ba3751d 	.word	0x7ba3751d
  800c770:	5a82799a 	.word	0x5a82799a
@@ -29649,7 +29649,7 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
  800d114:	f04f 0900 	mov.w	r9, #0
  800d118:	e002      	b.n	800d120 <xmp3_IMDCT+0x1704>
  800d11a:	bf00      	nop
- 800d11c:	08018abc 	.word	0x08018abc
+ 800d11c:	0801adbc 	.word	0x0801adbc
  800d120:	f853 1c24 	ldr.w	r1, [r3, #-36]
     __asm__ volatile ("smull %0,%1,%2,%3" : "=&r" (zlow), "=r" (y) : "r" (x), "1" (y)) ;
  800d124:	9c33      	ldr	r4, [sp, #204]	@ 0xcc
@@ -32323,7 +32323,7 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
  800e7cc:	4686      	mov	lr, r0
  800e7ce:	f04f 0a00 	mov.w	sl, #0
  800e7d2:	e001      	b.n	800e7d8 <xmp3_IMDCT+0x2dbc>
- 800e7d4:	08018abc 	.word	0x08018abc
+ 800e7d4:	0801adbc 	.word	0x0801adbc
  800e7d8:	f853 1c24 	ldr.w	r1, [r3, #-36]
     __asm__ volatile ("smull %0,%1,%2,%3" : "=&r" (zlow), "=r" (y) : "r" (x), "1" (y)) ;
  800e7dc:	9c3d      	ldr	r4, [sp, #244]	@ 0xf4
@@ -33201,7 +33201,7 @@ int IMDCT(MP3DecInfo *mp3DecInfo, int gr, int ch)
 	nBlocksOut = i;
  800efe2:	9301      	str	r3, [sp, #4]
  800efe4:	f7fe bbde 	b.w	800d7a4 <xmp3_IMDCT+0x1d88>
- 800efe8:	08018abc 	.word	0x08018abc
+ 800efe8:	0801adbc 	.word	0x0801adbc
 
 0800efec <MP3InitDecoder>:
  **************************************************************************************/
@@ -34210,7 +34210,7 @@ int UnpackScaleFactors(MP3DecInfo *mp3DecInfo, unsigned char *buf, int *bitOffse
  800f7aa:	9105      	str	r1, [sp, #20]
  800f7ac:	e74d      	b.n	800f64a <xmp3_UnpackScaleFactors+0x20e>
  800f7ae:	bf00      	nop
- 800f7b0:	080184f4 	.word	0x080184f4
+ 800f7b0:	0801a7f4 	.word	0x0801a7f4
  800f7b4:	66666667 	.word	0x66666667
  800f7b8:	aaaaaaab 	.word	0xaaaaaaab
  800f7bc:	ebc4 1144 	rsb	r1, r4, r4, lsl #5
@@ -35205,8 +35205,8 @@ void IntensityProcMPEG1(int x[MAX_NCHAN][MAX_NSAMP], int nSamps, FrameHeader *fh
  800ff64:	eb03 038b 	add.w	r3, r3, fp, lsl #2
  800ff68:	9400      	str	r4, [sp, #0]
  800ff6a:	e006      	b.n	800ff7a <xmp3_IntensityProcMPEG1+0x226>
- 800ff6c:	08018a84 	.word	0x08018a84
- 800ff70:	08018974 	.word	0x08018974
+ 800ff6c:	0801ad84 	.word	0x0801ad84
+ 800ff70:	0801ac74 	.word	0x0801ac74
  800ff74:	2d02      	cmp	r5, #2
  800ff76:	f77f af77 	ble.w	800fe68 <xmp3_IntensityProcMPEG1+0x114>
 			xr = MULSHIFT32(frs[0], x[0][i+0]) << 2;	x[1][i+0] = xr;	mOutR |= FASTABS(xr);
@@ -35357,7 +35357,7 @@ void IntensityProcMPEG1(int x[MAX_NCHAN][MAX_NSAMP], int nSamps, FrameHeader *fh
 	mOutL = mOutR = 0;
  80100a4:	4644      	mov	r4, r8
  80100a6:	e6e1      	b.n	800fe6c <xmp3_IntensityProcMPEG1+0x118>
- 80100a8:	08018974 	.word	0x08018974
+ 80100a8:	0801ac74 	.word	0x0801ac74
 
 080100ac <xmp3_IntensityProcMPEG2>:
  *              make sure all the mixed-block and IIP logic is right
@@ -35782,8 +35782,8 @@ void IntensityProcMPEG2(int x[MAX_NCHAN][MAX_NSAMP], int nSamps, FrameHeader *fh
 		for (j = 0; j < sfjs->nr[r]; j++, k++) 
  80103bc:	4665      	mov	r5, ip
  80103be:	e6d8      	b.n	8010172 <xmp3_IntensityProcMPEG2+0xc6>
- 80103c0:	08018984 	.word	0x08018984
- 80103c4:	08018974 	.word	0x08018974
+ 80103c0:	0801ac84 	.word	0x0801ac84
+ 80103c4:	0801ac74 	.word	0x0801ac74
 
 080103c8 <xmp3_Subband>:
 	//HuffmanInfo *hi;
@@ -35932,7 +35932,7 @@ void IntensityProcMPEG2(int x[MAX_NCHAN][MAX_NSAMP], int nSamps, FrameHeader *fh
 }
  80104d8:	4770      	bx	lr
  80104da:	bf00      	nop
- 80104dc:	08018514 	.word	0x08018514
+ 80104dc:	0801a814 	.word	0x0801a814
 
 080104e0 <GRAPH_getcolor_unknow>:
 //Callback for selecting pixel color components
@@ -36388,8 +36388,8 @@ static void MGL_setcolorbuffer(MGL_OBJ *obj, uint16_t *buffer,
  8010794:	fb09 0011 	mls	r0, r9, r1, r0
  8010798:	e729      	b.n	80105ee <MGL_setcolorbuffer+0x56>
  801079a:	bf00      	nop
- 801079c:	08018d10 	.word	0x08018d10
- 80107a0:	08018cfc 	.word	0x08018cfc
+ 801079c:	0801b010 	.word	0x0801b010
+ 80107a0:	0801affc 	.word	0x0801affc
  80107a4:	fffff800 	.word	0xfffff800
  80107a8:	42c80000 	.word	0x42c80000
  80107ac:	f8dd c04c 	ldr.w	ip, [sp, #76]	@ 0x4c
@@ -36853,7 +36853,7 @@ static void MGL_setcolorbuffer(MGL_OBJ *obj, uint16_t *buffer,
  8010b78:	e082      	b.n	8010c80 <MGL_setcolorbuffer+0x6e8>
  8010b7a:	bf00      	nop
  8010b7c:	fffff800 	.word	0xfffff800
- 8010b80:	08018d18 	.word	0x08018d18
+ 8010b80:	0801b018 	.word	0x0801b018
  8010b84:	b60b60b7 	.word	0xb60b60b7
 				j1 = (x - x_min) % i_w;
  8010b88:	9b22      	ldr	r3, [sp, #136]	@ 0x88
@@ -37295,7 +37295,7 @@ static void MGL_setcolorbuffer(MGL_OBJ *obj, uint16_t *buffer,
  8010f08:	fffff800 	.word	0xfffff800
  8010f0c:	080104e1 	.word	0x080104e1
  8010f10:	b60b60b7 	.word	0xb60b60b7
- 8010f14:	08018d18 	.word	0x08018d18
+ 8010f14:	0801b018 	.word	0x0801b018
  8010f18:	9b0f      	ldr	r3, [sp, #60]	@ 0x3c
  8010f1a:	9c20      	ldr	r4, [sp, #128]	@ 0x80
  8010f1c:	9d0e      	ldr	r5, [sp, #56]	@ 0x38
@@ -37556,7 +37556,7 @@ static void MGL_setcolorbuffer(MGL_OBJ *obj, uint16_t *buffer,
  8011132:	9506      	str	r5, [sp, #24]
  8011134:	f7ff bb02 	b.w	801073c <MGL_setcolorbuffer+0x1a4>
  8011138:	fffff800 	.word	0xfffff800
- 801113c:	08018d18 	.word	0x08018d18
+ 801113c:	0801b018 	.word	0x0801b018
 
 08011140 <MGL_GradientCreate>:
 {
@@ -39799,7 +39799,7 @@ void Init_DAC(void)
 	I2S_InitStruct.MCLKOutput = LL_I2S_MCLK_OUTPUT_DISABLE;
 	I2S_InitStruct.DataFormat = LL_I2S_DATAFORMAT_16B;
 	I2S_InitStruct.ClockPolarity = LL_I2S_POLARITY_LOW;
-	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_44K;
+	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_32K;
 	LL_I2S_Init(SPI3, &I2S_InitStruct);
  8011f94:	483a      	ldr	r0, [pc, #232]	@ (8012080 <Init_DAC+0x20c>)
  8011f96:	f8d3 2088 	ldr.w	r2, [r3, #136]	@ 0x88
@@ -39857,14 +39857,14 @@ void Init_DAC(void)
  801203a:	f8c3 2088 	str.w	r2, [r3, #136]	@ 0x88
 	I2S_InitStruct.Standard = LL_I2S_STANDARD_PHILIPS;
  801203e:	2400      	movs	r4, #0
-	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_44K;
- 8012040:	f64a 4244 	movw	r2, #44100	@ 0xac44
+	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_32K;
+ 8012040:	f44f 42fa 	mov.w	r2, #32000	@ 0x7d00
  8012044:	2300      	movs	r3, #0
 	I2S_InitStruct.Mode = LL_I2S_MODE_MASTER_TX;
  8012046:	f44f 7500 	mov.w	r5, #512	@ 0x200
 	LL_I2S_Init(SPI3, &I2S_InitStruct);
  801204a:	a904      	add	r1, sp, #16
-	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_44K;
+	I2S_InitStruct.AudioFreq = LL_I2S_AUDIOFREQ_32K;
  801204c:	e9cd 2308 	strd	r2, r3, [sp, #32]
 	I2S_InitStruct.Standard = LL_I2S_STANDARD_PHILIPS;
  8012050:	e9cd 5404 	strd	r5, r4, [sp, #16]
@@ -39979,7 +39979,7 @@ void Start_DAC(SPI_TypeDef *spi, DMA_TypeDef *dma_x, uint32_t stream, uint32_t *
  801212e:	b002      	add	sp, #8
  8012130:	bd70      	pop	{r4, r5, r6, pc}
  8012132:	bf00      	nop
- 8012134:	08018dd0 	.word	0x08018dd0
+ 8012134:	0801b0d0 	.word	0x0801b0d0
  8012138:	080127fc 	.word	0x080127fc
 
 0801213c <Stop_DAC>:
@@ -40045,7 +40045,7 @@ void Stop_DAC(SPI_TypeDef *spi, DMA_TypeDef *dma_x, uint32_t stream)
 }
  80121a4:	b003      	add	sp, #12
  80121a6:	bd30      	pop	{r4, r5, pc}
- 80121a8:	08018dd0 	.word	0x08018dd0
+ 80121a8:	0801b0d0 	.word	0x0801b0d0
  80121ac:	080127fc 	.word	0x080127fc
 
 080121b0 <Setup_DAC>:
@@ -40223,7 +40223,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  80122d0:	4601      	mov	r1, r0
  80122d2:	6818      	ldr	r0, [r3, #0]
  80122d4:	f000 b802 	b.w	80122dc <_calloc_r>
- 80122d8:	200000a8 	.word	0x200000a8
+ 80122d8:	200000b4 	.word	0x200000b4
 
 080122dc <_calloc_r>:
  80122dc:	b570      	push	{r4, r5, r6, lr}
@@ -40250,7 +40250,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  8012308:	6818      	ldr	r0, [r3, #0]
  801230a:	f000 b82d 	b.w	8012368 <_malloc_r>
  801230e:	bf00      	nop
- 8012310:	200000a8 	.word	0x200000a8
+ 8012310:	200000b4 	.word	0x200000b4
 
 08012314 <free>:
  8012314:	4b02      	ldr	r3, [pc, #8]	@ (8012320 <free+0xc>)
@@ -40258,7 +40258,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  8012318:	6818      	ldr	r0, [r3, #0]
  801231a:	f000 b9ad 	b.w	8012678 <_free_r>
  801231e:	bf00      	nop
- 8012320:	200000a8 	.word	0x200000a8
+ 8012320:	200000b4 	.word	0x200000b4
 
 08012324 <sbrk_aligned>:
  8012324:	b570      	push	{r4, r5, r6, lr}
@@ -40288,7 +40288,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  801235e:	d1f2      	bne.n	8012346 <sbrk_aligned+0x22>
  8012360:	e7ef      	b.n	8012342 <sbrk_aligned+0x1e>
  8012362:	bf00      	nop
- 8012364:	200034c8 	.word	0x200034c8
+ 8012364:	200034d4 	.word	0x200034d4
 
 08012368 <_malloc_r>:
  8012368:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
@@ -40398,19 +40398,19 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  801245e:	6005      	str	r5, [r0, #0]
  8012460:	e7d6      	b.n	8012410 <_malloc_r+0xa8>
  8012462:	bf00      	nop
- 8012464:	200034cc 	.word	0x200034cc
+ 8012464:	200034d8 	.word	0x200034d8
 
 08012468 <__malloc_lock>:
  8012468:	4801      	ldr	r0, [pc, #4]	@ (8012470 <__malloc_lock+0x8>)
  801246a:	f000 b8f5 	b.w	8012658 <__retarget_lock_acquire_recursive>
  801246e:	bf00      	nop
- 8012470:	2000360c 	.word	0x2000360c
+ 8012470:	20003618 	.word	0x20003618
 
 08012474 <__malloc_unlock>:
  8012474:	4801      	ldr	r0, [pc, #4]	@ (801247c <__malloc_unlock+0x8>)
  8012476:	f000 b8f0 	b.w	801265a <__retarget_lock_release_recursive>
  801247a:	bf00      	nop
- 801247c:	2000360c 	.word	0x2000360c
+ 801247c:	20003618 	.word	0x20003618
 
 08012480 <realloc>:
  8012480:	4b02      	ldr	r3, [pc, #8]	@ (801248c <realloc+0xc>)
@@ -40418,7 +40418,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  8012484:	4601      	mov	r1, r0
  8012486:	6818      	ldr	r0, [r3, #0]
  8012488:	f000 b802 	b.w	8012490 <_realloc_r>
- 801248c:	200000a8 	.word	0x200000a8
+ 801248c:	200000b4 	.word	0x200000b4
 
 08012490 <_realloc_r>:
  8012490:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
@@ -40514,7 +40514,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  8012564:	f801 5901 	strb.w	r5, [r1], #-1
  8012568:	e7f4      	b.n	8012554 <__utoa+0x68>
  801256a:	bf00      	nop
- 801256c:	08018dd8 	.word	0x08018dd8
+ 801256c:	0801b0d8 	.word	0x0801b0d8
 
 08012570 <utoa>:
  8012570:	f7ff bfbc 	b.w	80124ec <__utoa>
@@ -40587,14 +40587,14 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  80125fa:	b103      	cbz	r3, 80125fe <_sbrk_r+0x1a>
  80125fc:	6023      	str	r3, [r4, #0]
  80125fe:	bd38      	pop	{r3, r4, r5, pc}
- 8012600:	20003608 	.word	0x20003608
+ 8012600:	20003614 	.word	0x20003614
 
 08012604 <__errno>:
  8012604:	4b01      	ldr	r3, [pc, #4]	@ (801260c <__errno+0x8>)
  8012606:	6818      	ldr	r0, [r3, #0]
  8012608:	4770      	bx	lr
  801260a:	bf00      	nop
- 801260c:	200000a8 	.word	0x200000a8
+ 801260c:	200000b4 	.word	0x200000b4
 
 08012610 <__libc_init_array>:
  8012610:	b570      	push	{r4, r5, r6, lr}
@@ -40622,10 +40622,10 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  8012642:	4798      	blx	r3
  8012644:	3601      	adds	r6, #1
  8012646:	e7f2      	b.n	801262e <__libc_init_array+0x1e>
- 8012648:	08018e08 	.word	0x08018e08
- 801264c:	08018e08 	.word	0x08018e08
- 8012650:	08018e08 	.word	0x08018e08
- 8012654:	08018e0c 	.word	0x08018e0c
+ 8012648:	0801b108 	.word	0x0801b108
+ 801264c:	0801b108 	.word	0x0801b108
+ 8012650:	0801b108 	.word	0x0801b108
+ 8012654:	0801b10c 	.word	0x0801b10c
 
 08012658 <__retarget_lock_acquire_recursive>:
  8012658:	4770      	bx	lr
@@ -40715,7 +40715,7 @@ uint8_t Setup_DAC (SPI_TypeDef *spi, uint32_t SampleRate, uint32_t DataFormat)
  8012702:	e7ca      	b.n	801269a <_free_r+0x22>
  8012704:	bd38      	pop	{r3, r4, r5, pc}
  8012706:	bf00      	nop
- 8012708:	200034cc 	.word	0x200034cc
+ 8012708:	200034d8 	.word	0x200034d8
 
 0801270c <_malloc_usable_size_r>:
  801270c:	f851 3c04 	ldr.w	r3, [r1, #-4]

@@ -3065,8 +3065,7 @@ LOAD F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cu
 .rodata         0x08005d00      0x148
                 0x08005d00                        . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08005d00       0x1e ./Core/Src/main.o
- *fill*         0x08005d1e        0x2 
+ .rodata        0x08005d00       0x20 ./Core/Src/main.o
  .rodata        0x08005d20       0x7c F:/Program Files/ST/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v6-m/nofp\libgcc.a(divsf3.o)
  *(.rodata*)
  .rodata.ControlLeds

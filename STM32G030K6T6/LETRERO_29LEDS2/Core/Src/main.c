@@ -69,9 +69,9 @@
 ADC_HandleTypeDef hadc1;
 
 /* USER CODE BEGIN PV */
-//falta corregir para cantLeds par y cantLeds2 impar o algo asi
-uint8_t cantLeds=11;//creo que agregar o quitar en  ControlLeds
-uint8_t cantLeds2=8;//creo que agregar o quitar en  ControlLeds2
+//siempre tiene que cumplir esto cantLeds > cantLeds2
+uint8_t cantLeds =7;//agregar o quitar en  ControlLeds
+uint8_t cantLeds2=5;//agregar o quitar en  ControlLeds2
 uint16_t adc;
 static float vel;
 /* USER CODE END PV */
@@ -150,23 +150,23 @@ int main(void)
 
   while (1)
   {
-	  Barrido1(2,60,2500);
-	  Blink(2,1500);
+	  Barrido1(2,60,2500);Blink(2,1500);//ok
 
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds(i,1);}//encender todo 1
 	  ArmarIzquierda2(1,30,2000);
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+cantLeds,1);}//encender todo 2
 	  ArmarIzquierda(1,30,2000);
+	  Blink(2,1500);//ok
 
-	  Blink(2,1500);
-	  Girar(2,100);
-	  Blink(2,2000);
+
+	  Girar(2,100);Blink(2,2000);//ok
 
 
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds(i,1);}//encender todo 1
 	  VolumenAbrir2(1,30,2500);
 	  for(uint8_t i=1;i<=cantLeds;i++){ControlLeds2(i+cantLeds,1);}//encender todo 2
-	  VolumenAbrir(1,30,2500);
+	  VolumenAbrir(1,30,2500);//ok
+
 
 	  CerrarApagar(3,150,2000);
 	  Blink(2,1500);
@@ -178,6 +178,7 @@ int main(void)
 	  ArmarIzquierda(1,30,2000);
 
 	  Blink(3,1500);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -373,24 +374,17 @@ void ControlLeds(uint8_t led, uint8_t state){
 		case 5:  L5(state); break;
 		case 6:  L6(state); break;
 		case 7:  L7(state); break;
-		case 8:  L8(state); break;
-		case 9:  L9(state); break;
-		case 10: L10(state);break;
-		case 11: L11(state);break;
 		default:break;
 	}
 }
 
 void ControlLeds2(uint8_t led, uint8_t state){
 	switch(led){
+		case 8:  L8(state); break;
+		case 9:  L9(state); break;
+		case 10: L10(state);break;
+		case 11: L11(state);break;
 		case 12: L12(state);break;
-		case 13: L13(state);break;
-		case 14: L14(state);break;
-		case 15: L15(state);break;
-		case 16: L16(state);break;
-		case 17: L17(state);break;
-		case 18: L18(state);break;
-		case 19: L19(state);break;
 	}
 }
 
@@ -478,12 +472,16 @@ void Interlude(uint8_t veces, uint16_t tiempo){
 void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 
 	for(uint8_t v=0;v<veces;v++){
+
 		uint8_t centro,centro2,impar=1,par=0;
-		if(cantLeds%2==0){//si es par
-			centro = cantLeds/2;
+
+		// cantLeds = PAR  && cantLeds2 = PAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2==0 && cantLeds2%2==0){//OK
+			centro  = cantLeds/2; //3
+			centro2 = cantLeds2/2;//2
 			for(uint8_t i=centro;i>=1;i--){
-				ControlLeds(i, 1);
-				ControlLeds(i+impar, 1);
+				ControlLeds2(i-(centro-centro2)+cantLeds, 1);      ControlLeds(i,1);
+				ControlLeds2(i+impar-(centro-centro2)+cantLeds, 1);  ControlLeds(i+impar,1);
 				impar=impar+2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
@@ -492,20 +490,51 @@ void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 			HAL_Delay(tiempo2*Refresh_ADC_Value());
 
 			for(uint8_t i=centro;i>=1;i--){
-				ControlLeds(i, 0);
-				ControlLeds(i+impar, 0);
+				ControlLeds2(i-(centro-centro2)+cantLeds, 0);      ControlLeds(i,0);
+				ControlLeds2(i+impar-(centro-centro2)+cantLeds, 0);  ControlLeds(i+impar,0);
 				impar=impar+2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
 
-		}else{//si es impar (aqui edito porq cantLeds=15)
-			centro = (cantLeds/2)+1;//7
-			centro2 = (cantLeds2/2);//3
+		}
+
+
+
+
+
+		// cantLeds = PAR  && cantLeds2 = IMPAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2==0 && cantLeds2%2!=0){//OK
+			centro  = cantLeds/2; //3
+			centro2 = (cantLeds2/2)+1;//3
 			for(uint8_t i=centro;i>=1;i--){
-				//ControlLeds(i-(centro-centro2), 1);ControlLeds2(i+cantLeds,1);
-				//ControlLeds(i+par-(centro-centro2-1), 1);ControlLeds2(i+cantLeds+par,1);
 				ControlLeds2(i-(centro-centro2)+cantLeds, 1);      ControlLeds(i,1);
-				ControlLeds2(i+par-(centro-centro2-1)+cantLeds, 1);ControlLeds(i+par,1);
+				ControlLeds2(i+impar-(centro-centro2+1)+cantLeds, 1);  ControlLeds(i+impar,1);
+				impar=impar+2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+
+			impar=1;
+			HAL_Delay(tiempo2*Refresh_ADC_Value());
+
+			for(uint8_t i=centro;i>=1;i--){
+				ControlLeds2(i-(centro-centro2)+cantLeds, 0);      ControlLeds(i,0);
+				ControlLeds2(i+impar-(centro-centro2+1)+cantLeds, 0);  ControlLeds(i+impar,0);
+				impar=impar+2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+
+		}
+
+
+
+
+		// cantLeds = IMPAR  && cantLeds2 = PAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2!=0 && cantLeds2%2==0){//OK
+			centro = (cantLeds/2)+1;//4
+			centro2 = (cantLeds2/2);//2
+			for(uint8_t i=centro;i>=1;i--){
+				ControlLeds2(i-(centro-centro2)+cantLeds, 1);      ControlLeds(i,1);
+				ControlLeds2(i+par-(centro-centro2-1)+cantLeds, 1);  ControlLeds(i+par,1);
 				par=par+2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
@@ -514,40 +543,132 @@ void AbrirApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 			HAL_Delay(tiempo2*Refresh_ADC_Value());
 
 			for(uint8_t i=centro;i>=1;i--){
-				//ControlLeds(i-(centro-centro2), 0);ControlLeds2(i+cantLeds,0);
-				//ControlLeds(i+par-(centro-centro2-1), 0);ControlLeds2(i+cantLeds+par,0);
 				ControlLeds2(i-(centro-centro2)+cantLeds, 0);      ControlLeds(i,0);
 				ControlLeds2(i+par-(centro-centro2-1)+cantLeds, 0);ControlLeds(i+par,0);
 				par=par+2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
 		}
+
+
+
+		// cantLeds = IMPAR  && cantLeds2 = IMPAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2!=0 && cantLeds2%2!=0){//OK
+			centro = (cantLeds/2)+1;//4
+			centro2 = (cantLeds2/2+1);//3
+			for(uint8_t i=centro;i>=1;i--){
+				ControlLeds2(i-(centro-centro2)+cantLeds, 1);      ControlLeds(i,1);
+				ControlLeds2(i+par-(centro-centro2)+cantLeds, 1);  ControlLeds(i+par,1);
+				par=par+2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+
+			par=0;
+			HAL_Delay(tiempo2*Refresh_ADC_Value());
+
+			for(uint8_t i=centro;i>=1;i--){
+				ControlLeds2(i-(centro-centro2)+cantLeds, 0);      ControlLeds(i,0);
+				ControlLeds2(i+par-(centro-centro2)+cantLeds, 0);ControlLeds(i+par,0);
+				par=par+2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+		}
+
 	}
 }
 
 void CerrarApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 	for(uint8_t v=0;v<veces;v++){
 		uint8_t limite,limite2,centro;
-		if(cantLeds%2==0){//si es par
 
-			centro = cantLeds/2;//5
-			limite = cantLeds-1;
+		// cantLeds = PAR  && cantLeds2 = PAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2==0 && cantLeds2%2==0){//ok
+
+			centro = cantLeds/2;//3
+			limite = cantLeds-1;//5
+			limite2 = cantLeds2-1;//5
+
 			for(uint8_t i=1;i<=centro;i++){
-				ControlLeds(i, 1);
-				ControlLeds(i+limite, 1);
+				ControlLeds(i, 1);        ControlLeds2(i+cantLeds,1);
+				ControlLeds(i+limite, 1); ControlLeds2(i+cantLeds+limite2,1);
 				limite=limite-2;
+				limite2=limite2-2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
-			limite = cantLeds-1;
+
+			limite  = cantLeds-1;
+			limite2 = cantLeds2-1;
 			HAL_Delay(tiempo2*Refresh_ADC_Value());
+
 			for(uint8_t i=1;i<=centro;i++){
-				ControlLeds(i, 0);
-				ControlLeds(i+limite, 0);
+				ControlLeds(i, 0);        ControlLeds2(i+cantLeds,0);
+				ControlLeds(i+limite, 0); ControlLeds2(i+cantLeds+limite2,0);
 				limite=limite-2;
+				limite2=limite2-2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+		}
+
+		// cantLeds = PAR  && cantLeds2 = IMPAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2==0 && cantLeds2%2!=0){//ok
+
+			centro = cantLeds/2;//3
+			limite = cantLeds-1;//5
+			limite2 = cantLeds2-1;//4
+
+			for(uint8_t i=1;i<=centro;i++){
+				ControlLeds(i, 1);        ControlLeds2(i+cantLeds,1);
+				ControlLeds(i+limite, 1); ControlLeds2(i+cantLeds+limite2,1);
+				limite=limite-2;
+				limite2=limite2-2;
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
 
-		}else{//si es impar (ya esta listo para impar y cualquier cantidad de letras)
+			limite  = cantLeds-1;
+			limite2 = cantLeds2-1;
+			HAL_Delay(tiempo2*Refresh_ADC_Value());
+
+			for(uint8_t i=1;i<=centro;i++){
+				ControlLeds(i, 0);	      ControlLeds2(i+cantLeds,0);
+				ControlLeds(i+limite, 0); ControlLeds2(i+cantLeds+limite2,0);
+				limite=limite-2;
+				limite2=limite2-2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+		}
+
+
+
+
+		// cantLeds = IMPAR  && cantLeds2 = PAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2!=0 && cantLeds2%2==0){
+			centro = (cantLeds/2)+1;//7
+			limite = cantLeds-1;
+			limite2 = cantLeds2-1;
+
+			for(uint8_t i=1;i<=centro;i++){
+				ControlLeds(i, 1);       ControlLeds2(i+cantLeds,1);
+				ControlLeds(i+limite, 1);ControlLeds2(i+cantLeds+limite2,1);
+				limite=limite-2;
+				limite2=limite2-2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+
+			limite = cantLeds-1;
+			limite2 = cantLeds2-1;
+			HAL_Delay(tiempo2*Refresh_ADC_Value());
+
+			for(uint8_t i=1;i<=centro;i++){
+				ControlLeds(i, 0);       ControlLeds2(i+cantLeds,0);
+				ControlLeds(i+limite, 0);ControlLeds2(i+cantLeds+limite2,0);
+				limite=limite-2;
+				limite2=limite2-2;
+				HAL_Delay(tiempo*Refresh_ADC_Value());
+			}
+		}
+
+		// cantLeds = IMPAR  && cantLeds2 = IMPAR ///////////////////////////////////////////////////////////////
+		if(cantLeds%2!=0 && cantLeds2%2!=0){//ok
 			centro = (cantLeds/2)+1;//7
 			limite = cantLeds-1;limite2 = cantLeds2-1;
 			for(uint8_t i=1;i<=centro;i++){
@@ -565,6 +686,7 @@ void CerrarApagar(uint8_t veces, uint16_t tiempo, uint16_t tiempo2){
 				HAL_Delay(tiempo*Refresh_ADC_Value());
 			}
 		}
+
 	}
 }
 

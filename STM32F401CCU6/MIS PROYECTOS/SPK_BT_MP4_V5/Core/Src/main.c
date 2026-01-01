@@ -308,12 +308,17 @@ int main(void)
 	sprintf(buff,"I:%4.0fmA",current);
 	LCD_WriteString(lcd, 0, 25, buff, &Font_15x25, COLOR_GREEN, COLOR_RED, LCD_SYMBOL_PRINT_FAST);
 
+	LL_GPIO_SetOutputPin(GPIOB, ON_OFF_3V7_1_Pin);//ENCIENDO
+	LL_mDelay(100);
+
+
 	//LL_mDelay(1000);
 	//uint32_t keys=0;
 	//keys = KEYB_Inkeys();
 	//while (keys & (1 << KEYB_RIGHT));
 
 	while(!KEYB_kbhit());
+	LL_GPIO_SetOutputPin(GPIOB, IN_TS3A5018_Pin);//CAMBIO A AUDIO PCM
 
   /* USER CODE END 2 */
 
@@ -788,24 +793,35 @@ static void MX_GPIO_Init(void)
   LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB);
 
   /**/
-  LL_GPIO_SetOutputPin(LED_INDCTR_GPIO_Port, LED_INDCTR_Pin);
+  LL_GPIO_ResetOutputPin(LIGHTER_GPIO_Port, LIGHTER_Pin);
 
   /**/
-  LL_GPIO_SetOutputPin(GPIOA, LCD_DC_Pin|LCD_RES_Pin|LCD_CS_Pin);
+  LL_GPIO_ResetOutputPin(GPIOB, ON_OFF_3V7_1_Pin|A4988_SLEEP_2_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin);
+
+  /**/
+  LL_GPIO_ResetOutputPin(GPIOA, A4988_STEP_2_Pin|A4988_DIR_2_Pin);
+
+  /**/
+  LL_GPIO_SetOutputPin(GPIOA, A4988_EN_2_Pin|LCD_DC_Pin|LCD_RES_Pin|LCD_CS_Pin);
 
   /**/
   LL_GPIO_SetOutputPin(SD_CS_GPIO_Port, SD_CS_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOB, ON_OFF_3V7_1_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin);
-
-  /**/
-  GPIO_InitStruct.Pin = LED_INDCTR_Pin;
+  GPIO_InitStruct.Pin = LIGHTER_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(LED_INDCTR_GPIO_Port, &GPIO_InitStruct);
+  LL_GPIO_Init(LIGHTER_GPIO_Port, &GPIO_InitStruct);
+
+  /**/
+  GPIO_InitStruct.Pin = A4988_EN_2_Pin|A4988_STEP_2_Pin|A4988_DIR_2_Pin;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
+  GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  LL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /**/
   GPIO_InitStruct.Pin = LCD_DC_Pin|LCD_RES_Pin;
@@ -824,7 +840,7 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(LCD_CS_GPIO_Port, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = ON_OFF_3V7_1_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin;
+  GPIO_InitStruct.Pin = ON_OFF_3V7_1_Pin|A4988_SLEEP_2_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;

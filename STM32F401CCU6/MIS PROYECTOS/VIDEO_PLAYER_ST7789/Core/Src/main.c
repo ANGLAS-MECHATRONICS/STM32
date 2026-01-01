@@ -185,7 +185,7 @@ int main(void)
 
   /* USER CODE BEGIN SysInit */
   //set up the system timer (interrupts 1000 times per second)
-	SysTick_Config(SystemCoreClock/1000);
+  SysTick_Config(SystemCoreClock/1000);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -197,12 +197,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   //Initialize I2S3
-    Init_DAC();
+  Init_DAC();
     //Setup_DAC(SPI3, 44100, LL_I2S_DATAFORMAT_16B);
 
 
 
-	DWT_init();
+  DWT_init();
 
 	//-------------------Setting parameters and initializing the display ---------------------
 	LCD_BackLight_data bl_dat = { .htim_bk = TIM3,
@@ -226,6 +226,7 @@ int main(void)
 	LCD_Handler lcd1;
 	#endif
 
+
 	//For display on controller ST7789 170x320
 	//ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 320x170 -r 23.98 -q 10 che.avi
 	LCD = LCD_DisplayAdd( LCD,
@@ -247,6 +248,7 @@ int main(void)
 							&spi_dat,
 							LCD_DATA_16BIT_BUS,
 							bl_dat);
+
 
 	/*
 	//For display on controller ST7789 135x240
@@ -333,7 +335,7 @@ int main(void)
 	  	  	  	  	  	  	  	  	  	  	  	  	   - window width;
 	  	  	  	  	  	  	  	  	  	  	  	  	   - window height. */
 	fm->SetColor(fm, &color_scheme_pl);				 /* Color scheme (index) */
-	fm->SetFont(fm, &Font_8x13);					 /* Font (pointer) */
+	fm->SetFont(fm, &Font_12x20);					 /* Font (pointer) */
 	fm->SetKeys(fm, KEYB_UP, KEYB_DOWN, KEYB_RIGHT); /* Control buttons:
 	   	   	   	   	   	   	   	   	   	   	   	   	    - button bit number up;
 	   	   	   	   	   	   	   	   	   	   	   	   	    - button bit number down;
@@ -736,7 +738,7 @@ static void MX_GPIO_Init(void)
   LL_GPIO_SetOutputPin(GPIOA, LCD_DC_Pin|LCD_RES_Pin|LCD_CS_Pin);
 
   /**/
-  LL_GPIO_SetOutputPin(GPIOB, T_CS_Pin|SD_CS_Pin);
+  LL_GPIO_SetOutputPin(SD_CS_GPIO_Port, SD_CS_Pin);
 
   /**/
   GPIO_InitStruct.Pin = LED_INDCTR_Pin;
@@ -763,12 +765,12 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(LCD_CS_GPIO_Port, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = T_CS_Pin|SD_CS_Pin;
+  GPIO_InitStruct.Pin = SD_CS_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_HIGH;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
-  LL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  LL_GPIO_Init(SD_CS_GPIO_Port, &GPIO_InitStruct);
 
   /**/
   LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTA, LL_SYSCFG_EXTI_LINE0);

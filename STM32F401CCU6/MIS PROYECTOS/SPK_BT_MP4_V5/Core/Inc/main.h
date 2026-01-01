@@ -66,8 +66,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED_INDCTR_Pin LL_GPIO_PIN_13
-#define LED_INDCTR_GPIO_Port GPIOC
+#define LIGHTER_Pin LL_GPIO_PIN_13
+#define LIGHTER_GPIO_Port GPIOC
+#define A4988_EN_2_Pin LL_GPIO_PIN_1
+#define A4988_EN_2_GPIO_Port GPIOA
 #define LCD_DC_Pin LL_GPIO_PIN_2
 #define LCD_DC_GPIO_Port GPIOA
 #define LCD_RES_Pin LL_GPIO_PIN_3
@@ -84,6 +86,8 @@ void Error_Handler(void);
 #define ON_OFF_3V7_1_GPIO_Port GPIOB
 #define IN_DRAIN_LATCH1_Pin LL_GPIO_PIN_1
 #define IN_DRAIN_LATCH1_GPIO_Port GPIOB
+#define A4988_SLEEP_2_Pin LL_GPIO_PIN_2
+#define A4988_SLEEP_2_GPIO_Port GPIOB
 #define IN_TS3A5018_Pin LL_GPIO_PIN_10
 #define IN_TS3A5018_GPIO_Port GPIOB
 #define SD_CS_Pin LL_GPIO_PIN_12
@@ -94,6 +98,10 @@ void Error_Handler(void);
 #define SD_MISO_GPIO_Port GPIOB
 #define SD_MOSI_Pin LL_GPIO_PIN_15
 #define SD_MOSI_GPIO_Port GPIOB
+#define A4988_STEP_2_Pin LL_GPIO_PIN_11
+#define A4988_STEP_2_GPIO_Port GPIOA
+#define A4988_DIR_2_Pin LL_GPIO_PIN_12
+#define A4988_DIR_2_GPIO_Port GPIOA
 #define EN_TS3A5018_Pin LL_GPIO_PIN_6
 #define EN_TS3A5018_GPIO_Port GPIOB
 #define KEY_RIGHT_Pin LL_GPIO_PIN_7

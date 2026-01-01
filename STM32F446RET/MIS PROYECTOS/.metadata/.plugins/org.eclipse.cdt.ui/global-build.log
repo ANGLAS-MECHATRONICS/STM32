@@ -1,15 +1,28 @@
-19:00:01 **** Incremental Build of configuration Debug for project DAC_OLED_ENCODER ****
+11:34:48 **** Incremental Build of configuration Debug for project PWM_LASER_RED ****
 make -j4 all 
-arm-none-eabi-gcc "../Core/Src/Anglas_OLED_SSD1306.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Anglas_OLED_SSD1306.d" -MT"Core/Src/Anglas_OLED_SSD1306.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/Anglas_OLED_SSD1306.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "DAC_OLED_ENCODER.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\MIS PROYECTOS\DAC_OLED_ENCODER\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DAC_OLED_ENCODER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: DAC_OLED_ENCODER.elf
+arm-none-eabi-gcc -o "PWM_LASER_RED.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\MIS PROYECTOS\PWM_LASER_RED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_LASER_RED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_LASER_RED.elf
  
-arm-none-eabi-size  DAC_OLED_ENCODER.elf 
-arm-none-eabi-objdump -h -S DAC_OLED_ENCODER.elf  > "DAC_OLED_ENCODER.list"
+arm-none-eabi-size  PWM_LASER_RED.elf 
+arm-none-eabi-objdump -h -S PWM_LASER_RED.elf  > "PWM_LASER_RED.list"
    text	   data	    bss	    dec	    hex	filename
-  45216	    484	   3228	  48928	   bf20	DAC_OLED_ENCODER.elf
+  12672	     12	   1716	  14400	   3840	PWM_LASER_RED.elf
 Finished building: default.size.stdout
  
-Finished building: DAC_OLED_ENCODER.list
+Finished building: PWM_LASER_RED.list
+ 
+12:12:12 **** Incremental Build of configuration Debug for project PWM_LASER_RED ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "PWM_LASER_RED.elf" @"objects.list"   -mcpu=cortex-m4 -T"E:\GIOVANNY_TODO\SKETCHS\STM32\STM32F446RET\MIS PROYECTOS\PWM_LASER_RED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PWM_LASER_RED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: PWM_LASER_RED.elf
+ 
+arm-none-eabi-size  PWM_LASER_RED.elf 
+arm-none-eabi-objdump -h -S PWM_LASER_RED.elf  > "PWM_LASER_RED.list"
+   text	   data	    bss	    dec	    hex	filename
+  12672	     12	   1716	  14400	   3840	PWM_LASER_RED.elf
+Finished building: default.size.stdout
+ 
+Finished building: PWM_LASER_RED.list
  
