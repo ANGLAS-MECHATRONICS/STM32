@@ -114,8 +114,9 @@ int main(void)
 
   ST7789_Init();
   ST7789_rotation(4);
-  //ST7789_FillScreen(ST7789_BLACK);
-  ST7789_DrawImage(0, 0, 320, 170, korn_320x170);
+  ST7789_DrawImage(0, 0, 320, 170, blink_320x170);
+  HAL_Delay(2000);
+  ST7789_FillScreen(ST7789_BLACK);
   ST7789_print(20, 20, RGB565(255, 255, 255) , RGB565(0, 80, 100) , 1, &Font_16x26, 1, "GIOVANNY ANGLAS" );
   ST7789_print(40, 60, RGB565(255, 0, 0) , RGB565(0, 10, 100) , 1, &Font_16x26, 1, "CAMARA OV2640" );
   ov2640_Init(0x60, CAMERA_Monitor);
