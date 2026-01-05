@@ -93,18 +93,10 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	/* enable instruction caching */
-	#if (INSTRUCTION_CACHE_ENABLE != 0U)
-	((FLASH_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x3C00UL))->ACR |= (0x1UL << (9U));
-	#endif
-	/* enable data caching */
-	#if (DATA_CACHE_ENABLE != 0U)
-	((FLASH_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x3C00UL))->ACR |= (0x1UL << (10U));
-	#endif
-	/* enable the instruction prefetching system */
-	#if (PREFETCH_ENABLE != 0U)
-	((FLASH_TypeDef *) ((0x40000000UL + 0x00020000UL) + 0x3C00UL))->ACR |= (0x1UL << (8U));
-	#endif
+	LL_FLASH_SetLatency(LL_FLASH_LATENCY_5);   // Ajusta la latencia de la Flash para 168 MHz (evita fallos)
+	LL_FLASH_EnablePrefetch();                 // Adelanta instrucciones desde Flash (mejor rendimiento)
+	LL_FLASH_EnableInstCache();                // Cachea instrucciones (CPU más rápida)
+	LL_FLASH_EnableDataCache();                // Cachea datos desde Flash (accesos más rápidos)
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
