@@ -1,10 +1,10 @@
-08:22:03 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
+13:20:49 **** Incremental Build of configuration Debug for project LETRERO_29LEDS ****
 make -j4 all 
 arm-none-eabi-size  LETRERO_29LEDS.elf 
    text	   data	    bss	    dec	    hex	filename
-  24136	     24	   1680	  25840	   64f0	LETRERO_29LEDS.elf
+  24128	     24	   1680	  25832	   64e8	LETRERO_29LEDS.elf
 Finished building: default.size.stdout
  
 
-08:22:03 Build Finished. 0 errors, 0 warnings. (took 317ms)
+13:20:49 Build Finished. 0 errors, 0 warnings. (took 314ms)
 

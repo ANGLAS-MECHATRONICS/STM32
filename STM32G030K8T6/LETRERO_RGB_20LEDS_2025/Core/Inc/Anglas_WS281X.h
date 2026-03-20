@@ -14,7 +14,7 @@ extern TIM_HandleTypeDef htim1;
 extern DMA_HandleTypeDef hdma_tim1_ch1;
 extern ADC_HandleTypeDef hadc1;
 /* Exported constant ---------------------------------------------------------*/
-#define MAX_LEDS 9
+#define MAX_LEDS 14 //solo cambiar aqui, eso es todo :D
 #define BRILLO_MAX  0
 #define BRILLO_MID 128
 #define BRILLO_MIN 255

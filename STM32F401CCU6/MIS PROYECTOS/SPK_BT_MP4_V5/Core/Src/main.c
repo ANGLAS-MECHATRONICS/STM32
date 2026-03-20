@@ -136,7 +136,7 @@ int main(void)
   MAX17048_Init();
   MAX17048_QuickStart();
   MAX17048_SetAlertThreshold(1);
-  INA226_Init(3.2768,100,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);//CAMBIAR SHUNT 25
+  INA226_Init(3.2768,25,AVG_4,T_Vbus_8_244ms,T_Vshunt_8_244ms,MODE_SHUNT_BUS_CONTINUOUS);//CAMBIAR SHUNT 25
   INA226_Mode_pinAlert(SHUNT_VOLTAGE_OVER);
   INA226_Alert_Limit(1500);
 
@@ -317,8 +317,54 @@ int main(void)
 	//keys = KEYB_Inkeys();
 	//while (keys & (1 << KEYB_RIGHT));
 
-	while(!KEYB_kbhit());
-	LL_GPIO_SetOutputPin(GPIOB, IN_TS3A5018_Pin);//CAMBIO A AUDIO PCM
+	//while(!KEYB_kbhit());
+	//LL_GPIO_SetOutputPin(GPIOB, IN_TS3A5018_Pin);//CAMBIO A AUDIO PCM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//desde aqui estoy modificando o agregando
+ /******************** PARA USAR LOS TRES SYS_WKUP **********************************/
+
+
+  // Verifica si el sistema reanudó desde Standby Mode
+  if (__HAL_PWR_GET_FLAG(PWR_FLAG_SB) != RESET) {
+	  __HAL_PWR_CLEAR_FLAG(PWR_FLAG_SB); // Limpia la bandera
+
+
+	  ////////////////////////////////////// SYS_WKUP1 ////////////////////////////////////////////////
+	  //Esto hace cuando se presiona el pulsador del SYS_WKUP1 (necesita si o si resistencia PULL-DOWN)
+	  if (LL_GPIO_IsInputPinSet(GPIOA, GPIO_PIN_0) == 1) {//FUNCION 1, si presionamos SYS_WKUP1
+
+		  if (LL_GPIO_IsInputPinSet(IN_DRAIN_LATCH1_GPIO_Port, IN_DRAIN_LATCH1_Pin) == 0){//si no hay 3.7V en esta entrada IN_DRAIN_LATCH, entonces enciende el parlante
+
+		  }else{//si hay 3.7V en la entrada IN_DRAIN_LATCH, entonces esta encendido el parlante, y con las lineas de abajo lo apago
+
+		  }
+	  }
+
+      HAL_PWR_DisableWakeUpPin(PWR_WAKEUP_PIN1);// Desactiva el Wake-Up Pin1
+
+
+  }//end if (__HAL_PWR_GET_FLAG(PWR_FLAG_SB) != RESET)
+
+
+
+
+
 
   /* USER CODE END 2 */
 
