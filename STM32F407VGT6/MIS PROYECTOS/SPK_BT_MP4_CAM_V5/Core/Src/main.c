@@ -937,11 +937,13 @@ static void MX_GPIO_Init(void)
   LL_GPIO_SetOutputPin(GPIOB, LCD_CS_Pin|SD_CS_Pin);
 
   /**/
+  LL_GPIO_SetOutputPin(A4988_EN_1_GPIO_Port, A4988_EN_1_Pin);
+
+  /**/
   LL_GPIO_ResetOutputPin(LIGHTER_GPIO_Port, LIGHTER_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_9V_Pin|A4988_DIR_1_Pin|A4988_EN_1_Pin|A4988_STEP_1_Pin
-                          |A4988_SLEEP_1_Pin);
+  LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_9V_Pin|A4988_DIR_1_Pin|A4988_STEP_1_Pin|A4988_SLEEP_1_Pin);
 
   /**/
   LL_GPIO_ResetOutputPin(GPIOB, ON_OFF_OV2640_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin|OV_FLASH_Pin
