@@ -348,7 +348,7 @@ void PlayAVI(char *dir, char *fname, LCD_Handler *lcd, uint16_t x, uint16_t y, u
 						}
 					}
 					else if ((keys & (1 << KEYB_F1)) || (keys & (1 << KEYB_F2))) { //Change the option under the cursor.
-						uint32_t pllN;
+						//uint32_t pllN;
 						switch (m_p) { //Select a procedure depending on the number of the menu item under the cursor.
 							case 0: //Change shape color.
 								AVI_color_mode = AVI_color_mode == 1 ? 3 : 1;

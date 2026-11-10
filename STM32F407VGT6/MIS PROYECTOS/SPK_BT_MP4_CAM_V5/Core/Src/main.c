@@ -32,6 +32,7 @@
 
 #include "common.h"
 #include "ov2640.h"
+#include "Anglas_MotorPAP.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -80,7 +81,8 @@ static void MX_DCMI_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_TIM4_Init(void);
 /* USER CODE BEGIN PFP */
-
+void PWM_set_Freq_DutyCycle(uint32_t canal, uint16_t freq, uint8_t duty);
+void delay_us(uint32_t time);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -106,10 +108,10 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-	LL_FLASH_SetLatency(LL_FLASH_LATENCY_5);   // Ajusta la latencia de la Flash para 168 MHz (evita fallos)
-	LL_FLASH_EnablePrefetch();                 // Adelanta instrucciones desde Flash (mejor rendimiento)
-	LL_FLASH_EnableInstCache();                // Cachea instrucciones (CPU más rápida)
-	LL_FLASH_EnableDataCache();                // Cachea datos desde Flash (accesos más rápidos)
+  LL_FLASH_SetLatency(LL_FLASH_LATENCY_5);   // Ajusta la latencia de la Flash para 168 MHz (evita fallos)
+  LL_FLASH_EnablePrefetch();                 // Adelanta instrucciones desde Flash (mejor rendimiento)
+  LL_FLASH_EnableInstCache();                // Cachea instrucciones (CPU más rápida)
+  LL_FLASH_EnableDataCache();                // Cachea datos desde Flash (accesos más rápidos)
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -125,8 +127,8 @@ int main(void)
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
-	//настраиваем системный таймер (прерывания 1000 раз в секунду)
-	SysTick_Config(SystemCoreClock/1000);
+  //настраиваем системный таймер (прерывания 1000 раз в секунду)
+  SysTick_Config(SystemCoreClock/1000);
   /* USER CODE END SysInit */
 
   /* Initialize all configured peripherals */
@@ -151,95 +153,95 @@ int main(void)
   /* ------------------------------------------------------------------------------- */
 
   //Initialize I2S3
-    Init_DAC();
-    //Setup_DAC(SPI3, 44100, LL_I2S_DATAFORMAT_16B);
+  Init_DAC();
+  //Setup_DAC(SPI3, 44100, LL_I2S_DATAFORMAT_16B);
 
 
 
-	DWT_init();
+  DWT_init();
 
-	//-------------------Setting parameters and initializing the display ---------------------
-	LCD_BackLight_data bl_dat = { .htim_bk = TIM3,
-		  	  	  	  	  	  	  .channel_htim_bk = LL_TIM_CHANNEL_CH1,
-    							  .blk_port = 0,
-    							  .blk_pin = 0,
-    							  .bk_percent = 100 };
+  //-------------------Setting parameters and initializing the display ---------------------
+  LCD_BackLight_data bl_dat = { .htim_bk = TIM3,
+								.channel_htim_bk = LL_TIM_CHANNEL_CH1,
+								.blk_port = 0,
+								.blk_pin = 0,
+								.bk_percent = 100 };
 
-	LCD_DMA_TypeDef hdma_spi1_tx = { .dma = DMA2,
-		  	  	  	  	  	  	     .stream = LL_DMA_STREAM_3 };
+  LCD_DMA_TypeDef hdma_spi1_tx = { .dma = DMA2,
+								   .stream = LL_DMA_STREAM_3 };
 
-	LCD_SPI_Connected_data spi_dat = { .spi = SPI1,
-  		  							   .dma_tx = hdma_spi1_tx,
-   									   .reset_port = LCD_RES_GPIO_Port,
-   									   .reset_pin = LCD_RES_Pin,
-   									   .dc_port = LCD_DC_GPIO_Port,
-   									   .dc_pin = LCD_DC_Pin,
-   									   .cs_port = LCD_CS_GPIO_Port,
-   									   .cs_pin = LCD_CS_Pin  };
-	#ifndef LCD_DYNAMIC_MEM
-	LCD_Handler lcd1;
-	#endif
+  LCD_SPI_Connected_data spi_dat = { .spi = SPI1,
+									 .dma_tx = hdma_spi1_tx,
+									 .reset_port = LCD_RES_GPIO_Port,
+									 .reset_pin = LCD_RES_Pin,
+									 .dc_port = LCD_DC_GPIO_Port,
+									 .dc_pin = LCD_DC_Pin,
+									 .cs_port = LCD_CS_GPIO_Port,
+									 .cs_pin = LCD_CS_Pin  };
+  #ifndef LCD_DYNAMIC_MEM
+  	  LCD_Handler lcd1;
+  #endif
 
-	//For display on controller ST7789 170x320
-	//ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 320x170 -r 23.98 -q 10 che.avi
-	LCD = LCD_DisplayAdd( LCD,
-	#ifndef LCD_DYNAMIC_MEM
-			  	  	  	  	&lcd1,
-	#endif
-			  	  	  	  	170,//170
-			   				320,//320
-							ST7789_CONTROLLER_WIDTH,
-							ST7789_CONTROLLER_HEIGHT,
-							//queda original
-							/*35,
-							0,
-							PAGE_ORIENTATION_LANDSCAPE_MIRROR,*/
+  //For display on controller ST7789 170x320
+  //ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 320x170 -r 23.98 -q 10 che.avi
+  LCD = LCD_DisplayAdd( LCD,
+  #ifndef LCD_DYNAMIC_MEM
+						&lcd1,
+  #endif
+						170,//170
+						320,//320
+						ST7789_CONTROLLER_WIDTH,
+						ST7789_CONTROLLER_HEIGHT,
+						//queda original
+						35,
+						0,
+						PAGE_ORIENTATION_LANDSCAPE_MIRROR,
 
-							//pruebas para tener buena orientacion
-							-35,
-							0,
-							PAGE_ORIENTATION_LANDSCAPE,
+						//pruebas para tener buena orientacion
+						/*-35,
+						0,
+						PAGE_ORIENTATION_LANDSCAPE,*/
 
-							ST7789_Init,
-							ST7789_SetWindow,
-							ST7789_SleepIn,
-							ST7789_SleepOut,
-							&spi_dat,
-							LCD_DATA_16BIT_BUS,
-							bl_dat);
+						ST7789_Init,
+						ST7789_SetWindow,
+						ST7789_SleepIn,
+						ST7789_SleepOut,
+						&spi_dat,
+						LCD_DATA_16BIT_BUS,
+						bl_dat);
 
-	/*
-	//For display on controller ST7789 135x240
-	//ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 240x135 -r 23.98 -q 10 che.avi
-	LCD = LCD_DisplayAdd( LCD,
-	#ifndef LCD_DYNAMIC_MEM
-			  	  	  	  	&lcd1,
-	#endif
-			  	  	  	  	135,//170
-			   				240,//320
-							ST7789_CONTROLLER_WIDTH,
-							ST7789_CONTROLLER_HEIGHT,
-							//Задаем смещение по ширине и высоте для нестандартных или бракованных дисплеев:
-							-53,//-35
-							40,//0
-							PAGE_ORIENTATION_LANDSCAPE,// PAGE_ORIENTATION_LANDSCAPE
-							ST7789_Init,
-							ST7789_SetWindow,
-							ST7789_SleepIn,
-							ST7789_SleepOut,
-							&spi_dat,
-							LCD_DATA_16BIT_BUS,
-							bl_dat);
-	*/
+  /*
+  //For display on controller ST7789 135x240
+  //ffmpeg -i che.mp4 -c:a mp3 -c:v mjpeg -s 240x135 -r 23.98 -q 10 che.avi
+  LCD = LCD_DisplayAdd( LCD,
+  #ifndef LCD_DYNAMIC_MEM
+						&lcd1,
+  #endif
+						135,//170
+						240,//320
+						ST7789_CONTROLLER_WIDTH,
+						ST7789_CONTROLLER_HEIGHT,
+						//Задаем смещение по ширине и высоте для нестандартных или бракованных дисплеев:
+						-53,//-35
+						40,//0
+						PAGE_ORIENTATION_LANDSCAPE,// PAGE_ORIENTATION_LANDSCAPE
+						ST7789_Init,
+						ST7789_SetWindow,
+						ST7789_SleepIn,
+						ST7789_SleepOut,
+						&spi_dat,
+						LCD_DATA_16BIT_BUS,
+						bl_dat);
+  */
 
-	/*
-	//For display on controller ILI9341
-	LCD = LCD_DisplayAdd( LCD,
-	#ifndef LCD_DYNAMIC_MEM
-		  	  	  	  	  &lcd1,
-	#endif
-		  	  	  	  	  320,
-		   				  240,
+  /*
+  //For display on controller ILI9341
+  LCD = LCD_DisplayAdd( LCD,
+  #ifndef LCD_DYNAMIC_MEM
+						&lcd1,
+  #endif
+						  320,
+						  240,
 						  ILI9341_CONTROLLER_WIDTH,
 						  ILI9341_CONTROLLER_HEIGHT,
 						  //Set the offset in width and height for non-standard or defective displays:
@@ -255,94 +257,104 @@ int main(void)
 						  &spi_dat,
 						  LCD_DATA_16BIT_BUS,
 						  bl_dat );
-	*/
+  */
 
 
-	LCD_Handler *lcd = LCD; //pointer to the first display in the list
-	LCD_Init(lcd);
-	LCD_Fill(lcd, 0x319bb1);
-	//------------------------------------------------------------------------------------------
+  LCD_Handler *lcd = LCD; //pointer to the first display in the list
+  LCD_Init(lcd);
+  LCD_Fill(lcd, 0x319bb1);
+  //------------------------------------------------------------------------------------------
 
-	//----------------------------------- Mounting the disc -----------------------------------
-	(void)f_mount(&FatFS, Path, 0);
-	//------------------------------------------------------------------------------------------
+  //----------------------------------- Mounting the disc -----------------------------------
+  (void)f_mount(&FatFS, Path, 0);
+  //------------------------------------------------------------------------------------------
 
-	/* ----------------------------Setting up a file manager ---------------------------- */
-	/* Define a color scheme */
-	File_Manager_Color_Scheme color_scheme_pl = { COLOR_YELLOW,		/* directory name text color */
-			  	  	  	  	  	  	  	  	  	  COLOR_WHITE,		/* file name text color */
-												  COLOR_GREEN,		/* text color of the selected file/directory */
-												  0x319bb1,			/* manager window background color (for empty lines) */
-												  0x319bb1,			/* background color of even rows */
-												  0x319bb1,			/* background color of odd rows */
-												  COLOR_LIGHTGREY,	/* cursor color of the current file/directory */
-												  COLOR_LIGHTGREY,	/* vertical scroll slider color */
-												  0x319bb1,			/* vertical scroll bar color */
-												  1					/* cursor color flag:
-																  	  	  0 - the text of the selected file/directory is circled
-																  	  	  	  cursor color rectangle (cursor_color).
-														 	 	  	  	  >0 -the text background of the selected file/directory is equal to
-														 	 	  	  	  	  cursor color (cursor_color) */
-												 	 };
+  /* ----------------------------Setting up a file manager ---------------------------- */
+  /* Define a color scheme */
+  File_Manager_Color_Scheme color_scheme_pl = { COLOR_YELLOW,		/* directory name text color */
+												COLOR_WHITE,		/* file name text color */
+												COLOR_GREEN,		/* text color of the selected file/directory */
+												0x319bb1,			/* manager window background color (for empty lines) */
+												0x319bb1,			/* background color of even rows */
+												0x319bb1,			/* background color of odd rows */
+												COLOR_LIGHTGREY,	/* cursor color of the current file/directory */
+												COLOR_LIGHTGREY,	/* vertical scroll slider color */
+												0x319bb1,			/* vertical scroll bar color */
+												1					/* cursor color flag:
+																		  0 - the text of the selected file/directory is circled
+																			  cursor color rectangle (cursor_color).
+																		  >0 -the text background of the selected file/directory is equal to
+																			  cursor color (cursor_color) */
+												};
 
-	File_Manager_Handler *fm = FileManagerNew();	/* Creating a File Manager Handler */
-	fm->SetDisplay(fm, lcd);						/* Display showing the file manager (pointer) */
-	fm->SetWin(fm, 6, 0, lcd->Width-6, lcd->Height);/* File manager window options:
-	  	  	  	  	  	  	  	  	  	  	  	  	   - horizontal position of the upper left corner of the window;
-	  	  	  	  	  	  	  	  	  	  	  	  	   - vertical position of the upper left corner of the window;
-	  	  	  	  	  	  	  	  	  	  	  	  	   - window width;
-	  	  	  	  	  	  	  	  	  	  	  	  	   - window height. */
-	fm->SetColor(fm, &color_scheme_pl);				 /* Color scheme (index) */
-	fm->SetFont(fm, &Font_12x20);					 /* Font (pointer) */
-	fm->SetKeys(fm, KEYB_UP, KEYB_DOWN, KEYB_RIGHT); /* Control buttons:
-	   	   	   	   	   	   	   	   	   	   	   	   	    - button bit number up;
-	   	   	   	   	   	   	   	   	   	   	   	   	    - button bit number down;
-	   	   	   	   	   	   	   	   	   	   	   	   	    - bit number of the enter/select button. */
-	//-----------------------------------------------------------------------------------------
+  File_Manager_Handler *fm = FileManagerNew();	/* Creating a File Manager Handler */
+  fm->SetDisplay(fm, lcd);						/* Display showing the file manager (pointer) */
+  fm->SetWin(fm, 6, 0, lcd->Width-6, lcd->Height);/* File manager window options:
+													   - horizontal position of the upper left corner of the window;
+													   - vertical position of the upper left corner of the window;
+													   - window width;
+													   - window height. */
+  fm->SetColor(fm, &color_scheme_pl);				 /* Color scheme (index) */
+  fm->SetFont(fm, &Font_12x20);					 /* Font (pointer) */
+  fm->SetKeys(fm, KEYB_UP, KEYB_DOWN, KEYB_RIGHT); /* Control buttons:
+														- button bit number up;
+														- button bit number down;
+														- bit number of the enter/select button. */
+  //-----------------------------------------------------------------------------------------
 
-	//Splash screen with information about the program and author
-	//AVIIntro(lcd);
-	uint8_t f_popup = 1;
-
-
-
-	//LL_GPIO_ResetOutputPin(GPIOE, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO BT
-	//LL_GPIO_SetOutputPin(GPIOE, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO STM32
-
-	//LL_GPIO_SetOutputPin(GPIOD, ON_OFF_3V7_1_Pin);LL_mDelay(100);//ENCIENDO PARLANTE
-	//LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_3V7_1_Pin);LL_mDelay(100);//APAGO PARLANTE
-
-	//LL_GPIO_SetOutputPin(GPIOD, ON_OFF_3V7_2_Pin);LL_mDelay(100);//ENCIENDO MT3608 +9V
-		//LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_3V7_1_Pin);LL_mDelay(100);//APAGO MT3608 +9V
+  //Splash screen with information about the program and author
+  //AVIIntro(lcd);
+  uint8_t f_popup = 1;
 
 
-	while(1){
 
-		if (LL_GPIO_IsInputPinSet(GPIOE, KEY_UP_Pin) == 0) {
-			LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_3V7_2_Pin);LL_mDelay(250);//ENCIENDO MT3608 +9V
-		    LL_mDelay(250);
-		}
-		if (LL_GPIO_IsInputPinSet(GPIOE, KEY_DOWN_Pin) == 0) {
-			LL_GPIO_SetOutputPin(GPIOD, ON_OFF_3V7_2_Pin);LL_mDelay(250);//ENCIENDO MT3608 +9V
-		}
-	}
+  //LL_GPIO_ResetOutputPin(GPIOE, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO BT
+  //LL_GPIO_SetOutputPin(IN_TS3A5018_GPIO_Port, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO STM32
+
+  //LL_GPIO_SetOutputPin(ON_OFF_3V7_1_GPIO_Port, ON_OFF_3V7_1_Pin);LL_mDelay(100);//ENCIENDO PARLANTE
+  //LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_3V7_1_Pin);LL_mDelay(100);//APAGO PARLANTE
+
+  //LL_GPIO_SetOutputPin(GPIOD, ON_OFF_3V7_2_Pin);LL_mDelay(100);//ENCIENDO MT3608 +9V
+  //LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_3V7_1_Pin);LL_mDelay(100);//APAGO MT3608 +9V
 
 
 
 
+  //para probar el step up de 9v
+//  while(1){
+//	if (LL_GPIO_IsInputPinSet(GPIOE, KEY_UP_Pin) == 0) {
+//		LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_3V7_2_Pin);LL_mDelay(250);//ENCIENDO MT3608 +9V
+//		LL_mDelay(250);
+//	}
+//	if (LL_GPIO_IsInputPinSet(GPIOE, KEY_DOWN_Pin) == 0) {
+//		LL_GPIO_SetOutputPin(GPIOD, ON_OFF_3V7_2_Pin);LL_mDelay(250);//ENCIENDO MT3608 +9V
+//	}
+//  }
 
 
-	//uint32_t keys=0;
-	//keys = KEYB_Inkeys();
-	//while (keys & (1 << KEYB_RIGHT));
 
-	while(!KEYB_kbhit());
-	//Todo esto es para encender e iniciar la camara
-	LL_GPIO_ResetOutputPin(GPIOE, ON_OFF_OV2640_Pin);LL_mDelay(50);//enciendo la camara
-	ov2640_Init(0x60, CAMERA_Monitor);
 
-	LL_GPIO_SetOutputPin(GPIOE, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO STM32
 
+  //uint32_t keys=0;
+  //keys = KEYB_Inkeys();
+  //while (keys & (1 << KEYB_RIGHT));
+
+  while(!KEYB_kbhit());
+
+  //LL_GPIO_SetOutputPin(IN_TS3A5018_GPIO_Port, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO STM32
+
+  //Todo esto es para encender e iniciar la camara
+  LL_GPIO_SetOutputPin(OV2640_OE_GPIO_Port, OV2640_OE_Pin);LL_mDelay(50);//ON cristal activo 24mhz
+  LL_GPIO_SetOutputPin(ON_OFF_OV2640_GPIO_Port, ON_OFF_OV2640_Pin);LL_mDelay(50);//enciendo reguladores de la camara
+  ov2640_Init(0x60, CAMERA_Monitor);
+
+
+  LL_GPIO_ResetOutputPin(GPIOE, IN_TS3A5018_Pin);LL_mDelay(20);//AUDIO BT
+  LL_GPIO_SetOutputPin(ON_OFF_3V7_1_GPIO_Port, ON_OFF_3V7_1_Pin);LL_mDelay(100);//ENCIENDO PARLANTE
+  LL_GPIO_SetOutputPin(ON_OFF_9V_GPIO_Port, ON_OFF_9V_Pin);//enciendo +9V
+
+  uint8_t duty=10;
+  uint8_t flagMotor=0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -352,6 +364,35 @@ int main(void)
 	    HAL_DCMI_Start_DMA(&hdcmi, DCMI_MODE_SNAPSHOT, (uint32_t)pBuffer, MAX_PICTURE_BUFF/2);
 	    while (HAL_DCMI_GetState(&hdcmi) != HAL_DCMI_STATE_READY);
 	    LCD_DrawImage(lcd, 0, 0, 320, 170, pBuffer,0);
+
+	    //Probar si funciona pulsadores
+		if (LL_GPIO_IsInputPinSet(KEY_UP_GPIO_Port, KEY_UP_Pin) == 0) {
+			//LL_GPIO_SetOutputPin(OV_FLASH_GPIO_Port, OV_FLASH_Pin);//enciendo flash
+			//LL_GPIO_SetOutputPin(ON_OFF_9V_GPIO_Port, ON_OFF_9V_Pin);//enciendo +9V
+			flagMotor=1;
+			LL_mDelay(180);
+		}
+
+		if (LL_GPIO_IsInputPinSet(KEY_DOWN_GPIO_Port, KEY_DOWN_Pin) == 0) {
+			//LL_GPIO_ResetOutputPin(OV_FLASH_GPIO_Port, OV_FLASH_Pin);//apago flash
+			//LL_GPIO_ResetOutputPin(ON_OFF_9V_GPIO_Port, ON_OFF_9V_Pin);//apago +9V
+			flagMotor=0;
+			LL_mDelay(180);
+		}
+		if(flagMotor){
+			MotorPAP_1(5);
+		}else{
+
+		}
+
+		if (LL_GPIO_IsInputPinSet(KEY_RIGHT_GPIO_Port, KEY_RIGHT_Pin) == 0) {
+			PWM_set_Freq_DutyCycle(TIM_CHANNEL_1, 1000, duty);//B
+			PWM_set_Freq_DutyCycle(TIM_CHANNEL_2, 1000, duty);//G
+			PWM_set_Freq_DutyCycle(TIM_CHANNEL_3, 1000, duty);//R
+			duty+=10;
+			if(duty > 60) duty=0;//duty 50 es el 100% para que este 50% encendido y 50%apagado y disipe menos potencia el led
+			LL_mDelay(180);
+		}
 
 	/*
   	// Fill the display with blue (the background color of the file manager)
@@ -374,7 +415,8 @@ int main(void)
 			// Wait for any button to be pressed
 			while(!KEYB_kbhit()) { }
 		}
-	*/
+		*/
+
 
 
 
@@ -764,9 +806,9 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 1 */
   htim4.Instance = TIM4;
-  htim4.Init.Prescaler = 0;
+  htim4.Init.Prescaler = 84-1;
   htim4.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim4.Init.Period = 65535;
+  htim4.Init.Period = 1000-1;
   htim4.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim4.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_PWM_Init(&htim4) != HAL_OK)
@@ -892,16 +934,18 @@ static void MX_GPIO_Init(void)
   LL_GPIO_SetOutputPin(GPIOC, LCD_RES_Pin|LCD_DC_Pin);
 
   /**/
-  LL_GPIO_SetOutputPin(GPIOB, LCD_CS_Pin|SD_CS_Pin|ON_OFF_OV2640_Pin);
-
-  /**/
-  LL_GPIO_SetOutputPin(ON_OFF_3V7_2_GPIO_Port, ON_OFF_3V7_2_Pin);
+  LL_GPIO_SetOutputPin(GPIOB, LCD_CS_Pin|SD_CS_Pin);
 
   /**/
   LL_GPIO_ResetOutputPin(LIGHTER_GPIO_Port, LIGHTER_Pin);
 
   /**/
-  LL_GPIO_ResetOutputPin(GPIOB, IN_TS3A5018_Pin|EN_TS3A5018_Pin|OV_FLASH_Pin|OV2640_OE_Pin);
+  LL_GPIO_ResetOutputPin(GPIOD, ON_OFF_9V_Pin|A4988_DIR_1_Pin|A4988_EN_1_Pin|A4988_STEP_1_Pin
+                          |A4988_SLEEP_1_Pin);
+
+  /**/
+  LL_GPIO_ResetOutputPin(GPIOB, ON_OFF_OV2640_Pin|IN_TS3A5018_Pin|EN_TS3A5018_Pin|OV_FLASH_Pin
+                          |OV2640_OE_Pin);
 
   /**/
   LL_GPIO_ResetOutputPin(ON_OFF_3V7_1_GPIO_Port, ON_OFF_3V7_1_Pin);
@@ -913,6 +957,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
   LL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+
+  /**/
+  GPIO_InitStruct.Pin = END_RACE_Pin;
+  GPIO_InitStruct.Mode = LL_GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_DOWN;
+  LL_GPIO_Init(END_RACE_GPIO_Port, &GPIO_InitStruct);
 
   /**/
   GPIO_InitStruct.Pin = LIGHTER_Pin;
@@ -951,12 +1001,13 @@ static void MX_GPIO_Init(void)
   LL_GPIO_Init(IN_DRAIN_LATCH2_GPIO_Port, &GPIO_InitStruct);
 
   /**/
-  GPIO_InitStruct.Pin = ON_OFF_3V7_2_Pin;
+  GPIO_InitStruct.Pin = ON_OFF_9V_Pin|A4988_DIR_1_Pin|A4988_EN_1_Pin|A4988_STEP_1_Pin
+                          |A4988_SLEEP_1_Pin;
   GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;
   GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_LOW;
   GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
   GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
-  LL_GPIO_Init(ON_OFF_3V7_2_GPIO_Port, &GPIO_InitStruct);
+  LL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /**/
   GPIO_InitStruct.Pin = LL_GPIO_PIN_15;
@@ -999,7 +1050,26 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+//void PWM_set_Freq_DutyCycle(uint16_t freq, uint8_t duty, uint32_t tiempo){
+void PWM_set_Freq_DutyCycle(uint32_t canal, uint16_t freq, uint8_t duty){
+	uint16_t valor_CCR;
 
+	if(duty > 100) duty = 100;
+	freq = HAL_RCC_GetHCLKFreq()/(freq*(htim4.Instance->PSC + 1));//le sumo +1 porque aqui no es la formaula normal de (psc+1)x(ARR+1) sino es mi formula
+    HAL_TIM_PWM_Start(&htim4, canal);
+	__HAL_TIM_SET_AUTORELOAD(&htim4,freq);//Si quiero cambiar la frecuencia modifico: __HAL_TIM_SET_AUTORELOAD(&htim15, frecuencia que quiero)
+	valor_CCR = (__HAL_TIM_GET_AUTORELOAD(&htim4)+1)*duty/100;//__HAL_TIM_GET_AUTORELOAD(&htim15): esto es el valor de 10-1 osea 9, por eso le sumo 1 para volver a tener 10, y por 0.5 ya que quiero 50% del duty cycle
+    __HAL_TIM_SET_COMPARE(&htim4, canal, valor_CCR);
+    //HAL_Delay(tiempo);
+    //HAL_TIM_PWM_Stop(&htim4, canal);
+}
+
+void delay_us(uint32_t time){//esta funcion funciona mejor cambie uint16_t  a uint32_t y funciono mejor
+	uint32_t delay = time *(HAL_RCC_GetHCLKFreq() / 1000000);
+	for(int  i = 0; i < delay; i+=14){
+		__ASM("NOP");
+	}
+}
 /* USER CODE END 4 */
 
 /**
